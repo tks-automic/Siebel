@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-15" standalone="no"?><uc-export clientvers="8.0.0">
+<PRPT client="6000" name="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.STOP_IPLANET" system="AE10">
+<HEADER state="1">
+<Title/>
+
+
+<LastUsed/>
+<ArchiveKey1/>
+<ArchiveKey2/>
+<OH_SubType/>
+</HEADER>
+<PROMPTDESIGNER state="1">
+<DESIGNER/>
+</PROMPTDESIGNER>
+<PROMPTSETXUI state="1">
+<XUIEDITOR><![CDATA[<dialog height="0" icon="PRPT" id="PRPTS" left="279" top="4" width="0"><readpanel fill="b" id="PRPTBOX" nl="1" scroll="v" text="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.STOP_IPLANET"><properties><entry name="text">PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.STOP_IPLANET</entry><entry name="modifiable">0</entry></properties><dynradiogroup enabled="1" fill="b" focus="0" id="UC4RB_STOP_MODEs.00" nl="1" quotes="" text="Stop mode" tooltip="If &apos;script&apos; the runbook function stops SunOne using the a script found in UC4RB_HOME_DIR# with the name of UC4RB_SERVICE_FILE_NAME#If &apos;service&apos;, it is assumed, that the Windows service/Unix deamon is preconfigured and the runbook function stops the service/deamon." alt="1" required="0"><properties><entry listparam="C" name="reference">PCK.AUTOMIC_SIEBEL.PRV.VARA.STOP_IPLANET.SCRIPT_SERVICE</entry><entry name="text">Stop mode</entry><entry name="quotes"/><entry name="id">UC4RB_STOP_MODEs.00</entry><entry name="enabled">0</entry><entry name="focus">0</entry><entry name="tooltip">If &apos;script&apos; the runbook function stops SunOne using the a script found in UC4RB_HOME_DIR# with the name of UC4RB_SERVICE_FILE_NAME#If &apos;service&apos;, it is assumed, that the Windows service/Unix deamon is preconfigured and the runbook function stops the service/deamon.</entry><entry name="customfield"/><entry name="modifiable">1</entry><entry name="initvalue"/></properties></dynradiogroup><text enabled="1" fill="b" focus="0" id="UC4RB_SERVICE_FILE_NAMEs.00" inputassistance="0" len="" nl="1" separator="" showaspassword="0" text="Service name/Script Filename" tooltip="When &apos;service&apos; is chosen: For Windows: name of the service For Unix: script with full path in your init.d folder to call (e.g.: /etc/init.d/sunone) When &apos;script&apos; is chosen: For Windows and Unix the full path of the script must be specified (e.g.: C:\Program Files\Oracle\WebServer7\https-vwgaraiis01.arademo.local\bin\stopserv.bat)" upper="0" required="0" alt="1" regex=""><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant><properties><entry listparam="C" name="reference">UC_DATATYPE_STRING</entry><entry name="text">Service name/Script Filename</entry><entry name="multiselect">0</entry><entry name="separator"/><entry name="len"/><entry name="quotes"/><entry name="id">UC4RB_SERVICE_FILE_NAMEs.00</entry><entry name="inputassistance">0</entry><entry name="enabled">0</entry><entry name="upper">0</entry><entry name="focus">0</entry><entry name="showaspassword">0</entry><entry name="tooltip">When &apos;service&apos; is chosen: For Windows: name of the service For Unix: script with full path in your init.d folder to call (e.g.: /etc/init.d/sunone) When &apos;script&apos; is chosen: For Windows and Unix the full path of the script must be specified (e.g.: C:\Program Files\Oracle\WebServer7\https-vwgaraiis01.arademo.local\bin\stopserv.bat)</entry><entry name="customfield"/><entry name="modifiable">1</entry><entry name="required">1</entry><entry name="regex"/><entry name="initvalue"/></properties></text></readpanel></dialog>]]></XUIEDITOR>
+</PROMPTSETXUI>
+<PROMPTSETDATA state="1">
+<DATAEDITOR><![CDATA[<PRPTS idnr="0005492780" client="6000" system="AE10" ontop="1" src="oh"><PRPTBOX><UC4RB_STOP_MODEs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_STOP_MODE#" ReadFromTable="OPSE">script</UC4RB_STOP_MODEs.00><UC4RB_SERVICE_FILE_NAMEs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_SERVICE_FILE_NAME#" ReadFromTable="OPSE"></UC4RB_SERVICE_FILE_NAMEs.00></PRPTBOX></PRPTS>]]></DATAEDITOR>
+</PROMPTSETDATA>
+<DOCU_Docu state="1" type="text">
+<DOC/>
+</DOCU_Docu>
+</PRPT>
+</uc-export>

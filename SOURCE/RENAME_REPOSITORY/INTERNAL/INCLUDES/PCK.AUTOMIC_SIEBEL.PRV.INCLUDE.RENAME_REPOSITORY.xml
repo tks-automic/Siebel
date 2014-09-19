@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="ISO-8859-15" standalone="no"?><uc-export clientvers="8.0.0">
+<JOBI client="6000" name="PCK.AUTOMIC_SIEBEL.PRV.INCLUDE.RENAME_REPOSITORY" system="AE10">
+<HEADER state="1">
+<Title/>
+
+
+<LastUsed/>
+<ArchiveKey1/>
+<ArchiveKey2/>
+<OH_SubType/>
+</HEADER>
+<SCRIPT mode="1" state="1" tidy="0">
+<MSCRI><![CDATA[:INC PCK.AUTOMIC_SIEBEL.PRV.INCLUDE.SET_SIEBEL_PROPERTIES
+:JCL_CONCAT_CHAR "?"
+java -jar siebeltool.jar siebel  RenameRepository  ?
+-h &UC4RB_SIEBEL_SERVER_URL# ?
+-pt &UC4RB_SIEBEL_PORT# ?
+-e &UC4RB_SIEBEL_ENTERPRISE# ?
+-su "&UC4RB_SIEBEL_USER#" ?
+-sp "&UC4RB_SIEBEL_PASSWORD#" ?
+-om "&UC4RB_SIEBEL_OBJECT_MANAGER#" ?
+-bc "&UC4RB_SIEBEL_BUSINESS_COMP#" ?
+-bo "&UC4RB_SIEBEL_BUSINESS_OBJECT#" ?
+-on "&UC4RB_SIEBEL_OBJ_OLDNAME#" ?
+-nn "&UC4RB_SIEBEL_OBJ_NEWNAME#" &SIEBEL_PROPERTIES#
+:JCL_CONCAT_CHAR]]></MSCRI>
+</SCRIPT>
+<DOCU_Docu state="1" type="text">
+<DOC/>
+</DOCU_Docu>
+</JOBI>
+</uc-export>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="ISO-8859-15" standalone="no"?><uc-export clientvers="8.0.0">
+<PRPT client="6000" name="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.GENERATE_BROWSER_SCRIPT" system="AE10">
+<HEADER state="1">
+<Title/>
+
+
+<LastUsed/>
+<ArchiveKey1/>
+<ArchiveKey2/>
+<OH_SubType/>
+</HEADER>
+<PROMPTDESIGNER state="1">
+<DESIGNER/>
+</PROMPTDESIGNER>
+<PROMPTSETXUI state="1">
+<XUIEDITOR><![CDATA[<dialog height="424" icon="PRPT" id="PRPTS" left="0" top="0" width="441"><readpanel fill="b" id="PRPTBOX" nl="1" scroll="v" text="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.GENERATE_BROWSER_SCRIPT"><properties><entry name="text">PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.GENERATE_BROWSER_SCRIPT</entry><entry name="modifiable">0</entry></properties><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_SIEBEL_SCRIPT_OUTPUT_DIRs.00" inputassistance="0" len="" nl="1" regex="" required="0" separator="" showaspassword="0" text="Destination directory" tooltip="The Path where the browser scripts should be exported to." upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+         
+         <properties>
+            <entry listparam="C" name="reference">UC_DATATYPE_STRING</entry>
+            <entry name="text">Destination directory</entry>
+            <entry name="multiselect">0</entry>
+            <entry name="separator"/>
+            <entry name="len"/>
+            <entry name="quotes"/>
+            <entry name="id">UC4RB_SIEBEL_SCRIPT_OUTPUT_DIRs.00</entry>
+            <entry name="inputassistance">0</entry>
+            <entry name="enabled">0</entry>
+            <entry name="upper">0</entry>
+            <entry name="focus">0</entry>
+            <entry name="showaspassword">0</entry>
+            <entry name="tooltip">The Path where the browser scripts should be exported to.</entry>
+            <entry name="customfield"/>
+            <entry name="modifiable">1</entry>
+            <entry name="required">1</entry>
+            <entry name="regex"/>
+            <entry name="initvalue"/>
+         </properties>
+      </text><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_SIEBEL_SCRIPT_CFG_FILEs.00" inputassistance="0" len="" nl="1" regex="" required="0" separator="" showaspassword="0" text="Siebel client config" tooltip="The name of the config file of the Siebel client." upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+         
+         <properties>
+            <entry listparam="C" name="reference">UC_DATATYPE_STRING</entry>
+            <entry name="text">Siebel client config</entry>
+            <entry name="multiselect">0</entry>
+            <entry name="separator"/>
+            <entry name="len"/>
+            <entry name="quotes"/>
+            <entry name="id">UC4RB_SIEBEL_SCRIPT_CFG_FILEs.00</entry>
+            <entry name="inputassistance">0</entry>
+            <entry name="enabled">0</entry>
+            <entry name="upper">0</entry>
+            <entry name="focus">0</entry>
+            <entry name="showaspassword">0</entry>
+            <entry name="tooltip">The name of the config file of the Siebel client.</entry>
+            <entry name="customfield"/>
+            <entry name="modifiable">1</entry>
+            <entry name="required">1</entry>
+            <entry name="regex"/>
+            <entry name="initvalue"/>
+         </properties>
+      </text><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_SIEBEL_CLIENT_ROOTs.00" inputassistance="0" len="" nl="1" regex="" required="0" separator="" showaspassword="0" text="Siebel client directory" tooltip="Path to the Siebel Client which contain generate browser script tool" upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+         
+         <properties>
+            <entry listparam="C" name="reference">UC_DATATYPE_STRING</entry>
+            <entry name="text">Siebel client directory</entry>
+            <entry name="multiselect">0</entry>
+            <entry name="separator"/>
+            <entry name="len"/>
+            <entry name="quotes"/>
+            <entry name="id">UC4RB_SIEBEL_CLIENT_ROOTs.00</entry>
+            <entry name="inputassistance">0</entry>
+            <entry name="enabled">0</entry>
+            <entry name="upper">0</entry>
+            <entry name="focus">0</entry>
+            <entry name="showaspassword">0</entry>
+            <entry name="tooltip">Path to the Siebel Client which contain generate browser script tool</entry>
+            <entry name="customfield"/>
+            <entry name="modifiable">1</entry>
+            <entry name="required">1</entry>
+            <entry name="regex"/>
+            <entry name="initvalue"/>
+         </properties>
+      </text><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_SIEBEL_LANGUAGESs.00" inputassistance="0" len="" nl="1" regex="" required="0" separator="" showaspassword="0" text="Siebel languages" tooltip="Comma sepperated list of the installed languages." upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+         
+         <properties>
+            <entry listparam="C" name="reference">UC_DATATYPE_STRING</entry>
+            <entry name="text">Siebel languages</entry>
+            <entry name="multiselect">0</entry>
+            <entry name="separator"/>
+            <entry name="len"/>
+            <entry name="quotes"/>
+            <entry name="id">UC4RB_SIEBEL_LANGUAGESs.00</entry>
+            <entry name="inputassistance">0</entry>
+            <entry name="enabled">0</entry>
+            <entry name="upper">0</entry>
+            <entry name="focus">0</entry>
+            <entry name="showaspassword">0</entry>
+            <entry name="tooltip">Comma sepperated list of the installed languages.</entry>
+            <entry name="customfield"/>
+            <entry name="modifiable">1</entry>
+            <entry name="required">1</entry>
+            <entry name="regex"/>
+            <entry name="initvalue"/>
+         </properties>
+      </text></readpanel></dialog>]]></XUIEDITOR>
+</PROMPTSETXUI>
+<PROMPTSETDATA state="1">
+<DATAEDITOR><![CDATA[<PRPTS idnr="0005492877" client="6000" system="AE10" ontop="1" src="oh"><PRPTBOX><UC4RB_SIEBEL_SCRIPT_OUTPUT_DIRs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_SIEBEL_SCRIPT_OUTPUT_DIR#" ReadFromTable="OPSE"></UC4RB_SIEBEL_SCRIPT_OUTPUT_DIRs.00><UC4RB_SIEBEL_SCRIPT_CFG_FILEs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_SIEBEL_SCRIPT_CFG_FILE#" ReadFromTable="OPSE">&amp;ENV#?SIEBEL_SCRIPT_CFG_FILE</UC4RB_SIEBEL_SCRIPT_CFG_FILEs.00><UC4RB_SIEBEL_CLIENT_ROOTs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_SIEBEL_CLIENT_ROOT#" ReadFromTable="OPSE">&amp;ENV#?SIEBEL_CLIENT_ROOT</UC4RB_SIEBEL_CLIENT_ROOTs.00><UC4RB_SIEBEL_LANGUAGESs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_SIEBEL_LANGUAGES#" ReadFromTable="OPSE">&amp;ENV#?SIEBEL_LANGUAGES</UC4RB_SIEBEL_LANGUAGESs.00></PRPTBOX></PRPTS>]]></DATAEDITOR>
+</PROMPTSETDATA>
+<DOCU_Docu state="1" type="text">
+<DOC/>
+</DOCU_Docu>
+</PRPT>
+</uc-export>

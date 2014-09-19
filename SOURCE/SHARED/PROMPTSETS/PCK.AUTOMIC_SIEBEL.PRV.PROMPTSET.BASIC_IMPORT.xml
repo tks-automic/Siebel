@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="ISO-8859-15" standalone="no"?><uc-export clientvers="8.0.0">
+<PRPT client="6000" name="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.BASIC_IMPORT" system="AE10">
+<HEADER state="1">
+<Title>Basic Import promptset</Title>
+
+
+<LastUsed/>
+<ArchiveKey1/>
+<ArchiveKey2/>
+<OH_SubType/>
+</HEADER>
+<PROMPTDESIGNER state="1">
+<DESIGNER/>
+</PROMPTDESIGNER>
+<PROMPTSETXUI state="1">
+<XUIEDITOR><![CDATA[<dialog height="424" icon="PRPT" id="PRPTS" left="0" top="0" width="441"><readpanel fill="b" id="PRPTBOX" nl="1" scroll="v" text="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.BASIC_EXPORT"><properties><entry name="text">PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.BASIC_EXPORT</entry><entry name="modifiable">0</entry></properties><combo alt="1" dynamic="0" enabled="1" fill="b" filter="0" focus="0" id="ENVs.00" nl="1" strict="1" text="Environment" tooltip="Configuration Object of Siebel source environment" vtype="i"><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command owner="_self" owneraction="setsource" ownerparam="src|_dialog@src"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptcombolist" target="_self" targetaction="setlist" wait="1"/>
+         
+         
+         
+      <properties>
+        <entry listparam="" name="reference">PCK.AUTOMIC_SIEBEL.PRV.VARA.CONFIGURATION_OBJECTS</entry>
+        <entry name="text">Environment</entry>
+        <entry name="quotes"/>
+        <entry name="id">ENVs.00</entry>
+        <entry name="dynamic">0</entry>
+        <entry name="enabled">0</entry>
+        <entry name="focus">0</entry>
+        <entry name="tooltip">Configuration Object of Siebel source environment</entry>
+        <entry name="modifiable">1</entry>
+        <entry name="customfield"/>
+      <entry name="initvalue"/>
+         </properties>
+    </combo><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_SIEBEL_USERs.00" inputassistance="0" len="" nl="1" regex="" required="0" separator=";" showaspassword="0" text="Siebel User" tooltip="Siebel User of source environment" upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+         
+      <properties>
+        <entry listparam="C,N" name="reference">UC_DATATYPE_STRING</entry>
+        <entry name="text">Siebel User</entry>
+        <entry name="multiselect">0</entry>
+        <entry name="separator">;</entry>
+        <entry name="len"/>
+        <entry name="quotes"/>
+        <entry name="id">UC4RB_SIEBEL_USERs.00</entry>
+        <entry name="regex"/>
+        <entry name="inputassistance">0</entry>
+        <entry name="enabled">0</entry>
+        <entry name="required">1</entry>
+        <entry name="upper">0</entry>
+        <entry name="focus">0</entry>
+        <entry name="showaspassword">0</entry>
+        <entry name="tooltip">Siebel User of source environment</entry>
+        <entry name="modifiable">1</entry>
+        <entry name="customfield"/>
+      <entry name="initvalue"/>
+         </properties>
+    </text><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_SIEBEL_PASSWORDs.00" inputassistance="0" len="" nl="1" regex="" required="0" separator=";" showaspassword="1" text="Siebel Password" tooltip="Siebel password of source environment" upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+         
+      <properties>
+        <entry listparam="C,N" name="reference">UC_DATATYPE_STRING</entry>
+        <entry name="text">Siebel Password</entry>
+        <entry name="multiselect">0</entry>
+        <entry name="separator">;</entry>
+        <entry name="len"/>
+        <entry name="quotes"/>
+        <entry name="id">UC4RB_SIEBEL_PASSWORDs.00</entry>
+        <entry name="regex"/>
+        <entry name="inputassistance">0</entry>
+        <entry name="enabled">0</entry>
+        <entry name="required">1</entry>
+        <entry name="upper">0</entry>
+        <entry name="focus">0</entry>
+        <entry name="showaspassword">1</entry>
+        <entry name="tooltip">Siebel password of source environment</entry>
+        <entry name="modifiable">1</entry>
+        <entry name="customfield"/>
+      <entry name="initvalue"/>
+         </properties>
+    </text><combo alt="1" dynamic="0" enabled="1" fill="b" filter="0" focus="0" id="UC4RB_SIEBEL_SOURCE_AGENTs.00" nl="1" strict="1" text="Source Agent" tooltip="Source Agent where siebel basic export process run" vtype="i"><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command owner="_self" owneraction="setsource" ownerparam="src|_dialog@src"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptcombolist" target="_self" targetaction="setlist" wait="1"/>
+         
+         
+         
+      <properties>
+        <entry listparam="" name="reference">PCK.AUTOMIC_SHARED.PRV.VARA.AGENTS_AND_GROUPS</entry>
+        <entry name="text">Source Agent</entry>
+        <entry name="quotes"/>
+        <entry name="id">UC4RB_SIEBEL_SOURCE_AGENTs.00</entry>
+        <entry name="dynamic">0</entry>
+        <entry name="enabled">0</entry>
+        <entry name="focus">0</entry>
+        <entry name="tooltip">Source Agent where siebel basic export process run</entry>
+        <entry name="modifiable">1</entry>
+        <entry name="customfield"/>
+      <entry name="initvalue"/>
+         </properties>
+    </combo><combo alt="1" dynamic="0" enabled="1" fill="b" filter="0" focus="0" id="UC4RB_SIEBEL_SOURCE_LOGINs.00" nl="1" strict="1" text="Source Login" tooltip="Login Object of Source Agent where siebel basic export process run" vtype="i"><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command owner="_self" owneraction="setsource" ownerparam="src|_dialog@src"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptcombolist" target="_self" targetaction="setlist" wait="1"/>
+         
+         
+         
+      <properties>
+        <entry listparam="" name="reference">PCK.AUTOMIC_SHARED.PRV.VARA.LOGINS</entry>
+        <entry name="text">Source Login</entry>
+        <entry name="quotes"/>
+        <entry name="id">UC4RB_SIEBEL_SOURCE_LOGINs.00</entry>
+        <entry name="dynamic">0</entry>
+        <entry name="enabled">0</entry>
+        <entry name="focus">0</entry>
+        <entry name="tooltip">Login Object of Source Agent where siebel basic export process run</entry>
+        <entry name="modifiable">1</entry>
+        <entry name="customfield"/>
+      <entry name="initvalue"/>
+         </properties>
+    </combo><combo alt="1" dynamic="0" enabled="1" fill="b" filter="0" focus="0" id="UC4RB_SIEBEL_TARGET_AGENTs.00" nl="1" strict="1" text="Target Agent" tooltip="Target Agent where siebel basic import process run" vtype="i"><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command owner="_self" owneraction="setsource" ownerparam="src|_dialog@src"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptcombolist" target="_self" targetaction="setlist" wait="1"/>
+         
+         
+         
+      <properties>
+        <entry listparam="" name="reference">PCK.AUTOMIC_SHARED.PRV.VARA.AGENTS_AND_GROUPS</entry>
+        <entry name="text">Target Agent</entry>
+        <entry name="quotes"/>
+        <entry name="id">UC4RB_SIEBEL_TARGET_AGENTs.00</entry>
+        <entry name="dynamic">0</entry>
+        <entry name="enabled">0</entry>
+        <entry name="focus">0</entry>
+        <entry name="tooltip">Target Agent where siebel basic import process run</entry>
+        <entry name="modifiable">1</entry>
+        <entry name="customfield"/>
+      <entry name="initvalue"/>
+         </properties>
+    </combo><combo alt="1" dynamic="0" enabled="1" fill="b" filter="0" focus="0" id="UC4RB_SIEBEL_TARGET_LOGINs.00" nl="1" strict="1" text="Target Login" tooltip="Login Object of Target Agent where siebel basic import processes run" vtype="i"><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command owner="_self" owneraction="setsource" ownerparam="src|_dialog@src"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptcombolist" target="_self" targetaction="setlist" wait="1"/>
+         
+         
+         
+      <properties>
+        <entry listparam="" name="reference">PCK.AUTOMIC_SHARED.PRV.VARA.LOGINS</entry>
+        <entry name="text">Target Login</entry>
+        <entry name="quotes"/>
+        <entry name="id">UC4RB_SIEBEL_TARGET_LOGINs.00</entry>
+        <entry name="dynamic">0</entry>
+        <entry name="enabled">0</entry>
+        <entry name="focus">0</entry>
+        <entry name="tooltip">Login Object of Target Agent where siebel basic import processes run</entry>
+        <entry name="modifiable">1</entry>
+        <entry name="customfield"/>
+      <entry name="initvalue"/>
+         </properties>
+    </combo><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_SIEBEL_SOURCE_DIRs.00" inputassistance="0" len="" nl="1" regex="" required="0" separator=";" showaspassword="0" text="Source Directory" tooltip="The directory where siebel deployment package is placed in the source machine" upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+         
+      <properties>
+        <entry listparam="C,N" name="reference">UC_DATATYPE_STRING</entry>
+        <entry name="text">Source Directory</entry>
+        <entry name="multiselect">0</entry>
+        <entry name="separator">;</entry>
+        <entry name="len"/>
+        <entry name="quotes"/>
+        <entry name="id">UC4RB_SIEBEL_SOURCE_DIRs.00</entry>
+        <entry name="regex"/>
+        <entry name="inputassistance">0</entry>
+        <entry name="enabled">0</entry>
+        <entry name="required">1</entry>
+        <entry name="upper">0</entry>
+        <entry name="focus">0</entry>
+        <entry name="showaspassword">0</entry>
+        <entry name="tooltip">The directory where siebel deployment package is placed in the source machine</entry>
+        <entry name="modifiable">1</entry>
+        <entry name="customfield"/>
+      <entry name="initvalue"/>
+         </properties>
+    </text><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_SIEBEL_SOURCE_PCK_NAMEs.00" inputassistance="0" len="" nl="1" regex="" required="0" separator=";" showaspassword="0" text="Source archive file" tooltip="The siebel deployment package in the source machine" upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+         
+      <properties>
+        <entry listparam="C,N" name="reference">UC_DATATYPE_STRING</entry>
+        <entry name="text">Source archive file</entry>
+        <entry name="multiselect">0</entry>
+        <entry name="separator">;</entry>
+        <entry name="len"/>
+        <entry name="quotes"/>
+        <entry name="id">UC4RB_SIEBEL_SOURCE_PCK_NAMEs.00</entry>
+        <entry name="regex"/>
+        <entry name="inputassistance">0</entry>
+        <entry name="enabled">0</entry>
+        <entry name="required">1</entry>
+        <entry name="upper">0</entry>
+        <entry name="focus">0</entry>
+        <entry name="showaspassword">0</entry>
+        <entry name="tooltip">The siebel deployment package in the source machine</entry>
+        <entry name="modifiable">1</entry>
+        <entry name="customfield"/>
+      <entry name="initvalue"/>
+         </properties>
+    </text><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_SIEBEL_TARGET_DIRs.00" inputassistance="0" len="" nl="1" regex="" required="0" separator=";" showaspassword="0" text="Target Directory" tooltip="Source package should be copied to this directory in the target machine" upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+         
+      <properties>
+        <entry listparam="C,N" name="reference">UC_DATATYPE_STRING</entry>
+        <entry name="text">Target Directory</entry>
+        <entry name="multiselect">0</entry>
+        <entry name="separator">;</entry>
+        <entry name="len"/>
+        <entry name="quotes"/>
+        <entry name="id">UC4RB_SIEBEL_TARGET_DIRs.00</entry>
+        <entry name="regex"/>
+        <entry name="inputassistance">0</entry>
+        <entry name="enabled">0</entry>
+        <entry name="required">0</entry>
+        <entry name="upper">0</entry>
+        <entry name="focus">0</entry>
+        <entry name="showaspassword">0</entry>
+        <entry name="tooltip">Source package should be copied to this directory in the target machine</entry>
+        <entry name="modifiable">1</entry>
+        <entry name="customfield"/>
+      <entry name="initvalue"/>
+         </properties>
+    </text><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_SIEBEL_TARGET_PCK_NAMEs.00" inputassistance="0" len="" nl="1" regex="" required="0" separator=";" showaspassword="0" text="Target archive file" tooltip="The siebel deployment package in the target machine (after being copied from source)" upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+         
+      <properties>
+        <entry listparam="C,N" name="reference">UC_DATATYPE_STRING</entry>
+        <entry name="text">Target archive file</entry>
+        <entry name="multiselect">0</entry>
+        <entry name="separator">;</entry>
+        <entry name="len"/>
+        <entry name="quotes"/>
+        <entry name="id">UC4RB_SIEBEL_TARGET_PCK_NAMEs.00</entry>
+        <entry name="regex"/>
+        <entry name="inputassistance">0</entry>
+        <entry name="enabled">0</entry>
+        <entry name="required">0</entry>
+        <entry name="upper">0</entry>
+        <entry name="focus">0</entry>
+        <entry name="showaspassword">0</entry>
+        <entry name="tooltip">The siebel deployment package in the target machine (after being copied from source)</entry>
+        <entry name="modifiable">1</entry>
+        <entry name="customfield"/>
+      <entry name="initvalue"/>
+         </properties>
+    </text><dynradiogroup alt="1" enabled="1" fill="b" focus="" id="UC4RB_SIEBEL_BACKUP_REPOSITORYs.00" nl="1" text="Backup current Repository" tooltip="&quot;Yes&quot;: backup current Repository before import the new one  from import package. &quot;No&quot;: delete the current repository then import the new one from import package." required="0">
+      <properties>
+        <entry listparam="C,N" name="reference">PCK.AUTOMIC_SHARED.PRV.VARA.YES_NO</entry>
+        <entry name="text">Backup current Repository</entry>
+        <entry name="quotes"/>
+        <entry name="id">UC4RB_SIEBEL_BACKUP_REPOSITORYs.00</entry>
+        <entry name="enabled">0</entry>
+        <entry name="focus">0</entry>
+        <entry name="tooltip">&quot;Yes&quot;: backup current Repository before import the new one  from import package. &quot;No&quot;: delete the current repository then import the new one from import package.</entry>
+        <entry name="modifiable">1</entry>
+        <entry name="customfield"/>
+      <entry name="initvalue"/></properties>
+    </dynradiogroup><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_SIEBEL_BACKUP_REPO_NAMEs.00" inputassistance="0" len="" nl="1" regex="" required="0" separator=";" showaspassword="0" text="Backup Repository Name" tooltip="Backup Repository Name (must be different from current Repository Name). Only specific if field Backup current Repository is &quot;Yes&quot;" upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+      
+      <properties>
+        <entry listparam="C,N" name="reference">UC_DATATYPE_STRING</entry>
+        <entry name="text">Backup Repository Name</entry>
+        <entry name="multiselect">0</entry>
+        <entry name="separator">;</entry>
+        <entry name="len"/>
+        <entry name="quotes"/>
+        <entry name="id">UC4RB_SIEBEL_BACKUP_REPO_NAMEs.00</entry>
+        <entry name="regex"/>
+        <entry name="inputassistance">0</entry>
+        <entry name="enabled">0</entry>
+        <entry name="required">0</entry>
+        <entry name="upper">0</entry>
+        <entry name="focus">0</entry>
+        <entry name="showaspassword">0</entry>
+        <entry name="tooltip">Backup Repository Name (must be different from current Repository Name). Only specific if field Backup current Repository is &quot;Yes&quot;</entry>
+        <entry name="modifiable">1</entry>
+        <entry name="customfield"/>
+      <entry name="initvalue"/></properties>
+    </text></readpanel></dialog>]]></XUIEDITOR>
+</PROMPTSETXUI>
+<PROMPTSETDATA state="1">
+<DATAEDITOR><![CDATA[<PRPTS idnr="0005732196" client="6000" system="AE10" ontop="1" src="oh"><PRPTBOX><ENVs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="ENV#" ReadFromTable="OPSE"></ENVs.00><UC4RB_SIEBEL_USERs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_SIEBEL_USER#" ReadFromTable="OPSE"></UC4RB_SIEBEL_USERs.00><UC4RB_SIEBEL_PASSWORDs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_SIEBEL_PASSWORD#" ReadFromTable="OPSE">--10</UC4RB_SIEBEL_PASSWORDs.00><UC4RB_SIEBEL_SOURCE_AGENTs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_SIEBEL_SOURCE_AGENT#" ReadFromTable="OPSE"></UC4RB_SIEBEL_SOURCE_AGENTs.00><UC4RB_SIEBEL_SOURCE_LOGINs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_SIEBEL_SOURCE_LOGIN#" ReadFromTable="OPSE"></UC4RB_SIEBEL_SOURCE_LOGINs.00><UC4RB_SIEBEL_TARGET_AGENTs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_SIEBEL_TARGET_AGENT#" ReadFromTable="OPSE"></UC4RB_SIEBEL_TARGET_AGENTs.00><UC4RB_SIEBEL_TARGET_LOGINs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_SIEBEL_TARGET_LOGIN#" ReadFromTable="OPSE"></UC4RB_SIEBEL_TARGET_LOGINs.00><UC4RB_SIEBEL_SOURCE_DIRs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_SIEBEL_SOURCE_DIR#" ReadFromTable="OPSE"></UC4RB_SIEBEL_SOURCE_DIRs.00><UC4RB_SIEBEL_SOURCE_PCK_NAMEs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_SIEBEL_SOURCE_PCK_NAME#" ReadFromTable="OPSE"></UC4RB_SIEBEL_SOURCE_PCK_NAMEs.00><UC4RB_SIEBEL_TARGET_DIRs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_SIEBEL_TARGET_DIR#" ReadFromTable="OPSE"></UC4RB_SIEBEL_TARGET_DIRs.00><UC4RB_SIEBEL_TARGET_PCK_NAMEs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_SIEBEL_TARGET_PCK_NAME#" ReadFromTable="OPSE"></UC4RB_SIEBEL_TARGET_PCK_NAMEs.00><UC4RB_SIEBEL_BACKUP_REPOSITORYs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_SIEBEL_BACKUP_REPOSITORY#" ReadFromTable="OPSE">No</UC4RB_SIEBEL_BACKUP_REPOSITORYs.00><UC4RB_SIEBEL_BACKUP_REPO_NAMEs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_SIEBEL_BACKUP_REPO_NAME#" ReadFromTable="OPSE"></UC4RB_SIEBEL_BACKUP_REPO_NAMEs.00></PRPTBOX></PRPTS>]]></DATAEDITOR>
+</PROMPTSETDATA>
+<DOCU_Docu state="1" type="text">
+<DOC/>
+</DOCU_Docu>
+</PRPT>
+</uc-export>

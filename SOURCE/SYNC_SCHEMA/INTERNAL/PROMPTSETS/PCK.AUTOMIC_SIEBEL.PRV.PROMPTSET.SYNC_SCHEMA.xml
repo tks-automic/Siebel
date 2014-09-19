@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="ISO-8859-15" standalone="no"?><uc-export clientvers="8.0.0">
+<PRPT client="6000" name="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.SYNC_SCHEMA" system="AE10">
+<HEADER state="1">
+<Title/>
+
+
+<LastUsed/>
+<ArchiveKey1/>
+<ArchiveKey2/>
+<OH_SubType/>
+</HEADER>
+<PROMPTDESIGNER state="1">
+<DESIGNER/>
+</PROMPTDESIGNER>
+<PROMPTSETXUI state="1">
+<XUIEDITOR><![CDATA[<dialog height="424" icon="PRPT" id="PRPTS" left="0" top="0" width="441"><readpanel fill="b" id="PRPTBOX" nl="1" scroll="v" text="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.SYNC_SCHEMA"><properties><entry name="text">PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.SYNC_SCHEMA</entry><entry name="modifiable">0</entry></properties><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_SIEBEL_ENV_SCRIPT_DIRs.00" inputassistance="0" len="" nl="1" regex="" required="0" separator=";" showaspassword="0" text="Siebel Environment Script directory" tooltip="The directory where the Siebel Environment script is placed (UNIX only)." upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+      
+      <properties>
+        <entry listparam="C,N" name="reference">UC_DATATYPE_STRING</entry>
+        <entry name="text">Siebel Environment Script directory</entry>
+        <entry name="multiselect">0</entry>
+        <entry name="separator">;</entry>
+        <entry name="len"/>
+        <entry name="quotes"/>
+        <entry name="id">UC4RB_SIEBEL_ENV_SCRIPT_DIRs.00</entry>
+        <entry name="regex"/>
+        <entry name="inputassistance">0</entry>
+        <entry name="enabled">0</entry>
+        <entry name="required">0</entry>
+        <entry name="upper">0</entry>
+        <entry name="focus">0</entry>
+        <entry name="showaspassword">0</entry>
+        <entry name="tooltip">The directory where the Siebel Environment script is placed (UNIX only).</entry>
+        <entry name="modifiable">1</entry>
+        <entry name="customfield"/>
+      <entry name="initvalue"/></properties>
+    </text><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_SIEBEL_ENV_SCRIPTs.00" inputassistance="0" len="" nl="1" regex="" required="0" separator=";" showaspassword="0" text="Siebel Environment Script file name" tooltip="" upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+      
+      <properties>
+        <entry listparam="C,N" name="reference">UC_DATATYPE_STRING</entry>
+        <entry name="text">Siebel Environment Script file name</entry>
+        <entry name="multiselect">0</entry>
+        <entry name="separator">;</entry>
+        <entry name="len"/>
+        <entry name="quotes"/>
+        <entry name="id">UC4RB_SIEBEL_ENV_SCRIPTs.00</entry>
+        <entry name="regex"/>
+        <entry name="inputassistance">0</entry>
+        <entry name="enabled">0</entry>
+        <entry name="required">0</entry>
+        <entry name="upper">0</entry>
+        <entry name="focus">0</entry>
+        <entry name="showaspassword">0</entry>
+        <entry name="tooltip"/>
+        <entry name="modifiable">1</entry>
+        <entry name="customfield"/>
+      <entry name="initvalue"/></properties>
+    </text><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_SIEBEL_SERVER_ROOTs.00" inputassistance="0" len="" nl="1" regex="" required="0" separator="" showaspassword="0" text="Siebel Server Directory" tooltip="The installation or root directory for Siebel Server" upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+         
+         <properties>
+            <entry listparam="C" name="reference">UC_DATATYPE_STRING</entry>
+            <entry name="text">Siebel Server Directory</entry>
+            <entry name="multiselect">0</entry>
+            <entry name="separator"/>
+            <entry name="len"/>
+            <entry name="quotes"/>
+            <entry name="id">UC4RB_SIEBEL_SERVER_ROOTs.00</entry>
+            <entry name="inputassistance">0</entry>
+            <entry name="enabled">0</entry>
+            <entry name="upper">0</entry>
+            <entry name="focus">0</entry>
+            <entry name="showaspassword">0</entry>
+            <entry name="tooltip">The installation or root directory for Siebel Server</entry>
+            <entry name="customfield"/>
+            <entry name="modifiable">1</entry>
+            <entry name="required">1</entry>
+            <entry name="regex"/>
+            <entry name="initvalue"/>
+         </properties>
+      </text><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_SIEBEL_DDL_FILE_PATHs.00" inputassistance="0" len="" nl="1" regex="" required="0" separator="" showaspassword="0" text="DDL file path" tooltip="The path of the ddl that to import" upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+         
+         <properties>
+            <entry listparam="C" name="reference">UC_DATATYPE_STRING</entry>
+            <entry name="text">DDL file path</entry>
+            <entry name="multiselect">0</entry>
+            <entry name="separator"/>
+            <entry name="len"/>
+            <entry name="quotes"/>
+            <entry name="id">UC4RB_SIEBEL_DDL_FILE_PATHs.00</entry>
+            <entry name="inputassistance">0</entry>
+            <entry name="enabled">0</entry>
+            <entry name="upper">0</entry>
+            <entry name="focus">0</entry>
+            <entry name="showaspassword">0</entry>
+            <entry name="tooltip">The path of the ddl that to import</entry>
+            <entry name="customfield"/>
+            <entry name="modifiable">1</entry>
+            <entry name="required">1</entry>
+            <entry name="regex"/>
+            <entry name="initvalue"/>
+         </properties>
+      </text><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_SIEBEL_LOG_FILE_PATHs.00" inputassistance="0" len="" nl="1" regex="" required="0" separator="" showaspassword="0" text="Log file path" tooltip="The name of the log file" upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+         
+         <properties>
+            <entry listparam="C" name="reference">UC_DATATYPE_STRING</entry>
+            <entry name="text">Log file path</entry>
+            <entry name="multiselect">0</entry>
+            <entry name="separator"/>
+            <entry name="len"/>
+            <entry name="quotes"/>
+            <entry name="id">UC4RB_SIEBEL_LOG_FILE_PATHs.00</entry>
+            <entry name="inputassistance">0</entry>
+            <entry name="enabled">0</entry>
+            <entry name="upper">0</entry>
+            <entry name="focus">0</entry>
+            <entry name="showaspassword">0</entry>
+            <entry name="tooltip">The name of the log file</entry>
+            <entry name="customfield"/>
+            <entry name="modifiable">1</entry>
+            <entry name="required">1</entry>
+            <entry name="regex"/>
+            <entry name="initvalue"/>
+         </properties>
+      </text><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_SIEBEL_DB_USERs.00" inputassistance="0" len="" nl="1" regex="" required="0" separator="" showaspassword="0" text="DB User" tooltip="The User of the Siebel DB" upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+         
+         <properties>
+            <entry listparam="C" name="reference">UC_DATATYPE_STRING</entry>
+            <entry name="text">DB User</entry>
+            <entry name="multiselect">0</entry>
+            <entry name="separator"/>
+            <entry name="len"/>
+            <entry name="quotes"/>
+            <entry name="id">UC4RB_SIEBEL_DB_USERs.00</entry>
+            <entry name="inputassistance">0</entry>
+            <entry name="enabled">0</entry>
+            <entry name="upper">0</entry>
+            <entry name="focus">0</entry>
+            <entry name="showaspassword">0</entry>
+            <entry name="tooltip">The User of the Siebel DB</entry>
+            <entry name="customfield"/>
+            <entry name="modifiable">1</entry>
+            <entry name="required">1</entry>
+            <entry name="regex"/>
+            <entry name="initvalue"/>
+         </properties>
+      </text><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_SIEBEL_DB_PASSWORDs.00" inputassistance="0" len="" nl="1" regex="" required="0" separator="" showaspassword="1" text="DB Password" tooltip="The password of the db user" upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+         
+         <properties>
+            <entry listparam="C" name="reference">UC_DATATYPE_STRING</entry>
+            <entry name="text">DB Password</entry>
+            <entry name="multiselect">0</entry>
+            <entry name="separator"/>
+            <entry name="len"/>
+            <entry name="quotes"/>
+            <entry name="id">UC4RB_SIEBEL_DB_PASSWORDs.00</entry>
+            <entry name="inputassistance">0</entry>
+            <entry name="enabled">0</entry>
+            <entry name="upper">0</entry>
+            <entry name="focus">0</entry>
+            <entry name="showaspassword">1</entry>
+            <entry name="tooltip">The password of the db user</entry>
+            <entry name="customfield"/>
+            <entry name="modifiable">1</entry>
+            <entry name="required">1</entry>
+            <entry name="regex"/>
+            <entry name="initvalue"/>
+         </properties>
+      </text><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_SIEBEL_DATA_SOURCEs.00" inputassistance="0" len="" nl="1" regex="" required="0" separator="" showaspassword="0" text="ODBC Data Source" tooltip="The Name of the target ODBC connection to the database" upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+         
+         <properties>
+            <entry listparam="C" name="reference">UC_DATATYPE_STRING</entry>
+            <entry name="text">ODBC Data Source</entry>
+            <entry name="multiselect">0</entry>
+            <entry name="separator"/>
+            <entry name="len"/>
+            <entry name="quotes"/>
+            <entry name="id">UC4RB_SIEBEL_DATA_SOURCEs.00</entry>
+            <entry name="inputassistance">0</entry>
+            <entry name="enabled">0</entry>
+            <entry name="upper">0</entry>
+            <entry name="focus">0</entry>
+            <entry name="showaspassword">0</entry>
+            <entry name="tooltip">The Name of the target ODBC connection to the database</entry>
+            <entry name="customfield"/>
+            <entry name="modifiable">1</entry>
+            <entry name="required">1</entry>
+            <entry name="regex"/>
+            <entry name="initvalue"/>
+         </properties>
+      </text><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_SIEBEL_SQL_FILE_PATHs.00" inputassistance="0" len="" nl="1" regex="" required="0" separator="" showaspassword="0" text="SQL file path" tooltip="SQL Filename. On the command line the option /Q should be used." upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+         
+         <properties>
+            <entry listparam="C" name="reference">UC_DATATYPE_STRING</entry>
+            <entry name="text">SQL file path</entry>
+            <entry name="multiselect">0</entry>
+            <entry name="separator"/>
+            <entry name="len"/>
+            <entry name="quotes"/>
+            <entry name="id">UC4RB_SIEBEL_SQL_FILE_PATHs.00</entry>
+            <entry name="inputassistance">0</entry>
+            <entry name="enabled">0</entry>
+            <entry name="upper">0</entry>
+            <entry name="focus">0</entry>
+            <entry name="showaspassword">0</entry>
+            <entry name="tooltip">SQL Filename. On the command line the option /Q should be used.</entry>
+            <entry name="customfield"/>
+            <entry name="modifiable">1</entry>
+            <entry name="required">0</entry>
+            <entry name="regex"/>
+            <entry name="initvalue"/>
+         </properties>
+      </text><dynradiogroup alt="1" enabled="1" fill="b" focus="0" id="UC4RB_SIEBEL_ENCODINGs.00" nl="1" quotes="" text="Encoding" tooltip="Unicode/CodePage  ( default: CP )" required="0">
+         <properties>
+            <entry listparam="C" name="reference">PCK.AUTOMIC_SIEBEL.PRV.VARA.SYNC_SCHEMA.UCS2_UTF8_CP</entry>
+            <entry name="text">Encoding</entry>
+            <entry name="quotes"/>
+            <entry name="id">UC4RB_SIEBEL_ENCODINGs.00</entry>
+            <entry name="enabled">0</entry>
+            <entry name="focus">0</entry>
+            <entry name="tooltip">Unicode/CodePage  ( default: CP )</entry>
+            <entry name="customfield"/>
+            <entry name="modifiable">1</entry>
+            <entry name="initvalue"/>
+         </properties>
+      </dynradiogroup><dynradiogroup alt="1" enabled="1" fill="b" focus="0" id="UC4RB_SIEBEL_IMPORT_TABLESs.00" nl="1" quotes="" text="Import Tables" tooltip="Import Tables?" required="0">
+         <properties>
+            <entry listparam="C" name="reference">PCK.AUTOMIC_SIEBEL.PRV.VARA.SYNC_SCHEMA.YES_NO</entry>
+            <entry name="text">Import Tables</entry>
+            <entry name="quotes"/>
+            <entry name="id">UC4RB_SIEBEL_IMPORT_TABLESs.00</entry>
+            <entry name="enabled">0</entry>
+            <entry name="focus">0</entry>
+            <entry name="tooltip">Import Tables?</entry>
+            <entry name="customfield"/>
+            <entry name="modifiable">1</entry>
+            <entry name="initvalue"/>
+         </properties>
+      </dynradiogroup><dynradiogroup alt="1" enabled="1" fill="b" focus="0" id="UC4RB_SIEBEL_DROP_OBS_TABLESs.00" nl="1" quotes="" text="Drop Obsolete Tables" tooltip="Drop obsolete tables" required="0">
+         <properties>
+            <entry listparam="C" name="reference">PCK.AUTOMIC_SIEBEL.PRV.VARA.SYNC_SCHEMA.YES_NO</entry>
+            <entry name="text">Drop Obsolete Tables</entry>
+            <entry name="quotes"/>
+            <entry name="id">UC4RB_SIEBEL_DROP_OBS_TABLESs.00</entry>
+            <entry name="enabled">0</entry>
+            <entry name="focus">0</entry>
+            <entry name="tooltip">Drop obsolete tables</entry>
+            <entry name="customfield"/>
+            <entry name="modifiable">1</entry>
+            <entry name="initvalue"/>
+         </properties>
+      </dynradiogroup><dynradiogroup alt="1" enabled="1" fill="b" focus="0" id="UC4RB_SIEBEL_DROP_OBS_COLUMNSs.00" nl="1" quotes="" text="Drop Obsolete Columns" tooltip="Drop obsolete columns" required="0">
+         <properties>
+            <entry listparam="C" name="reference">PCK.AUTOMIC_SIEBEL.PRV.VARA.SYNC_SCHEMA.YES_NO</entry>
+            <entry name="text">Drop Obsolete Columns</entry>
+            <entry name="quotes"/>
+            <entry name="id">UC4RB_SIEBEL_DROP_OBS_COLUMNSs.00</entry>
+            <entry name="enabled">0</entry>
+            <entry name="focus">0</entry>
+            <entry name="tooltip">Drop obsolete columns</entry>
+            <entry name="customfield"/>
+            <entry name="modifiable">1</entry>
+            <entry name="initvalue"/>
+         </properties>
+      </dynradiogroup><dynradiogroup alt="1" enabled="1" fill="b" focus="0" id="UC4RB_SIEBEL_DONT_REBUILDs.00" nl="1" quotes="" text="Dont Rebuild Tables" tooltip="Do not rebuild tables" required="0">
+         <properties>
+            <entry listparam="C" name="reference">PCK.AUTOMIC_SIEBEL.PRV.VARA.SYNC_SCHEMA.YES_NO</entry>
+            <entry name="text">Dont Rebuild Tables</entry>
+            <entry name="quotes"/>
+            <entry name="id">UC4RB_SIEBEL_DONT_REBUILDs.00</entry>
+            <entry name="enabled">0</entry>
+            <entry name="focus">0</entry>
+            <entry name="tooltip">Do not rebuild tables</entry>
+            <entry name="customfield"/>
+            <entry name="modifiable">1</entry>
+            <entry name="initvalue"/>
+         </properties>
+      </dynradiogroup><dynradiogroup alt="1" enabled="1" fill="b" focus="0" id="UC4RB_SIEBEL_IMPORT_INDEXESs.00" nl="1" quotes="" text="Import Indexes" tooltip="Import Indexes? (Option /I)" required="0">
+         <properties>
+            <entry listparam="C" name="reference">PCK.AUTOMIC_SIEBEL.PRV.VARA.SYNC_SCHEMA.YES_NO</entry>
+            <entry name="text">Import Indexes</entry>
+            <entry name="quotes"/>
+            <entry name="id">UC4RB_SIEBEL_IMPORT_INDEXESs.00</entry>
+            <entry name="enabled">0</entry>
+            <entry name="focus">0</entry>
+            <entry name="tooltip">Import Indexes? (Option /I)</entry>
+            <entry name="customfield"/>
+            <entry name="modifiable">1</entry>
+            <entry name="initvalue"/>
+         </properties>
+      </dynradiogroup><dynradiogroup alt="1" enabled="1" fill="b" focus="0" id="UC4RB_SIEBEL_PAR_INDEX_CREATEs.00" nl="1" quotes="" text="Parallel Index Create" tooltip="Parallel index create" required="0">
+         <properties>
+            <entry listparam="C" name="reference">PCK.AUTOMIC_SIEBEL.PRV.VARA.SYNC_SCHEMA.YES_NO</entry>
+            <entry name="text">Parallel Index Create</entry>
+            <entry name="quotes"/>
+            <entry name="id">UC4RB_SIEBEL_PAR_INDEX_CREATEs.00</entry>
+            <entry name="enabled">0</entry>
+            <entry name="focus">0</entry>
+            <entry name="tooltip">Parallel index create</entry>
+            <entry name="customfield"/>
+            <entry name="modifiable">1</entry>
+            <entry name="initvalue"/>
+         </properties>
+      </dynradiogroup><dynradiogroup alt="1" enabled="1" fill="b" focus="0" id="UC4RB_SIEBEL_DROP_OBS_INDEXESs.00" nl="1" quotes="" text="Only Drop Obsolete Indexes" tooltip="Only drop obsolete indexes" required="0">
+         <properties>
+            <entry listparam="C" name="reference">PCK.AUTOMIC_SIEBEL.PRV.VARA.SYNC_SCHEMA.YES_NO</entry>
+            <entry name="text">Only Drop Obsolete Indexes</entry>
+            <entry name="quotes"/>
+            <entry name="id">UC4RB_SIEBEL_DROP_OBS_INDEXESs.00</entry>
+            <entry name="enabled">0</entry>
+            <entry name="focus">0</entry>
+            <entry name="tooltip">Only drop obsolete indexes</entry>
+            <entry name="customfield"/>
+            <entry name="modifiable">1</entry>
+            <entry name="initvalue"/>
+         </properties>
+      </dynradiogroup><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_SIEBEL_TABLESPACEs.00" inputassistance="0" len="" nl="1" regex="" required="0" separator="" showaspassword="0" text="Tablespace" tooltip="Tablespace (Option /S)" upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+         
+         <properties>
+            <entry listparam="C" name="reference">UC_DATATYPE_STRING</entry>
+            <entry name="text">Tablespace</entry>
+            <entry name="multiselect">0</entry>
+            <entry name="separator"/>
+            <entry name="len"/>
+            <entry name="quotes"/>
+            <entry name="id">UC4RB_SIEBEL_TABLESPACEs.00</entry>
+            <entry name="inputassistance">0</entry>
+            <entry name="enabled">0</entry>
+            <entry name="upper">0</entry>
+            <entry name="focus">0</entry>
+            <entry name="showaspassword">0</entry>
+            <entry name="tooltip">Tablespace (Option /S)</entry>
+            <entry name="customfield"/>
+            <entry name="modifiable">1</entry>
+            <entry name="required">0</entry>
+            <entry name="regex"/>
+            <entry name="initvalue"/>
+         </properties>
+      </text><dynradiogroup alt="1" enabled="1" fill="b" focus="0" id="UC4RB_SIEBEL_STOP_ON_ERRs.00" nl="1" quotes="" text="Stop On DDL Error" tooltip="Stop on DDL error?" required="0">
+         <properties>
+            <entry listparam="C" name="reference">PCK.AUTOMIC_SIEBEL.PRV.VARA.SYNC_SCHEMA.YES_NO</entry>
+            <entry name="text">Stop On DDL Error</entry>
+            <entry name="quotes"/>
+            <entry name="id">UC4RB_SIEBEL_STOP_ON_ERRs.00</entry>
+            <entry name="enabled">0</entry>
+            <entry name="focus">0</entry>
+            <entry name="tooltip">Stop on DDL error?</entry>
+            <entry name="customfield"/>
+            <entry name="modifiable">1</entry>
+            <entry name="initvalue"/>
+         </properties>
+      </dynradiogroup><dynradiogroup alt="1" enabled="1" fill="b" focus="0" id="UC4RB_SIEBEL_MERGE_SCHEMAs.00" nl="1" quotes="" text="Merge With Existing Schema" tooltip="Merge with existing schema?" required="0">
+         <properties>
+            <entry listparam="C" name="reference">PCK.AUTOMIC_SIEBEL.PRV.VARA.SYNC_SCHEMA.YES_NO</entry>
+            <entry name="text">Merge With Existing Schema</entry>
+            <entry name="quotes"/>
+            <entry name="id">UC4RB_SIEBEL_MERGE_SCHEMAs.00</entry>
+            <entry name="enabled">0</entry>
+            <entry name="focus">0</entry>
+            <entry name="tooltip">Merge with existing schema?</entry>
+            <entry name="customfield"/>
+            <entry name="modifiable">1</entry>
+            <entry name="initvalue"/>
+         </properties>
+      </dynradiogroup><dynradiogroup alt="1" enabled="1" fill="b" focus="0" id="UC4RB_SIEBEL_ADD_CHANGEs.00" nl="1" quotes="" text="Additive Schema Change Only" tooltip="Additive schema change only? (Option /A)" required="0">
+         <properties>
+            <entry listparam="C" name="reference">PCK.AUTOMIC_SIEBEL.PRV.VARA.SYNC_SCHEMA.YES_NO</entry>
+            <entry name="text">Additive Schema Change Only</entry>
+            <entry name="quotes"/>
+            <entry name="id">UC4RB_SIEBEL_ADD_CHANGEs.00</entry>
+            <entry name="enabled">0</entry>
+            <entry name="focus">0</entry>
+            <entry name="tooltip">Additive schema change only? (Option /A)</entry>
+            <entry name="customfield"/>
+            <entry name="modifiable">1</entry>
+            <entry name="initvalue"/>
+         </properties>
+      </dynradiogroup><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_SIEBEL_REPO_FILE_NAMEs.00" inputassistance="0" len="" nl="1" regex="" required="0" separator="" showaspassword="0" text="Repository Module Filename" tooltip="Repository Module Filename" upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+         
+         <properties>
+            <entry listparam="C" name="reference">UC_DATATYPE_STRING</entry>
+            <entry name="text">Repository Module Filename</entry>
+            <entry name="multiselect">0</entry>
+            <entry name="separator"/>
+            <entry name="len"/>
+            <entry name="quotes"/>
+            <entry name="id">UC4RB_SIEBEL_REPO_FILE_NAMEs.00</entry>
+            <entry name="inputassistance">0</entry>
+            <entry name="enabled">0</entry>
+            <entry name="upper">0</entry>
+            <entry name="focus">0</entry>
+            <entry name="showaspassword">0</entry>
+            <entry name="tooltip">Repository Module Filename</entry>
+            <entry name="customfield"/>
+            <entry name="modifiable">1</entry>
+            <entry name="required">0</entry>
+            <entry name="regex"/>
+            <entry name="initvalue"/>
+         </properties>
+      </text><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_SIEBEL_GRANTEEs.00" inputassistance="0" len="" nl="1" regex="" required="0" separator="" showaspassword="0" text="Grantee For Tables" tooltip="Grantee for tables (Option /G)" upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+         
+         <properties>
+            <entry listparam="C" name="reference">UC_DATATYPE_STRING</entry>
+            <entry name="text">Grantee For Tables</entry>
+            <entry name="multiselect">0</entry>
+            <entry name="separator"/>
+            <entry name="len"/>
+            <entry name="quotes"/>
+            <entry name="id">UC4RB_SIEBEL_GRANTEEs.00</entry>
+            <entry name="inputassistance">0</entry>
+            <entry name="enabled">0</entry>
+            <entry name="upper">0</entry>
+            <entry name="focus">0</entry>
+            <entry name="showaspassword">0</entry>
+            <entry name="tooltip">Grantee for tables (Option /G)</entry>
+            <entry name="customfield"/>
+            <entry name="modifiable">1</entry>
+            <entry name="required">0</entry>
+            <entry name="regex"/>
+            <entry name="initvalue"/>
+         </properties>
+      </text></readpanel></dialog>]]></XUIEDITOR>
+</PROMPTSETXUI>
+<PROMPTSETDATA state="1">
+<DATAEDITOR><![CDATA[<PRPTS idnr="0005595366" client="6000" system="AE10" ontop="1" src="oh"><PRPTBOX><UC4RB_SIEBEL_ENV_SCRIPT_DIRs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_SIEBEL_ENV_SCRIPT_DIR#" ReadFromTable="OPSE">&amp;ENV#?UNIX_SIEBEL_ENV_SCRIPT_DIR</UC4RB_SIEBEL_ENV_SCRIPT_DIRs.00><UC4RB_SIEBEL_ENV_SCRIPTs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_SIEBEL_ENV_SCRIPT#" ReadFromTable="OPSE">&amp;ENV#?UNIX_SIEBEL_ENV_SCRIPT</UC4RB_SIEBEL_ENV_SCRIPTs.00><UC4RB_SIEBEL_SERVER_ROOTs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_SIEBEL_SERVER_ROOT#" ReadFromTable="OPSE">&amp;ENV#?SIEBEL_SERVER_ROOT</UC4RB_SIEBEL_SERVER_ROOTs.00><UC4RB_SIEBEL_DDL_FILE_PATHs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_SIEBEL_DDL_FILE_PATH#" ReadFromTable="OPSE">&amp;UC4RB_SIEBEL_EXTRACTED_DIR#\schema\schema.ddl</UC4RB_SIEBEL_DDL_FILE_PATHs.00><UC4RB_SIEBEL_LOG_FILE_PATHs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_SIEBEL_LOG_FILE_PATH#" ReadFromTable="OPSE">&amp;UC4RB_SIEBEL_IMPORT_PCK_DIR#\log\schema_&amp;$RUNID#.log</UC4RB_SIEBEL_LOG_FILE_PATHs.00><UC4RB_SIEBEL_DB_USERs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_SIEBEL_DB_USER#" ReadFromTable="OPSE"></UC4RB_SIEBEL_DB_USERs.00><UC4RB_SIEBEL_DB_PASSWORDs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_SIEBEL_DB_PASSWORD#" ReadFromTable="OPSE">--10</UC4RB_SIEBEL_DB_PASSWORDs.00><UC4RB_SIEBEL_DATA_SOURCEs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_SIEBEL_DATA_SOURCE#" ReadFromTable="OPSE">&amp;ENV#?SIEBEL_ODBC_DATA_SOURCE</UC4RB_SIEBEL_DATA_SOURCEs.00><UC4RB_SIEBEL_SQL_FILE_PATHs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_SIEBEL_SQL_FILE_PATH#" ReadFromTable="OPSE">&amp;UC4RB_SIEBEL_IMPORT_PCK_DIR#\log\sql_&amp;$RUNID#.log</UC4RB_SIEBEL_SQL_FILE_PATHs.00><UC4RB_SIEBEL_ENCODINGs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_SIEBEL_ENCODING#" ReadFromTable="OPSE">UTF8</UC4RB_SIEBEL_ENCODINGs.00><UC4RB_SIEBEL_IMPORT_TABLESs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_SIEBEL_IMPORT_TABLES#" ReadFromTable="OPSE">Yes</UC4RB_SIEBEL_IMPORT_TABLESs.00><UC4RB_SIEBEL_DROP_OBS_TABLESs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_SIEBEL_DROP_OBS_TABLES#" ReadFromTable="OPSE">No</UC4RB_SIEBEL_DROP_OBS_TABLESs.00><UC4RB_SIEBEL_DROP_OBS_COLUMNSs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_SIEBEL_DROP_OBS_COLUMNS#" ReadFromTable="OPSE">No</UC4RB_SIEBEL_DROP_OBS_COLUMNSs.00><UC4RB_SIEBEL_DONT_REBUILDs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_SIEBEL_DONT_REBUILD#" ReadFromTable="OPSE">No</UC4RB_SIEBEL_DONT_REBUILDs.00><UC4RB_SIEBEL_IMPORT_INDEXESs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_SIEBEL_IMPORT_INDEXES#" ReadFromTable="OPSE">Yes</UC4RB_SIEBEL_IMPORT_INDEXESs.00><UC4RB_SIEBEL_PAR_INDEX_CREATEs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_SIEBEL_PAR_INDEX_CREATE#" ReadFromTable="OPSE">No</UC4RB_SIEBEL_PAR_INDEX_CREATEs.00><UC4RB_SIEBEL_DROP_OBS_INDEXESs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_SIEBEL_DROP_OBS_INDEXES#" ReadFromTable="OPSE">No</UC4RB_SIEBEL_DROP_OBS_INDEXESs.00><UC4RB_SIEBEL_TABLESPACEs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_SIEBEL_TABLESPACE#" ReadFromTable="OPSE">siebel:Siebel</UC4RB_SIEBEL_TABLESPACEs.00><UC4RB_SIEBEL_STOP_ON_ERRs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_SIEBEL_STOP_ON_ERR#" ReadFromTable="OPSE">Yes</UC4RB_SIEBEL_STOP_ON_ERRs.00><UC4RB_SIEBEL_MERGE_SCHEMAs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_SIEBEL_MERGE_SCHEMA#" ReadFromTable="OPSE">Yes</UC4RB_SIEBEL_MERGE_SCHEMAs.00><UC4RB_SIEBEL_ADD_CHANGEs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_SIEBEL_ADD_CHANGE#" ReadFromTable="OPSE">No</UC4RB_SIEBEL_ADD_CHANGEs.00><UC4RB_SIEBEL_REPO_FILE_NAMEs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_SIEBEL_REPO_FILE_NAME#" ReadFromTable="OPSE"></UC4RB_SIEBEL_REPO_FILE_NAMEs.00><UC4RB_SIEBEL_GRANTEEs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_SIEBEL_GRANTEE#" ReadFromTable="OPSE">SSE_ROLE</UC4RB_SIEBEL_GRANTEEs.00></PRPTBOX></PRPTS>]]></DATAEDITOR>
+</PROMPTSETDATA>
+<DOCU_Docu state="1" type="text">
+<DOC/>
+</DOCU_Docu>
+</PRPT>
+</uc-export>

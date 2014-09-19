@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="ISO-8859-15" standalone="no"?><uc-export clientvers="8.0.0">
+<JOBS_UNIX AttrType="UNIX" name="PCK.AUTOMIC_SIEBEL.PRV.JOB.COPY_ARCHIVE_TO_TARGET@UNIX">
+<XHEADER state="1">
+<Title/>
+
+
+<LastUsed/>
+<ArchiveKey1/>
+<ArchiveKey2/>
+<ExtRepDef>1</ExtRepDef>
+<ExtRepAll>0</ExtRepAll>
+<ExtRepNone>0</ExtRepNone>
+<Active>1</Active>
+<OH_SubType/>
+</XHEADER>
+<OUTPUTREG state="1" tidy="1">
+<FileReg/>
+</OUTPUTREG>
+<SYNCREF state="1">
+<Syncs/>
+</SYNCREF>
+<ATTR_JOBS state="1">
+<Queue>CLIENT_QUEUE</Queue>
+<StartType/>
+<HostDst>UNIX|&lt;UNIX&gt;|HOST</HostDst>
+<HostATTR_Type>UNIX</HostATTR_Type>
+<CodeName/>
+<Login/>
+<IntAccount/>
+<AutoDeactNo>0</AutoDeactNo>
+<AutoDeact1ErrorFree>0</AutoDeact1ErrorFree>
+<AutoDeactErrorFree>0</AutoDeactErrorFree>
+<DeactWhen/>
+<DeactDelay>0</DeactDelay>
+<AutoDeactAlways>1</AutoDeactAlways>
+<AttDialog>0</AttDialog>
+<ActAtRun>0</ActAtRun>
+<Consumption>0</Consumption>
+<UC4Priority>0</UC4Priority>
+<MaxParallel2>0</MaxParallel2>
+<MpElse1>1</MpElse1>
+<MpElse2>0</MpElse2>
+<TZ/>
+</ATTR_JOBS>
+<ATTR_UNIX state="1">
+<OutputDb>1</OutputDb>
+<OutputDbErr>0</OutputDbErr>
+<OutputFile>0</OutputFile>
+<ShellScript>1</ShellScript>
+<Command>0</Command>
+<Priority>0</Priority>
+<Shell/>
+<ShellOptions/>
+<Com/>
+</ATTR_UNIX>
+<RUNTIME state="1">
+<MaxRetCode>0</MaxRetCode>
+<MrcExecute/>
+<MrcElseE>0</MrcElseE>
+<FcstStatus>0| </FcstStatus>
+<Ert>1</Ert>
+<ErtMethodDef>1</ErtMethodDef>
+<ErtMethodFix>0</ErtMethodFix>
+<ErtFix>0</ErtFix>
+<ErtDynMethod>2|Average</ErtDynMethod>
+<ErtMethodDyn>0</ErtMethodDyn>
+<ErtCnt>0</ErtCnt>
+<ErtCorr>0</ErtCorr>
+<ErtIgn>0</ErtIgn>
+<ErtIgnFlg>0</ErtIgnFlg>
+<ErtMinCnt>0</ErtMinCnt>
+<MrtMethodNone>1</MrtMethodNone>
+<MrtMethodFix>0</MrtMethodFix>
+<MrtFix>0</MrtFix>
+<MrtMethodErt>0</MrtMethodErt>
+<MrtErt>0</MrtErt>
+<MrtMethodDate>0</MrtMethodDate>
+<MrtDays>0</MrtDays>
+<MrtTime>00:00</MrtTime>
+<MrtTZ/>
+<SrtMethodNone>1</SrtMethodNone>
+<SrtMethodFix>0</SrtMethodFix>
+<SrtFix>0</SrtFix>
+<SrtMethodErt>0</SrtMethodErt>
+<SrtErt>0</SrtErt>
+<MrtCancel>0</MrtCancel>
+<MrtExecute>0</MrtExecute>
+<MrtExecuteObj/>
+</RUNTIME>
+<DYNVALUES state="1">
+<dyntree>
+<node content="1" id="VALUE" name="Variables" parent="" type="VALUE">
+<VALUE state="1">
+<Values/>
+<Mode>0</Mode>
+</VALUE>
+</node>
+</dyntree>
+</DYNVALUES>
+<ROLLBACK state="1" tidy="1">
+<RollbackFlag>0</RollbackFlag>
+<CBackupObj/>
+<CRollbackObj/>
+<FBackupPath/>
+<FDeleteBefore>0</FDeleteBefore>
+<FInclSubDirs>0</FInclSubDirs>
+</ROLLBACK>
+<PRE_SCRIPT mode="1" replacementmode="1" state="1" tidy="0">
+<PSCRI><![CDATA[:SET &PROMPTSET# = "PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_ARCHIVE_TO_TARGET"
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.START_STOP_JOB_ACCORDING_TO_AGENT_OS]]></PSCRI>
+</PRE_SCRIPT>
+<SCRIPT mode="1" state="1" tidy="0">
+<MSCRI><![CDATA[
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_HEADER_PARAM_VALIDATION
+
+:DEFINE &STRING_ARR#,string,30
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.NORMALIZE_PATH "UC4RB_CONVERTED_STRING" = "UC4RB_SIEBEL_SOURCE_DIR"
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.NORMALIZE_PATH "UC4RB_CONVERTED_STRING" = "UC4RB_SIEBEL_TARGET_DIR"
+
+:SET &UC4RB_SOURCE_FILE# = "&UC4RB_SIEBEL_SOURCE_DIR#/&UC4RB_SIEBEL_SOURCE_PCK_NAME#"
+:SET &UC4RB_TARGET_FILE# = "&UC4RB_SIEBEL_TARGET_DIR#/&UC4RB_SIEBEL_TARGET_PCK_NAME#"
+
+:SET &UC4RB_LOGGING_PARAMETER# = "Siebel Source Host"
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_PARAM &UC4RB_LOGGING_PARAMETER_VAL# = &UC4RB_SIEBEL_SOURCE_HOST#
+
+:SET &UC4RB_LOGGING_PARAMETER# = "Siebel Source Dir"
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_PARAM &UC4RB_LOGGING_PARAMETER_VAL# = &UC4RB_SIEBEL_SOURCE_DIR#
+
+:SET &UC4RB_LOGGING_PARAMETER# = "Siebel Source Archive Name"
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_PARAM &UC4RB_LOGGING_PARAMETER_VAL# = &UC4RB_SIEBEL_SOURCE_PCK_NAME#
+
+:SET &UC4RB_LOGGING_PARAMETER# = "Siebel Target Dir"
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_PARAM &UC4RB_LOGGING_PARAMETER_VAL# = &UC4RB_SIEBEL_TARGET_DIR#
+
+:SET &UC4RB_LOGGING_PARAMETER# = "Siebel Target Archive Name"
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_PARAM &UC4RB_LOGGING_PARAMETER_VAL# = &UC4RB_SIEBEL_TARGET_PCK_NAME#
+
+errors=0
+
+! Check if source archive file exists
+:SET &UC4RB_CHECKME# = &UC4RB_SOURCE_FILE#
+:INCLUDE PCK.AUTOMIC_SHARED.PUB.INCLUDE.CHECK_UNIX_SHELL_FILE_EXISTS
+
+if [ $EXIST -eq 0 ]
+then
+:   SET &UC4RB_LOGGING_PARAMETER# = "Siebel source archive file"
+:   SET &UC4RB_LOGGING_ERROR# = "Siebel source archive &UC4RB_CHECKME# does not exist"
+:   INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_ERROR_PARAMETER
+    errors=1
+else
+  if [ "$ISFILE" -eq "0" ] ;
+  then
+:   SET &UC4RB_LOGGING_PARAMETER# = "Siebel source archive file"
+:   SET &UC4RB_LOGGING_ERROR# = "Siebel source archive &UC4RB_CHECKME# exists but is not a file "
+:   INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_ERROR_PARAMETER
+   errors=2
+  fi
+fi
+
+! Check if target dir exists
+: SET &UC4RB_CONVERTED_STRING# = "&UC4RB_SIEBEL_TARGET_DIR#"
+: INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.ENSURE_DIRECTORY_EXISTS_UNIX
+
+:IF &UC4RB_SIEBEL_OVERWRITE# = 'No'
+:  SET &UC4RB_CHECKME# = &UC4RB_TARGET_FILE#
+:  INCLUDE PCK.AUTOMIC_SHARED.PUB.INCLUDE.CHECK_UNIX_SHELL_FILE_EXISTS
+
+   if [ $EXIST -eq 1 ]
+    then
+:    SET &UC4RB_LOGGING_PARAMETER# = "Siebel target archive file"
+:    SET &UC4RB_LOGGING_ERROR# = "Siebel target archive &UC4RB_CHECKME# already existed and overwrite flag set to No"
+:    INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_ERROR_PARAMETER
+     errors=1
+   fi
+:ENDIF
+
+
+if [ $errors -ne 0 ]
+then
+  exit $errors
+fi
+
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_HEADER_EXECUTION
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.CHANGE_FOLDER_TO_AGENT_BIN
+
+:SET &UC4RB_LOGGING_INFO# = "Copy siebel package from &UC4RB_SOURCE_FILE# to &UC4RB_TARGET_FILE# ..."
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_INFO
+\cp -f -p "&UC4RB_SOURCE_FILE#" "&UC4RB_TARGET_FILE#"
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.CHECK_RETURN_CODE_UNIX_SHELL]]></MSCRI>
+</SCRIPT>
+<OUTPUTSCAN state="1">
+<Inherit>N</Inherit>
+<filterobjects/>
+<HostFsc/>
+<LoginFsc/>
+</OUTPUTSCAN>
+<POST_SCRIPT mode="1" replacementmode="1" state="1" tidy="1">
+<OSCRI/>
+</POST_SCRIPT>
+<DOCU_Docu state="1" type="text">
+<DOC/>
+</DOCU_Docu>
+</JOBS_UNIX>
+</uc-export>

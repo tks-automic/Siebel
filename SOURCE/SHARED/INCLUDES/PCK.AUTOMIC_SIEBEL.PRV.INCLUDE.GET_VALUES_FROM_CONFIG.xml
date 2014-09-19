@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="ISO-8859-15" standalone="no"?><uc-export clientvers="8.0.0">
+<JOBI client="6000" name="PCK.AUTOMIC_SIEBEL.PRV.INCLUDE.GET_VALUES_FROM_CONFIG" system="AE10">
+<HEADER state="1">
+<Title/>
+
+
+<LastUsed/>
+<ArchiveKey1/>
+<ArchiveKey2/>
+<OH_SubType/>
+</HEADER>
+<SCRIPT mode="1" state="1" tidy="0">
+<MSCRI><![CDATA[:SET &HND# = PREP_PROCESS_PROMPTSET(&PROMPTSET#)
+:PROCESS &HND#
+:  SET &VAR# = GET_PROCESS_LINE(&HND#,1)
+:  SET &VAR_VALUE# = GET_SCRIPT_VAR(&VAR#)
+
+:  SET &POS# = STR_FIND(&VAR_VALUE#, "?")
+:  IF &POS# > 3
+:    SET &END_CONFIG_VARA_NAME# = &POS# - 1
+:    SET &CONFIG_VARA# = STR_CUT(&VAR_VALUE#, 1, &END_CONFIG_VARA_NAME#)
+
+:    SET &EXIST# = GET_OBJECT_TYPE("&CONFIG_VARA#")
+:    IF &EXIST# <> 20223
+:      SET &START_CONFIG_VARA_KEY# = &POS# + 1
+:      SET &CONFIG_VARA_KEY# = STR_CUT(&VAR_VALUE#, &START_CONFIG_VARA_KEY#)
+
+!      Get value from configuration objects
+:      SET &HND2#=PREP_PROCESS_VAR(&CONFIG_VARA#)
+:      PROCESS &HND2#
+:        SET &KEY# = GET_PROCESS_LINE(&HND2#,1)
+:        IF &KEY# EQ &CONFIG_VARA_KEY#
+:          SET &VALUE# = GET_PROCESS_LINE(&HND2#,2)
+:          SET_SCRIPT_VAR &VAR# = &VALUE#
+:          P "&VAR# = &VALUE#"
+:        ENDIF
+:      ENDPROCESS
+:      CLOSE_PROCESS &HND2#
+
+:    ENDIF
+:  ENDIF
+:ENDPROCESS
+:CLOSE_PROCESS &HND#]]></MSCRI>
+</SCRIPT>
+<DOCU_Docu state="1" type="text">
+<DOC/>
+</DOCU_Docu>
+</JOBI>
+</uc-export>

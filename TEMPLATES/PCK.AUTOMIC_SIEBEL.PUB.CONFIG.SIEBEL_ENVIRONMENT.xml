@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="ISO-8859-15" standalone="no"?><uc-export clientvers="8.0.0">
+<VARA OVD_VRName="FREI" client="6000" data_type="STATIC" name="PCK.AUTOMIC_SIEBEL.PUB.CONFIG.SIEBEL_ENVIRONMENT" replacementmode="2" system="AE10">
+<HEADER state="1">
+<Title>Siebel Server</Title>
+
+
+<LastUsed/>
+<ArchiveKey1/>
+<ArchiveKey2/>
+<OH_SubType>STATIC</OH_SubType>
+</HEADER>
+<ATTR_VARA state="1">
+<Type>C|Text</Type>
+<lblSource>Static</lblSource>
+<source>STATIC</source>
+<VRName>FREI|Freely selected</VRName>
+<NotFoundErr>0</NotFoundErr>
+<NotFoundDef>1</NotFoundDef>
+<ShareN>0</ShareN>
+<ShareL>0</ShareL>
+<ShareR>0</ShareR>
+<MaxValue_C>1024</MaxValue_C>
+<CheckMax_C>0</CheckMax_C>
+<uppercase>0</uppercase>
+<sortColumn>0</sortColumn>
+<sortDirection>0</sortDirection>
+</ATTR_VARA>
+<VARA state="1">
+<Variables>
+<row Name="SIEBEL_CFG_DATA_SOURCE" Value=" " Value1="Datasource ( as in .cfg file ) that Siebel Tools connect to" Value2=" " Value3=" " Value4=" "/>
+<row Name="SIEBEL_CLIENT_ROOT" Value=" " Value1="The Siebel client directory" Value2=" " Value3=" " Value4=" "/>
+<row Name="SIEBEL_ENTRPR_SERVER" Value=" " Value1="The Siebel Enterprise name" Value2=" " Value3=" " Value4=" "/>
+<row Name="SIEBEL_GATEWAY_SERVER" Value=" " Value1="The Siebel gateway server address" Value2=" " Value3=" " Value4=" "/>
+<row Name="SIEBEL_LANGUAGES" Value=" " Value1="Comma separated list of the installed languages" Value2=" " Value3=" " Value4=" "/>
+<row Name="SIEBEL_OBJECT_MANAGERS" Value=" " Value1="Comma separated list of Siebel Object Managers" Value2=" " Value3=" " Value4=" "/>
+<row Name="SIEBEL_ODBC_DATA_SOURCE" Value=" " Value1="The ODBC system data source name that Siebel server uses to connect to the Siebel database on the RDBMS" Value2=" " Value3=" " Value4=" "/>
+<row Name="SIEBEL_PORT" Value=" " Value1="The port number belongs to the SCBroker component" Value2=" " Value3=" " Value4=" "/>
+<row Name="SIEBEL_REPOSITORY_NAME" Value=" " Value1="The name of the Siebel Repository" Value2=" " Value3=" " Value4=" "/>
+<row Name="SIEBEL_RETRY_NUMBER" Value=" " Value1="Number of open session retries. Siebel will try to open a new session after a session is expired" Value2=" " Value3=" " Value4=" "/>
+<row Name="SIEBEL_ROOT" Value=" " Value1="The Siebel home directory" Value2=" " Value3=" " Value4=" "/>
+<row Name="SIEBEL_SCRIPT_CFG_FILE" Value=" " Value1="Siebel client config file name" Value2=" " Value3=" " Value4=" "/>
+<row Name="SIEBEL_SERVER_ROOT" Value=" " Value1="The Siebel server root directory" Value2=" " Value3=" " Value4=" "/>
+<row Name="SIEBEL_SERVERS" Value=" " Value1="Comma separated list siebel servers" Value2=" " Value3=" " Value4=" "/>
+<row Name="SIEBEL_SESSION_TIMEOUT" Value=" " Value1="Transaction timeout (in seconds) on the client side. A session define time of user's inactivity" Value2=" " Value3=" " Value4=" "/>
+<row Name="SIEBEL_SRF_FILE" Value="SIEBEL_SIA.srf" Value1="The Siebel SRF file" Value2=" " Value3=" " Value4=" "/>
+<row Name="SIEBEL_TABLE_OWNER" Value=" " Value1="The Siebel Database Table Owner" Value2=" " Value3=" " Value4=" "/>
+<row Name="SIEBEL_TOOLS_CONFIG_FILE" Value=" " Value1="The name of the config file of the siebel tools" Value2=" " Value3=" " Value4=" "/>
+<row Name="SIEBEL_TOOLS_ROOT" Value=" " Value1="The installation or root directory for Siebel Tools" Value2=" " Value3=" " Value4=" "/>
+<row Name="SIEBEL_TXT_TIMEOUT" Value=" " Value1="Transaction timeout (in milliseconds). A Siebel transaction is a series of user actions on a Siebel application" Value2=" " Value3=" " Value4=" "/>
+<row Name="SIEBEL_URL" Value=" " Value1="Hostname/IP address of the siebel machine" Value2=" " Value3=" " Value4=" "/>
+<row Name="SIEBEL_WS_PUB_DIR" Value=" " Value1="Siebel web server public directory" Value2=" " Value3=" " Value4=" "/>
+<row Name="UNIX_SIEBEL_ENV_SCRIPT" Value=" " Value1="The file name of the Environment Script. (Unix only). Default: siebenv.sh" Value2=" " Value3=" " Value4=" "/>
+<row Name="UNIX_SIEBEL_ENV_SCRIPT_DIR" Value=" " Value1="The directory where the Siebel Environment script is placed. (Unix only)" Value2=" " Value3=" " Value4=" "/>
+<row Name="WIN_SIEBEL_SERVICES" Value=" " Value1="Comma-separated list of Windows Siebel Server Services" Value2=" " Value3=" " Value4=" "/>
+</Variables>
+</VARA>
+<DOCU_Docu state="1" type="text">
+<DOC/>
+</DOCU_Docu>
+</VARA>
+</uc-export>

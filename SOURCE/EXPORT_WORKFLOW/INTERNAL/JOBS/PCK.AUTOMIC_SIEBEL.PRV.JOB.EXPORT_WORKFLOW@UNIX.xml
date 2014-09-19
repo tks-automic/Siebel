@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="ISO-8859-15" standalone="no"?><uc-export clientvers="8.0.0">
+<JOBS_UNIX AttrType="UNIX" name="PCK.AUTOMIC_SIEBEL.PRV.JOB.EXPORT_WORKFLOW@UNIX">
+<XHEADER state="1">
+<Title/>
+
+
+<LastUsed/>
+<ArchiveKey1/>
+<ArchiveKey2/>
+<ExtRepDef>1</ExtRepDef>
+<ExtRepAll>0</ExtRepAll>
+<ExtRepNone>0</ExtRepNone>
+<Active>1</Active>
+<OH_SubType/>
+</XHEADER>
+<OUTPUTREG state="1" tidy="1">
+<FileReg/>
+</OUTPUTREG>
+<SYNCREF state="1">
+<Syncs/>
+</SYNCREF>
+<ATTR_JOBS state="1">
+<Queue>CLIENT_QUEUE</Queue>
+<StartType/>
+<HostDst>UNIX|&lt;UNIX&gt;|HOST</HostDst>
+<HostATTR_Type>UNIX</HostATTR_Type>
+<CodeName/>
+<Login/>
+<IntAccount/>
+<AutoDeactNo>1</AutoDeactNo>
+<AutoDeact1ErrorFree>0</AutoDeact1ErrorFree>
+<AutoDeactErrorFree>0</AutoDeactErrorFree>
+<DeactWhen/>
+<DeactDelay>0</DeactDelay>
+<AutoDeactAlways>0</AutoDeactAlways>
+<AttDialog>0</AttDialog>
+<ActAtRun>0</ActAtRun>
+<Consumption>0</Consumption>
+<UC4Priority>0</UC4Priority>
+<MaxParallel2>0</MaxParallel2>
+<MpElse1>1</MpElse1>
+<MpElse2>0</MpElse2>
+<TZ/>
+</ATTR_JOBS>
+<ATTR_UNIX state="1">
+<OutputDb>1</OutputDb>
+<OutputDbErr>0</OutputDbErr>
+<OutputFile>0</OutputFile>
+<ShellScript>1</ShellScript>
+<Command>0</Command>
+<Priority>0</Priority>
+<Shell/>
+<ShellOptions/>
+<Com/>
+</ATTR_UNIX>
+<RUNTIME state="1">
+<MaxRetCode>0</MaxRetCode>
+<MrcExecute/>
+<MrcElseE>0</MrcElseE>
+<FcstStatus>0| </FcstStatus>
+<Ert>11</Ert>
+<ErtMethodDef>1</ErtMethodDef>
+<ErtMethodFix>0</ErtMethodFix>
+<ErtFix>0</ErtFix>
+<ErtDynMethod>2|Average</ErtDynMethod>
+<ErtMethodDyn>0</ErtMethodDyn>
+<ErtCnt>0</ErtCnt>
+<ErtCorr>0</ErtCorr>
+<ErtIgn>0</ErtIgn>
+<ErtIgnFlg>0</ErtIgnFlg>
+<ErtMinCnt>0</ErtMinCnt>
+<MrtMethodNone>1</MrtMethodNone>
+<MrtMethodFix>0</MrtMethodFix>
+<MrtFix>0</MrtFix>
+<MrtMethodErt>0</MrtMethodErt>
+<MrtErt>0</MrtErt>
+<MrtMethodDate>0</MrtMethodDate>
+<MrtDays>0</MrtDays>
+<MrtTime>00:00</MrtTime>
+<MrtTZ/>
+<SrtMethodNone>1</SrtMethodNone>
+<SrtMethodFix>0</SrtMethodFix>
+<SrtFix>0</SrtFix>
+<SrtMethodErt>0</SrtMethodErt>
+<SrtErt>0</SrtErt>
+<MrtCancel>0</MrtCancel>
+<MrtExecute>0</MrtExecute>
+<MrtExecuteObj/>
+</RUNTIME>
+<DYNVALUES state="1">
+<dyntree>
+<node content="1" id="VALUE" name="Variables" parent="" type="VALUE">
+<VALUE state="1">
+<Values/>
+<Mode>0</Mode>
+</VALUE>
+</node>
+</dyntree>
+</DYNVALUES>
+<ROLLBACK state="1" tidy="1">
+<RollbackFlag>0</RollbackFlag>
+<CBackupObj/>
+<CRollbackObj/>
+<FBackupPath/>
+<FDeleteBefore>0</FDeleteBefore>
+<FInclSubDirs>0</FInclSubDirs>
+</ROLLBACK>
+<PRE_SCRIPT mode="1" replacementmode="1" state="1" tidy="0">
+<PSCRI><![CDATA[:SET &PROMPTSET# = "PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.EXPORT_WORKFLOW"
+:INC PCK.AUTOMIC_SIEBEL.PRV.INCLUDE.GET_VALUES_FROM_CONFIG
+:SET &PROMPTSET# = "PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.SIEBEL_JAVA_PROPERTIES"
+:INC PCK.AUTOMIC_SIEBEL.PRV.INCLUDE.GET_VALUES_FROM_CONFIG
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.START_STOP_JOB_ACCORDING_TO_AGENT_OS]]></PSCRI>
+</PRE_SCRIPT>
+<SCRIPT mode="1" state="1" tidy="0">
+<MSCRI><![CDATA[:DEFINE &STRING_ARR#, string, 30
+
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_HEADER_PARAM_VALIDATION
+
+:SET &UC4RB_LOGGING_PARAMETER# = "Server Url"
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_PARAM &UC4RB_LOGGING_PARAMETER_VAL# = &UC4RB_SIEBEL_SERVER_URL#
+
+:SET &UC4RB_LOGGING_PARAMETER# = "Port"
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_PARAM &UC4RB_LOGGING_PARAMETER_VAL# = &UC4RB_SIEBEL_PORT#
+
+:SET &UC4RB_LOGGING_PARAMETER# = "Siebel Enterprise"
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_PARAM &UC4RB_LOGGING_PARAMETER_VAL# = &UC4RB_SIEBEL_ENTERPRISE#
+
+:SET &UC4RB_LOGGING_PARAMETER# = "Siebel Username"
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_PARAM &UC4RB_LOGGING_PARAMETER_VAL# = &UC4RB_SIEBEL_USER#
+
+:SET &UC4RB_LOGGING_PARAMETER# = "Object Manager"
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_PARAM &UC4RB_LOGGING_PARAMETER_VAL# = &UC4RB_SIEBEL_OBJECT_MANAGER#
+
+:SET &UC4RB_LOGGING_PARAMETER# = "Export Directory"
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_PARAM &UC4RB_LOGGING_PARAMETER_VAL# = &UC4RB_SIEBEL_EXPORT_DIR#
+
+:SET &UC4RB_LOGGING_PARAMETER# = "Flow Search Specification"
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_PARAM &UC4RB_LOGGING_PARAMETER_VAL# = &UC4RB_SIEBEL_FLOWSEARCH_SPEC#
+
+:SET &UC4RB_LOGGING_PARAMETER# = "Repository"
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_PARAM &UC4RB_LOGGING_PARAMETER_VAL# = &UC4RB_SIEBEL_REPOSITORY#
+
+! apply sudo
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.SUDOERS_HEADER
+errors=0
+
+:SET &UC4RB_CHECKME# = &UC4RB_SIEBEL_EXPORT_DIR#
+:INCLUDE PCK.AUTOMIC_SHARED.PUB.INCLUDE.CHECK_UNIX_SHELL_FILE_EXISTS
+if [ $ISFILE -eq 1 ]
+then
+:   SET &UC4RB_LOGGING_PARAMETER# = "Export directory"
+:   SET &UC4RB_LOGGING_ERROR# = "&UC4RB_SIEBEL_EXPORT_DIR# is a file"
+:   INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_ERROR_PARAMETER
+    errors=1
+fi
+
+if [ $EXIST -eq 0 ]
+then
+    mkdir -p "&UC4RB_SIEBEL_EXPORT_DIR#"
+fi
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.CHECK_RETURN_CODE_UNIX_SHELL
+
+if [ $errors -ne 0 ]
+then
+  exit $errors
+fi
+
+:SET &UC4RB_SIEBEL_EXPORT_DIR_TMP# = STR_CAT(&UC4RB_SIEBEL_EXPORT_DIR#, "/temp_&$RUNID#")
+:PUB &UC4RB_SIEBEL_EXPORT_DIR_TMP#,,TOP
+
+:INC PCK.AUTOMIC_SIEBEL.PRV.INCLUDE.SET_SIEBEL_PROPERTIES
+:SET &COMMAND# = "java -jar siebeltool.jar siebel  ExportWorkflow"
+:SET &COMMAND# = STR_CAT(&COMMAND#, ' -h &UC4RB_SIEBEL_SERVER_URL# -pt &UC4RB_SIEBEL_PORT#')
+:SET &COMMAND# = STR_CAT(&COMMAND#, ' -su &UC4RB_SIEBEL_USER# -sp &UC4RB_SIEBEL_PASSWORD#')
+:SET &COMMAND# = STR_CAT(&COMMAND#, ' -e "&UC4RB_SIEBEL_ENTERPRISE#" -om &UC4RB_SIEBEL_OBJECT_MANAGER#')
+:SET &COMMAND# = STR_CAT(&COMMAND#, ' -ex "&UC4RB_SIEBEL_EXPORT_DIR_TMP#"')
+:SET &UC4RB_SIEBEL_FLOWSEARCH_TMP# = STR_SUB(&UC4RB_SIEBEL_FLOWSEARCH_SPEC#,'"','\"')
+:SET &COMMAND# = STR_CAT(&COMMAND#, ' -s "&UC4RB_SIEBEL_FLOWSEARCH_TMP#"')
+:SET &COMMAND# = STR_CAT(&COMMAND#, ' -rp "&UC4RB_SIEBEL_REPOSITORY#"')
+:SET &COMMAND# = STR_CAT(&COMMAND#, "&SIEBEL_PROPERTIES#")
+!Begin my code
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_HEADER_EXECUTION
+
+mkdir -p "&UC4RB_SIEBEL_EXPORT_DIR_TMP#"
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.CHECK_RETURN_CODE_UNIX_SHELL
+:PUB &UC4RB_SIEBEL_EXPORT_DIR_TMP#,,TOP
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.CHANGE_FOLDER_TO_AGENT_BIN
+&COMMAND#
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.CHECK_RETURN_CODE_UNIX_SHELL
+! apply sudo
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.SUDOERS_FOOTER
+!End my code]]></MSCRI>
+</SCRIPT>
+<OUTPUTSCAN state="1">
+<Inherit>N</Inherit>
+<filterobjects/>
+<HostFsc/>
+<LoginFsc/>
+</OUTPUTSCAN>
+<POST_SCRIPT mode="1" replacementmode="1" state="1" tidy="0">
+<OSCRI><![CDATA[:SET &UC4RB_OUT_NUM_EXPORTED_WF# = "0"
+
+:SET &hnd# = PREP_PROCESS_REPORT(,, "REP", "*Number of workflow exported: *")
+:PROCESS &hnd#
+:  SET &line# = GET_PROCESS_LINE(&hnd#,1)
+:  SET &LENGTH# = STR_FIND(&line#, "exported: ")
+:  SET &LENGTH# = &LENGTH# + 10
+:  SET &UC4RB_OUT_NUM_EXPORTED_WF# = STR_CUT(&line#, &LENGTH#)
+:ENDPROCESS
+
+:PUB &UC4RB_OUT_NUM_EXPORTED_WF#,,TOP]]></OSCRI>
+</POST_SCRIPT>
+<DOCU_Docu state="1" type="text">
+<DOC/>
+</DOCU_Docu>
+</JOBS_UNIX>
+</uc-export>

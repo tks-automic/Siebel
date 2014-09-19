@@ -1,0 +1,1051 @@
+<?xml version="1.0" encoding="ISO-8859-15" standalone="no"?><uc-export clientvers="8.0.0">
+<JOBP AllowExternal="1" name="PCK.AUTOMIC_SIEBEL.PUB.ACTION.COPY_FILES_TO_TARGET">
+<XHEADER state="1">
+<Title>Copy Files to Target Siebel System</Title>
+
+
+<LastUsed/>
+<ArchiveKey1/>
+<ArchiveKey2/>
+<ExtRepDef>1</ExtRepDef>
+<ExtRepAll>0</ExtRepAll>
+<ExtRepNone>0</ExtRepNone>
+<Active>1</Active>
+<OH_SubType/>
+</XHEADER>
+<SYNCREF state="1">
+<Syncs/>
+</SYNCREF>
+<ATTR_JOBP state="1">
+<Queue>CLIENT_QUEUE</Queue>
+<ChildQueue/>
+<StartType/>
+<IntAccount/>
+<AutoDeactNo>1</AutoDeactNo>
+<AutoDeact1ErrorFree>0</AutoDeact1ErrorFree>
+<AutoDeactErrorFree>0</AutoDeactErrorFree>
+<DeactWhen/>
+<AutoDeactAlways>0</AutoDeactAlways>
+<DeactDelay>0</DeactDelay>
+<ActAtRun>1</ActAtRun>
+<UC4Priority>0</UC4Priority>
+<MaxParallel2>0</MaxParallel2>
+<ReuseHG>1</ReuseHG>
+<MpElse1>1</MpElse1>
+<MpElse2>0</MpElse2>
+<TZ/>
+<RWhen/>
+<RExecute/>
+<JPA_SubType/>
+</ATTR_JOBP>
+<JOBP state="1">
+<JobpStruct mode="design">
+<task Alias="" BranchType="0" Col="1" Idnr="0" Lnr="1" OH_TITLE="" OType="&lt;START&gt;" Object="START" ParentAlias="" ParentObject="" Row="2" State="" Text1="" Text2="" Text3="&lt;START&gt;" Text4="" Text5="" Text6="" runid="0" subType="" taskicon="&lt;START&gt;">
+<checkpoint RollbackFlag="0" RunPerPatch="0" RunPerTarget="0" TcpADays="0" TcpATime="00:00" TcpATimeTZ="" TcpExecute="" TcpOn="0" promptatgen="0" showprompt="0"/>
+<after ActFlg="1" AtimOn="0" ErlstStDays="0" ErlstStTime="00:00" ErlstStTimeTZ="" HoldFlg="0"/>
+<when ChkWhenExec="0" LtstEnd="0" LtstEndDays="0" LtstEndTime="00:00" LtstSt="0" LtstStDays="0" LtstStTime="00:00" LtstTimeTZ="" WCTypeAND="1" WCTypeOR="0" WElseA="0" WElseH="0" WElseS="1" WElseX="0" WhenExecute="" WtimOn="0"/>
+<preconditions CCTypeOne="1" CaleOn="0">
+<PreCon>
+<conditions id="CONDITIONS"/>
+</PreCon>
+</preconditions>
+<predecessors/>
+<runtime MrtCancel="0" MrtDays="0" MrtErt="0" MrtExecute="0" MrtExecuteObj="" MrtFix="0" MrtMethodDate="0" MrtMethodErt="0" MrtMethodFix="0" MrtMethodNone="1" MrtOn="1" MrtTZ="" MrtTime="00:00" SrtErt="0" SrtFix="0" SrtMethodErt="0" SrtMethodFix="0" SrtMethodNone="1"/>
+<result ChkRExec="0" RElseHalt="0" RElseIgn="0" RElseJPAbend="0" RExecFlag="0" RExecute="" RRepMTimes="0" RRepOn="0" RRepWait="0" RWhen=""/>
+<dynvalues>
+<dyntree>
+<node content="1" id="VALUE" name="Variables" parent="" type="TASKVALUE">
+<VALUE state="2">
+<Values/>
+<Mode>OH_OV_Mode</Mode>
+</VALUE>
+</node>
+<node content="1" id="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET" name="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET" parent="PPRPTS" type="PPROMPTSET">
+<PROMPTSET name="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET">
+<PRPTBOX promptset="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET">
+<UC4RB_SIEBEL_DEPL_PKG_DIRs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_DEPL_PKG_DIR#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET"/>
+<UC4RB_SIEBEL_DEPL_PKG_FILENAMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_DEPL_PKG_FILENAME#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET"/>
+<UC4RB_SIEBEL_FILE_BACKUP_DIRs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_FILE_BACKUP_DIR#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET"/>
+<UC4RB_SIEBEL_LANGUAGESs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_LANGUAGES#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET">&amp;ENV#?SIEBEL_LANGUAGES</UC4RB_SIEBEL_LANGUAGESs.00>
+<UC4RB_SIEBEL_SERVER_HOME_DIRs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_SERVER_HOME_DIR#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET">&amp;ENV#?SIEBEL_SERVER_ROOT</UC4RB_SIEBEL_SERVER_HOME_DIRs.00>
+<UC4RB_SIEBEL_WS_PUB_DIRs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_WS_PUB_DIR#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET">&amp;ENV#?SIEBEL_WS_PUB_DIR</UC4RB_SIEBEL_WS_PUB_DIRs.00>
+</PRPTBOX>
+</PROMPTSET>
+</node>
+<node content="1" id="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT" name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT" parent="PPRPTS" type="PPROMPTSET">
+<PROMPTSET name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT">
+<PRPTBOX promptset="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT">
+<AGENTs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="AGENT#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT"/>
+<LOGINs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="LOGIN#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT"/>
+</PRPTBOX>
+</PROMPTSET>
+</node>
+<node content="1" id="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO" name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO" parent="PPRPTS" type="PPROMPTSET">
+<PROMPTSET name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO">
+<PRPTBOX promptset="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO">
+<UC4RB_SUDO_PASSWORDs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SUDO_PASSWORD#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO"/>
+<UC4RB_SUDO_USERs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SUDO_USER#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO"/>
+<UC4RB_USE_SUDOs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_USE_SUDO#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO">None</UC4RB_USE_SUDOs.00>
+</PRPTBOX>
+</PROMPTSET>
+</node>
+</dyntree>
+</dynvalues>
+<CIT CCTypeOne="1" CaleOn="0"/>
+<calendars CCTypeAll="0" CCTypeExt="0" CCTypeNone="0" CCTypeOne="1" CaleOn="0"/>
+<postconditions CCTypeOne="1" CaleOn="0">
+<PostCon>
+<conditions id="CONDITIONS"/>
+</PostCon>
+</postconditions>
+</task>
+<task Alias="VALIDATE" BranchType="0" Col="2" Idnr="5630752" Lnr="2" OH_TITLE="" OType="JOBP" Object="PCK.AUTOMIC_SIEBEL.PRV.ACTION.COPY_FILES_VALIDATE_PARAM" ParentAlias="" ParentObject="" Row="2" State="" Text1="" Text2="W" Text3="JOBP|jobp_l" Text4="" Text5="" Text6="" runid="0" subType="" taskicon="JOBP|jobp_l">
+<checkpoint RollbackFlag="1" RunPerPatch="0" RunPerTarget="0" TcpADays="0" TcpATime="00:00" TcpATimeTZ="" TcpExecute="" TcpOn="0" promptatgen="0" showprompt="0"/>
+<after ActFlg="1" AtimOn="0" ErlstStDays="0" ErlstStTime="00:00" ErlstStTimeTZ="" HoldFlg="0"/>
+<when ChkWhenExec="0" LtstEnd="0" LtstEndDays="0" LtstEndTime="00:00" LtstSt="0" LtstStDays="0" LtstStTime="00:00" LtstTimeTZ="" WCTypeAND="1" WCTypeOR="0" WElseA="1" WElseH="0" WElseS="0" WElseX="0" WhenExecute="" WtimOn="0"/>
+<preconditions CCTypeOne="1" CaleOn="0">
+<PreCon>
+<conditions id="CONDITIONS"/>
+</PreCon>
+</preconditions>
+<predecessors>
+<pre BranchType="0" Lnr="1" PreLnr="1" When="ANY_OK" type="container"/>
+</predecessors>
+<runtime MrtCancel="0" MrtDays="0" MrtErt="0" MrtExecute="0" MrtExecuteObj="" MrtFix="0" MrtMethodDate="0" MrtMethodErt="0" MrtMethodFix="0" MrtMethodNone="1" MrtOn="1" MrtTZ="" MrtTime="00:00" SrtErt="0" SrtFix="0" SrtMethodErt="0" SrtMethodFix="0" SrtMethodNone="1"/>
+<result ChkRExec="0" RElseHalt="1" RElseIgn="0" RElseJPAbend="0" RExecFlag="0" RExecute="" RRepMTimes="0" RRepOn="0" RRepWait="0" RWhen=""/>
+<dynvalues>
+<dyntree>
+<node content="1" id="VALUE" name="Variables" parent="" type="TASKVALUE">
+<VALUE state="2">
+<Values/>
+<Mode>0</Mode>
+</VALUE>
+</node>
+<node content="1" id="PVALUE" name="Parent Variables" parent="" type="TASKVALUE">
+<VALUE state="2">
+<Values>
+<row Mod="0" Name="&amp;UC4RB_SIEBEL_CREATED_DIR#" Value="&amp;UC4RB_SIEBEL_FILE_BACKUP_DIR#/&amp;$PHYS_DATE_YYYYMMDD#_&amp;$PHYS_TIME_HHMMSS#"/>
+<row Mod="0" Name="&amp;UC4RB_SIEBEL_EXTRACTED_DIR#" Value=""/>
+</Values>
+<Mode>0</Mode>
+</VALUE>
+</node>
+<node content="1" id="PRPTS" name="PromptSets" parent="" pref="1" type="PROMPTSET"/>
+<node content="0" id="PPRPTS" name="Parent PromptSets" parent="" type="PPROMPTSET"/>
+<node content="1" id="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET" name="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET" parent="PPRPTS" type="PPROMPTSET">
+<PROMPTSET name="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET">
+<PRPTBOX promptset="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET">
+<UC4RB_SIEBEL_DEPL_PKG_DIRs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_DEPL_PKG_DIR#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET"/>
+<UC4RB_SIEBEL_DEPL_PKG_FILENAMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_DEPL_PKG_FILENAME#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET"/>
+<UC4RB_SIEBEL_FILE_BACKUP_DIRs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_FILE_BACKUP_DIR#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET"/>
+<UC4RB_SIEBEL_LANGUAGESs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_LANGUAGES#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET">&amp;ENV#?SIEBEL_LANGUAGES</UC4RB_SIEBEL_LANGUAGESs.00>
+<UC4RB_SIEBEL_SERVER_HOME_DIRs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_SERVER_HOME_DIR#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET">&amp;ENV#?SIEBEL_SERVER_ROOT</UC4RB_SIEBEL_SERVER_HOME_DIRs.00>
+<UC4RB_SIEBEL_WS_PUB_DIRs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_WS_PUB_DIR#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET">&amp;ENV#?SIEBEL_WS_PUB_DIR</UC4RB_SIEBEL_WS_PUB_DIRs.00>
+</PRPTBOX>
+</PROMPTSET>
+</node>
+<node content="1" id="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT" name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT" parent="PPRPTS" type="PPROMPTSET">
+<PROMPTSET name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT">
+<PRPTBOX promptset="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT">
+<AGENTs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="AGENT#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT"/>
+<LOGINs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="LOGIN#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT"/>
+</PRPTBOX>
+</PROMPTSET>
+</node>
+<node content="1" id="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO" name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO" parent="PPRPTS" type="PPROMPTSET">
+<PROMPTSET name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO">
+<PRPTBOX promptset="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO">
+<UC4RB_SUDO_PASSWORDs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SUDO_PASSWORD#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO"/>
+<UC4RB_SUDO_USERs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SUDO_USER#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO"/>
+<UC4RB_USE_SUDOs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_USE_SUDO#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO">None</UC4RB_USE_SUDOs.00>
+</PRPTBOX>
+</PROMPTSET>
+</node>
+</dyntree>
+</dynvalues>
+<CIT CCTypeOne="1" CaleOn="0"/>
+<calendars CCTypeAll="0" CCTypeExt="0" CCTypeNone="0" CCTypeOne="1" CaleOn="0"/>
+<postconditions CCTypeOne="1" CaleOn="0">
+<PostCon>
+<conditions id="CONDITIONS"/>
+</PostCon>
+</postconditions>
+</task>
+<task Alias="CREATE_BACKUP" BranchType="0" Col="3" Idnr="5536419" Lnr="3" OH_TITLE="Create Directory" OType="JOBP" Object="PCK.AUTOMIC_SHARED.PUB.ACTION.CREATE_DIR" ParentAlias="" ParentObject="" Row="2" State="" Text1="" Text2="W" Text3="JOBP|jobp_l" Text4="" Text5="" Text6="" runid="0" subType="" taskicon="JOBP|jobp_l">
+<checkpoint RollbackFlag="1" RunPerPatch="0" RunPerTarget="0" TcpADays="0" TcpATime="00:00" TcpATimeTZ="" TcpExecute="" TcpOn="0" promptatgen="0" showprompt="0"/>
+<after ActFlg="1" AtimOn="0" ErlstStDays="0" ErlstStTime="00:00" ErlstStTimeTZ="" HoldFlg="0"/>
+<when ChkWhenExec="0" LtstEnd="0" LtstEndDays="0" LtstEndTime="00:00" LtstSt="0" LtstStDays="0" LtstStTime="00:00" LtstTimeTZ="" WCTypeAND="1" WCTypeOR="0" WElseA="1" WElseH="0" WElseS="0" WElseX="0" WhenExecute="" WtimOn="0"/>
+<preconditions CCTypeOne="1" CaleOn="0">
+<PreCon>
+<conditions id="CONDITIONS"/>
+</PreCon>
+</preconditions>
+<predecessors>
+<pre BranchType="0" Lnr="1" PreLnr="2" When="ANY_OK" type="container"/>
+</predecessors>
+<runtime MrtCancel="0" MrtDays="0" MrtErt="0" MrtExecute="0" MrtExecuteObj="" MrtFix="0" MrtMethodDate="0" MrtMethodErt="0" MrtMethodFix="0" MrtMethodNone="1" MrtOn="1" MrtTZ="" MrtTime="00:00" SrtErt="0" SrtFix="0" SrtMethodErt="0" SrtMethodFix="0" SrtMethodNone="1"/>
+<result ChkRExec="0" RElseHalt="1" RElseIgn="0" RElseJPAbend="0" RExecFlag="0" RExecute="" RRepMTimes="0" RRepOn="0" RRepWait="0" RWhen=""/>
+<dynvalues>
+<dyntree>
+<node content="1" id="VALUE" name="Variables" parent="" type="TASKVALUE">
+<VALUE state="2">
+<Values/>
+<Mode>0</Mode>
+</VALUE>
+</node>
+<node content="1" id="PVALUE" name="Parent Variables" parent="" type="TASKVALUE">
+<VALUE state="2">
+<Values>
+<row Mod="0" Name="&amp;UC4RB_SIEBEL_CREATED_DIR#" Value="&amp;UC4RB_SIEBEL_FILE_BACKUP_DIR#/&amp;$PHYS_DATE_YYYYMMDD#_&amp;$PHYS_TIME_HHMMSS#"/>
+<row Mod="0" Name="&amp;UC4RB_SIEBEL_EXTRACTED_DIR#" Value=""/>
+</Values>
+<Mode>0</Mode>
+</VALUE>
+</node>
+<node content="1" id="PRPTS" name="PromptSets" parent="" pref="1" type="PROMPTSET"/>
+<node content="0" id="PPRPTS" name="Parent PromptSets" parent="" type="PPROMPTSET"/>
+<node content="1" id="PCK.AUTOMIC_SHARED.PRV.PROMPTSET.CREATE_DIR" name="PCK.AUTOMIC_SHARED.PRV.PROMPTSET.CREATE_DIR" parent="PRPTS" type="PROMPTSET">
+<PROMPTSET name="PCK.AUTOMIC_SHARED.PRV.PROMPTSET.CREATE_DIR">
+<PRPTBOX promptset="PCK.AUTOMIC_SHARED.PRV.PROMPTSET.CREATE_DIR">
+<UC4RB_DIR_FILE_CREATE_DIRs.00 ReadFromTable="JPPV" altview="1" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DIR_FILE_CREATE_DIR#" promptsetname="PCK.AUTOMIC_SHARED.PRV.PROMPTSET.CREATE_DIR">&amp;UC4RB_SIEBEL_CREATED_DIR#</UC4RB_DIR_FILE_CREATE_DIRs.00>
+</PRPTBOX>
+</PROMPTSET>
+</node>
+<node content="1" id="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT" name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT" parent="PRPTS" type="PROMPTSET">
+<PROMPTSET name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT">
+<PRPTBOX promptset="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT">
+<AGENTs.00 ReadFromTable="JPPV" altview="1" haslist="0" msginsert="" msgnr="" promptname="AGENT#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT">&amp;AGENT#</AGENTs.00>
+<LOGINs.00 ReadFromTable="JPPV" altview="1" haslist="0" msginsert="" msgnr="" promptname="LOGIN#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT">&amp;LOGIN#</LOGINs.00>
+</PRPTBOX>
+</PROMPTSET>
+</node>
+<node content="1" id="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO" name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO" parent="PRPTS" type="PROMPTSET">
+<PROMPTSET name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO">
+<PRPTBOX promptset="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO">
+<UC4RB_SUDO_PASSWORDs.00 ReadFromTable="JPPV" altview="1" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SUDO_PASSWORD#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO">&amp;UC4RB_SUDO_PASSWORD#</UC4RB_SUDO_PASSWORDs.00>
+<UC4RB_SUDO_USERs.00 ReadFromTable="JPPV" altview="1" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SUDO_USER#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO">&amp;UC4RB_SUDO_USER#</UC4RB_SUDO_USERs.00>
+<UC4RB_USE_SUDOs.00 ReadFromTable="JPPV" altview="1" haslist="0" msginsert="" msgnr="" promptname="UC4RB_USE_SUDO#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO">&amp;UC4RB_USE_SUDO#</UC4RB_USE_SUDOs.00>
+</PRPTBOX>
+</PROMPTSET>
+</node>
+<node content="1" id="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET" name="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET" parent="PPRPTS" type="PPROMPTSET">
+<PROMPTSET name="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET">
+<PRPTBOX promptset="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET">
+<UC4RB_SIEBEL_DEPL_PKG_DIRs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_DEPL_PKG_DIR#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET"/>
+<UC4RB_SIEBEL_DEPL_PKG_FILENAMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_DEPL_PKG_FILENAME#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET"/>
+<UC4RB_SIEBEL_FILE_BACKUP_DIRs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_FILE_BACKUP_DIR#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET"/>
+<UC4RB_SIEBEL_LANGUAGESs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_LANGUAGES#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET">&amp;ENV#?SIEBEL_LANGUAGES</UC4RB_SIEBEL_LANGUAGESs.00>
+<UC4RB_SIEBEL_SERVER_HOME_DIRs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_SERVER_HOME_DIR#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET">&amp;ENV#?SIEBEL_SERVER_ROOT</UC4RB_SIEBEL_SERVER_HOME_DIRs.00>
+<UC4RB_SIEBEL_WS_PUB_DIRs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_WS_PUB_DIR#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET">&amp;ENV#?SIEBEL_WS_PUB_DIR</UC4RB_SIEBEL_WS_PUB_DIRs.00>
+</PRPTBOX>
+</PROMPTSET>
+</node>
+<node content="1" id="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT" name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT" parent="PPRPTS" type="PPROMPTSET">
+<PROMPTSET name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT">
+<PRPTBOX promptset="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT">
+<AGENTs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="AGENT#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT"/>
+<LOGINs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="LOGIN#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT"/>
+</PRPTBOX>
+</PROMPTSET>
+</node>
+<node content="1" id="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO" name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO" parent="PPRPTS" type="PPROMPTSET">
+<PROMPTSET name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO">
+<PRPTBOX promptset="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO">
+<UC4RB_SUDO_PASSWORDs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SUDO_PASSWORD#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO"/>
+<UC4RB_SUDO_USERs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SUDO_USER#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO"/>
+<UC4RB_USE_SUDOs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_USE_SUDO#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO">None</UC4RB_USE_SUDOs.00>
+</PRPTBOX>
+</PROMPTSET>
+</node>
+</dyntree>
+</dynvalues>
+<CIT CCTypeOne="1" CaleOn="0"/>
+<calendars CCTypeAll="0" CCTypeExt="0" CCTypeNone="0" CCTypeOne="1" CaleOn="0"/>
+<postconditions CCTypeOne="1" CaleOn="0">
+<PostCon>
+<conditions id="CONDITIONS"/>
+</PostCon>
+</postconditions>
+</task>
+<task Alias="BACKUP_FILES" BranchType="0" Col="4" Idnr="5595129" Lnr="4" OH_TITLE="" OType="JOBS" Object="PCK.AUTOMIC_SIEBEL.PRV.JOB.BACKUP_FILES@WINDOWS" ParentAlias="" ParentObject="" Row="1" State="" Text1="" Text2="W" Text3="&lt;WIN&gt;|windows_s:_jobs_l" Text4="" Text5="" Text6="" runid="0" subType="" taskicon="&lt;WIN&gt;|windows_s:_jobs_l">
+<checkpoint RollbackFlag="1" RunPerPatch="0" RunPerTarget="0" TcpADays="0" TcpATime="00:00" TcpATimeTZ="" TcpExecute="" TcpOn="0" promptatgen="0" showprompt="0"/>
+<after ActFlg="1" AtimOn="0" ErlstStDays="0" ErlstStTime="00:00" ErlstStTimeTZ="" HoldFlg="0"/>
+<when ChkWhenExec="0" LtstEnd="0" LtstEndDays="0" LtstEndTime="00:00" LtstSt="0" LtstStDays="0" LtstStTime="00:00" LtstTimeTZ="" WCTypeAND="1" WCTypeOR="0" WElseA="1" WElseH="0" WElseS="0" WElseX="0" WhenExecute="" WtimOn="0"/>
+<preconditions CCTypeOne="1" CaleOn="0">
+<PreCon>
+<conditions id="CONDITIONS"/>
+</PreCon>
+</preconditions>
+<predecessors>
+<pre BranchType="0" Lnr="1" PreLnr="3" When="ANY_OK" type="container"/>
+</predecessors>
+<runtime MrtCancel="0" MrtDays="0" MrtErt="0" MrtExecute="0" MrtExecuteObj="" MrtFix="0" MrtMethodDate="0" MrtMethodErt="0" MrtMethodFix="0" MrtMethodNone="1" MrtOn="1" MrtTZ="" MrtTime="00:00" SrtErt="0" SrtFix="0" SrtMethodErt="0" SrtMethodFix="0" SrtMethodNone="1"/>
+<result ChkRExec="0" RElseHalt="1" RElseIgn="0" RElseJPAbend="0" RExecFlag="0" RExecute="" RRepMTimes="0" RRepOn="0" RRepWait="0" RWhen=""/>
+<dynvalues>
+<dyntree>
+<node content="1" id="VALUE" name="Variables" parent="" type="TASKVALUE">
+<VALUE state="2">
+<Values/>
+<Mode>0</Mode>
+</VALUE>
+</node>
+<node content="1" id="PVALUE" name="Parent Variables" parent="" type="TASKVALUE">
+<VALUE state="2">
+<Values>
+<row Mod="0" Name="&amp;UC4RB_SIEBEL_CREATED_DIR#" Value="&amp;UC4RB_SIEBEL_FILE_BACKUP_DIR#/&amp;$PHYS_DATE_YYYYMMDD#_&amp;$PHYS_TIME_HHMMSS#"/>
+<row Mod="0" Name="&amp;UC4RB_SIEBEL_EXTRACTED_DIR#" Value=""/>
+</Values>
+<Mode>0</Mode>
+</VALUE>
+</node>
+<node content="1" id="PRPTS" name="PromptSets" parent="" pref="1" type="PROMPTSET"/>
+<node content="0" id="PPRPTS" name="Parent PromptSets" parent="" type="PPROMPTSET"/>
+<node content="1" id="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET" name="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET" parent="PPRPTS" type="PPROMPTSET">
+<PROMPTSET name="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET">
+<PRPTBOX promptset="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET">
+<UC4RB_SIEBEL_DEPL_PKG_DIRs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_DEPL_PKG_DIR#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET"/>
+<UC4RB_SIEBEL_DEPL_PKG_FILENAMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_DEPL_PKG_FILENAME#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET"/>
+<UC4RB_SIEBEL_FILE_BACKUP_DIRs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_FILE_BACKUP_DIR#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET"/>
+<UC4RB_SIEBEL_LANGUAGESs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_LANGUAGES#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET">&amp;ENV#?SIEBEL_LANGUAGES</UC4RB_SIEBEL_LANGUAGESs.00>
+<UC4RB_SIEBEL_SERVER_HOME_DIRs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_SERVER_HOME_DIR#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET">&amp;ENV#?SIEBEL_SERVER_ROOT</UC4RB_SIEBEL_SERVER_HOME_DIRs.00>
+<UC4RB_SIEBEL_WS_PUB_DIRs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_WS_PUB_DIR#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET">&amp;ENV#?SIEBEL_WS_PUB_DIR</UC4RB_SIEBEL_WS_PUB_DIRs.00>
+</PRPTBOX>
+</PROMPTSET>
+</node>
+<node content="1" id="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT" name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT" parent="PPRPTS" type="PPROMPTSET">
+<PROMPTSET name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT">
+<PRPTBOX promptset="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT">
+<AGENTs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="AGENT#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT"/>
+<LOGINs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="LOGIN#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT"/>
+</PRPTBOX>
+</PROMPTSET>
+</node>
+<node content="1" id="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO" name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO" parent="PPRPTS" type="PPROMPTSET">
+<PROMPTSET name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO">
+<PRPTBOX promptset="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO">
+<UC4RB_SUDO_PASSWORDs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SUDO_PASSWORD#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO"/>
+<UC4RB_SUDO_USERs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SUDO_USER#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO"/>
+<UC4RB_USE_SUDOs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_USE_SUDO#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO">None</UC4RB_USE_SUDOs.00>
+</PRPTBOX>
+</PROMPTSET>
+</node>
+</dyntree>
+</dynvalues>
+<CIT CCTypeOne="1" CaleOn="0"/>
+<calendars CCTypeAll="0" CCTypeExt="0" CCTypeNone="0" CCTypeOne="1" CaleOn="0"/>
+<postconditions CCTypeOne="1" CaleOn="0">
+<PostCon>
+<conditions id="CONDITIONS"/>
+</PostCon>
+</postconditions>
+</task>
+<task Alias="BACKUP_FILES" BranchType="0" Col="4" Idnr="5763896" Lnr="5" OH_TITLE="" OType="JOBS" Object="PCK.AUTOMIC_SIEBEL.PRV.JOB.BACKUP_FILES@UNIX" ParentAlias="" ParentObject="" Row="3" State="" Text1="" Text2="W" Text3="&lt;UNIX&gt;|unix_s:_jobs_l" Text4="" Text5="" Text6="" runid="0" subType="" taskicon="&lt;UNIX&gt;|unix_s:_jobs_l">
+<checkpoint RollbackFlag="1" RunPerPatch="0" RunPerTarget="0" TcpADays="0" TcpATime="00:00" TcpATimeTZ="" TcpExecute="" TcpOn="0" promptatgen="0" showprompt="0"/>
+<after ActFlg="1" AtimOn="0" ErlstStDays="0" ErlstStTime="00:00" ErlstStTimeTZ="" HoldFlg="0"/>
+<when ChkWhenExec="0" LtstEnd="0" LtstEndDays="0" LtstEndTime="00:00" LtstSt="0" LtstStDays="0" LtstStTime="00:00" LtstTimeTZ="" WCTypeAND="1" WCTypeOR="0" WElseA="1" WElseH="0" WElseS="0" WElseX="0" WhenExecute="" WtimOn="0"/>
+<preconditions CCTypeOne="1" CaleOn="0">
+<PreCon>
+<conditions id="CONDITIONS"/>
+</PreCon>
+</preconditions>
+<predecessors>
+<pre BranchType="0" Lnr="1" PreLnr="3" When="ANY_OK" type="container"/>
+</predecessors>
+<runtime MrtCancel="0" MrtDays="0" MrtErt="0" MrtExecute="0" MrtExecuteObj="" MrtFix="0" MrtMethodDate="0" MrtMethodErt="0" MrtMethodFix="0" MrtMethodNone="1" MrtOn="1" MrtTZ="" MrtTime="00:00" SrtErt="0" SrtFix="0" SrtMethodErt="0" SrtMethodFix="0" SrtMethodNone="1"/>
+<result ChkRExec="0" RElseHalt="1" RElseIgn="0" RElseJPAbend="0" RExecFlag="0" RExecute="" RRepMTimes="0" RRepOn="0" RRepWait="0" RWhen=""/>
+<dynvalues>
+<dyntree>
+<node content="1" id="VALUE" name="Variables" parent="" type="TASKVALUE">
+<VALUE state="2">
+<Values/>
+<Mode>0</Mode>
+</VALUE>
+</node>
+<node content="1" id="PVALUE" name="Parent Variables" parent="" type="TASKVALUE">
+<VALUE state="2">
+<Values>
+<row Mod="0" Name="&amp;UC4RB_SIEBEL_CREATED_DIR#" Value="&amp;UC4RB_SIEBEL_FILE_BACKUP_DIR#/&amp;$PHYS_DATE_YYYYMMDD#_&amp;$PHYS_TIME_HHMMSS#"/>
+<row Mod="0" Name="&amp;UC4RB_SIEBEL_EXTRACTED_DIR#" Value=""/>
+</Values>
+<Mode>0</Mode>
+</VALUE>
+</node>
+<node content="1" id="PRPTS" name="PromptSets" parent="" pref="1" type="PROMPTSET"/>
+<node content="0" id="PPRPTS" name="Parent PromptSets" parent="" type="PPROMPTSET"/>
+<node content="1" id="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET" name="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET" parent="PPRPTS" type="PPROMPTSET">
+<PROMPTSET name="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET">
+<PRPTBOX promptset="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET">
+<UC4RB_SIEBEL_DEPL_PKG_DIRs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_DEPL_PKG_DIR#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET"/>
+<UC4RB_SIEBEL_DEPL_PKG_FILENAMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_DEPL_PKG_FILENAME#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET"/>
+<UC4RB_SIEBEL_FILE_BACKUP_DIRs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_FILE_BACKUP_DIR#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET"/>
+<UC4RB_SIEBEL_LANGUAGESs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_LANGUAGES#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET">&amp;ENV#?SIEBEL_LANGUAGES</UC4RB_SIEBEL_LANGUAGESs.00>
+<UC4RB_SIEBEL_SERVER_HOME_DIRs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_SERVER_HOME_DIR#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET">&amp;ENV#?SIEBEL_SERVER_ROOT</UC4RB_SIEBEL_SERVER_HOME_DIRs.00>
+<UC4RB_SIEBEL_WS_PUB_DIRs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_WS_PUB_DIR#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET">&amp;ENV#?SIEBEL_WS_PUB_DIR</UC4RB_SIEBEL_WS_PUB_DIRs.00>
+</PRPTBOX>
+</PROMPTSET>
+</node>
+<node content="1" id="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT" name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT" parent="PPRPTS" type="PPROMPTSET">
+<PROMPTSET name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT">
+<PRPTBOX promptset="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT">
+<AGENTs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="AGENT#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT"/>
+<LOGINs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="LOGIN#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT"/>
+</PRPTBOX>
+</PROMPTSET>
+</node>
+<node content="1" id="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO" name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO" parent="PPRPTS" type="PPROMPTSET">
+<PROMPTSET name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO">
+<PRPTBOX promptset="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO">
+<UC4RB_SUDO_PASSWORDs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SUDO_PASSWORD#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO"/>
+<UC4RB_SUDO_USERs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SUDO_USER#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO"/>
+<UC4RB_USE_SUDOs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_USE_SUDO#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO">None</UC4RB_USE_SUDOs.00>
+</PRPTBOX>
+</PROMPTSET>
+</node>
+</dyntree>
+</dynvalues>
+<CIT CCTypeOne="1" CaleOn="0"/>
+<calendars CCTypeAll="0" CCTypeExt="0" CCTypeNone="0" CCTypeOne="1" CaleOn="0"/>
+<postconditions CCTypeOne="1" CaleOn="0">
+<PostCon>
+<conditions id="CONDITIONS"/>
+</PostCon>
+</postconditions>
+</task>
+<task Alias="EXTRACT_FILE" BranchType="0" Col="5" Idnr="5495708" Lnr="6" OH_TITLE="" OType="JOBS" Object="PCK.AUTOMIC_SIEBEL.PRV.JOB.EXTRACT_DEPLOYMENT_PACKAGE@WINDOWS" ParentAlias="" ParentObject="" Row="1" State="" Text1="" Text2="W" Text3="&lt;WIN&gt;|windows_s:_jobs_l" Text4="" Text5="" Text6="" runid="0" subType="" taskicon="&lt;WIN&gt;|windows_s:_jobs_l">
+<checkpoint RollbackFlag="1" RunPerPatch="0" RunPerTarget="0" TcpADays="0" TcpATime="00:00" TcpATimeTZ="" TcpExecute="" TcpOn="0" promptatgen="0" showprompt="0"/>
+<after ActFlg="1" AtimOn="0" ErlstStDays="0" ErlstStTime="00:00" ErlstStTimeTZ="" HoldFlg="0"/>
+<when ChkWhenExec="0" LtstEnd="0" LtstEndDays="0" LtstEndTime="00:00" LtstSt="0" LtstStDays="0" LtstStTime="00:00" LtstTimeTZ="" WCTypeAND="1" WCTypeOR="0" WElseA="1" WElseH="0" WElseS="0" WElseX="0" WhenExecute="" WtimOn="0"/>
+<preconditions CCTypeOne="1" CaleOn="0">
+<PreCon>
+<conditions id="CONDITIONS"/>
+</PreCon>
+</preconditions>
+<predecessors>
+<pre BranchType="0" Lnr="1" PreLnr="4" When="ANY_OK" type="container"/>
+</predecessors>
+<runtime MrtCancel="0" MrtDays="0" MrtErt="0" MrtExecute="0" MrtExecuteObj="" MrtFix="0" MrtMethodDate="0" MrtMethodErt="0" MrtMethodFix="0" MrtMethodNone="1" MrtOn="1" MrtTZ="" MrtTime="00:00" SrtErt="0" SrtFix="0" SrtMethodErt="0" SrtMethodFix="0" SrtMethodNone="1"/>
+<result ChkRExec="0" RElseHalt="1" RElseIgn="0" RElseJPAbend="0" RExecFlag="0" RExecute="" RRepMTimes="0" RRepOn="0" RRepWait="0" RWhen=""/>
+<dynvalues>
+<dyntree>
+<node content="1" id="VALUE" name="Variables" parent="" type="TASKVALUE">
+<VALUE state="2">
+<Values/>
+<Mode>0</Mode>
+</VALUE>
+</node>
+<node content="1" id="PVALUE" name="Parent Variables" parent="" type="TASKVALUE">
+<VALUE state="2">
+<Values>
+<row Mod="0" Name="&amp;UC4RB_SIEBEL_CREATED_DIR#" Value="&amp;UC4RB_SIEBEL_FILE_BACKUP_DIR#/&amp;$PHYS_DATE_YYYYMMDD#_&amp;$PHYS_TIME_HHMMSS#"/>
+<row Mod="0" Name="&amp;UC4RB_SIEBEL_EXTRACTED_DIR#" Value=""/>
+</Values>
+<Mode>0</Mode>
+</VALUE>
+</node>
+<node content="1" id="PRPTS" name="PromptSets" parent="" pref="1" type="PROMPTSET"/>
+<node content="0" id="PPRPTS" name="Parent PromptSets" parent="" type="PPROMPTSET"/>
+<node content="1" id="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET" name="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET" parent="PPRPTS" type="PPROMPTSET">
+<PROMPTSET name="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET">
+<PRPTBOX promptset="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET">
+<UC4RB_SIEBEL_DEPL_PKG_DIRs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_DEPL_PKG_DIR#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET"/>
+<UC4RB_SIEBEL_DEPL_PKG_FILENAMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_DEPL_PKG_FILENAME#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET"/>
+<UC4RB_SIEBEL_FILE_BACKUP_DIRs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_FILE_BACKUP_DIR#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET"/>
+<UC4RB_SIEBEL_LANGUAGESs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_LANGUAGES#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET">&amp;ENV#?SIEBEL_LANGUAGES</UC4RB_SIEBEL_LANGUAGESs.00>
+<UC4RB_SIEBEL_SERVER_HOME_DIRs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_SERVER_HOME_DIR#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET">&amp;ENV#?SIEBEL_SERVER_ROOT</UC4RB_SIEBEL_SERVER_HOME_DIRs.00>
+<UC4RB_SIEBEL_WS_PUB_DIRs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_WS_PUB_DIR#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET">&amp;ENV#?SIEBEL_WS_PUB_DIR</UC4RB_SIEBEL_WS_PUB_DIRs.00>
+</PRPTBOX>
+</PROMPTSET>
+</node>
+<node content="1" id="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT" name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT" parent="PPRPTS" type="PPROMPTSET">
+<PROMPTSET name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT">
+<PRPTBOX promptset="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT">
+<AGENTs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="AGENT#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT"/>
+<LOGINs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="LOGIN#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT"/>
+</PRPTBOX>
+</PROMPTSET>
+</node>
+<node content="1" id="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO" name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO" parent="PPRPTS" type="PPROMPTSET">
+<PROMPTSET name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO">
+<PRPTBOX promptset="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO">
+<UC4RB_SUDO_PASSWORDs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SUDO_PASSWORD#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO"/>
+<UC4RB_SUDO_USERs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SUDO_USER#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO"/>
+<UC4RB_USE_SUDOs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_USE_SUDO#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO">None</UC4RB_USE_SUDOs.00>
+</PRPTBOX>
+</PROMPTSET>
+</node>
+</dyntree>
+</dynvalues>
+<CIT CCTypeOne="1" CaleOn="0"/>
+<calendars CCTypeAll="0" CCTypeExt="0" CCTypeNone="0" CCTypeOne="1" CaleOn="0"/>
+<postconditions CCTypeOne="1" CaleOn="0">
+<PostCon>
+<conditions id="CONDITIONS"/>
+</PostCon>
+</postconditions>
+</task>
+<task Alias="EXTRACT_FILE" BranchType="0" Col="5" Idnr="5764584" Lnr="7" OH_TITLE="" OType="JOBS" Object="PCK.AUTOMIC_SIEBEL.PRV.JOB.EXTRACT_DEPLOYMENT_PACKAGE@UNIX" ParentAlias="" ParentObject="" Row="3" State="" Text1="" Text2="W" Text3="&lt;UNIX&gt;|unix_s:_jobs_l" Text4="" Text5="" Text6="" runid="0" subType="" taskicon="&lt;UNIX&gt;|unix_s:_jobs_l">
+<checkpoint RollbackFlag="1" RunPerPatch="0" RunPerTarget="0" TcpADays="0" TcpATime="00:00" TcpATimeTZ="" TcpExecute="" TcpOn="0" promptatgen="0" showprompt="0"/>
+<after ActFlg="1" AtimOn="0" ErlstStDays="0" ErlstStTime="00:00" ErlstStTimeTZ="" HoldFlg="0"/>
+<when ChkWhenExec="0" LtstEnd="0" LtstEndDays="0" LtstEndTime="00:00" LtstSt="0" LtstStDays="0" LtstStTime="00:00" LtstTimeTZ="" WCTypeAND="1" WCTypeOR="0" WElseA="1" WElseH="0" WElseS="0" WElseX="0" WhenExecute="" WtimOn="0"/>
+<preconditions CCTypeOne="1" CaleOn="0">
+<PreCon>
+<conditions id="CONDITIONS"/>
+</PreCon>
+</preconditions>
+<predecessors>
+<pre BranchType="0" Lnr="1" PreLnr="5" When="ANY_OK" type="container"/>
+</predecessors>
+<runtime MrtCancel="0" MrtDays="0" MrtErt="0" MrtExecute="0" MrtExecuteObj="" MrtFix="0" MrtMethodDate="0" MrtMethodErt="0" MrtMethodFix="0" MrtMethodNone="1" MrtOn="1" MrtTZ="" MrtTime="00:00" SrtErt="0" SrtFix="0" SrtMethodErt="0" SrtMethodFix="0" SrtMethodNone="1"/>
+<result ChkRExec="0" RElseHalt="1" RElseIgn="0" RElseJPAbend="0" RExecFlag="0" RExecute="" RRepMTimes="0" RRepOn="0" RRepWait="0" RWhen=""/>
+<dynvalues>
+<dyntree>
+<node content="1" id="VALUE" name="Variables" parent="" type="TASKVALUE">
+<VALUE state="2">
+<Values/>
+<Mode>0</Mode>
+</VALUE>
+</node>
+<node content="1" id="PVALUE" name="Parent Variables" parent="" type="TASKVALUE">
+<VALUE state="2">
+<Values>
+<row Mod="0" Name="&amp;UC4RB_SIEBEL_CREATED_DIR#" Value="&amp;UC4RB_SIEBEL_FILE_BACKUP_DIR#/&amp;$PHYS_DATE_YYYYMMDD#_&amp;$PHYS_TIME_HHMMSS#"/>
+<row Mod="0" Name="&amp;UC4RB_SIEBEL_EXTRACTED_DIR#" Value=""/>
+</Values>
+<Mode>0</Mode>
+</VALUE>
+</node>
+<node content="1" id="PRPTS" name="PromptSets" parent="" pref="1" type="PROMPTSET"/>
+<node content="0" id="PPRPTS" name="Parent PromptSets" parent="" type="PPROMPTSET"/>
+<node content="1" id="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET" name="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET" parent="PPRPTS" type="PPROMPTSET">
+<PROMPTSET name="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET">
+<PRPTBOX promptset="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET">
+<UC4RB_SIEBEL_DEPL_PKG_DIRs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_DEPL_PKG_DIR#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET"/>
+<UC4RB_SIEBEL_DEPL_PKG_FILENAMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_DEPL_PKG_FILENAME#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET"/>
+<UC4RB_SIEBEL_FILE_BACKUP_DIRs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_FILE_BACKUP_DIR#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET"/>
+<UC4RB_SIEBEL_LANGUAGESs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_LANGUAGES#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET">&amp;ENV#?SIEBEL_LANGUAGES</UC4RB_SIEBEL_LANGUAGESs.00>
+<UC4RB_SIEBEL_SERVER_HOME_DIRs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_SERVER_HOME_DIR#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET">&amp;ENV#?SIEBEL_SERVER_ROOT</UC4RB_SIEBEL_SERVER_HOME_DIRs.00>
+<UC4RB_SIEBEL_WS_PUB_DIRs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_WS_PUB_DIR#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET">&amp;ENV#?SIEBEL_WS_PUB_DIR</UC4RB_SIEBEL_WS_PUB_DIRs.00>
+</PRPTBOX>
+</PROMPTSET>
+</node>
+<node content="1" id="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT" name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT" parent="PPRPTS" type="PPROMPTSET">
+<PROMPTSET name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT">
+<PRPTBOX promptset="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT">
+<AGENTs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="AGENT#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT"/>
+<LOGINs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="LOGIN#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT"/>
+</PRPTBOX>
+</PROMPTSET>
+</node>
+<node content="1" id="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO" name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO" parent="PPRPTS" type="PPROMPTSET">
+<PROMPTSET name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO">
+<PRPTBOX promptset="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO">
+<UC4RB_SUDO_PASSWORDs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SUDO_PASSWORD#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO"/>
+<UC4RB_SUDO_USERs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SUDO_USER#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO"/>
+<UC4RB_USE_SUDOs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_USE_SUDO#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO">None</UC4RB_USE_SUDOs.00>
+</PRPTBOX>
+</PROMPTSET>
+</node>
+</dyntree>
+</dynvalues>
+<CIT CCTypeOne="1" CaleOn="0"/>
+<calendars CCTypeAll="0" CCTypeExt="0" CCTypeNone="0" CCTypeOne="1" CaleOn="0"/>
+<postconditions CCTypeOne="1" CaleOn="0">
+<PostCon>
+<conditions id="CONDITIONS"/>
+</PostCon>
+</postconditions>
+</task>
+<task Alias="COPY_BSCRIPTS" BranchType="0" Col="6" Idnr="5655482" Lnr="8" OH_TITLE="" OType="JOBS" Object="PCK.AUTOMIC_SIEBEL.PRV.JOB.COPY_BSCRIPTS@WINDOWS" ParentAlias="" ParentObject="" Row="1" State="" Text1="" Text2="W" Text3="&lt;WIN&gt;|windows_s:_jobs_l" Text4="" Text5="" Text6="" runid="0" subType="" taskicon="&lt;WIN&gt;|windows_s:_jobs_l">
+<checkpoint RollbackFlag="1" RunPerPatch="0" RunPerTarget="0" TcpADays="0" TcpATime="00:00" TcpATimeTZ="" TcpExecute="" TcpOn="0" promptatgen="0" showprompt="0"/>
+<after ActFlg="1" AtimOn="0" ErlstStDays="0" ErlstStTime="00:00" ErlstStTimeTZ="" HoldFlg="0"/>
+<when ChkWhenExec="0" LtstEnd="0" LtstEndDays="0" LtstEndTime="00:00" LtstSt="0" LtstStDays="0" LtstStTime="00:00" LtstTimeTZ="" WCTypeAND="1" WCTypeOR="0" WElseA="1" WElseH="0" WElseS="0" WElseX="0" WhenExecute="" WtimOn="0"/>
+<preconditions CCTypeOne="1" CaleOn="0">
+<PreCon>
+<conditions id="CONDITIONS"/>
+</PreCon>
+</preconditions>
+<predecessors>
+<pre BranchType="0" Lnr="1" PreLnr="6" When="ANY_OK" type="container"/>
+</predecessors>
+<runtime MrtCancel="0" MrtDays="0" MrtErt="0" MrtExecute="0" MrtExecuteObj="" MrtFix="0" MrtMethodDate="0" MrtMethodErt="0" MrtMethodFix="0" MrtMethodNone="1" MrtOn="1" MrtTZ="" MrtTime="00:00" SrtErt="0" SrtFix="0" SrtMethodErt="0" SrtMethodFix="0" SrtMethodNone="1"/>
+<result ChkRExec="0" RElseHalt="1" RElseIgn="0" RElseJPAbend="0" RExecFlag="0" RExecute="" RRepMTimes="0" RRepOn="0" RRepWait="0" RWhen=""/>
+<dynvalues>
+<dyntree>
+<node content="1" id="VALUE" name="Variables" parent="" type="TASKVALUE">
+<VALUE state="2">
+<Values/>
+<Mode>0</Mode>
+</VALUE>
+</node>
+<node content="1" id="PVALUE" name="Parent Variables" parent="" type="TASKVALUE">
+<VALUE state="2">
+<Values>
+<row Mod="0" Name="&amp;UC4RB_SIEBEL_CREATED_DIR#" Value="&amp;UC4RB_SIEBEL_FILE_BACKUP_DIR#/&amp;$PHYS_DATE_YYYYMMDD#_&amp;$PHYS_TIME_HHMMSS#"/>
+<row Mod="0" Name="&amp;UC4RB_SIEBEL_EXTRACTED_DIR#" Value=""/>
+</Values>
+<Mode>0</Mode>
+</VALUE>
+</node>
+<node content="1" id="PRPTS" name="PromptSets" parent="" pref="1" type="PROMPTSET"/>
+<node content="0" id="PPRPTS" name="Parent PromptSets" parent="" type="PPROMPTSET"/>
+<node content="1" id="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET" name="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET" parent="PPRPTS" type="PPROMPTSET">
+<PROMPTSET name="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET">
+<PRPTBOX promptset="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET">
+<UC4RB_SIEBEL_DEPL_PKG_DIRs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_DEPL_PKG_DIR#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET"/>
+<UC4RB_SIEBEL_DEPL_PKG_FILENAMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_DEPL_PKG_FILENAME#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET"/>
+<UC4RB_SIEBEL_FILE_BACKUP_DIRs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_FILE_BACKUP_DIR#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET"/>
+<UC4RB_SIEBEL_LANGUAGESs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_LANGUAGES#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET">&amp;ENV#?SIEBEL_LANGUAGES</UC4RB_SIEBEL_LANGUAGESs.00>
+<UC4RB_SIEBEL_SERVER_HOME_DIRs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_SERVER_HOME_DIR#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET">&amp;ENV#?SIEBEL_SERVER_ROOT</UC4RB_SIEBEL_SERVER_HOME_DIRs.00>
+<UC4RB_SIEBEL_WS_PUB_DIRs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_WS_PUB_DIR#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET">&amp;ENV#?SIEBEL_WS_PUB_DIR</UC4RB_SIEBEL_WS_PUB_DIRs.00>
+</PRPTBOX>
+</PROMPTSET>
+</node>
+<node content="1" id="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT" name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT" parent="PPRPTS" type="PPROMPTSET">
+<PROMPTSET name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT">
+<PRPTBOX promptset="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT">
+<AGENTs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="AGENT#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT"/>
+<LOGINs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="LOGIN#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT"/>
+</PRPTBOX>
+</PROMPTSET>
+</node>
+<node content="1" id="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO" name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO" parent="PPRPTS" type="PPROMPTSET">
+<PROMPTSET name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO">
+<PRPTBOX promptset="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO">
+<UC4RB_SUDO_PASSWORDs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SUDO_PASSWORD#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO"/>
+<UC4RB_SUDO_USERs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SUDO_USER#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO"/>
+<UC4RB_USE_SUDOs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_USE_SUDO#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO">None</UC4RB_USE_SUDOs.00>
+</PRPTBOX>
+</PROMPTSET>
+</node>
+</dyntree>
+</dynvalues>
+<CIT CCTypeOne="1" CaleOn="0"/>
+<calendars CCTypeAll="0" CCTypeExt="0" CCTypeNone="0" CCTypeOne="1" CaleOn="0"/>
+<postconditions CCTypeOne="1" CaleOn="0">
+<PostCon>
+<conditions id="CONDITIONS"/>
+</PostCon>
+</postconditions>
+</task>
+<task Alias="COPY_BSCRIPTS" BranchType="0" Col="6" Idnr="5766317" Lnr="9" OH_TITLE="" OType="JOBS" Object="PCK.AUTOMIC_SIEBEL.PRV.JOB.COPY_BSCRIPTS@UNIX" ParentAlias="" ParentObject="" Row="3" State="" Text1="" Text2="W" Text3="&lt;UNIX&gt;|unix_s:_jobs_l" Text4="" Text5="" Text6="" runid="0" subType="" taskicon="&lt;UNIX&gt;|unix_s:_jobs_l">
+<checkpoint RollbackFlag="1" RunPerPatch="0" RunPerTarget="0" TcpADays="0" TcpATime="00:00" TcpATimeTZ="" TcpExecute="" TcpOn="0" promptatgen="0" showprompt="0"/>
+<after ActFlg="1" AtimOn="0" ErlstStDays="0" ErlstStTime="00:00" ErlstStTimeTZ="" HoldFlg="0"/>
+<when ChkWhenExec="0" LtstEnd="0" LtstEndDays="0" LtstEndTime="00:00" LtstSt="0" LtstStDays="0" LtstStTime="00:00" LtstTimeTZ="" WCTypeAND="1" WCTypeOR="0" WElseA="1" WElseH="0" WElseS="0" WElseX="0" WhenExecute="" WtimOn="0"/>
+<preconditions CCTypeOne="1" CaleOn="0">
+<PreCon>
+<conditions id="CONDITIONS"/>
+</PreCon>
+</preconditions>
+<predecessors>
+<pre BranchType="0" Lnr="1" PreLnr="7" When="ANY_OK" type="container"/>
+</predecessors>
+<runtime MrtCancel="0" MrtDays="0" MrtErt="0" MrtExecute="0" MrtExecuteObj="" MrtFix="0" MrtMethodDate="0" MrtMethodErt="0" MrtMethodFix="0" MrtMethodNone="1" MrtOn="1" MrtTZ="" MrtTime="00:00" SrtErt="0" SrtFix="0" SrtMethodErt="0" SrtMethodFix="0" SrtMethodNone="1"/>
+<result ChkRExec="0" RElseHalt="1" RElseIgn="0" RElseJPAbend="0" RExecFlag="0" RExecute="" RRepMTimes="0" RRepOn="0" RRepWait="0" RWhen=""/>
+<dynvalues>
+<dyntree>
+<node content="1" id="VALUE" name="Variables" parent="" type="TASKVALUE">
+<VALUE state="2">
+<Values/>
+<Mode>0</Mode>
+</VALUE>
+</node>
+<node content="1" id="PVALUE" name="Parent Variables" parent="" type="TASKVALUE">
+<VALUE state="2">
+<Values>
+<row Mod="0" Name="&amp;UC4RB_SIEBEL_CREATED_DIR#" Value="&amp;UC4RB_SIEBEL_FILE_BACKUP_DIR#/&amp;$PHYS_DATE_YYYYMMDD#_&amp;$PHYS_TIME_HHMMSS#"/>
+<row Mod="0" Name="&amp;UC4RB_SIEBEL_EXTRACTED_DIR#" Value=""/>
+</Values>
+<Mode>0</Mode>
+</VALUE>
+</node>
+<node content="1" id="PRPTS" name="PromptSets" parent="" pref="1" type="PROMPTSET"/>
+<node content="0" id="PPRPTS" name="Parent PromptSets" parent="" type="PPROMPTSET"/>
+<node content="1" id="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET" name="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET" parent="PPRPTS" type="PPROMPTSET">
+<PROMPTSET name="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET">
+<PRPTBOX promptset="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET">
+<UC4RB_SIEBEL_DEPL_PKG_DIRs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_DEPL_PKG_DIR#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET"/>
+<UC4RB_SIEBEL_DEPL_PKG_FILENAMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_DEPL_PKG_FILENAME#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET"/>
+<UC4RB_SIEBEL_FILE_BACKUP_DIRs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_FILE_BACKUP_DIR#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET"/>
+<UC4RB_SIEBEL_LANGUAGESs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_LANGUAGES#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET">&amp;ENV#?SIEBEL_LANGUAGES</UC4RB_SIEBEL_LANGUAGESs.00>
+<UC4RB_SIEBEL_SERVER_HOME_DIRs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_SERVER_HOME_DIR#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET">&amp;ENV#?SIEBEL_SERVER_ROOT</UC4RB_SIEBEL_SERVER_HOME_DIRs.00>
+<UC4RB_SIEBEL_WS_PUB_DIRs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_WS_PUB_DIR#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET">&amp;ENV#?SIEBEL_WS_PUB_DIR</UC4RB_SIEBEL_WS_PUB_DIRs.00>
+</PRPTBOX>
+</PROMPTSET>
+</node>
+<node content="1" id="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT" name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT" parent="PPRPTS" type="PPROMPTSET">
+<PROMPTSET name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT">
+<PRPTBOX promptset="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT">
+<AGENTs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="AGENT#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT"/>
+<LOGINs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="LOGIN#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT"/>
+</PRPTBOX>
+</PROMPTSET>
+</node>
+<node content="1" id="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO" name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO" parent="PPRPTS" type="PPROMPTSET">
+<PROMPTSET name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO">
+<PRPTBOX promptset="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO">
+<UC4RB_SUDO_PASSWORDs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SUDO_PASSWORD#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO"/>
+<UC4RB_SUDO_USERs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SUDO_USER#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO"/>
+<UC4RB_USE_SUDOs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_USE_SUDO#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO">None</UC4RB_USE_SUDOs.00>
+</PRPTBOX>
+</PROMPTSET>
+</node>
+</dyntree>
+</dynvalues>
+<CIT CCTypeOne="1" CaleOn="0"/>
+<calendars CCTypeAll="0" CCTypeExt="0" CCTypeNone="0" CCTypeOne="1" CaleOn="0"/>
+<postconditions CCTypeOne="1" CaleOn="0">
+<PostCon>
+<conditions id="CONDITIONS"/>
+</PostCon>
+</postconditions>
+</task>
+<task Alias="COPY_OTHERS" BranchType="0" Col="7" Idnr="5642139" Lnr="10" OH_TITLE="" OType="JOBS" Object="PCK.AUTOMIC_SIEBEL.PRV.JOB.COPY_OTHERS@WINDOWS" ParentAlias="" ParentObject="" Row="1" State="" Text1="" Text2="W" Text3="&lt;WIN&gt;|windows_s:_jobs_l" Text4="" Text5="" Text6="" runid="0" subType="" taskicon="&lt;WIN&gt;|windows_s:_jobs_l">
+<checkpoint RollbackFlag="1" RunPerPatch="0" RunPerTarget="0" TcpADays="0" TcpATime="00:00" TcpATimeTZ="" TcpExecute="" TcpOn="0" promptatgen="0" showprompt="0"/>
+<after ActFlg="1" AtimOn="0" ErlstStDays="0" ErlstStTime="00:00" ErlstStTimeTZ="" HoldFlg="0"/>
+<when ChkWhenExec="0" LtstEnd="0" LtstEndDays="0" LtstEndTime="00:00" LtstSt="0" LtstStDays="0" LtstStTime="00:00" LtstTimeTZ="" WCTypeAND="1" WCTypeOR="0" WElseA="1" WElseH="0" WElseS="0" WElseX="0" WhenExecute="" WtimOn="0"/>
+<preconditions CCTypeOne="1" CaleOn="0">
+<PreCon>
+<conditions id="CONDITIONS"/>
+</PreCon>
+</preconditions>
+<predecessors>
+<pre BranchType="0" Lnr="1" PreLnr="8" When="ANY_OK" type="container"/>
+</predecessors>
+<runtime MrtCancel="0" MrtDays="0" MrtErt="0" MrtExecute="0" MrtExecuteObj="" MrtFix="0" MrtMethodDate="0" MrtMethodErt="0" MrtMethodFix="0" MrtMethodNone="1" MrtOn="1" MrtTZ="" MrtTime="00:00" SrtErt="0" SrtFix="0" SrtMethodErt="0" SrtMethodFix="0" SrtMethodNone="1"/>
+<result ChkRExec="0" RElseHalt="1" RElseIgn="0" RElseJPAbend="0" RExecFlag="0" RExecute="" RRepMTimes="0" RRepOn="0" RRepWait="0" RWhen=""/>
+<dynvalues>
+<dyntree>
+<node content="1" id="VALUE" name="Variables" parent="" type="TASKVALUE">
+<VALUE state="2">
+<Values/>
+<Mode>0</Mode>
+</VALUE>
+</node>
+<node content="1" id="PVALUE" name="Parent Variables" parent="" type="TASKVALUE">
+<VALUE state="2">
+<Values>
+<row Mod="0" Name="&amp;UC4RB_SIEBEL_CREATED_DIR#" Value="&amp;UC4RB_SIEBEL_FILE_BACKUP_DIR#/&amp;$PHYS_DATE_YYYYMMDD#_&amp;$PHYS_TIME_HHMMSS#"/>
+<row Mod="0" Name="&amp;UC4RB_SIEBEL_EXTRACTED_DIR#" Value=""/>
+</Values>
+<Mode>0</Mode>
+</VALUE>
+</node>
+<node content="1" id="PRPTS" name="PromptSets" parent="" pref="1" type="PROMPTSET"/>
+<node content="0" id="PPRPTS" name="Parent PromptSets" parent="" type="PPROMPTSET"/>
+<node content="1" id="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET" name="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET" parent="PPRPTS" type="PPROMPTSET">
+<PROMPTSET name="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET">
+<PRPTBOX promptset="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET">
+<UC4RB_SIEBEL_DEPL_PKG_DIRs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_DEPL_PKG_DIR#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET"/>
+<UC4RB_SIEBEL_DEPL_PKG_FILENAMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_DEPL_PKG_FILENAME#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET"/>
+<UC4RB_SIEBEL_FILE_BACKUP_DIRs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_FILE_BACKUP_DIR#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET"/>
+<UC4RB_SIEBEL_LANGUAGESs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_LANGUAGES#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET">&amp;ENV#?SIEBEL_LANGUAGES</UC4RB_SIEBEL_LANGUAGESs.00>
+<UC4RB_SIEBEL_SERVER_HOME_DIRs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_SERVER_HOME_DIR#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET">&amp;ENV#?SIEBEL_SERVER_ROOT</UC4RB_SIEBEL_SERVER_HOME_DIRs.00>
+<UC4RB_SIEBEL_WS_PUB_DIRs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_WS_PUB_DIR#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET">&amp;ENV#?SIEBEL_WS_PUB_DIR</UC4RB_SIEBEL_WS_PUB_DIRs.00>
+</PRPTBOX>
+</PROMPTSET>
+</node>
+<node content="1" id="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT" name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT" parent="PPRPTS" type="PPROMPTSET">
+<PROMPTSET name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT">
+<PRPTBOX promptset="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT">
+<AGENTs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="AGENT#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT"/>
+<LOGINs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="LOGIN#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT"/>
+</PRPTBOX>
+</PROMPTSET>
+</node>
+<node content="1" id="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO" name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO" parent="PPRPTS" type="PPROMPTSET">
+<PROMPTSET name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO">
+<PRPTBOX promptset="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO">
+<UC4RB_SUDO_PASSWORDs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SUDO_PASSWORD#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO"/>
+<UC4RB_SUDO_USERs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SUDO_USER#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO"/>
+<UC4RB_USE_SUDOs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_USE_SUDO#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO">None</UC4RB_USE_SUDOs.00>
+</PRPTBOX>
+</PROMPTSET>
+</node>
+</dyntree>
+</dynvalues>
+<CIT CCTypeOne="1" CaleOn="0"/>
+<calendars CCTypeAll="0" CCTypeExt="0" CCTypeNone="0" CCTypeOne="1" CaleOn="0"/>
+<postconditions CCTypeOne="1" CaleOn="0">
+<PostCon>
+<conditions id="CONDITIONS"/>
+</PostCon>
+</postconditions>
+</task>
+<task Alias="COPY_OTHERS" BranchType="0" Col="7" Idnr="5766768" Lnr="11" OH_TITLE="" OType="JOBS" Object="PCK.AUTOMIC_SIEBEL.PRV.JOB.COPY_OTHERS@UNIX" ParentAlias="" ParentObject="" Row="3" State="" Text1="" Text2="W" Text3="&lt;UNIX&gt;|unix_s:_jobs_l" Text4="" Text5="" Text6="" runid="0" subType="" taskicon="&lt;UNIX&gt;|unix_s:_jobs_l">
+<checkpoint RollbackFlag="1" RunPerPatch="0" RunPerTarget="0" TcpADays="0" TcpATime="00:00" TcpATimeTZ="" TcpExecute="" TcpOn="0" promptatgen="0" showprompt="0"/>
+<after ActFlg="1" AtimOn="0" ErlstStDays="0" ErlstStTime="00:00" ErlstStTimeTZ="" HoldFlg="0"/>
+<when ChkWhenExec="0" LtstEnd="0" LtstEndDays="0" LtstEndTime="00:00" LtstSt="0" LtstStDays="0" LtstStTime="00:00" LtstTimeTZ="" WCTypeAND="1" WCTypeOR="0" WElseA="1" WElseH="0" WElseS="0" WElseX="0" WhenExecute="" WtimOn="0"/>
+<preconditions CCTypeOne="1" CaleOn="0">
+<PreCon>
+<conditions id="CONDITIONS"/>
+</PreCon>
+</preconditions>
+<predecessors>
+<pre BranchType="0" Lnr="1" PreLnr="9" When="ANY_OK" type="container"/>
+</predecessors>
+<runtime MrtCancel="0" MrtDays="0" MrtErt="0" MrtExecute="0" MrtExecuteObj="" MrtFix="0" MrtMethodDate="0" MrtMethodErt="0" MrtMethodFix="0" MrtMethodNone="1" MrtOn="1" MrtTZ="" MrtTime="00:00" SrtErt="0" SrtFix="0" SrtMethodErt="0" SrtMethodFix="0" SrtMethodNone="1"/>
+<result ChkRExec="0" RElseHalt="1" RElseIgn="0" RElseJPAbend="0" RExecFlag="0" RExecute="" RRepMTimes="0" RRepOn="0" RRepWait="0" RWhen=""/>
+<dynvalues>
+<dyntree>
+<node content="1" id="VALUE" name="Variables" parent="" type="TASKVALUE">
+<VALUE state="2">
+<Values/>
+<Mode>0</Mode>
+</VALUE>
+</node>
+<node content="1" id="PVALUE" name="Parent Variables" parent="" type="TASKVALUE">
+<VALUE state="2">
+<Values>
+<row Mod="0" Name="&amp;UC4RB_SIEBEL_CREATED_DIR#" Value="&amp;UC4RB_SIEBEL_FILE_BACKUP_DIR#/&amp;$PHYS_DATE_YYYYMMDD#_&amp;$PHYS_TIME_HHMMSS#"/>
+<row Mod="0" Name="&amp;UC4RB_SIEBEL_EXTRACTED_DIR#" Value=""/>
+</Values>
+<Mode>0</Mode>
+</VALUE>
+</node>
+<node content="1" id="PRPTS" name="PromptSets" parent="" pref="1" type="PROMPTSET"/>
+<node content="0" id="PPRPTS" name="Parent PromptSets" parent="" type="PPROMPTSET"/>
+<node content="1" id="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET" name="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET" parent="PPRPTS" type="PPROMPTSET">
+<PROMPTSET name="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET">
+<PRPTBOX promptset="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET">
+<UC4RB_SIEBEL_DEPL_PKG_DIRs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_DEPL_PKG_DIR#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET"/>
+<UC4RB_SIEBEL_DEPL_PKG_FILENAMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_DEPL_PKG_FILENAME#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET"/>
+<UC4RB_SIEBEL_FILE_BACKUP_DIRs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_FILE_BACKUP_DIR#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET"/>
+<UC4RB_SIEBEL_LANGUAGESs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_LANGUAGES#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET">&amp;ENV#?SIEBEL_LANGUAGES</UC4RB_SIEBEL_LANGUAGESs.00>
+<UC4RB_SIEBEL_SERVER_HOME_DIRs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_SERVER_HOME_DIR#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET">&amp;ENV#?SIEBEL_SERVER_ROOT</UC4RB_SIEBEL_SERVER_HOME_DIRs.00>
+<UC4RB_SIEBEL_WS_PUB_DIRs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_WS_PUB_DIR#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET">&amp;ENV#?SIEBEL_WS_PUB_DIR</UC4RB_SIEBEL_WS_PUB_DIRs.00>
+</PRPTBOX>
+</PROMPTSET>
+</node>
+<node content="1" id="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT" name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT" parent="PPRPTS" type="PPROMPTSET">
+<PROMPTSET name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT">
+<PRPTBOX promptset="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT">
+<AGENTs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="AGENT#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT"/>
+<LOGINs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="LOGIN#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT"/>
+</PRPTBOX>
+</PROMPTSET>
+</node>
+<node content="1" id="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO" name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO" parent="PPRPTS" type="PPROMPTSET">
+<PROMPTSET name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO">
+<PRPTBOX promptset="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO">
+<UC4RB_SUDO_PASSWORDs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SUDO_PASSWORD#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO"/>
+<UC4RB_SUDO_USERs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SUDO_USER#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO"/>
+<UC4RB_USE_SUDOs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_USE_SUDO#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO">None</UC4RB_USE_SUDOs.00>
+</PRPTBOX>
+</PROMPTSET>
+</node>
+</dyntree>
+</dynvalues>
+<CIT CCTypeOne="1" CaleOn="0"/>
+<calendars CCTypeAll="0" CCTypeExt="0" CCTypeNone="0" CCTypeOne="1" CaleOn="0"/>
+<postconditions CCTypeOne="1" CaleOn="0">
+<PostCon>
+<conditions id="CONDITIONS"/>
+</PostCon>
+</postconditions>
+</task>
+<task Alias="" BranchType="0" Col="8" Idnr="0" Lnr="12" OH_TITLE="" OType="&lt;END&gt;" Object="END" ParentAlias="" ParentObject="" Row="2" State="" Text1="" Text2="W" Text3="&lt;END&gt;" Text4="" Text5="" Text6="" runid="0" subType="" taskicon="&lt;END&gt;">
+<checkpoint RollbackFlag="0" RunPerPatch="0" RunPerTarget="0" TcpADays="0" TcpATime="00:00" TcpATimeTZ="" TcpExecute="" TcpOn="0" promptatgen="0" showprompt="0"/>
+<after ActFlg="1" AtimOn="0" ErlstStDays="0" ErlstStTime="00:00" ErlstStTimeTZ="" HoldFlg="0"/>
+<when ChkWhenExec="0" LtstEnd="0" LtstEndDays="0" LtstEndTime="00:00" LtstSt="0" LtstStDays="0" LtstStTime="00:00" LtstTimeTZ="" WCTypeAND="1" WCTypeOR="0" WElseA="1" WElseH="0" WElseS="0" WElseX="0" WhenExecute="" WtimOn="0"/>
+<preconditions CCTypeOne="1" CaleOn="0">
+<PreCon>
+<conditions id="CONDITIONS"/>
+</PreCon>
+</preconditions>
+<predecessors>
+<pre BranchType="0" Lnr="1" PreLnr="10" When="ANY_OK" type="container"/>
+<pre BranchType="0" Lnr="2" PreLnr="11" When="ANY_OK" type="container"/>
+</predecessors>
+<runtime MrtCancel="0" MrtDays="0" MrtErt="0" MrtExecute="0" MrtExecuteObj="" MrtFix="0" MrtMethodDate="0" MrtMethodErt="0" MrtMethodFix="0" MrtMethodNone="1" MrtOn="1" MrtTZ="" MrtTime="00:00" SrtErt="0" SrtFix="0" SrtMethodErt="0" SrtMethodFix="0" SrtMethodNone="1"/>
+<result ChkRExec="0" RElseHalt="0" RElseIgn="0" RElseJPAbend="0" RExecFlag="0" RExecute="" RRepMTimes="0" RRepOn="0" RRepWait="0" RWhen=""/>
+<dynvalues>
+<dyntree>
+<node content="1" id="VALUE" name="Variables" parent="" type="TASKVALUE">
+<VALUE state="2">
+<Values/>
+<Mode>OH_OV_Mode</Mode>
+</VALUE>
+</node>
+<node content="1" id="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET" name="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET" parent="PPRPTS" type="PPROMPTSET">
+<PROMPTSET name="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET">
+<PRPTBOX promptset="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET">
+<UC4RB_SIEBEL_DEPL_PKG_DIRs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_DEPL_PKG_DIR#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET"/>
+<UC4RB_SIEBEL_DEPL_PKG_FILENAMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_DEPL_PKG_FILENAME#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET"/>
+<UC4RB_SIEBEL_FILE_BACKUP_DIRs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_FILE_BACKUP_DIR#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET"/>
+<UC4RB_SIEBEL_LANGUAGESs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_LANGUAGES#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET">&amp;ENV#?SIEBEL_LANGUAGES</UC4RB_SIEBEL_LANGUAGESs.00>
+<UC4RB_SIEBEL_SERVER_HOME_DIRs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_SERVER_HOME_DIR#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET">&amp;ENV#?SIEBEL_SERVER_ROOT</UC4RB_SIEBEL_SERVER_HOME_DIRs.00>
+<UC4RB_SIEBEL_WS_PUB_DIRs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_WS_PUB_DIR#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET">&amp;ENV#?SIEBEL_WS_PUB_DIR</UC4RB_SIEBEL_WS_PUB_DIRs.00>
+</PRPTBOX>
+</PROMPTSET>
+</node>
+<node content="1" id="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT" name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT" parent="PPRPTS" type="PPROMPTSET">
+<PROMPTSET name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT">
+<PRPTBOX promptset="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT">
+<AGENTs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="AGENT#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT"/>
+<LOGINs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="LOGIN#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT"/>
+</PRPTBOX>
+</PROMPTSET>
+</node>
+<node content="1" id="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO" name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO" parent="PPRPTS" type="PPROMPTSET">
+<PROMPTSET name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO">
+<PRPTBOX promptset="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO">
+<UC4RB_SUDO_PASSWORDs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SUDO_PASSWORD#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO"/>
+<UC4RB_SUDO_USERs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SUDO_USER#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO"/>
+<UC4RB_USE_SUDOs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_USE_SUDO#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO">None</UC4RB_USE_SUDOs.00>
+</PRPTBOX>
+</PROMPTSET>
+</node>
+</dyntree>
+</dynvalues>
+<CIT CCTypeOne="1" CaleOn="0"/>
+<calendars CCTypeAll="0" CCTypeExt="0" CCTypeNone="0" CCTypeOne="1" CaleOn="0"/>
+<postconditions CCTypeOne="1" CaleOn="0">
+<PostCon>
+<conditions id="CONDITIONS"/>
+</PostCon>
+</postconditions>
+</task>
+<OPTIONS/>
+</JobpStruct>
+</JOBP>
+<RUNTIME state="1">
+<MaxRetCode>0</MaxRetCode>
+<MrcExecute/>
+<MrcElseE>0</MrcElseE>
+<FcstStatus>0| </FcstStatus>
+<Ert>253</Ert>
+<ErtMethodDef>1</ErtMethodDef>
+<ErtMethodFix>0</ErtMethodFix>
+<ErtFix>0</ErtFix>
+<ErtDynMethod>2|Average</ErtDynMethod>
+<ErtMethodDyn>0</ErtMethodDyn>
+<ErtCnt>0</ErtCnt>
+<ErtCorr>0</ErtCorr>
+<ErtIgn>0</ErtIgn>
+<ErtIgnFlg>0</ErtIgnFlg>
+<ErtMinCnt>0</ErtMinCnt>
+<MrtMethodNone>1</MrtMethodNone>
+<MrtMethodFix>0</MrtMethodFix>
+<MrtFix>0</MrtFix>
+<MrtMethodErt>0</MrtMethodErt>
+<MrtErt>0</MrtErt>
+<MrtMethodDate>0</MrtMethodDate>
+<MrtDays>0</MrtDays>
+<MrtTime>00:00</MrtTime>
+<MrtTZ/>
+<SrtMethodNone>1</SrtMethodNone>
+<SrtMethodFix>0</SrtMethodFix>
+<SrtFix>0</SrtFix>
+<SrtMethodErt>0</SrtMethodErt>
+<SrtErt>0</SrtErt>
+<MrtCancel>0</MrtCancel>
+<MrtExecute>0</MrtExecute>
+<MrtExecuteObj/>
+</RUNTIME>
+<DYNVALUES state="1">
+<dyntree>
+<node content="1" id="VALUE" name="Variables" parent="" type="VALUE">
+<VALUE state="1">
+<Values>
+<row Name="&amp;UC4RB_SIEBEL_CREATED_DIR#" Value="&amp;UC4RB_SIEBEL_FILE_BACKUP_DIR#/&amp;$PHYS_DATE_YYYYMMDD#_&amp;$PHYS_TIME_HHMMSS#"/>
+<row Name="&amp;UC4RB_SIEBEL_EXTRACTED_DIR#" Value=""/>
+</Values>
+<Mode>0</Mode>
+</VALUE>
+</node>
+<node content="1" id="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET" name="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET" parent="PRPTS" type="PROMPTSET">
+<PROMPTSET client="6000" idnr="0005495707" name="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET" ontop="1" src="oh" system="AE10">
+<PRPTBOX promptset="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET" prptmode="1">
+<UC4RB_SIEBEL_DEPL_PKG_DIRs.00 altview="0" haslist="0"/>
+<UC4RB_SIEBEL_DEPL_PKG_FILENAMEs.00 altview="0" haslist="0"/>
+<UC4RB_SIEBEL_FILE_BACKUP_DIRs.00 altview="0" haslist="0"/>
+<UC4RB_SIEBEL_SERVER_HOME_DIRs.00 altview="0" haslist="0">&amp;ENV#?SIEBEL_SERVER_ROOT</UC4RB_SIEBEL_SERVER_HOME_DIRs.00>
+<UC4RB_SIEBEL_LANGUAGESs.00 altview="0" haslist="0">&amp;ENV#?SIEBEL_LANGUAGES</UC4RB_SIEBEL_LANGUAGESs.00>
+<UC4RB_SIEBEL_WS_PUB_DIRs.00 altview="0" haslist="0">&amp;ENV#?SIEBEL_WS_PUB_DIR</UC4RB_SIEBEL_WS_PUB_DIRs.00>
+</PRPTBOX>
+</PROMPTSET>
+</node>
+<node content="1" id="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT" name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT" parent="PRPTS" type="PROMPTSET">
+<PROMPTSET client="6000" idnr="0005005814" name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT" ontop="1" src="oh" system="AE10">
+<PRPTBOX promptset="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT" prptmode="1">
+<AGENTs.00 altview="0" haslist="0"/>
+<LOGINs.00 altview="0" haslist="0"/>
+</PRPTBOX>
+</PROMPTSET>
+</node>
+<node content="1" id="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO" name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO" parent="PRPTS" type="PROMPTSET">
+<PROMPTSET client="6000" idnr="0005766652" name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO" ontop="1" src="oh" system="AE10">
+<PRPTBOX promptset="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO" prptmode="1"/>
+</PROMPTSET>
+</node>
+</dyntree>
+</DYNVALUES>
+<DEPLOYMENT state="1" tidy="1">
+<DeploymentFlag>0</DeploymentFlag>
+<WFTypeA>1</WFTypeA>
+<WFTypeC>0</WFTypeC>
+<AppName/>
+<WFName/>
+<ComponentName/>
+</DEPLOYMENT>
+<ROLLBACK state="1" tidy="1">
+<RollbackFlag>0</RollbackFlag>
+<CBackupObj/>
+<CRollbackObj/>
+<FBackupPath/>
+<FDeleteBefore>0</FDeleteBefore>
+<FInclSubDirs>0</FInclSubDirs>
+</ROLLBACK>
+<SCRIPT mode="1" state="1" tidy="0">
+<MSCRI><![CDATA[: PUBLISH &UC4RB_SIEBEL_SERVER_HOME_DIR#,,"TOP"
+: PUBLISH &UC4RB_SIEBEL_LANGUAGES#,,"TOP"]]></MSCRI>
+</SCRIPT>
+<DOCU_Docu state="1" type="text">
+<DOC><![CDATA[= RB name =
+PCK.AUTOMIC_SIEBEL.PUB.ACTION.COPY_FILE_TO_TARGET
+
+= General description =
+This Action first creates a backup of files on the Siebel Server and then copies the files from the archive file. This Action runs on the Siebel target Server.
+
+= Inputs =
+* Deployment Package Dir: The directory, where the deployment package should be imported from
+* Deployment Package Filename: The deployment package file name to import
+* Backup Directory Name: Base file path fort the Backup
+* Siebel Server Home Directory: The home dir of the siebel server.
+* Languages to use for the Import: The installed languages as comma sepperated list.
+* Siebel WebServer Public Directory: The public directory of the siebel web server
+
+= Behavior =
+This Action first creates a backup of files on the Siebel Server and then copies the files from the archive file. This Action runs on the Siebel target Server.
+Steps:
+* Create Backup Directory
+Create a Directory.
+Accept an Entry for the Base directory of the Backup.
+Base Directory: siebel_backup
+Backup Dir: actual Date --> YYYYMMDD_HHMMSS
+* Backup Files
+Put all of the following files in the backup Directory:
+Browser Script Dir (For all languages)
+current .SRF File (For all languages)
+webtemplates (*.swt)
+css (For all languages)
+* Put SRF to Directory
+An Action that moves the new SRF File to the specified Directory and overwrites the existing old one. (that is language dependent and has to be repeated for every given Language). The Directory is the same from the root directory of the siebel server, on every siebel server.
+* Copy Rest of Files
+In the export there was a creation of an archive, that puts together some files. These files have to be put in place, on the target machine. The directories have to be the same as on source. Owners and Groups must be compatible to the target system. The access rights must be the same as on the source system.
+
+= Outputs =
+* Return code is 0 if success
+* Return code is 1 if not success.
+
+= Rollback =
+(none)
+
+= Logging =
+(none)
+
+= Example =
+(none)]]></DOC>
+</DOCU_Docu>
+</JOBP>
+</uc-export>

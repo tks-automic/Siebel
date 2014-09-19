@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="ISO-8859-15" standalone="no"?><uc-export clientvers="8.0.0">
+<JOBS_WINDOWS AttrType="WINDOWS" name="PCK.AUTOMIC_SIEBEL.PRV.JOB.EXTRACT_DEPLOYMENT_PACKAGE@WINDOWS">
+<XHEADER state="1">
+<Title/>
+
+
+<LastUsed/>
+<ArchiveKey1/>
+<ArchiveKey2/>
+<ExtRepDef>1</ExtRepDef>
+<ExtRepAll>0</ExtRepAll>
+<ExtRepNone>0</ExtRepNone>
+<Active>1</Active>
+<OH_SubType/>
+</XHEADER>
+<OUTPUTREG state="1" tidy="1">
+<FileReg/>
+</OUTPUTREG>
+<SYNCREF state="1">
+<Syncs/>
+</SYNCREF>
+<ATTR_JOBS state="1">
+<Queue>CLIENT_QUEUE</Queue>
+<StartType/>
+<HostDst>WINDOWS|&lt;WIN&gt;|HOST</HostDst>
+<HostATTR_Type>WINDOWS</HostATTR_Type>
+<CodeName/>
+<Login/>
+<IntAccount/>
+<AutoDeactNo>1</AutoDeactNo>
+<AutoDeact1ErrorFree>0</AutoDeact1ErrorFree>
+<AutoDeactErrorFree>0</AutoDeactErrorFree>
+<DeactWhen/>
+<DeactDelay>0</DeactDelay>
+<AutoDeactAlways>0</AutoDeactAlways>
+<AttDialog>0</AttDialog>
+<ActAtRun>1</ActAtRun>
+<Consumption>0</Consumption>
+<UC4Priority>0</UC4Priority>
+<MaxParallel2>0</MaxParallel2>
+<MpElse1>1</MpElse1>
+<MpElse2>0</MpElse2>
+<TZ/>
+</ATTR_JOBS>
+<ATTR_WINDOWS state="1">
+<OutputDb>1</OutputDb>
+<OutputDbErr>0</OutputDbErr>
+<OutputFile>0</OutputFile>
+<IsGenerated>0</IsGenerated>
+<BAT>0</BAT>
+<COM>0</COM>
+<WinBatch>1</WinBatch>
+<Standard>1</Standard>
+<Minimized>0</Minimized>
+<Maximized>0</Maximized>
+<JObjDefault>0</JObjDefault>
+<JObjYes>1</JObjYes>
+<JObjNo>0</JObjNo>
+<WorkingDirectory>c:\</WorkingDirectory>
+<Command/>
+<LogOn>0</LogOn>
+<ShowJob>0</ShowJob>
+</ATTR_WINDOWS>
+<RUNTIME state="1">
+<MaxRetCode>0</MaxRetCode>
+<MrcExecute/>
+<MrcElseE>0</MrcElseE>
+<FcstStatus>0| </FcstStatus>
+<Ert>62</Ert>
+<ErtMethodDef>1</ErtMethodDef>
+<ErtMethodFix>0</ErtMethodFix>
+<ErtFix>0</ErtFix>
+<ErtDynMethod>2|Average</ErtDynMethod>
+<ErtMethodDyn>0</ErtMethodDyn>
+<ErtCnt>0</ErtCnt>
+<ErtCorr>0</ErtCorr>
+<ErtIgn>0</ErtIgn>
+<ErtIgnFlg>0</ErtIgnFlg>
+<ErtMinCnt>0</ErtMinCnt>
+<MrtMethodNone>1</MrtMethodNone>
+<MrtMethodFix>0</MrtMethodFix>
+<MrtFix>0</MrtFix>
+<MrtMethodErt>0</MrtMethodErt>
+<MrtErt>0</MrtErt>
+<MrtMethodDate>0</MrtMethodDate>
+<MrtDays>0</MrtDays>
+<MrtTime>00:00</MrtTime>
+<MrtTZ/>
+<SrtMethodNone>1</SrtMethodNone>
+<SrtMethodFix>0</SrtMethodFix>
+<SrtFix>0</SrtFix>
+<SrtMethodErt>0</SrtMethodErt>
+<SrtErt>0</SrtErt>
+<MrtCancel>0</MrtCancel>
+<MrtExecute>0</MrtExecute>
+<MrtExecuteObj/>
+</RUNTIME>
+<DYNVALUES state="1">
+<dyntree>
+<node content="1" id="VALUE" name="Variables" parent="" type="VALUE">
+<VALUE state="1">
+<Values/>
+<Mode>0</Mode>
+</VALUE>
+</node>
+</dyntree>
+</DYNVALUES>
+<ROLLBACK state="1" tidy="1">
+<RollbackFlag>0</RollbackFlag>
+<CBackupObj/>
+<CRollbackObj/>
+<FBackupPath/>
+<FDeleteBefore>0</FDeleteBefore>
+<FInclSubDirs>0</FInclSubDirs>
+</ROLLBACK>
+<PRE_SCRIPT mode="1" replacementmode="1" state="1" tidy="0">
+<PSCRI><![CDATA[:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.START_STOP_JOB_ACCORDING_TO_AGENT_OS]]></PSCRI>
+</PRE_SCRIPT>
+<SCRIPT mode="1" state="1" tidy="0">
+<MSCRI><![CDATA[:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.POWERSHELL_UTILITY
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_HEADER_PARAM_VALIDATION
+
+:DEFINE &STRING_ARR#,string,30
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.NORMALIZE_PATH "UC4RB_CONVERTED_STRING" = "UC4RB_SIEBEL_DEPL_PKG_DIR"
+
+:SET &UC4RB_LOGGING_PARAMETER# = "Deployment Package Directory"
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_PARAM &UC4RB_LOGGING_PARAMETER_VAL# = &UC4RB_SIEBEL_DEPL_PKG_DIR#
+:SET &UC4RB_LOGGING_PARAMETER# = "Deployment Package Name"
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_PARAM &UC4RB_LOGGING_PARAMETER_VAL# = &UC4RB_SIEBEL_DEPL_PKG_FILENAME#
+
+:SET &UC4RB_SIEBEL_PACKAGE_FILENAME# = &UC4RB_SIEBEL_DEPL_PKG_DIR#\&UC4RB_SIEBEL_DEPL_PKG_FILENAME#
+
+! Start execution
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_HEADER_EXECUTION
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.CHANGE_FOLDER_TO_AGENT_BIN
+
+:SET &UC4RB_SIEBEL_EXTRACTED_DIR# = "&UC4RB_AGENT_WORKING_DIR#\temp&$RUNID#"
+:PUBLISH &UC4RB_SIEBEL_EXTRACTED_DIR#, , "TOP"
+
+! Create extracted directory
+New-Item -Path "&UC4RB_SIEBEL_EXTRACTED_DIR#" -Force -ItemType directory
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.CHECK_RETURN_CODE_WINDOWS_POWERSHELL
+
+! Extract deployment package to temp directory
+:SET &UC4RB_LOGGING_INFO# = "Start extracting file to &UC4RB_SIEBEL_EXTRACTED_DIR#..."
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_INFO
+
+:SET &UC4RB_DIR_FI_UNPACK_NAME# = &UC4RB_SIEBEL_PACKAGE_FILENAME#
+:SET &UC4RB_DIR_FI_UNPACK_TARGET# = &UC4RB_SIEBEL_EXTRACTED_DIR#
+:INC PCK.AUTOMIC_SHARED.PRV.INCLUDE.UNPACK
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.CHECK_RETURN_CODE_WINDOWS_POWERSHELL
+
+! java -jar siebeltool.jar siebel UnarchiveFeature -s "&UC4RB_SIEBEL_PACKAGE_FILENAME#" -t "&UC4RB_SIEBEL_EXTRACTED_DIR#" | Out-Default
+! :INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.CHECK_RETURN_CODE_WINDOWS_POWERSHELL
+
+! Search zip file in folder collected_files
+$source_zip = ""
+ForEach($item in (Get-ChildItem -Path "&UC4RB_SIEBEL_EXTRACTED_DIR#\collected_files" -Filter "*.zip")) {
+  if ($item.Attributes -eq "Archive") {
+    $source_zip = $item.FullName
+  }
+}
+
+if ($source_zip -ne "") {
+:  SET &UC4RB_DIR_FI_UNPACK_NAME# = "$source_zip"
+:  SET &UC4RB_DIR_FI_UNPACK_TARGET# = "&UC4RB_SIEBEL_EXTRACTED_DIR#\collected_files\"
+:  INC PCK.AUTOMIC_SHARED.PRV.INCLUDE.UNPACK
+:  INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.CHECK_RETURN_CODE_WINDOWS_POWERSHELL
+}
+
+:SET &UC4RB_LOGGING_INFO# = "Extracted files successfully to &UC4RB_SIEBEL_EXTRACTED_DIR#"
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_INFO]]></MSCRI>
+</SCRIPT>
+<OUTPUTSCAN state="1">
+<Inherit>N</Inherit>
+<filterobjects/>
+<HostFsc/>
+<LoginFsc/>
+</OUTPUTSCAN>
+<POST_SCRIPT mode="1" replacementmode="1" state="1" tidy="1">
+<OSCRI/>
+</POST_SCRIPT>
+<DOCU_Docu state="1" type="text">
+<DOC/>
+</DOCU_Docu>
+</JOBS_WINDOWS>
+</uc-export>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="ISO-8859-15" standalone="no"?><uc-export clientvers="8.0.0">
+<PRPT client="6000" name="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_SRF_TO_TARGET" system="AE10">
+<HEADER state="1">
+<Title/>
+
+
+<LastUsed/>
+<ArchiveKey1/>
+<ArchiveKey2/>
+<OH_SubType/>
+</HEADER>
+<PROMPTDESIGNER state="1">
+<DESIGNER/>
+</PROMPTDESIGNER>
+<PROMPTSETXUI state="1">
+<XUIEDITOR><![CDATA[<dialog height="424" icon="PRPT" id="PRPTS" left="0" top="0" width="676"><readpanel fill="b" id="PRPTBOX" nl="1" scroll="v" text="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COLLECT_FILES"><properties><entry name="text">PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COLLECT_FILES</entry><entry name="modifiable">0</entry></properties><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_SIEBEL_EXTRACTED_DIRs.00" inputassistance="0" len="" nl="1" regex="" required="0" separator=";" showaspassword="0" text="Deployment Package Extracted Directory" tooltip="The full path to extracted directory of source package" upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+         
+      <properties>
+        <entry listparam="C,N" name="reference">UC_DATATYPE_STRING</entry>
+        <entry name="text">Deployment Package Extracted Directory</entry>
+        <entry name="multiselect">0</entry>
+        <entry name="separator">;</entry>
+        <entry name="len"/>
+        <entry name="quotes"/>
+        <entry name="id">UC4RB_SIEBEL_EXTRACTED_DIRs.00</entry>
+        <entry name="regex"/>
+        <entry name="inputassistance">0</entry>
+        <entry name="enabled">0</entry>
+        <entry name="required">1</entry>
+        <entry name="upper">0</entry>
+        <entry name="focus">0</entry>
+        <entry name="showaspassword">0</entry>
+        <entry name="tooltip">The full path to extracted directory of source package</entry>
+        <entry name="modifiable">1</entry>
+        <entry name="customfield"/>
+      <entry name="initvalue"/>
+         </properties>
+    </text><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_SIEBEL_SERVER_HOME_DIRs.00" inputassistance="0" len="" nl="1" regex="" required="0" separator="" showaspassword="0" text="Siebel Server Home Directory" tooltip="The home directory of the siebel server" upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+         
+         <properties>
+            <entry listparam="C" name="reference">UC_DATATYPE_STRING</entry>
+            <entry name="text">Siebel Server Home Directory</entry>
+            <entry name="multiselect">0</entry>
+            <entry name="separator"/>
+            <entry name="len"/>
+            <entry name="quotes"/>
+            <entry name="id">UC4RB_SIEBEL_SERVER_HOME_DIRs.00</entry>
+            <entry name="inputassistance">0</entry>
+            <entry name="enabled">0</entry>
+            <entry name="upper">0</entry>
+            <entry name="focus">0</entry>
+            <entry name="showaspassword">0</entry>
+            <entry name="tooltip">The home directory of the siebel server</entry>
+            <entry name="customfield"/>
+            <entry name="modifiable">1</entry>
+            <entry name="required">1</entry>
+            <entry name="regex"/>
+            <entry name="initvalue"/>
+         </properties>
+      </text><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_SIEBEL_LANGUAGESs.00" inputassistance="0" len="" nl="1" regex="" required="0" separator=";" showaspassword="0" text="Languages to use for the Import" tooltip="The installed languages as comma sepperated list." upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+         
+      <properties>
+        <entry listparam="C,N" name="reference">UC_DATATYPE_STRING</entry>
+        <entry name="text">Languages to use for the Import</entry>
+        <entry name="multiselect">0</entry>
+        <entry name="separator">;</entry>
+        <entry name="len"/>
+        <entry name="quotes"/>
+        <entry name="id">UC4RB_SIEBEL_LANGUAGESs.00</entry>
+        <entry name="regex"/>
+        <entry name="inputassistance">0</entry>
+        <entry name="enabled">0</entry>
+        <entry name="required">1</entry>
+        <entry name="upper">0</entry>
+        <entry name="focus">0</entry>
+        <entry name="showaspassword">0</entry>
+        <entry name="tooltip">The installed languages as comma sepperated list.</entry>
+        <entry name="modifiable">1</entry>
+        <entry name="customfield"/>
+      <entry name="initvalue"/>
+         </properties>
+    </text><integer alt="1" enabled="1" fill="b" focus="0" id="UC4RB_COPY_MAXIMUM_RETRIESs.00" max="" min="" nl="1" text="Maximum retries" tooltip="Maximum retries time to copy/replace SRF file">
+      <properties>
+        <entry listparam="N" name="reference">UC_DATATYPE_NUMERIC</entry>
+        <entry name="text">Maximum retries</entry>
+        <entry name="min"/>
+        <entry name="max"/>
+        <entry name="quotes"/>
+        <entry name="id">UC4RB_COPY_MAXIMUM_RETRIESs.00</entry>
+        <entry name="enabled">0</entry>
+        <entry name="focus">0</entry>
+        <entry name="tooltip">Maximum retries time to copy/replace SRF file</entry>
+        <entry name="modifiable">1</entry>
+        <entry name="customfield"/>
+      <entry name="initvalue">0</entry>
+         </properties>
+    </integer><integer alt="1" enabled="1" fill="b" focus="0" id="UC4RB_COPY_DELAY_TIMEs.00" max="" min="" nl="1" text="Delay time" tooltip="Delay time per each retry (in second)">
+      <properties>
+        <entry listparam="N" name="reference">UC_DATATYPE_NUMERIC</entry>
+        <entry name="text">Delay time</entry>
+        <entry name="min"/>
+        <entry name="max"/>
+        <entry name="quotes"/>
+        <entry name="id">UC4RB_COPY_DELAY_TIMEs.00</entry>
+        <entry name="enabled">0</entry>
+        <entry name="focus">0</entry>
+        <entry name="tooltip">Delay time per each retry (in second)</entry>
+        <entry name="modifiable">1</entry>
+        <entry name="customfield"/>
+      <entry name="initvalue">0</entry>
+         </properties>
+    </integer></readpanel></dialog>]]></XUIEDITOR>
+</PROMPTSETXUI>
+<PROMPTSETDATA state="1">
+<DATAEDITOR><![CDATA[<PRPTS idnr="0005721811" client="6000" system="AE10" ontop="1" src="oh"><PRPTBOX><UC4RB_SIEBEL_EXTRACTED_DIRs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_SIEBEL_EXTRACTED_DIR#" ReadFromTable="OPSE">&amp;UC4RB_SIEBEL_IMPORT_PCK_DIR#</UC4RB_SIEBEL_EXTRACTED_DIRs.00><UC4RB_SIEBEL_SERVER_HOME_DIRs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_SIEBEL_SERVER_HOME_DIR#" ReadFromTable="OPSE">&amp;ENV#?SIEBEL_SERVER_ROOT</UC4RB_SIEBEL_SERVER_HOME_DIRs.00><UC4RB_SIEBEL_LANGUAGESs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_SIEBEL_LANGUAGES#" ReadFromTable="OPSE">&amp;ENV#?SIEBEL_LANGUAGES</UC4RB_SIEBEL_LANGUAGESs.00><UC4RB_COPY_MAXIMUM_RETRIESs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_COPY_MAXIMUM_RETRIES#" ReadFromTable="OPSE">5</UC4RB_COPY_MAXIMUM_RETRIESs.00><UC4RB_COPY_DELAY_TIMEs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_COPY_DELAY_TIME#" ReadFromTable="OPSE">30</UC4RB_COPY_DELAY_TIMEs.00></PRPTBOX></PRPTS>]]></DATAEDITOR>
+</PROMPTSETDATA>
+<DOCU_Docu state="1" type="text">
+<DOC/>
+</DOCU_Docu>
+</PRPT>
+</uc-export>

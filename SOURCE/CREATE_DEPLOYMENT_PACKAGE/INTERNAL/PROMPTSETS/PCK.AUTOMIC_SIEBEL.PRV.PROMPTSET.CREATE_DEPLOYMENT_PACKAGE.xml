@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="ISO-8859-15" standalone="no"?><uc-export clientvers="8.0.0">
+<PRPT client="6000" name="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.CREATE_DEPLOYMENT_PACKAGE" system="AE10">
+<HEADER state="1">
+<Title/>
+
+
+<LastUsed/>
+<ArchiveKey1/>
+<ArchiveKey2/>
+<OH_SubType/>
+</HEADER>
+<PROMPTDESIGNER state="1">
+<DESIGNER/>
+</PROMPTDESIGNER>
+<PROMPTSETXUI state="1">
+<XUIEDITOR><![CDATA[<dialog height="424" icon="PRPT" id="PRPTS" left="0" top="0" width="441"><readpanel fill="b" id="PRPTBOX" nl="1" scroll="v" text="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.CREATE_DEPLOYMENT_PACKAGE"><properties><entry name="text">PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.CREATE_DEPLOYMENT_PACKAGE</entry><entry name="modifiable">0</entry></properties><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_SIEBEL_SRF_OUTPUT_DIRs.00" inputassistance="0" len="" nl="1" regex="" required="0" separator="" showaspassword="0" text="Siebel SRF Output Directory" tooltip="Path to directory contains exported SRF files, if multiple languages files are created, SRF files are located under this children directories like enu/, nld/, ..." upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+         
+         <properties>
+            <entry listparam="C" name="reference">UC_DATATYPE_STRING</entry>
+            <entry name="text">Siebel SRF Output Directory</entry>
+            <entry name="multiselect">0</entry>
+            <entry name="separator"/>
+            <entry name="len"/>
+            <entry name="quotes"/>
+            <entry name="id">UC4RB_SIEBEL_SRF_OUTPUT_DIRs.00</entry>
+            <entry name="inputassistance">0</entry>
+            <entry name="enabled">0</entry>
+            <entry name="upper">0</entry>
+            <entry name="focus">0</entry>
+            <entry name="showaspassword">0</entry>
+            <entry name="tooltip">Path to directory contains exported SRF files, if multiple languages files are created, SRF files are located under this children directories like enu/, nld/, ...</entry>
+            <entry name="customfield"/>
+            <entry name="modifiable">1</entry>
+            <entry name="required">1</entry>
+            <entry name="regex"/>
+            <entry name="initvalue"/>
+         </properties>
+      </text><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_SIEBEL_SCRIPT_OUTPUT_DIRs.00" inputassistance="0" len="" nl="1" regex="" required="0" separator="" showaspassword="0" text="Siebel Browser Script Output Directory" tooltip="Path to directory contains generated browser scripts." upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+         
+         <properties>
+            <entry listparam="C" name="reference">UC_DATATYPE_STRING</entry>
+            <entry name="text">Siebel Browser Script Output Directory</entry>
+            <entry name="multiselect">0</entry>
+            <entry name="separator"/>
+            <entry name="len"/>
+            <entry name="quotes"/>
+            <entry name="id">UC4RB_SIEBEL_SCRIPT_OUTPUT_DIRs.00</entry>
+            <entry name="inputassistance">0</entry>
+            <entry name="enabled">0</entry>
+            <entry name="upper">0</entry>
+            <entry name="focus">0</entry>
+            <entry name="showaspassword">0</entry>
+            <entry name="tooltip">Path to directory contains generated browser scripts.</entry>
+            <entry name="customfield"/>
+            <entry name="modifiable">1</entry>
+            <entry name="required">1</entry>
+            <entry name="regex"/>
+            <entry name="initvalue"/>
+         </properties>
+      </text><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_SIEBEL_REPOSITORY_FILEs.00" inputassistance="0" len="" nl="1" regex="" required="0" separator="" showaspassword="0" text="Siebel Exported Repository File" tooltip="Path to exported repository file" upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+         
+         <properties>
+            <entry listparam="C" name="reference">UC_DATATYPE_STRING</entry>
+            <entry name="text">Siebel Exported Repository File</entry>
+            <entry name="multiselect">0</entry>
+            <entry name="separator"/>
+            <entry name="len"/>
+            <entry name="quotes"/>
+            <entry name="id">UC4RB_SIEBEL_REPOSITORY_FILEs.00</entry>
+            <entry name="inputassistance">0</entry>
+            <entry name="enabled">0</entry>
+            <entry name="upper">0</entry>
+            <entry name="focus">0</entry>
+            <entry name="showaspassword">0</entry>
+            <entry name="tooltip">Path to exported repository file</entry>
+            <entry name="customfield"/>
+            <entry name="modifiable">1</entry>
+            <entry name="required">1</entry>
+            <entry name="regex"/>
+            <entry name="initvalue"/>
+         </properties>
+      </text><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_SIEBEL_SCHEMA_FILEs.00" inputassistance="0" len="" nl="1" regex="" required="0" separator="" showaspassword="0" text="Siebel Exported Schema File" tooltip="Path to exported schema file" upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+         
+         <properties>
+            <entry listparam="C" name="reference">UC_DATATYPE_STRING</entry>
+            <entry name="text">Siebel Exported Schema File</entry>
+            <entry name="multiselect">0</entry>
+            <entry name="separator"/>
+            <entry name="len"/>
+            <entry name="quotes"/>
+            <entry name="id">UC4RB_SIEBEL_SCHEMA_FILEs.00</entry>
+            <entry name="inputassistance">0</entry>
+            <entry name="enabled">0</entry>
+            <entry name="upper">0</entry>
+            <entry name="focus">0</entry>
+            <entry name="showaspassword">0</entry>
+            <entry name="tooltip">Path to exported schema file</entry>
+            <entry name="customfield"/>
+            <entry name="modifiable">1</entry>
+            <entry name="required">1</entry>
+            <entry name="regex"/>
+            <entry name="initvalue"/>
+         </properties>
+      </text><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_SIEBEL_COLLECTED_FILEs.00" inputassistance="0" len="" nl="1" regex="" required="0" separator="" showaspassword="0" text="Siebel Collected Archive File" tooltip="Path to ZIP archive of collected files" upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+         
+         <properties>
+            <entry listparam="C" name="reference">UC_DATATYPE_STRING</entry>
+            <entry name="text">Siebel Collected Archive File</entry>
+            <entry name="multiselect">0</entry>
+            <entry name="separator"/>
+            <entry name="len"/>
+            <entry name="quotes"/>
+            <entry name="id">UC4RB_SIEBEL_COLLECTED_FILEs.00</entry>
+            <entry name="inputassistance">0</entry>
+            <entry name="enabled">0</entry>
+            <entry name="upper">0</entry>
+            <entry name="focus">0</entry>
+            <entry name="showaspassword">0</entry>
+            <entry name="tooltip">Path to ZIP archive of collected files</entry>
+            <entry name="customfield"/>
+            <entry name="modifiable">1</entry>
+            <entry name="required">1</entry>
+            <entry name="regex"/>
+            <entry name="initvalue"/>
+         </properties>
+      </text><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_SIEBEL_DEP_PKG_FILEs.00" inputassistance="0" len="" nl="1" regex="" required="0" separator="" showaspassword="0" text="Output Package File" tooltip="Path to output deployment package file" upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+         
+         <properties>
+            <entry listparam="C" name="reference">UC_DATATYPE_STRING</entry>
+            <entry name="text">Output Package File</entry>
+            <entry name="multiselect">0</entry>
+            <entry name="separator"/>
+            <entry name="len"/>
+            <entry name="quotes"/>
+            <entry name="id">UC4RB_SIEBEL_DEP_PKG_FILEs.00</entry>
+            <entry name="inputassistance">0</entry>
+            <entry name="enabled">0</entry>
+            <entry name="upper">0</entry>
+            <entry name="focus">0</entry>
+            <entry name="showaspassword">0</entry>
+            <entry name="tooltip">Path to output deployment package file</entry>
+            <entry name="customfield"/>
+            <entry name="modifiable">1</entry>
+            <entry name="required">1</entry>
+            <entry name="regex"/>
+            <entry name="initvalue"/>
+         </properties>
+      </text></readpanel></dialog>]]></XUIEDITOR>
+</PROMPTSETXUI>
+<PROMPTSETDATA state="1">
+<DATAEDITOR><![CDATA[<PRPTS idnr="0005492916" client="6000" system="AE10" ontop="1" src="oh"><PRPTBOX><UC4RB_SIEBEL_SRF_OUTPUT_DIRs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_SIEBEL_SRF_OUTPUT_DIR#" ReadFromTable="OPSE"></UC4RB_SIEBEL_SRF_OUTPUT_DIRs.00><UC4RB_SIEBEL_SCRIPT_OUTPUT_DIRs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_SIEBEL_SCRIPT_OUTPUT_DIR#" ReadFromTable="OPSE"></UC4RB_SIEBEL_SCRIPT_OUTPUT_DIRs.00><UC4RB_SIEBEL_REPOSITORY_FILEs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_SIEBEL_REPOSITORY_FILE#" ReadFromTable="OPSE"></UC4RB_SIEBEL_REPOSITORY_FILEs.00><UC4RB_SIEBEL_SCHEMA_FILEs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_SIEBEL_SCHEMA_FILE#" ReadFromTable="OPSE"></UC4RB_SIEBEL_SCHEMA_FILEs.00><UC4RB_SIEBEL_COLLECTED_FILEs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_SIEBEL_COLLECTED_FILE#" ReadFromTable="OPSE"></UC4RB_SIEBEL_COLLECTED_FILEs.00><UC4RB_SIEBEL_DEP_PKG_FILEs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_SIEBEL_DEP_PKG_FILE#" ReadFromTable="OPSE"></UC4RB_SIEBEL_DEP_PKG_FILEs.00></PRPTBOX></PRPTS>]]></DATAEDITOR>
+</PROMPTSETDATA>
+<DOCU_Docu state="1" type="text">
+<DOC/>
+</DOCU_Docu>
+</PRPT>
+</uc-export>

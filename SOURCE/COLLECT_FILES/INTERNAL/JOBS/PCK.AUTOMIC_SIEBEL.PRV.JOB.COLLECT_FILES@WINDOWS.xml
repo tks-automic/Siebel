@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="ISO-8859-15" standalone="no"?><uc-export clientvers="8.0.0">
+<JOBS_WINDOWS AttrType="WINDOWS" name="PCK.AUTOMIC_SIEBEL.PRV.JOB.COLLECT_FILES@WINDOWS">
+<XHEADER state="1">
+<Title/>
+
+
+<LastUsed/>
+<ArchiveKey1/>
+<ArchiveKey2/>
+<ExtRepDef>1</ExtRepDef>
+<ExtRepAll>0</ExtRepAll>
+<ExtRepNone>0</ExtRepNone>
+<Active>1</Active>
+<OH_SubType/>
+</XHEADER>
+<OUTPUTREG state="1" tidy="1">
+<FileReg/>
+</OUTPUTREG>
+<SYNCREF state="1">
+<Syncs/>
+</SYNCREF>
+<ATTR_JOBS state="1">
+<Queue>CLIENT_QUEUE</Queue>
+<StartType/>
+<HostDst>WINDOWS|&lt;WIN&gt;|HOST</HostDst>
+<HostATTR_Type>WINDOWS</HostATTR_Type>
+<CodeName/>
+<Login/>
+<IntAccount/>
+<AutoDeactNo>1</AutoDeactNo>
+<AutoDeact1ErrorFree>0</AutoDeact1ErrorFree>
+<AutoDeactErrorFree>0</AutoDeactErrorFree>
+<DeactWhen/>
+<DeactDelay>0</DeactDelay>
+<AutoDeactAlways>0</AutoDeactAlways>
+<AttDialog>0</AttDialog>
+<ActAtRun>0</ActAtRun>
+<Consumption>0</Consumption>
+<UC4Priority>0</UC4Priority>
+<MaxParallel2>0</MaxParallel2>
+<MpElse1>1</MpElse1>
+<MpElse2>0</MpElse2>
+<TZ/>
+</ATTR_JOBS>
+<ATTR_WINDOWS state="1">
+<OutputDb>1</OutputDb>
+<OutputDbErr>0</OutputDbErr>
+<OutputFile>0</OutputFile>
+<IsGenerated>0</IsGenerated>
+<BAT>0</BAT>
+<COM>0</COM>
+<WinBatch>1</WinBatch>
+<Standard>1</Standard>
+<Minimized>0</Minimized>
+<Maximized>0</Maximized>
+<JObjDefault>0</JObjDefault>
+<JObjYes>1</JObjYes>
+<JObjNo>0</JObjNo>
+<WorkingDirectory>c:\</WorkingDirectory>
+<Command/>
+<LogOn>0</LogOn>
+<ShowJob>0</ShowJob>
+</ATTR_WINDOWS>
+<RUNTIME state="1">
+<MaxRetCode>0</MaxRetCode>
+<MrcExecute/>
+<MrcElseE>0</MrcElseE>
+<FcstStatus>0| </FcstStatus>
+<Ert>92</Ert>
+<ErtMethodDef>1</ErtMethodDef>
+<ErtMethodFix>0</ErtMethodFix>
+<ErtFix>0</ErtFix>
+<ErtDynMethod>2|Average</ErtDynMethod>
+<ErtMethodDyn>0</ErtMethodDyn>
+<ErtCnt>0</ErtCnt>
+<ErtCorr>0</ErtCorr>
+<ErtIgn>0</ErtIgn>
+<ErtIgnFlg>0</ErtIgnFlg>
+<ErtMinCnt>0</ErtMinCnt>
+<MrtMethodNone>1</MrtMethodNone>
+<MrtMethodFix>0</MrtMethodFix>
+<MrtFix>0</MrtFix>
+<MrtMethodErt>0</MrtMethodErt>
+<MrtErt>0</MrtErt>
+<MrtMethodDate>0</MrtMethodDate>
+<MrtDays>0</MrtDays>
+<MrtTime>00:00</MrtTime>
+<MrtTZ/>
+<SrtMethodNone>1</SrtMethodNone>
+<SrtMethodFix>0</SrtMethodFix>
+<SrtFix>0</SrtFix>
+<SrtMethodErt>0</SrtMethodErt>
+<SrtErt>0</SrtErt>
+<MrtCancel>0</MrtCancel>
+<MrtExecute>0</MrtExecute>
+<MrtExecuteObj/>
+</RUNTIME>
+<DYNVALUES state="1">
+<dyntree>
+<node content="1" id="VALUE" name="Variables" parent="" type="VALUE">
+<VALUE state="1">
+<Values/>
+<Mode>0</Mode>
+</VALUE>
+</node>
+</dyntree>
+</DYNVALUES>
+<ROLLBACK state="1" tidy="1">
+<RollbackFlag>0</RollbackFlag>
+<CBackupObj/>
+<CRollbackObj/>
+<FBackupPath/>
+<FDeleteBefore>0</FDeleteBefore>
+<FInclSubDirs>0</FInclSubDirs>
+</ROLLBACK>
+<PRE_SCRIPT mode="1" replacementmode="1" state="1" tidy="0">
+<PSCRI><![CDATA[:SET &PROMPTSET# = "PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COLLECT_FILES"
+:INC PCK.AUTOMIC_SIEBEL.PRV.INCLUDE.GET_VALUES_FROM_CONFIG
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.START_STOP_JOB_ACCORDING_TO_AGENT_OS]]></PSCRI>
+</PRE_SCRIPT>
+<SCRIPT mode="1" state="1" tidy="0">
+<MSCRI><![CDATA[:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.POWERSHELL_UTILITY
+
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_HEADER_PARAM_VALIDATION
+
+:DEFINE &STRING_ARR#,string,30
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.NORMALIZE_PATH "UC4RB_CONVERTED_STRING" = "UC4RB_SIEBEL_SERVER_ROOT"
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.NORMALIZE_PATH "UC4RB_CONVERTED_STRING" = "UC4RB_SIEBEL_WS_PUB_DIR"
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.NORMALIZE_PATH "UC4RB_CONVERTED_STRING" = "UC4RB_SIEBEL_EXPORT_FILE_PATH"
+
+:SET &UC4RB_LOGGING_PARAMETER# = "Siebel Server Directory"
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_PARAM &UC4RB_LOGGING_PARAMETER_VAL# = &UC4RB_SIEBEL_SERVER_ROOT#
+:SET &UC4RB_LOGGING_PARAMETER# = "Siebel languages"
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_PARAM &UC4RB_LOGGING_PARAMETER_VAL# = &UC4RB_SIEBEL_LANGUAGES#
+:SET &UC4RB_LOGGING_PARAMETER# = "Siebel web server public directory"
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_PARAM &UC4RB_LOGGING_PARAMETER_VAL# = &UC4RB_SIEBEL_WS_PUB_DIR#
+:SET &UC4RB_LOGGING_PARAMETER# = "Export file path"
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_PARAM &UC4RB_LOGGING_PARAMETER_VAL# = &UC4RB_SIEBEL_EXPORT_FILE_PATH#
+
+! Check if siebel server hom directory exists
+:SET &UC4RB_CHECKME# = &UC4RB_SIEBEL_SERVER_ROOT#
+:INCLUDE PCK.AUTOMIC_SHARED.PUB.INCLUDE.CHECK_WINDOWS_POWERSHELL_FILE_EXISTS
+$errors = 0
+if  ($EXIST -eq 0) {
+:   SET &UC4RB_LOGGING_PARAMETER# = "Siebel Server Directory"
+:   SET &UC4RB_LOGGING_ERROR# = "Directory &UC4RB_SIEBEL_SERVER_ROOT# does not exist"
+:   INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_ERROR_PARAMETER
+    $errors = 1
+} elseif  ($ISDIR -eq 0){
+:   SET &UC4RB_LOGGING_PARAMETER# = "Siebel Server Directory"
+:   SET &UC4RB_LOGGING_ERROR# = "&UC4RB_SIEBEL_SERVER_ROOT# exists but is not a directory "
+:   INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_ERROR_PARAMETER
+    $errors = 2
+}
+
+! Check Siebel web server public directory exists
+:SET &UC4RB_CHECKME# = &UC4RB_SIEBEL_WS_PUB_DIR#
+:INCLUDE PCK.AUTOMIC_SHARED.PUB.INCLUDE.CHECK_WINDOWS_POWERSHELL_FILE_EXISTS
+
+if  ($EXIST -eq 0) {
+:   SET &UC4RB_LOGGING_PARAMETER# = "Siebel web server public directory"
+:   SET &UC4RB_LOGGING_ERROR# = "Directory &UC4RB_SIEBEL_WS_PUB_DIR# does not exist"
+:   INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_ERROR_PARAMETER
+    $errors=1
+} elseif  ($ISDIR -eq 0){
+:   SET &UC4RB_LOGGING_PARAMETER# = "Siebel web server public directory"
+:   SET &UC4RB_LOGGING_ERROR# = "&UC4RB_SIEBEL_WS_PUB_DIR# exists but is not a directory "
+:   INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_ERROR_PARAMETER
+    $errors=2
+}
+
+:DEFINE &ARRAY#, string, 20
+:FILL &ARRAY#[] = STR_SPLIT(&UC4RB_SIEBEL_LANGUAGES#, ",")
+:SET &VAR# = 1
+:SET &LEN# = LENGTH(&ARRAY#[], SIZE)
+:IF &LEN# LT 1
+:   SET &UC4RB_LOGGING_PARAMETER# = "Siebel languages"
+:   SET &UC4RB_LOGGING_ERROR# = "Installed languages parameter &UC4RB_SIEBEL_LANGUAGES# is invalid"
+:   INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_ERROR_PARAMETER
+:ENDIF
+:WHILE &VAR# LE &LEN#
+:  SET &UC4RB_SIEBEL_LANGUAGE# = &ARRAY#[&VAR#]
+
+! Check image files in &UC4RB_SIEBEL_SERVER_ROOT#\webmaster\images\&UC4RB_SIEBEL_LANGUAGE#
+:  SET &UC4RB_CHECKME# = "&UC4RB_SIEBEL_SERVER_ROOT#\webmaster\images\&UC4RB_SIEBEL_LANGUAGE#"
+:  INCLUDE PCK.AUTOMIC_SHARED.PUB.INCLUDE.CHECK_WINDOWS_POWERSHELL_FILE_EXISTS
+
+   if  ($EXIST -eq 0) {
+:    SET &UC4RB_LOGGING_PARAMETER# = "Image Directory"
+:    SET &UC4RB_LOGGING_ERROR# = "Directory &UC4RB_CHECKME# does not exist"
+:    INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_ERROR_PARAMETER
+     $errors=1
+   } elseif  ($ISDIR -eq 0){
+:     SET &UC4RB_LOGGING_PARAMETER# = "Image Directory"
+:     SET &UC4RB_LOGGING_ERROR# = "&UC4RB_CHECKME# exists but is not a directory "
+:     INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_ERROR_PARAMETER
+      $errors=2
+   }
+! Check css files in &UC4RB_SIEBEL_SERVER_ROOT#\webmaster\files\&UC4RB_SIEBEL_LANGUAGE#
+:  SET &UC4RB_CHECKME# = "&UC4RB_SIEBEL_SERVER_ROOT#\webmaster\files\&UC4RB_SIEBEL_LANGUAGE#"
+:  INCLUDE PCK.AUTOMIC_SHARED.PUB.INCLUDE.CHECK_WINDOWS_POWERSHELL_FILE_EXISTS
+
+   if  ($EXIST -eq 0) {
+:    SET &UC4RB_LOGGING_PARAMETER# = "Css Directory"
+:    SET &UC4RB_LOGGING_ERROR# = "Directory &UC4RB_CHECKME# does not exist"
+:    INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_ERROR_PARAMETER
+     $errors=1
+   } elseif  ($ISDIR -eq 0){
+:     SET &UC4RB_LOGGING_PARAMETER# = "Css Directory"
+:     SET &UC4RB_LOGGING_ERROR# = "&UC4RB_CHECKME# exists but is not a directory "
+:     INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_ERROR_PARAMETER
+      $errors=2
+   }
+
+! Check webserver files in <webserver public directory>/[language_3_letter_code]/files
+:  SET &UC4RB_CHECKME# = "&UC4RB_SIEBEL_WS_PUB_DIR#\&UC4RB_SIEBEL_LANGUAGE#\files"
+:  INCLUDE PCK.AUTOMIC_SHARED.PUB.INCLUDE.CHECK_WINDOWS_POWERSHELL_FILE_EXISTS
+
+   if  ($EXIST -eq 0) {
+:    SET &UC4RB_LOGGING_PARAMETER# = "Siebel web server public directory"
+:    SET &UC4RB_LOGGING_ERROR# = "Directory &UC4RB_CHECKME# does not exist"
+:    INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_ERROR_PARAMETER
+     $errors=1
+   } elseif  ($ISDIR -eq 0){
+:     SET &UC4RB_LOGGING_PARAMETER# = "Siebel web server public directory"
+:     SET &UC4RB_LOGGING_ERROR# = "&UC4RB_CHECKME# exists but is not a directory"
+:     INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_ERROR_PARAMETER
+      $errors=2
+   }
+
+! Check webserver images in <webserver public directory>/[language_3_letter_code]/images
+:  SET &UC4RB_CHECKME# = "&UC4RB_SIEBEL_WS_PUB_DIR#\&UC4RB_SIEBEL_LANGUAGE#\images"
+:  INCLUDE PCK.AUTOMIC_SHARED.PUB.INCLUDE.CHECK_WINDOWS_POWERSHELL_FILE_EXISTS
+
+   if  ($EXIST -eq 0) {
+:    SET &UC4RB_LOGGING_PARAMETER# = "Siebel web server public directory"
+:    SET &UC4RB_LOGGING_ERROR# = "Directory &UC4RB_CHECKME# does not exist"
+:    INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_ERROR_PARAMETER
+     $errors=1
+   } elseif  ($ISDIR -eq 0){
+:     SET &UC4RB_LOGGING_PARAMETER# = "Siebel web server public directory"
+:     SET &UC4RB_LOGGING_ERROR# = "&UC4RB_CHECKME# exists but is not a directory"
+:     INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_ERROR_PARAMETER
+      $errors=2
+   }
+:  SET &VAR# = &VAR# + 1
+:ENDWHILE
+
+! Checking output zip file exist
+:SET &UC4RB_CHECKME# = &UC4RB_SIEBEL_EXPORT_FILE_PATH#
+:INCLUDE PCK.AUTOMIC_SHARED.PUB.INCLUDE.CHECK_WINDOWS_POWERSHELL_FILE_EXISTS
+
+if  ($ISFILE -eq 1) {
+:   SET &UC4RB_LOGGING_PARAMETER# = "Export file path"
+:   SET &UC4RB_LOGGING_ERROR# = "Output file &UC4RB_CHECKME# already exist, please delete the file and try again"
+:   INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_ERROR_PARAMETER
+    $errors=1
+}
+
+
+if ($errors -gt 0) {
+  $retcode = $errors
+  __uc_return( $retcode )
+}
+
+! Start execution
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_HEADER_EXECUTION
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.CHANGE_FOLDER_TO_AGENT_BIN
+
+! getting siebel build number by executing list server cmd in srvrmgr tool
+$buildNumber = Get-Content "&UC4RB_SIEBEL_SERVER_ROOT#\base.txt"| select-string -Pattern "`[[0-9\-]*`]" -allmatches | select -expa matches | select -expa value
+$buildNumber = $buildNumber.replace("[","").replace("]","")
+
+:SET &UC4RB_COLLECT_FILES_TEMP_DIR# = "&UC4RB_AGENT_WORKING_DIR#\temp&$RUNID#"
+:PUB &UC4RB_COLLECT_FILES_TEMP_DIR#,,"WORKFLOW"
+! create container dir
+$tempDir = "&UC4RB_COLLECT_FILES_TEMP_DIR#"
+md $tempDir
+
+if( $? -ne 1 ) {
+  if ( $LASTEXITCODE -ne 0 ) {
+    $retcode = $LASTEXITCODE
+  } else {
+    $retcode = 1
+  }
+  Write-Host "ERROR: Cannot create $tempDir, try again later"
+  __uc_return( $retcode )
+}
+
+$languages = "&UC4RB_SIEBEL_LANGUAGE#"
+$serverFullDir = "&UC4RB_SIEBEL_SERVER_ROOT#";
+$wsPubDir = "&UC4RB_SIEBEL_WS_PUB_DIR#";
+
+$serverFullDir = $serverFullDir.replace("/","\")
+$strArr = $serverFullDir.Split("\")
+$exportServerDir = $strArr[$strArr.length-1];
+
+$wsPubDir = $wsPubDir.replace("/","\")
+$strArr = $wsPubDir.Split("\")
+$exportWsPubDir = $strArr[$strArr.length-2]+"\"+$strArr[$strArr.length-1];
+
+
+$strLang = $languages.Split(",")
+ForEach ($lang in $strLang) {
+  $targetDir = $tempDir+"\"+$exportServerDir+"\webmaster\images\"+$lang
+  $EXIST = Test-Path $targetDir
+  if ($EXIST -eq 0) {
+    md $targetDir
+  }
+  cp "$serverFullDir\webmaster\images\$lang\*" "$targetDir" -recurse
+
+  $targetDir = $tempDir+"\"+$exportServerDir+"\webtempl"
+  $EXIST = Test-Path $targetDir
+  if ($EXIST -eq 0) {
+    md $targetDir
+  }
+  cp "$serverFullDir\webtempl\*" "$targetDir" -recurse
+
+
+  $targetDir = $tempDir+"\"+$exportServerDir+"\webmaster\files\"+$lang
+  $EXIST = Test-Path $targetDir
+  if ($EXIST -eq 0) {
+    md $targetDir
+  }
+  cp "$serverFullDir\webmaster\files\$lang\*" "$targetDir" -recurse
+
+  $targetDir = $tempDir+"\"+$exportWsPubDir+"\"+$lang+"\files"
+  $EXIST = Test-Path $targetDir
+  if ($EXIST -eq 0) {
+    md $targetDir
+  }
+  cp "$wsPubDir\$lang\files\*" "$targetDir" -recurse
+
+  $targetDir = $tempDir+"\"+$exportWsPubDir+"\"+$lang+"\images"
+  $EXIST = Test-Path $targetDir
+  if ($EXIST -eq 0) {
+    md $targetDir
+  }
+  cp "$wsPubDir\$lang\images\*" "$targetDir" -recurse
+
+
+  $targetDir = $tempDir+"\"+$exportWsPubDir+"\"+$lang+"\"+$buildNumber+"\scripts"
+  $EXIST = Test-Path $targetDir
+  if ($EXIST -eq 0) {
+    md $targetDir
+  }
+  cp "$wsPubDir\$lang\$buildNumber\scripts\*" "$targetDir" -recurse
+
+  $targetDir = $tempDir+"\"+$exportWsPubDir+"\"+$lang+"\"+$buildNumber+"\applets"
+  $EXIST = Test-Path $targetDir
+  if ($EXIST -eq 0) {
+    md $targetDir
+  }
+  cp "$wsPubDir\$lang\$buildNumber\applets\*" "$targetDir" -recurse
+}
+
+  $targetDir = $tempDir+"\"+$exportServerDir+"\webmaster\siebel_build\applets"
+  $EXIST = Test-Path $targetDir
+  if ($EXIST -eq 0) {
+    md $targetDir
+  }
+  cp "$serverFullDir\webmaster\siebel_build\applets\*" "$targetDir" -recurse
+
+  $targetDir = $tempDir+"\"+$exportServerDir+"\webmaster\siebel_build\scripts"
+  $EXIST = Test-Path $targetDir
+  if ($EXIST -eq 0) {
+    md $targetDir
+  }
+  cp "$serverFullDir\webmaster\siebel_build\scripts\*" "$targetDir" -recurse
+! Add the $tempDir to collected_files.zip
+Write-Host "INFO: Creating zip output file at &UC4RB_SIEBEL_EXPORT_FILE_PATH#.." | Out-Default]]></MSCRI>
+</SCRIPT>
+<OUTPUTSCAN state="1">
+<Inherit>N</Inherit>
+<filterobjects/>
+<HostFsc/>
+<LoginFsc/>
+</OUTPUTSCAN>
+<POST_SCRIPT mode="1" replacementmode="1" state="1" tidy="0">
+<OSCRI><![CDATA[: SET &UC4RB_OUT_COLLECT_FILES_ZIP# = &UC4RB_SIEBEL_EXPORT_FILE_PATH#
+:  PUBLISH &UC4RB_OUT_COLLECT_FILES_ZIP#, , "TOP"]]></OSCRI>
+</POST_SCRIPT>
+<DOCU_Docu state="1" type="text">
+<DOC/>
+</DOCU_Docu>
+</JOBS_WINDOWS>
+</uc-export>

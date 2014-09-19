@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="ISO-8859-15" standalone="no"?><uc-export clientvers="8.0.0">
+<JOBS_WINDOWS AttrType="WINDOWS" name="PCK.AUTOMIC_SIEBEL.PRV.JOB.FULL_COMPILE@WINDOWS">
+<XHEADER state="1">
+<Title/>
+
+
+<LastUsed/>
+<ArchiveKey1/>
+<ArchiveKey2/>
+<ExtRepDef>1</ExtRepDef>
+<ExtRepAll>0</ExtRepAll>
+<ExtRepNone>0</ExtRepNone>
+<Active>1</Active>
+<OH_SubType/>
+</XHEADER>
+<OUTPUTREG state="1" tidy="1">
+<FileReg/>
+</OUTPUTREG>
+<SYNCREF state="1">
+<Syncs/>
+</SYNCREF>
+<ATTR_JOBS state="1">
+<Queue>CLIENT_QUEUE</Queue>
+<StartType/>
+<HostDst>WINDOWS|&lt;WIN&gt;|HOST</HostDst>
+<HostATTR_Type>WINDOWS</HostATTR_Type>
+<CodeName/>
+<Login/>
+<IntAccount/>
+<AutoDeactNo>1</AutoDeactNo>
+<AutoDeact1ErrorFree>0</AutoDeact1ErrorFree>
+<AutoDeactErrorFree>0</AutoDeactErrorFree>
+<DeactWhen/>
+<DeactDelay>0</DeactDelay>
+<AutoDeactAlways>0</AutoDeactAlways>
+<AttDialog>0</AttDialog>
+<ActAtRun>0</ActAtRun>
+<Consumption>0</Consumption>
+<UC4Priority>0</UC4Priority>
+<MaxParallel2>0</MaxParallel2>
+<MpElse1>1</MpElse1>
+<MpElse2>0</MpElse2>
+<TZ/>
+</ATTR_JOBS>
+<ATTR_WINDOWS state="1">
+<OutputDb>1</OutputDb>
+<OutputDbErr>0</OutputDbErr>
+<OutputFile>0</OutputFile>
+<IsGenerated>0</IsGenerated>
+<BAT>0</BAT>
+<COM>0</COM>
+<WinBatch>1</WinBatch>
+<Standard>1</Standard>
+<Minimized>0</Minimized>
+<Maximized>0</Maximized>
+<JObjDefault>0</JObjDefault>
+<JObjYes>1</JObjYes>
+<JObjNo>0</JObjNo>
+<WorkingDirectory>c:\</WorkingDirectory>
+<Command/>
+<LogOn>0</LogOn>
+<ShowJob>0</ShowJob>
+</ATTR_WINDOWS>
+<RUNTIME state="1">
+<MaxRetCode>0</MaxRetCode>
+<MrcExecute/>
+<MrcElseE>0</MrcElseE>
+<FcstStatus>0| </FcstStatus>
+<Ert>36313</Ert>
+<ErtMethodDef>1</ErtMethodDef>
+<ErtMethodFix>0</ErtMethodFix>
+<ErtFix>0</ErtFix>
+<ErtDynMethod>2|Average</ErtDynMethod>
+<ErtMethodDyn>0</ErtMethodDyn>
+<ErtCnt>0</ErtCnt>
+<ErtCorr>0</ErtCorr>
+<ErtIgn>0</ErtIgn>
+<ErtIgnFlg>0</ErtIgnFlg>
+<ErtMinCnt>0</ErtMinCnt>
+<MrtMethodNone>1</MrtMethodNone>
+<MrtMethodFix>0</MrtMethodFix>
+<MrtFix>0</MrtFix>
+<MrtMethodErt>0</MrtMethodErt>
+<MrtErt>0</MrtErt>
+<MrtMethodDate>0</MrtMethodDate>
+<MrtDays>0</MrtDays>
+<MrtTime>00:00</MrtTime>
+<MrtTZ/>
+<SrtMethodNone>1</SrtMethodNone>
+<SrtMethodFix>0</SrtMethodFix>
+<SrtFix>0</SrtFix>
+<SrtMethodErt>0</SrtMethodErt>
+<SrtErt>0</SrtErt>
+<MrtCancel>0</MrtCancel>
+<MrtExecute>0</MrtExecute>
+<MrtExecuteObj/>
+</RUNTIME>
+<DYNVALUES state="1">
+<dyntree>
+<node content="1" id="VALUE" name="Variables" parent="" type="VALUE">
+<VALUE state="1">
+<Values/>
+<Mode>0</Mode>
+</VALUE>
+</node>
+</dyntree>
+</DYNVALUES>
+<ROLLBACK state="1" tidy="1">
+<RollbackFlag>0</RollbackFlag>
+<CBackupObj/>
+<CRollbackObj/>
+<FBackupPath/>
+<FDeleteBefore>0</FDeleteBefore>
+<FInclSubDirs>0</FInclSubDirs>
+</ROLLBACK>
+<PRE_SCRIPT mode="1" replacementmode="1" state="1" tidy="0">
+<PSCRI><![CDATA[:SET &PROMPTSET# = "PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.FULL_COMPILE"
+:INC PCK.AUTOMIC_SIEBEL.PRV.INCLUDE.GET_VALUES_FROM_CONFIG
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.START_STOP_JOB_ACCORDING_TO_AGENT_OS]]></PSCRI>
+</PRE_SCRIPT>
+<SCRIPT mode="1" state="1" tidy="0">
+<MSCRI><![CDATA[:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.POWERSHELL_UTILITY
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_HEADER_PARAM_VALIDATION
+
+:SET &UC4RB_LOGGING_PARAMETER# = "Siebel Tools Directory"
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_PARAM &UC4RB_LOGGING_PARAMETER_VAL# = &UC4RB_SIEBEL_TOOLS_ROOT#
+
+:SET &UC4RB_LOGGING_PARAMETER# = "Username"
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_PARAM &UC4RB_LOGGING_PARAMETER_VAL# = &UC4RB_SIEBEL_USER#
+
+:SET &UC4RB_LOGGING_PARAMETER# = "Password"
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_PARAM &UC4RB_LOGGING_PARAMETER_VAL# = &UC4RB_SIEBEL_PASSWORD#
+
+:SET &UC4RB_LOGGING_PARAMETER# = "Repository name"
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_PARAM &UC4RB_LOGGING_PARAMETER_VAL# = &UC4RB_SIEBEL_REPOSITORY_NAME#
+
+:SET &UC4RB_LOGGING_PARAMETER# = "Siebel repository directory"
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_PARAM &UC4RB_LOGGING_PARAMETER_VAL# = &UC4RB_SIEBEL_SRF_DIR#
+
+:SET &UC4RB_LOGGING_PARAMETER# = "Siebel repository file name"
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_PARAM &UC4RB_LOGGING_PARAMETER_VAL# = &UC4RB_SIEBEL_SRF_NAME#
+
+:SET &UC4RB_LOGGING_PARAMETER# = "Siebel config"
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_PARAM &UC4RB_LOGGING_PARAMETER_VAL# = &UC4RB_SIEBEL_CONFIG_NAME#
+
+:SET &UC4RB_LOGGING_PARAMETER# = "Siebel Datasource"
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_PARAM &UC4RB_LOGGING_PARAMETER_VAL# = &UC4RB_SIEBEL_CFG_DATA_SOURCE#
+
+:SET &UC4RB_LOGGING_PARAMETER# = "Siebel languages"
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_PARAM &UC4RB_LOGGING_PARAMETER_VAL# = &UC4RB_SIEBEL_LANGUAGES#
+
+! set /a errors=0 > nul
+! if %errors% GTR 0 (
+!       set retcode=%errors%
+!       goto :retcode
+! )
+!
+
+function isFileLocked()
+{
+  param($fileName)
+  $oFile = New-Object System.IO.FileInfo $fileName
+  try
+  {
+    $oStream = $oFile.Open([System.IO.FileMode]::Open, [System.IO.FileAccess]::ReadWrite, [System.IO.FileShare]::None)
+    if ($oStream)
+    {
+      $oStream.Close()
+    }
+    return $false
+  }
+  catch
+  {
+    # file is locked by a process.
+    return $true
+  }
+}
+
+function checkErrorInSRF()
+{
+  param($fileName)
+  $isrunning=1
+  while ( $isrunning -eq $true )
+  {
+    if (!(Test-Path -Path "$fileName" )) {
+    echo "The file $fileName doesn't exist"
+    exit(1)
+    break
+    }
+
+  if ( isFileLocked "$fileName" ) {
+        echo "Wait in 5 minutes"
+        Start-Sleep -s 300
+  } else {
+    $file=$( Get-ChildItem "$fileName" -ErrorAction "SilentlyContinue" | Where-Object {$_.Length -gt 30MB} )
+    if ( !$file ) {
+      echo "file $fileName < 30MB"
+      exit 1;
+    } else {
+      break
+    }
+  }
+ }
+}
+
+:D &STRING_ARR#,string,20
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.NORMALIZE_PATH "UC4RB_CONVERTED_STRING" = "UC4RB_SIEBEL_SRF_DIR"
+
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_HEADER_EXECUTION
+
+cd "&UC4RB_SIEBEL_TOOLS_ROOT#\bin"
+
+:DEFINE &ARRAY#, string, 20
+:FILL &ARRAY#[] = STR_SPLIT(&UC4RB_SIEBEL_LANGUAGES#, ",")
+:SET &VAR# = 1
+:SET &LEN# = LENGTH(&ARRAY#[], SIZE)
+
+:SET &UC4RB_ENCRYPTED_PASSWORD_TMP#="&UC4RB_SIEBEL_PASSWORD#"
+:INCLUDE PCK.AUTOMIC_SHARED.PUB.INCLUDE.DECRYPT_PASSWORD
+
+:WHILE &VAR# LE &LEN#
+:  SET &UC4RB_SIEBEL_LANGUAGE# = &ARRAY#[&VAR#]
+if(!(Test-Path -Path "&UC4RB_SIEBEL_SRF_DIR#\&UC4RB_SIEBEL_LANGUAGE#" )){
+    New-Item -ItemType directory -Path "&UC4RB_SIEBEL_SRF_DIR#\&UC4RB_SIEBEL_LANGUAGE#"
+}
+:  JCL_CONCAT_CHAR "?"
+& .\siebdev.exe /c "&UC4RB_SIEBEL_CONFIG_NAME#" /d "&UC4RB_SIEBEL_CFG_DATA_SOURCE#" /u "&UC4RB_SIEBEL_USER#" /p "$UC4_DECRYPTED_PWD" ?
+ /tl &UC4RB_SIEBEL_LANGUAGE# /bc "&UC4RB_SIEBEL_REPOSITORY_NAME#" "&UC4RB_SIEBEL_SRF_DIR#\&UC4RB_SIEBEL_LANGUAGE#\&UC4RB_SIEBEL_SRF_NAME#"
+:  JCL_CONCAT_CHAR
+:  INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.CHECK_RETURN_CODE_WINDOWS_POWERSHELL
+:  SET &VAR# = &VAR# + 1
+:ENDWHILE
+
+! Wait 1 minute before do other check
+Start-Sleep -s 30
+
+:SET &VAR# = 1
+:WHILE &VAR# LE &LEN#
+:  SET &UC4RB_SIEBEL_LANGUAGE# = &ARRAY#[&VAR#]
+checkErrorInSRF "&UC4RB_SIEBEL_SRF_DIR#\&UC4RB_SIEBEL_LANGUAGE#\&UC4RB_SIEBEL_SRF_NAME#"
+:  SET &VAR# = &VAR# + 1
+:ENDWHILE
+
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.CHECK_RETURN_CODE_WINDOWS_POWERSHELL
+__uc_return( 0 )]]></MSCRI>
+</SCRIPT>
+<OUTPUTSCAN state="1">
+<Inherit>N</Inherit>
+<filterobjects/>
+<HostFsc/>
+<LoginFsc/>
+</OUTPUTSCAN>
+<POST_SCRIPT mode="1" replacementmode="1" state="1" tidy="0">
+<OSCRI><![CDATA[:SET &UC4RB_OUT_FULL_COMPILE_SRF_DIR# = &UC4RB_SIEBEL_SRF_DIR#
+:PUBLISH &UC4RB_OUT_FULL_COMPILE_SRF_DIR#, , "TOP"]]></OSCRI>
+</POST_SCRIPT>
+<DOCU_Docu state="1" type="text">
+<DOC/>
+</DOCU_Docu>
+</JOBS_WINDOWS>
+</uc-export>

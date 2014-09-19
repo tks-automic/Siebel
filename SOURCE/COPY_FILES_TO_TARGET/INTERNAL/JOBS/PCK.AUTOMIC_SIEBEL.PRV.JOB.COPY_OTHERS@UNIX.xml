@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="ISO-8859-15" standalone="no"?><uc-export clientvers="8.0.0">
+<JOBS_UNIX AttrType="UNIX" name="PCK.AUTOMIC_SIEBEL.PRV.JOB.COPY_OTHERS@UNIX">
+<XHEADER state="1">
+<Title/>
+
+
+<LastUsed/>
+<ArchiveKey1/>
+<ArchiveKey2/>
+<ExtRepDef>1</ExtRepDef>
+<ExtRepAll>0</ExtRepAll>
+<ExtRepNone>0</ExtRepNone>
+<Active>1</Active>
+<OH_SubType/>
+</XHEADER>
+<OUTPUTREG state="1" tidy="1">
+<FileReg/>
+</OUTPUTREG>
+<SYNCREF state="1">
+<Syncs/>
+</SYNCREF>
+<ATTR_JOBS state="1">
+<Queue>CLIENT_QUEUE</Queue>
+<StartType/>
+<HostDst>UNIX|&lt;UNIX&gt;|HOST</HostDst>
+<HostATTR_Type>UNIX</HostATTR_Type>
+<CodeName/>
+<Login/>
+<IntAccount/>
+<AutoDeactNo>0</AutoDeactNo>
+<AutoDeact1ErrorFree>0</AutoDeact1ErrorFree>
+<AutoDeactErrorFree>0</AutoDeactErrorFree>
+<DeactWhen/>
+<DeactDelay>0</DeactDelay>
+<AutoDeactAlways>1</AutoDeactAlways>
+<AttDialog>0</AttDialog>
+<ActAtRun>1</ActAtRun>
+<Consumption>0</Consumption>
+<UC4Priority>0</UC4Priority>
+<MaxParallel2>0</MaxParallel2>
+<MpElse1>1</MpElse1>
+<MpElse2>0</MpElse2>
+<TZ/>
+</ATTR_JOBS>
+<ATTR_UNIX state="1">
+<OutputDb>1</OutputDb>
+<OutputDbErr>0</OutputDbErr>
+<OutputFile>0</OutputFile>
+<ShellScript>1</ShellScript>
+<Command>0</Command>
+<Priority>0</Priority>
+<Shell/>
+<ShellOptions/>
+<Com/>
+</ATTR_UNIX>
+<RUNTIME state="1">
+<MaxRetCode>0</MaxRetCode>
+<MrcExecute/>
+<MrcElseE>0</MrcElseE>
+<FcstStatus>0| </FcstStatus>
+<Ert>3</Ert>
+<ErtMethodDef>1</ErtMethodDef>
+<ErtMethodFix>0</ErtMethodFix>
+<ErtFix>0</ErtFix>
+<ErtDynMethod>2|Average</ErtDynMethod>
+<ErtMethodDyn>0</ErtMethodDyn>
+<ErtCnt>0</ErtCnt>
+<ErtCorr>0</ErtCorr>
+<ErtIgn>0</ErtIgn>
+<ErtIgnFlg>0</ErtIgnFlg>
+<ErtMinCnt>0</ErtMinCnt>
+<MrtMethodNone>1</MrtMethodNone>
+<MrtMethodFix>0</MrtMethodFix>
+<MrtFix>0</MrtFix>
+<MrtMethodErt>0</MrtMethodErt>
+<MrtErt>0</MrtErt>
+<MrtMethodDate>0</MrtMethodDate>
+<MrtDays>0</MrtDays>
+<MrtTime>00:00</MrtTime>
+<MrtTZ/>
+<SrtMethodNone>1</SrtMethodNone>
+<SrtMethodFix>0</SrtMethodFix>
+<SrtFix>0</SrtFix>
+<SrtMethodErt>0</SrtMethodErt>
+<SrtErt>0</SrtErt>
+<MrtCancel>0</MrtCancel>
+<MrtExecute>0</MrtExecute>
+<MrtExecuteObj/>
+</RUNTIME>
+<DYNVALUES state="1">
+<dyntree>
+<node content="1" id="VALUE" name="Variables" parent="" type="VALUE">
+<VALUE state="1">
+<Values/>
+<Mode>0</Mode>
+</VALUE>
+</node>
+</dyntree>
+</DYNVALUES>
+<ROLLBACK state="1" tidy="1">
+<RollbackFlag>0</RollbackFlag>
+<CBackupObj/>
+<CRollbackObj/>
+<FBackupPath/>
+<FDeleteBefore>0</FDeleteBefore>
+<FInclSubDirs>0</FInclSubDirs>
+</ROLLBACK>
+<PRE_SCRIPT mode="1" replacementmode="1" state="1" tidy="0">
+<PSCRI><![CDATA[:SET &PROMPTSET# = "PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET"
+:INC PCK.AUTOMIC_SIEBEL.PRV.INCLUDE.GET_VALUES_FROM_CONFIG
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.START_STOP_JOB_ACCORDING_TO_AGENT_OS]]></PSCRI>
+</PRE_SCRIPT>
+<SCRIPT mode="1" state="1" tidy="0">
+<MSCRI><![CDATA[getconf ARG_MAX
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_HEADER_PARAM_VALIDATION
+
+:DEFINE &STRING_ARR#,string,30
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.NORMALIZE_PATH "UC4RB_CONVERTED_STRING" = "UC4RB_SIEBEL_SERVER_HOME_DIR"
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.NORMALIZE_PATH "UC4RB_CONVERTED_STRING" = "UC4RB_SIEBEL_WS_PUB_DIR"
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.NORMALIZE_PATH "UC4RB_CONVERTED_STRING" = "UC4RB_SIEBEL_EXTRACTED_DIR"
+
+:SET &UC4RB_LOGGING_PARAMETER# = "Siebel Server Home Directory"
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_PARAM &UC4RB_LOGGING_PARAMETER_VAL# = &UC4RB_SIEBEL_SERVER_HOME_DIR#
+:SET &UC4RB_LOGGING_PARAMETER# = "Siebel WebServer Public Directory"
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_PARAM &UC4RB_LOGGING_PARAMETER_VAL# = &UC4RB_SIEBEL_WS_PUB_DIR#
+:SET &UC4RB_LOGGING_PARAMETER# = "Languages to use for the Import"
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_PARAM &UC4RB_LOGGING_PARAMETER_VAL# = &UC4RB_SIEBEL_LANGUAGES#
+:SET &UC4RB_LOGGING_PARAMETER# = "Deployment Package Extracted Directory"
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_PARAM &UC4RB_LOGGING_PARAMETER_VAL# = &UC4RB_SIEBEL_EXTRACTED_DIR#
+
+! Start execution
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_HEADER_EXECUTION
+
+! <Begin of sudo script>
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.SUDOERS_HEADER
+
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.CHANGE_FOLDER_TO_AGENT_BIN
+
+sourceBase="&UC4RB_SIEBEL_EXTRACTED_DIR#/collected_files/Client/PUBLIC"
+targetBase="&UC4RB_SIEBEL_WS_PUB_DIR#"
+
+! Copy Siebel Client Public files to Siebel WebServer Public Directory
+:SET &UC4RB_LOGGING_INFO# = "Start copying Client PUBLIC files to &UC4RB_SIEBEL_WS_PUB_DIR#..."
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_INFO
+
+:DEFINE &ARRAY#, string, 20
+:FILL &ARRAY#[] = STR_SPLIT(&UC4RB_SIEBEL_LANGUAGES#, ",")
+:SET &VAR# = 1
+:SET &LEN# = LENGTH(&ARRAY#[], SIZE)
+
+:WHILE &VAR# LE &LEN#
+:  SET &LANG# = STR_TRIM(&ARRAY#[&VAR#])
+:  SET &LANG_UC# = STR_UC(&LANG#)
+:  SET &LANG_LC# = STR_LC(&LANG#)
+  sourceDir=$sourceBase/&LANG#
+  sourceDir_uc=$sourceBase/&LANG_UC#
+  sourceDir_lc=$sourceBase/&LANG_LC#
+  targetDir=$targetBase/&LANG#
+  targetDir_uc=$targetBase/&LANG_UC#
+  targetDir_lc=$targetBase/&LANG_LC#
+  if [ -d "$sourceDir_uc" ]; then
+    cd "$sourceDir_uc"
+    if [ -d "$targetDir_uc" ]; then
+      echo "INFO: Copy file from $sourceDir_uc to $targetDir_uc."
+      cp -rf * "$targetDir_uc"
+:     INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.CHECK_RETURN_CODE_UNIX_SHELL
+    elif [ -d "$targetDir_lc" ]; then
+      echo "INFO: Copy file from $sourceDir_uc to $targetDir_lc."
+      cp -rf * "$targetDir_lc"
+:     INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.CHECK_RETURN_CODE_UNIX_SHELL
+    else
+      echo "INFO: Copy file from $sourceDir_uc to $targetDir_uc."
+      mkdir -p "$targetDir_uc"
+:     INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.CHECK_RETURN_CODE_UNIX_SHELL
+      cp -rf * "$targetDir_uc"
+:     INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.CHECK_RETURN_CODE_UNIX_SHELL
+    fi
+  elif [ -d "$sourceDir_lc" ]; then
+    cd "$sourceDir_lc"
+    if [ -d "$targetDir_uc" ]; then
+      echo "INFO: Copy file from $sourceDir_lc to $targetDir_uc."
+      cp -rf * "$targetDir_uc"
+:     INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.CHECK_RETURN_CODE_UNIX_SHELL
+    elif [ -d "$targetDir_lc" ]; then
+      echo "INFO: Copy file from $sourceDir_lc to $targetDir_lc."
+      cp -rf * "$targetDir_lc"
+:     INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.CHECK_RETURN_CODE_UNIX_SHELL
+    else
+      mkdir -p "$targetDir_lc"
+:     INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.CHECK_RETURN_CODE_UNIX_SHELL
+      cp -rf * "$targetDir_lc"
+:     INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.CHECK_RETURN_CODE_UNIX_SHELL
+    fi
+  fi
+:  SET &VAR# = &VAR# + 1
+:ENDWHILE
+
+:SET &UC4RB_LOGGING_INFO# = "Copy Client PUBLIC files successfully to &UC4RB_SIEBEL_WS_PUB_DIR#"
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_INFO
+
+sourceBase=""
+targetBase="&UC4RB_SIEBEL_SERVER_HOME_DIR#"
+
+for f in $(ls -d "&UC4RB_SIEBEL_EXTRACTED_DIR#/collected_files"/*)
+do
+  if [[ $f != *Client ]] && [ -d "$f" ]; then
+    sourceBase=$f
+  fi
+done
+
+if [ -z "$sourceBase" ]; then
+  echo "Source in &UC4RB_SIEBEL_EXTRACTED_DIR#/collected_files/ directory does not exist. "
+  exit 0;
+fi
+
+! Copy Siebel Server files to Siebel Server
+:SET &UC4RB_LOGGING_INFO# = "Start copying Siebel Server files to &UC4RB_SIEBEL_SERVER_HOME_DIR#..."
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_INFO
+
+! Web Templates: <SiebelServer_HomeDir>\webtempl\*
+sourceDir=$sourceBase/webtempl
+targetDir=$targetBase/webtempl
+if [ -d "$sourceDir" ]; then
+  echo "INFO: Copy file from $sourceDir to $targetDir."
+  if [ ! -d "$targetDir" ]; then
+    mkdir -p "$targetDir"
+:   INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.CHECK_RETURN_CODE_UNIX_SHELL
+  fi
+  cd "$sourceDir"
+  cp -rf * "$targetDir"
+: INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.CHECK_RETURN_CODE_UNIX_SHELL
+fi
+
+! Java Applets: <SiebelServer_HomeDir>\webmaster\siebel_build\applets\*
+sourceDir=$sourceBase/webmaster/siebel_build/applets
+targetDir=$targetBase/webmaster/siebel_build/applets
+if [ -d "$sourceDir" ]; then
+  echo "INFO: Copy file from $sourceDir to $targetDir."
+  if [ ! -d "$targetDir" ]; then
+    mkdir -p "$targetDir"
+:   INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.CHECK_RETURN_CODE_UNIX_SHELL
+  fi
+  cd "$sourceDir"
+  cp -rf * "$targetDir"
+: INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.CHECK_RETURN_CODE_UNIX_SHELL
+fi
+
+! Java Scripts: <SiebelServer_HomeDir>\webmaster\siebel_build\scripts\*
+sourceDir=$sourceBase/webmaster/siebel_build/scripts
+targetDir=$targetBase/webmaster/siebel_build/scripts
+if [ -d "$sourceDir" ]; then
+  echo "INFO: Copy file from $sourceDir to $targetDir."
+  if [ ! -d "$targetDir" ]; then
+    mkdir -p "$targetDir"
+:   INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.CHECK_RETURN_CODE_UNIX_SHELL
+  fi
+  cd "$sourceDir"
+  cp -rf * "$targetDir"
+: INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.CHECK_RETURN_CODE_UNIX_SHELL
+fi
+
+:SET &VAR# = 1
+:WHILE &VAR# LE &LEN#
+:  SET &LANG# = STR_TRIM(&ARRAY#[&VAR#])
+:  SET &LANG_UC# = STR_UC(&LANG#)
+:  SET &LANG_LC# = STR_LC(&LANG#)
+
+! Images <SiebelServer_HomeDir>\webmaster\images\[language_3_letter_code]\*
+  sourceDir=$sourceBase/webmaster/images/&LANG#
+  sourceDir_uc=$sourceBase/webmaster/images/&LANG_UC#
+  sourceDir_lc=$sourceBase/webmaster/images/&LANG_LC#
+  targetDir=$targetBase/webmaster/images/&LANG#
+  targetDir_uc=$targetBase/webmaster/images/&LANG_UC#
+  targetDir_lc=$targetBase/webmaster/images/&LANG_LC#
+  if [ -d "$sourceDir_uc" ]; then
+    cd "$sourceDir_uc"
+    if [ -d "$targetDir_uc" ]; then
+      echo "INFO: Copy file from $sourceDir_uc to $targetDir_uc."
+      cp -rf * "$targetDir_uc"
+!       cp -rf "$sourceDir_uc"/* "$targetDir_uc"
+:     INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.CHECK_RETURN_CODE_UNIX_SHELL
+    elif [ -d "$targetDir_lc" ]; then
+      echo "INFO: Copy file from $sourceDir_uc to $targetDir_lc."
+      cp -rf * "$targetDir_lc"
+!       cp -rf "$sourceDir_uc"/* "$targetDir_lc"
+:     INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.CHECK_RETURN_CODE_UNIX_SHELL
+    else
+      echo "INFO: Copy file from $sourceDir_uc to $targetDir_uc."
+      mkdir -p "$targetDir_uc"
+:     INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.CHECK_RETURN_CODE_UNIX_SHELL
+      cp -rf * "$targetDir_uc"
+:     INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.CHECK_RETURN_CODE_UNIX_SHELL
+    fi
+  elif [ -d "$sourceDir_lc" ]; then
+    cd "$sourceDir_lc"
+    if [ -d "$targetDir_uc" ]; then
+      echo "INFO: Copy file from $sourceDir_lc to $targetDir_uc."
+      cp -rf * "$targetDir_uc"
+:     INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.CHECK_RETURN_CODE_UNIX_SHELL
+    elif [ -d "$targetDir_lc" ]; then
+      echo "INFO: Copy file from $sourceDir_lc to $targetDir_lc."
+      cp -rf * "$targetDir_lc"
+:     INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.CHECK_RETURN_CODE_UNIX_SHELL
+    else
+      echo "INFO: Copy file from $sourceDir_lc to $targetDir_lc."
+      mkdir -p "$targetDir_lc"
+:     INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.CHECK_RETURN_CODE_UNIX_SHELL
+      cp -rf * "$targetDir_lc"
+:     INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.CHECK_RETURN_CODE_UNIX_SHELL
+    fi
+  fi
+
+! CSS: <SiebelServer_HomeDir>\webmaster\files\[language_3_letter_code]\*
+  sourceDir=$sourceBase/webmaster/files/&LANG#
+  sourceDir_uc=$sourceBase/webmaster/files/&LANG_UC#
+  sourceDir_lc=$sourceBase/webmaster/files/&LANG_LC#
+  targetDir=$targetBase/webmaster/files/&LANG#
+  targetDir_uc=$targetBase/webmaster/files/&LANG_UC#
+  targetDir_lc=$targetBase/webmaster/files/&LANG_LC#
+  if [ -d "$sourceDir_uc" ]; then
+    cd "$sourceDir_uc"
+    if [ -d "$targetDir_uc" ]; then
+      echo "INFO: Copy file from $sourceDir_uc to $targetDir_uc."
+      cp -rf * "$targetDir_uc"
+:     INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.CHECK_RETURN_CODE_UNIX_SHELL
+    elif [ -d "$targetDir_lc" ];then
+      echo "INFO: Copy file from $sourceDir_uc to $targetDir_lc."
+      cp -rf * "$targetDir_lc"
+:     INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.CHECK_RETURN_CODE_UNIX_SHELL
+    else
+      echo "INFO: Copy file from $sourceDir_uc to $targetDir_uc."
+      mkdir -p "$targetDir_uc"
+:     INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.CHECK_RETURN_CODE_UNIX_SHELL
+      cp -rf * "$targetDir_uc"
+:     INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.CHECK_RETURN_CODE_UNIX_SHELL
+    fi
+  elif [ -d "$sourceDir_lc" ]; then
+    cd "$sourceDir_lc"
+    if [ -d "$targetDir_uc" ]; then
+      echo "INFO: Copy file from $sourceDir_lc to $targetDir_uc."
+      cp -rf * "$targetDir_uc"
+:     INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.CHECK_RETURN_CODE_UNIX_SHELL
+    elif [ -d "$targetDir_lc" ];then
+      echo "INFO: Copy file from $sourceDir_lc to $targetDir_lc."
+      cp -rf * "$targetDir_lc"
+:     INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.CHECK_RETURN_CODE_UNIX_SHELL
+    else
+      echo "INFO: Copy file from $sourceDir_lc to $targetDir_lc."
+      mkdir -p "$targetDir_lc"
+:     INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.CHECK_RETURN_CODE_UNIX_SHELL
+      cp -rf * "$targetDir_lc"
+:     INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.CHECK_RETURN_CODE_UNIX_SHELL
+    fi
+  fi
+:  SET &VAR# = &VAR# + 1
+:ENDWHILE
+
+:SET &UC4RB_LOGGING_INFO# = "Copy Siebel Server files successfully to &UC4RB_SIEBEL_SERVER_HOME_DIR#"
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_INFO
+
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.SUDOERS_FOOTER
+! <End of sudo script>]]></MSCRI>
+</SCRIPT>
+<OUTPUTSCAN state="1">
+<Inherit>N</Inherit>
+<filterobjects/>
+<HostFsc/>
+<LoginFsc/>
+</OUTPUTSCAN>
+<POST_SCRIPT mode="1" replacementmode="1" state="1" tidy="1">
+<OSCRI/>
+</POST_SCRIPT>
+<DOCU_Docu state="1" type="text">
+<DOC/>
+</DOCU_Docu>
+</JOBS_UNIX>
+</uc-export>

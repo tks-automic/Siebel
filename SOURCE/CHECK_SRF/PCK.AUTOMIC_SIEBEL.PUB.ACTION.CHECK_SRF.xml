@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="ISO-8859-15" standalone="no"?><uc-export clientvers="8.0.0">
+<JOBP AllowExternal="1" name="PCK.AUTOMIC_SIEBEL.PUB.ACTION.CHECK_SRF">
+<XHEADER state="1">
+<Title>Check SRF</Title>
+
+
+<LastUsed/>
+<ArchiveKey1/>
+<ArchiveKey2/>
+<ExtRepDef>1</ExtRepDef>
+<ExtRepAll>0</ExtRepAll>
+<ExtRepNone>0</ExtRepNone>
+<Active>1</Active>
+<OH_SubType/>
+</XHEADER>
+<SYNCREF state="1">
+<Syncs/>
+</SYNCREF>
+<ATTR_JOBP state="1">
+<Queue>CLIENT_QUEUE</Queue>
+<ChildQueue/>
+<StartType/>
+<IntAccount/>
+<AutoDeactNo>1</AutoDeactNo>
+<AutoDeact1ErrorFree>0</AutoDeact1ErrorFree>
+<AutoDeactErrorFree>0</AutoDeactErrorFree>
+<DeactWhen/>
+<AutoDeactAlways>0</AutoDeactAlways>
+<DeactDelay>0</DeactDelay>
+<ActAtRun>1</ActAtRun>
+<UC4Priority>0</UC4Priority>
+<MaxParallel2>0</MaxParallel2>
+<ReuseHG>1</ReuseHG>
+<MpElse1>1</MpElse1>
+<MpElse2>0</MpElse2>
+<TZ/>
+<RWhen/>
+<RExecute/>
+<JPA_SubType/>
+</ATTR_JOBP>
+<JOBP state="1">
+<JobpStruct mode="design">
+<task Alias="" BranchType="0" Col="1" Idnr="0" Lnr="1" OH_TITLE="" OType="&lt;START&gt;" Object="START" ParentAlias="" ParentObject="" Row="1" State="" Text1="" Text2="" Text3="&lt;START&gt;" Text4="" Text5="" Text6="" runid="0" subType="" taskicon="&lt;START&gt;">
+<checkpoint RollbackFlag="0" RunPerPatch="0" RunPerTarget="0" TcpADays="0" TcpATime="00:00" TcpATimeTZ="" TcpExecute="" TcpOn="0" promptatgen="0" showprompt="0"/>
+<after ActFlg="1" AtimOn="0" ErlstStDays="0" ErlstStTime="00:00" ErlstStTimeTZ="" HoldFlg="0"/>
+<when ChkWhenExec="0" LtstEnd="0" LtstEndDays="0" LtstEndTime="00:00" LtstSt="0" LtstStDays="0" LtstStTime="00:00" LtstTimeTZ="" WCTypeAND="1" WCTypeOR="0" WElseA="0" WElseH="0" WElseS="1" WElseX="0" WhenExecute="" WtimOn="0"/>
+<preconditions CCTypeOne="1" CaleOn="0">
+<PreCon>
+<conditions id="CONDITIONS"/>
+</PreCon>
+</preconditions>
+<predecessors/>
+<runtime MrtCancel="0" MrtDays="0" MrtErt="0" MrtExecute="0" MrtExecuteObj="" MrtFix="0" MrtMethodDate="0" MrtMethodErt="0" MrtMethodFix="0" MrtMethodNone="1" MrtOn="1" MrtTZ="" MrtTime="00:00" SrtErt="0" SrtFix="0" SrtMethodErt="0" SrtMethodFix="0" SrtMethodNone="1"/>
+<result ChkRExec="0" RElseHalt="0" RElseIgn="0" RElseJPAbend="0" RExecFlag="0" RExecute="" RRepMTimes="0" RRepOn="0" RRepWait="0" RWhen=""/>
+<dynvalues>
+<dyntree>
+<node content="1" id="VALUE" name="Variables" parent="" type="TASKVALUE">
+<VALUE state="2">
+<Values/>
+<Mode>OH_OV_Mode</Mode>
+</VALUE>
+</node>
+<node content="1" id="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.CHECK_SRF" name="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.CHECK_SRF" parent="PPRPTS" type="PPROMPTSET">
+<PROMPTSET name="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.CHECK_SRF">
+<PRPTBOX promptset="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.CHECK_SRF">
+<UC4RB_SIEBEL_EXPORT_FILE_PATHs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_EXPORT_FILE_PATH#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.CHECK_SRF"/>
+<UC4RB_SIEBEL_LANGUAGESs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_LANGUAGES#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.CHECK_SRF">&amp;ENV#?SIEBEL_LANGUAGES</UC4RB_SIEBEL_LANGUAGESs.00>
+<UC4RB_SIEBEL_OUTPUT_DIRs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_OUTPUT_DIR#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.CHECK_SRF"/>
+<UC4RB_SIEBEL_SRF_NAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_SRF_NAME#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.CHECK_SRF">&amp;ENV#?SIEBEL_SRF_FILE</UC4RB_SIEBEL_SRF_NAMEs.00>
+</PRPTBOX>
+</PROMPTSET>
+</node>
+<node content="1" id="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT" name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT" parent="PPRPTS" type="PPROMPTSET">
+<PROMPTSET name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT">
+<PRPTBOX promptset="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT">
+<AGENTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="AGENT#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT"/>
+<LOGINs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="LOGIN#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT"/>
+</PRPTBOX>
+</PROMPTSET>
+</node>
+</dyntree>
+</dynvalues>
+<CIT CCTypeOne="1" CaleOn="0"/>
+<calendars CCTypeAll="0" CCTypeExt="0" CCTypeNone="0" CCTypeOne="1" CaleOn="0"/>
+<postconditions CCTypeOne="1" CaleOn="0">
+<PostCon>
+<conditions id="CONDITIONS"/>
+</PostCon>
+</postconditions>
+</task>
+<task Alias="" BranchType="0" Col="2" Idnr="5181917" Lnr="2" OH_TITLE="" OType="JOBS" Object="PCK.AUTOMIC_SIEBEL.PRV.JOB.CHECK_SRF@WINDOWS" ParentAlias="" ParentObject="" Row="1" State="" Text1="" Text2="W" Text3="&lt;WIN&gt;|windows_s:_jobs_l" Text4="" Text5="" Text6="" runid="0" subType="" taskicon="&lt;WIN&gt;|windows_s:_jobs_l">
+<checkpoint RollbackFlag="1" RunPerPatch="0" RunPerTarget="0" TcpADays="0" TcpATime="00:00" TcpATimeTZ="" TcpExecute="" TcpOn="0" promptatgen="0" showprompt="0"/>
+<after ActFlg="1" AtimOn="0" ErlstStDays="0" ErlstStTime="00:00" ErlstStTimeTZ="" HoldFlg="0"/>
+<when ChkWhenExec="0" LtstEnd="0" LtstEndDays="0" LtstEndTime="00:00" LtstSt="0" LtstStDays="0" LtstStTime="00:00" LtstTimeTZ="" WCTypeAND="1" WCTypeOR="0" WElseA="1" WElseH="0" WElseS="0" WElseX="0" WhenExecute="" WtimOn="0"/>
+<preconditions CCTypeOne="1" CaleOn="0">
+<PreCon>
+<conditions id="CONDITIONS"/>
+</PreCon>
+</preconditions>
+<predecessors>
+<pre BranchType="0" Lnr="1" PreLnr="1" When="ANY_OK" type="container"/>
+</predecessors>
+<runtime MrtCancel="0" MrtDays="0" MrtErt="0" MrtExecute="0" MrtExecuteObj="" MrtFix="0" MrtMethodDate="0" MrtMethodErt="0" MrtMethodFix="0" MrtMethodNone="1" MrtOn="1" MrtTZ="" MrtTime="00:00" SrtErt="0" SrtFix="0" SrtMethodErt="0" SrtMethodFix="0" SrtMethodNone="1"/>
+<result ChkRExec="0" RElseHalt="1" RElseIgn="0" RElseJPAbend="0" RExecFlag="0" RExecute="" RRepMTimes="0" RRepOn="0" RRepWait="0" RWhen=""/>
+<dynvalues>
+<dyntree>
+<node content="1" id="VALUE" name="Variables" parent="" type="TASKVALUE">
+<VALUE state="2">
+<Values/>
+<Mode>0</Mode>
+</VALUE>
+</node>
+<node content="1" id="PVALUE" name="Parent Variables" parent="" type="TASKVALUE">
+<VALUE state="2">
+<Values/>
+<Mode>0</Mode>
+</VALUE>
+</node>
+<node content="1" id="PRPTS" name="PromptSets" parent="" pref="1" type="PROMPTSET"/>
+<node content="0" id="PPRPTS" name="Parent PromptSets" parent="" type="PPROMPTSET"/>
+<node content="1" id="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.CHECK_SRF" name="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.CHECK_SRF" parent="PPRPTS" type="PPROMPTSET">
+<PROMPTSET name="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.CHECK_SRF">
+<PRPTBOX promptset="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.CHECK_SRF">
+<UC4RB_SIEBEL_EXPORT_FILE_PATHs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_EXPORT_FILE_PATH#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.CHECK_SRF"/>
+<UC4RB_SIEBEL_LANGUAGESs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_LANGUAGES#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.CHECK_SRF">&amp;ENV#?SIEBEL_LANGUAGES</UC4RB_SIEBEL_LANGUAGESs.00>
+<UC4RB_SIEBEL_OUTPUT_DIRs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_OUTPUT_DIR#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.CHECK_SRF"/>
+<UC4RB_SIEBEL_SRF_NAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_SRF_NAME#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.CHECK_SRF">&amp;ENV#?SIEBEL_SRF_FILE</UC4RB_SIEBEL_SRF_NAMEs.00>
+</PRPTBOX>
+</PROMPTSET>
+</node>
+<node content="1" id="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT" name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT" parent="PPRPTS" type="PPROMPTSET">
+<PROMPTSET name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT">
+<PRPTBOX promptset="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT">
+<AGENTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="AGENT#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT"/>
+<LOGINs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="LOGIN#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT"/>
+</PRPTBOX>
+</PROMPTSET>
+</node>
+</dyntree>
+</dynvalues>
+<CIT CCTypeOne="1" CaleOn="0"/>
+<calendars CCTypeAll="0" CCTypeExt="0" CCTypeNone="0" CCTypeOne="1" CaleOn="0"/>
+<postconditions CCTypeOne="1" CaleOn="0">
+<PostCon>
+<conditions id="CONDITIONS"/>
+</PostCon>
+</postconditions>
+</task>
+<task Alias="" BranchType="0" Col="3" Idnr="0" Lnr="3" OH_TITLE="" OType="&lt;END&gt;" Object="END" ParentAlias="" ParentObject="" Row="1" State="" Text1="" Text2="W" Text3="&lt;END&gt;" Text4="" Text5="" Text6="" runid="0" subType="" taskicon="&lt;END&gt;">
+<checkpoint RollbackFlag="0" RunPerPatch="0" RunPerTarget="0" TcpADays="0" TcpATime="00:00" TcpATimeTZ="" TcpExecute="" TcpOn="0" promptatgen="0" showprompt="0"/>
+<after ActFlg="1" AtimOn="0" ErlstStDays="0" ErlstStTime="00:00" ErlstStTimeTZ="" HoldFlg="0"/>
+<when ChkWhenExec="0" LtstEnd="0" LtstEndDays="0" LtstEndTime="00:00" LtstSt="0" LtstStDays="0" LtstStTime="00:00" LtstTimeTZ="" WCTypeAND="1" WCTypeOR="0" WElseA="1" WElseH="0" WElseS="0" WElseX="0" WhenExecute="" WtimOn="0"/>
+<preconditions CCTypeOne="1" CaleOn="0">
+<PreCon>
+<conditions id="CONDITIONS"/>
+</PreCon>
+</preconditions>
+<predecessors>
+<pre BranchType="0" Lnr="1" PreLnr="2" When="ANY_OK" type="container"/>
+</predecessors>
+<runtime MrtCancel="0" MrtDays="0" MrtErt="0" MrtExecute="0" MrtExecuteObj="" MrtFix="0" MrtMethodDate="0" MrtMethodErt="0" MrtMethodFix="0" MrtMethodNone="1" MrtOn="1" MrtTZ="" MrtTime="00:00" SrtErt="0" SrtFix="0" SrtMethodErt="0" SrtMethodFix="0" SrtMethodNone="1"/>
+<result ChkRExec="0" RElseHalt="0" RElseIgn="0" RElseJPAbend="0" RExecFlag="0" RExecute="" RRepMTimes="0" RRepOn="0" RRepWait="0" RWhen=""/>
+<dynvalues>
+<dyntree>
+<node content="1" id="VALUE" name="Variables" parent="" type="TASKVALUE">
+<VALUE state="2">
+<Values/>
+<Mode>OH_OV_Mode</Mode>
+</VALUE>
+</node>
+<node content="1" id="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.CHECK_SRF" name="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.CHECK_SRF" parent="PPRPTS" type="PPROMPTSET">
+<PROMPTSET name="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.CHECK_SRF">
+<PRPTBOX promptset="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.CHECK_SRF">
+<UC4RB_SIEBEL_EXPORT_FILE_PATHs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_EXPORT_FILE_PATH#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.CHECK_SRF"/>
+<UC4RB_SIEBEL_LANGUAGESs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_LANGUAGES#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.CHECK_SRF">&amp;ENV#?SIEBEL_LANGUAGES</UC4RB_SIEBEL_LANGUAGESs.00>
+<UC4RB_SIEBEL_OUTPUT_DIRs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_OUTPUT_DIR#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.CHECK_SRF"/>
+<UC4RB_SIEBEL_SRF_NAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_SRF_NAME#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.CHECK_SRF">&amp;ENV#?SIEBEL_SRF_FILE</UC4RB_SIEBEL_SRF_NAMEs.00>
+</PRPTBOX>
+</PROMPTSET>
+</node>
+<node content="1" id="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT" name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT" parent="PPRPTS" type="PPROMPTSET">
+<PROMPTSET name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT">
+<PRPTBOX promptset="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT">
+<AGENTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="AGENT#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT"/>
+<LOGINs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="LOGIN#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT"/>
+</PRPTBOX>
+</PROMPTSET>
+</node>
+</dyntree>
+</dynvalues>
+<CIT CCTypeOne="1" CaleOn="0"/>
+<calendars CCTypeAll="0" CCTypeExt="0" CCTypeNone="0" CCTypeOne="1" CaleOn="0"/>
+<postconditions CCTypeOne="1" CaleOn="0">
+<PostCon>
+<conditions id="CONDITIONS"/>
+</PostCon>
+</postconditions>
+</task>
+<OPTIONS/>
+</JobpStruct>
+</JOBP>
+<RUNTIME state="1">
+<MaxRetCode>0</MaxRetCode>
+<MrcExecute/>
+<MrcElseE>0</MrcElseE>
+<FcstStatus>0| </FcstStatus>
+<Ert>1</Ert>
+<ErtMethodDef>1</ErtMethodDef>
+<ErtMethodFix>0</ErtMethodFix>
+<ErtFix>0</ErtFix>
+<ErtDynMethod>2|Average</ErtDynMethod>
+<ErtMethodDyn>0</ErtMethodDyn>
+<ErtCnt>0</ErtCnt>
+<ErtCorr>0</ErtCorr>
+<ErtIgn>0</ErtIgn>
+<ErtIgnFlg>0</ErtIgnFlg>
+<ErtMinCnt>0</ErtMinCnt>
+<MrtMethodNone>1</MrtMethodNone>
+<MrtMethodFix>0</MrtMethodFix>
+<MrtFix>0</MrtFix>
+<MrtMethodErt>0</MrtMethodErt>
+<MrtErt>0</MrtErt>
+<MrtMethodDate>0</MrtMethodDate>
+<MrtDays>0</MrtDays>
+<MrtTime>00:00</MrtTime>
+<MrtTZ/>
+<SrtMethodNone>1</SrtMethodNone>
+<SrtMethodFix>0</SrtMethodFix>
+<SrtFix>0</SrtFix>
+<SrtMethodErt>0</SrtMethodErt>
+<SrtErt>0</SrtErt>
+<MrtCancel>0</MrtCancel>
+<MrtExecute>0</MrtExecute>
+<MrtExecuteObj/>
+</RUNTIME>
+<DYNVALUES state="1">
+<dyntree>
+<node content="1" id="VALUE" name="Variables" parent="" type="VALUE">
+<VALUE state="1">
+<Values/>
+<Mode>0</Mode>
+</VALUE>
+</node>
+<node content="1" id="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.CHECK_SRF" name="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.CHECK_SRF" parent="PRPTS" type="PROMPTSET">
+<PROMPTSET client="6000" idnr="0005472483" name="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.CHECK_SRF" ontop="1" src="oh" system="AE10">
+<PRPTBOX promptset="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.CHECK_SRF" prptmode="1"/>
+</PROMPTSET>
+</node>
+<node content="1" id="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT" name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT" parent="PRPTS" type="PROMPTSET">
+<PROMPTSET client="6000" idnr="0005005814" name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT" ontop="1" src="oh" system="AE10">
+<PRPTBOX promptset="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT" prptmode="1"/>
+</PROMPTSET>
+</node>
+</dyntree>
+</DYNVALUES>
+<DEPLOYMENT state="1" tidy="1">
+<DeploymentFlag>0</DeploymentFlag>
+<WFTypeA>1</WFTypeA>
+<WFTypeC>0</WFTypeC>
+<AppName/>
+<WFName/>
+<ComponentName/>
+</DEPLOYMENT>
+<ROLLBACK state="1" tidy="1">
+<RollbackFlag>0</RollbackFlag>
+<CBackupObj/>
+<CRollbackObj/>
+<FBackupPath/>
+<FDeleteBefore>0</FDeleteBefore>
+<FInclSubDirs>0</FInclSubDirs>
+</ROLLBACK>
+<SCRIPT mode="1" state="1" tidy="1">
+<MSCRI/>
+</SCRIPT>
+<DOCU_Docu state="1" type="text">
+<DOC><![CDATA[= RB name =
+PCK.AUTOMIC_SIEBEL.PUB.ACTION.CHECK_SRF
+
+= General description =
+Analyze the Generate Browser Script CMD output. It is ok when "Successfully created" appears. That also means the SRF Creation was fine. The action should run through if the line is found. If not the workflow should block.
+The line where you should find it looks like:
+Successfully created 8 files in "c:\adm1\BrowserScripts\srf1387467768_444\bscripts\all".
+
+= Inputs =
+* Siebel SRF Output Directory: The Path where the SRF should be exported to.
+* Siebel SRF file name: File name of the SRF that is produced.
+* Siebel languages: Comma sepperated list of the installed languages
+* Generate Browser Script log directory: The Directory of the Siebel Log File output
+
+= Behavior =
+(see general description)
+
+= Outputs =
+* Return code is 0 if success.
+* Return code is 1 if not success.
+
+= Rollback =
+(none)
+
+= Logging =
+(none)
+
+= Example =
+Siebel SRF Output Directory: C:\export
+Siebel SRF file name: SIEBEL_SIA.srf
+Siebel languages: ENU, NLD, HEBR
+Generate Browser Script log directory: C:\export
+
+]]></DOC>
+</DOCU_Docu>
+</JOBP>
+</uc-export>

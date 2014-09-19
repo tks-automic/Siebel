@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="ISO-8859-15" standalone="no"?><uc-export clientvers="8.0.0">
+<PRPT client="6000" name="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.DISCOVERY" system="AE10">
+<HEADER state="1">
+<Title/>
+
+
+<LastUsed/>
+<ArchiveKey1/>
+<ArchiveKey2/>
+<OH_SubType/>
+</HEADER>
+<PROMPTDESIGNER state="1">
+<DESIGNER/>
+</PROMPTDESIGNER>
+<PROMPTSETXUI state="1">
+<XUIEDITOR><![CDATA[<dialog height="424" icon="PRPT" id="PRPTS" left="0" top="0" width="441"><readpanel fill="b" id="PRPTBOX" nl="1" scroll="v" text="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.DISCOVERY"><properties><entry name="text">PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.DISCOVERY</entry><entry name="modifiable">0</entry></properties><text alt="1" enabled="1" fill="b" focus="0" id="UC4_AE_PASSWORDs.00" inputassistance="0" len="" nl="1" regex="" required="0" separator=";" showaspassword="1" text="AE Password" tooltip="Password to authenticate with the AE" upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+         
+      <properties>
+        <entry listparam="C,N" name="reference">UC_DATATYPE_STRING</entry>
+        <entry name="text">AE Password</entry>
+        <entry name="multiselect">0</entry>
+        <entry name="separator">;</entry>
+        <entry name="len"/>
+        <entry name="quotes"/>
+        <entry name="id">UC4_AE_PASSWORDs.00</entry>
+        <entry name="regex"/>
+        <entry name="inputassistance">0</entry>
+        <entry name="enabled">0</entry>
+        <entry name="required">1</entry>
+        <entry name="upper">0</entry>
+        <entry name="focus">0</entry>
+        <entry name="showaspassword">1</entry>
+        <entry name="tooltip">Password to authenticate with the AE</entry>
+        <entry name="modifiable">1</entry>
+        <entry name="customfield"/>
+      <entry name="initvalue"/>
+         </properties>
+    </text><text alt="1" enabled="1" fill="b" focus="0" id="UC4_CONFIG_OBJECT_TITLEs.00" inputassistance="0" len="" nl="1" regex="" required="0" separator=";" showaspassword="0" text="Configuration Object Title" tooltip="Title of the configuration object to be created or updated" upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+         
+      <properties>
+        <entry listparam="C,N" name="reference">UC_DATATYPE_STRING</entry>
+        <entry name="text">Configuration Object Title</entry>
+        <entry name="multiselect">0</entry>
+        <entry name="separator">;</entry>
+        <entry name="len"/>
+        <entry name="quotes"/>
+        <entry name="id">UC4_CONFIG_OBJECT_TITLEs.00</entry>
+        <entry name="regex"/>
+        <entry name="inputassistance">0</entry>
+        <entry name="enabled">0</entry>
+        <entry name="required">1</entry>
+        <entry name="upper">0</entry>
+        <entry name="focus">0</entry>
+        <entry name="showaspassword">0</entry>
+        <entry name="tooltip">Title of the configuration object to be created or updated</entry>
+        <entry name="modifiable">1</entry>
+        <entry name="customfield"/>
+      <entry name="initvalue"/>
+         </properties>
+    </text><text alt="1" enabled="1" fill="b" focus="0" id="UC4_CONFIG_FOLDERs.00" inputassistance="0" len="" nl="1" regex="" required="0" separator=";" showaspassword="0" text="Configuration Object Target Folder" tooltip="The target folder where the configuration object should be created." upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+         
+      <properties>
+        <entry listparam="C,N" name="reference">UC_DATATYPE_STRING</entry>
+        <entry name="text">Configuration Object Target Folder</entry>
+        <entry name="multiselect">0</entry>
+        <entry name="separator">;</entry>
+        <entry name="len"/>
+        <entry name="quotes"/>
+        <entry name="id">UC4_CONFIG_FOLDERs.00</entry>
+        <entry name="regex"/>
+        <entry name="inputassistance">0</entry>
+        <entry name="enabled">0</entry>
+        <entry name="required">1</entry>
+        <entry name="upper">0</entry>
+        <entry name="focus">0</entry>
+        <entry name="showaspassword">0</entry>
+        <entry name="tooltip">The target folder where the configuration object should be created.</entry>
+        <entry name="modifiable">1</entry>
+        <entry name="customfield"/>
+      <entry name="initvalue"/>
+         </properties>
+    </text><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_SIEBEL_USERs.00" inputassistance="0" len="" nl="1" regex="" required="0" separator=";" showaspassword="0" text="Siebel Username" tooltip="The Siebel user to connect Siebel cli tool" upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+         
+      <properties>
+        <entry listparam="C,N" name="reference">UC_DATATYPE_STRING</entry>
+        <entry name="text">Siebel Username</entry>
+        <entry name="multiselect">0</entry>
+        <entry name="separator">;</entry>
+        <entry name="len"/>
+        <entry name="quotes"/>
+        <entry name="id">UC4RB_SIEBEL_USERs.00</entry>
+        <entry name="regex"/>
+        <entry name="inputassistance">0</entry>
+        <entry name="enabled">0</entry>
+        <entry name="required">1</entry>
+        <entry name="upper">0</entry>
+        <entry name="focus">0</entry>
+        <entry name="showaspassword">0</entry>
+        <entry name="tooltip">The Siebel user to connect Siebel cli tool</entry>
+        <entry name="modifiable">1</entry>
+        <entry name="customfield"/>
+      <entry name="initvalue"/>
+         </properties>
+    </text><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_SIEBEL_PASSWORDs.00" inputassistance="0" len="" nl="1" regex="" required="0" separator=";" showaspassword="1" text="Siebel Password" tooltip="The Password of Siebel User to connect Siebel cli tool" upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+         
+      <properties>
+        <entry listparam="C,N" name="reference">UC_DATATYPE_STRING</entry>
+        <entry name="text">Siebel Password</entry>
+        <entry name="multiselect">0</entry>
+        <entry name="separator">;</entry>
+        <entry name="len"/>
+        <entry name="quotes"/>
+        <entry name="id">UC4RB_SIEBEL_PASSWORDs.00</entry>
+        <entry name="regex"/>
+        <entry name="inputassistance">0</entry>
+        <entry name="enabled">0</entry>
+        <entry name="required">1</entry>
+        <entry name="upper">0</entry>
+        <entry name="focus">0</entry>
+        <entry name="showaspassword">1</entry>
+        <entry name="tooltip">The Password of Siebel User to connect Siebel cli tool</entry>
+        <entry name="modifiable">1</entry>
+        <entry name="customfield"/>
+      <entry name="initvalue"/>
+         </properties>
+    </text><label fill="b" id="LABEL1s.00" nl="1" text="Optional" tooltip="" alt="0">
+      <properties>
+        <entry name="text">Optional</entry>
+        <entry name="id">LABEL1s.00</entry>
+        <entry name="tooltip"/>
+        <entry name="modifiable">1</entry>
+        <entry name="customfield"/>
+      </properties>
+    </label><text alt="1" enabled="1" fill="b" focus="0" id="UC4_AE_HOSTs.00" inputassistance="0" len="" nl="1" regex="" required="0" separator=";" showaspassword="0" text="AE Hostname" tooltip="Hostname/IP of the AE to connect to. Default: IP of current AE " upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+         
+      <properties>
+        <entry listparam="C,N" name="reference">UC_DATATYPE_STRING</entry>
+        <entry name="text">AE Hostname</entry>
+        <entry name="multiselect">0</entry>
+        <entry name="separator">;</entry>
+        <entry name="len"/>
+        <entry name="quotes"/>
+        <entry name="id">UC4_AE_HOSTs.00</entry>
+        <entry name="regex"/>
+        <entry name="inputassistance">0</entry>
+        <entry name="enabled">0</entry>
+        <entry name="required">0</entry>
+        <entry name="upper">0</entry>
+        <entry name="focus">0</entry>
+        <entry name="showaspassword">0</entry>
+        <entry name="tooltip">Hostname/IP of the AE to connect to. Default: IP of current AE </entry>
+        <entry name="modifiable">1</entry>
+        <entry name="customfield"/>
+      <entry name="initvalue"/>
+         </properties>
+    </text><integer alt="1" enabled="1" fill="b" focus="0" id="UC4_AE_PORTs.00" max="" min="" nl="1" text="AE Port" tooltip="Port number of the AE to connect to. Default: Port of the running worker process">
+      <properties>
+        <entry listparam="N" name="reference">UC_DATATYPE_NUMERIC</entry>
+        <entry name="text">AE Port</entry>
+        <entry name="min"/>
+        <entry name="max"/>
+        <entry name="quotes"/>
+        <entry name="id">UC4_AE_PORTs.00</entry>
+        <entry name="enabled">0</entry>
+        <entry name="focus">0</entry>
+        <entry name="tooltip">Port number of the AE to connect to. Default: Port of the running worker process</entry>
+        <entry name="modifiable">1</entry>
+        <entry name="customfield"/>
+      <entry name="initvalue">0</entry>
+         </properties>
+    </integer><text alt="1" enabled="1" fill="b" focus="0" id="UC4_AE_USERs.00" inputassistance="0" len="" nl="1" regex="" required="0" separator=";" showaspassword="0" text="AE User" tooltip="User to authenticate with the AE (client/user/department). Default: current user" upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+         
+      <properties>
+        <entry listparam="C,N" name="reference">UC_DATATYPE_STRING</entry>
+        <entry name="text">AE User</entry>
+        <entry name="multiselect">0</entry>
+        <entry name="separator">;</entry>
+        <entry name="len"/>
+        <entry name="quotes"/>
+        <entry name="id">UC4_AE_USERs.00</entry>
+        <entry name="regex"/>
+        <entry name="inputassistance">0</entry>
+        <entry name="enabled">0</entry>
+        <entry name="required">0</entry>
+        <entry name="upper">0</entry>
+        <entry name="focus">0</entry>
+        <entry name="showaspassword">0</entry>
+        <entry name="tooltip">User to authenticate with the AE (client/user/department). Default: current user</entry>
+        <entry name="modifiable">1</entry>
+        <entry name="customfield"/>
+      <entry name="initvalue"/>
+         </properties>
+    </text><combo alt="1" dynamic="0" enabled="1" fill="b" filter="0" focus="0" id="UC4_LOGLEVELs.00" nl="1" strict="1" text="Log Level" tooltip="" vtype="i"><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command owner="_self" owneraction="setsource" ownerparam="src|_dialog@src"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptcombolist" target="_self" targetaction="setlist" wait="1"/>
+      
+      
+      
+      <properties>
+        <entry listparam="" name="reference">PCK.AUTOMIC_SHARED.PRV.VARA.LOGLEVEL</entry>
+        <entry name="text">Log Level</entry>
+        <entry name="quotes"/>
+        <entry name="id">UC4_LOGLEVELs.00</entry>
+        <entry name="dynamic">0</entry>
+        <entry name="enabled">0</entry>
+        <entry name="focus">0</entry>
+        <entry name="tooltip"/>
+        <entry name="modifiable">1</entry>
+        <entry name="customfield"/>
+      <entry name="initvalue"/></properties>
+    </combo></readpanel></dialog>]]></XUIEDITOR>
+</PROMPTSETXUI>
+<PROMPTSETDATA state="1">
+<DATAEDITOR><![CDATA[<PRPTS idnr="0005734983" client="6000" system="AE10" ontop="1" src="oh"><PRPTBOX><UC4_AE_PASSWORDs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4_AE_PASSWORD#" ReadFromTable="OPSE"></UC4_AE_PASSWORDs.00><UC4_CONFIG_OBJECT_TITLEs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4_CONFIG_OBJECT_TITLE#" ReadFromTable="OPSE">Siebel Dev Environment</UC4_CONFIG_OBJECT_TITLEs.00><UC4_CONFIG_FOLDERs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4_CONFIG_FOLDER#" ReadFromTable="OPSE">CONFIG/AUTOMIC_SIEBEL/</UC4_CONFIG_FOLDERs.00><UC4RB_SIEBEL_USERs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_SIEBEL_USER#" ReadFromTable="OPSE"></UC4RB_SIEBEL_USERs.00><UC4RB_SIEBEL_PASSWORDs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_SIEBEL_PASSWORD#" ReadFromTable="OPSE"></UC4RB_SIEBEL_PASSWORDs.00><UC4_AE_HOSTs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4_AE_HOST#" ReadFromTable="OPSE"></UC4_AE_HOSTs.00><UC4_AE_PORTs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4_AE_PORT#" ReadFromTable="OPSE">0</UC4_AE_PORTs.00><UC4_AE_USERs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4_AE_USER#" ReadFromTable="OPSE"></UC4_AE_USERs.00><UC4_LOGLEVELs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4_LOGLEVEL#" ReadFromTable="OPSE">INFO</UC4_LOGLEVELs.00></PRPTBOX></PRPTS>]]></DATAEDITOR>
+</PROMPTSETDATA>
+<DOCU_Docu state="1" type="text">
+<DOC/>
+</DOCU_Docu>
+</PRPT>
+</uc-export>

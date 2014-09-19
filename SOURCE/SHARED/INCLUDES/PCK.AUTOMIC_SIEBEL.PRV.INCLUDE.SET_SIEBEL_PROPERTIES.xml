@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-15" standalone="no"?><uc-export clientvers="8.0.0">
+<JOBI client="6000" name="PCK.AUTOMIC_SIEBEL.PRV.INCLUDE.SET_SIEBEL_PROPERTIES" system="AE10">
+<HEADER state="1">
+<Title/>
+
+
+<LastUsed/>
+<ArchiveKey1/>
+<ArchiveKey2/>
+<OH_SubType/>
+</HEADER>
+<SCRIPT mode="1" state="1" tidy="0">
+<MSCRI><![CDATA[:SET &SIEBEL_PROPERTIES# = ""
+:IF &UC4RB_SIEBEL_TXT_TIMEOUT# <> ""
+:  SET &SIEBEL_PROPERTIES# = STR_CAT(&SIEBEL_PROPERTIES#, " -tt &UC4RB_SIEBEL_TXT_TIMEOUT#")
+:ENDIF
+:IF &UC4RB_SIEBEL_SESSION_TIMEOUT# <> ""
+:  SET &SIEBEL_PROPERTIES# = STR_CAT(&SIEBEL_PROPERTIES#, " -st &UC4RB_SIEBEL_SESSION_TIMEOUT#")
+:ENDIF
+:IF &UC4RB_SIEBEL_NUM_RETRY# <> ""
+:  SET &SIEBEL_PROPERTIES# = STR_CAT(&SIEBEL_PROPERTIES#, " -re &UC4RB_SIEBEL_NUM_RETRY#")
+:ENDIF]]></MSCRI>
+</SCRIPT>
+<DOCU_Docu state="1" type="text">
+<DOC/>
+</DOCU_Docu>
+</JOBI>
+</uc-export>

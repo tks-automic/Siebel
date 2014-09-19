@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="ISO-8859-15" standalone="no"?><uc-export clientvers="8.0.0">
+<PRPT client="6000" name="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.RESTART" system="AE10">
+<HEADER state="1">
+<Title>Restart Component PromptSet</Title>
+
+
+<LastUsed/>
+<ArchiveKey1/>
+<ArchiveKey2/>
+<OH_SubType/>
+</HEADER>
+<PROMPTDESIGNER state="1">
+<DESIGNER/>
+</PROMPTDESIGNER>
+<PROMPTSETXUI state="1">
+<XUIEDITOR><![CDATA[<dialog height="496" icon="PRPT" id="PRPTS" left="0" top="0" width="441"><readpanel fill="b" id="PRPTBOX" nl="1" scroll="v" text="Restart Component"><properties><entry name="text">Restart Component</entry><entry name="modifiable">0</entry></properties><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_SIEBEL_GATEWAY_SERVERs.00" inputassistance="0" len="" nl="1" regex="" required="0" separator=";" showaspassword="0" text="Siebel gateway server address" tooltip="Siebel gateway server address" upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+         
+      <properties>
+        <entry listparam="C,N" name="reference">UC_DATATYPE_STRING</entry>
+        <entry name="text">Siebel gateway server address</entry>
+        <entry name="multiselect">0</entry>
+        <entry name="separator">;</entry>
+        <entry name="len"/>
+        <entry name="quotes"/>
+        <entry name="id">UC4RB_SIEBEL_GATEWAY_SERVERs.00</entry>
+        <entry name="regex"/>
+        <entry name="inputassistance">0</entry>
+        <entry name="enabled">0</entry>
+        <entry name="required">1</entry>
+        <entry name="upper">0</entry>
+        <entry name="focus">0</entry>
+        <entry name="showaspassword">0</entry>
+        <entry name="tooltip">Siebel gateway server address</entry>
+        <entry name="modifiable">1</entry>
+        <entry name="customfield"/>
+      <entry name="initvalue"/>
+         </properties>
+    </text><integer alt="1" enabled="1" fill="b" focus="0" id="UC4RB_SIEBEL_PORTs.00" max="" min="" nl="1" text="Siebel port" tooltip="The port Siebel is listening on.">
+      <properties>
+        <entry listparam="N" name="reference">UC_DATATYPE_NUMERIC</entry>
+        <entry name="text">Siebel port</entry>
+        <entry name="min"/>
+        <entry name="max"/>
+        <entry name="quotes"/>
+        <entry name="id">UC4RB_SIEBEL_PORTs.00</entry>
+        <entry name="enabled">0</entry>
+        <entry name="focus">0</entry>
+        <entry name="tooltip">The port Siebel is listening on.</entry>
+        <entry name="modifiable">1</entry>
+        <entry name="customfield"/>
+      <entry name="initvalue">0</entry>
+         </properties>
+    </integer><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_SIEBEL_SERVER_ROOTs.00" inputassistance="0" len="" nl="1" regex="" required="0" separator=";" showaspassword="0" text="Siebel Server root directory" tooltip="Siebel server root directory" upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+         
+      <properties>
+        <entry listparam="C,N" name="reference">UC_DATATYPE_STRING</entry>
+        <entry name="text">Siebel Server root directory</entry>
+        <entry name="multiselect">0</entry>
+        <entry name="separator">;</entry>
+        <entry name="len"/>
+        <entry name="quotes"/>
+        <entry name="id">UC4RB_SIEBEL_SERVER_ROOTs.00</entry>
+        <entry name="regex"/>
+        <entry name="inputassistance">0</entry>
+        <entry name="enabled">0</entry>
+        <entry name="required">1</entry>
+        <entry name="upper">0</entry>
+        <entry name="focus">0</entry>
+        <entry name="showaspassword">0</entry>
+        <entry name="tooltip">Siebel server root directory</entry>
+        <entry name="modifiable">1</entry>
+        <entry name="customfield"/>
+      <entry name="initvalue"/>
+         </properties>
+    </text><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_SIEBEL_ENTERPRISEs.00" inputassistance="0" len="" nl="1" regex="" required="0" separator=";" showaspassword="0" text="Sebiel Enterprise name" tooltip="The Enterprise that the databean should connect to." upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+         
+      <properties>
+        <entry listparam="C,N" name="reference">UC_DATATYPE_STRING</entry>
+        <entry name="text">Sebiel Enterprise name</entry>
+        <entry name="multiselect">0</entry>
+        <entry name="separator">;</entry>
+        <entry name="len"/>
+        <entry name="quotes"/>
+        <entry name="id">UC4RB_SIEBEL_ENTERPRISEs.00</entry>
+        <entry name="regex"/>
+        <entry name="inputassistance">0</entry>
+        <entry name="enabled">0</entry>
+        <entry name="required">1</entry>
+        <entry name="upper">0</entry>
+        <entry name="focus">0</entry>
+        <entry name="showaspassword">0</entry>
+        <entry name="tooltip">The Enterprise that the databean should connect to.</entry>
+        <entry name="modifiable">1</entry>
+        <entry name="customfield"/>
+      <entry name="initvalue"/>
+         </properties>
+    </text><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_SIEBEL_ENV_SCRIPT_PATHs.00" inputassistance="0" len="" nl="1" regex="" required="0" separator=";" showaspassword="0" text="Siebel server environment script" tooltip="Full path of the siebel environment script." upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+         
+      <properties>
+        <entry listparam="C,N" name="reference">UC_DATATYPE_STRING</entry>
+        <entry name="text">Siebel server environment script</entry>
+        <entry name="multiselect">0</entry>
+        <entry name="separator">;</entry>
+        <entry name="len"/>
+        <entry name="quotes"/>
+        <entry name="id">UC4RB_SIEBEL_ENV_SCRIPT_PATHs.00</entry>
+        <entry name="regex"/>
+        <entry name="inputassistance">0</entry>
+        <entry name="enabled">0</entry>
+        <entry name="required">1</entry>
+        <entry name="upper">0</entry>
+        <entry name="focus">0</entry>
+        <entry name="showaspassword">0</entry>
+        <entry name="tooltip">Full path of the siebel environment script.</entry>
+        <entry name="modifiable">1</entry>
+        <entry name="customfield"/>
+      <entry name="initvalue"/>
+         </properties>
+    </text><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_SIEBEL_USERNAMEs.00" inputassistance="0" len="" nl="1" regex="" required="0" separator=";" showaspassword="0" text="Siebel Username" tooltip="The Siebel user to connect." upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+         
+      <properties>
+        <entry listparam="C,N" name="reference">UC_DATATYPE_STRING</entry>
+        <entry name="text">Siebel Username</entry>
+        <entry name="multiselect">0</entry>
+        <entry name="separator">;</entry>
+        <entry name="len"/>
+        <entry name="quotes"/>
+        <entry name="id">UC4RB_SIEBEL_USERNAMEs.00</entry>
+        <entry name="regex"/>
+        <entry name="inputassistance">0</entry>
+        <entry name="enabled">0</entry>
+        <entry name="required">1</entry>
+        <entry name="upper">0</entry>
+        <entry name="focus">0</entry>
+        <entry name="showaspassword">0</entry>
+        <entry name="tooltip">The Siebel user to connect.</entry>
+        <entry name="modifiable">1</entry>
+        <entry name="customfield"/>
+      <entry name="initvalue"/>
+         </properties>
+    </text><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_SIEBEL_PASSWORDs.00" inputassistance="0" len="" nl="1" regex="" required="0" separator=";" showaspassword="1" text="Siebel Password" tooltip=" Password to connect with the Siebel user" upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+         
+      <properties>
+        <entry listparam="C,N" name="reference">UC_DATATYPE_STRING</entry>
+        <entry name="text">Siebel Password</entry>
+        <entry name="multiselect">0</entry>
+        <entry name="separator">;</entry>
+        <entry name="len"/>
+        <entry name="quotes"/>
+        <entry name="id">UC4RB_SIEBEL_PASSWORDs.00</entry>
+        <entry name="regex"/>
+        <entry name="inputassistance">0</entry>
+        <entry name="enabled">0</entry>
+        <entry name="required">1</entry>
+        <entry name="upper">0</entry>
+        <entry name="focus">0</entry>
+        <entry name="showaspassword">1</entry>
+        <entry name="tooltip"> Password to connect with the Siebel user</entry>
+        <entry name="modifiable">1</entry>
+        <entry name="customfield"/>
+      <entry name="initvalue"/>
+         </properties>
+    </text><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_SIEBEL_SERVERSs.00" inputassistance="0" len="" nl="1" regex="" required="0" separator=";" showaspassword="0" text="Siebel servers" tooltip="Comma separated list siebel servers which will be stopped (ALL for all servers)" upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+         
+      <properties>
+        <entry listparam="C,N" name="reference">UC_DATATYPE_STRING</entry>
+        <entry name="text">Siebel servers</entry>
+        <entry name="multiselect">0</entry>
+        <entry name="separator">;</entry>
+        <entry name="len"/>
+        <entry name="quotes"/>
+        <entry name="id">UC4RB_SIEBEL_SERVERSs.00</entry>
+        <entry name="regex"/>
+        <entry name="inputassistance">0</entry>
+        <entry name="enabled">0</entry>
+        <entry name="required">1</entry>
+        <entry name="upper">0</entry>
+        <entry name="focus">0</entry>
+        <entry name="showaspassword">0</entry>
+        <entry name="tooltip">Comma separated list siebel servers which will be stopped (ALL for all servers)</entry>
+        <entry name="modifiable">1</entry>
+        <entry name="customfield">Comma separated list siebel servers which will be stopped</entry>
+      <entry name="initvalue"/>
+         </properties>
+    </text><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_SIEBEL_OBJECT_MANAGERSs.00" inputassistance="0" len="" nl="1" regex="" required="0" separator=";" showaspassword="0" text="Object Managers" tooltip="The Objectmanagers to connect with the Databean to check if Siebel is running. (No Spaces!!)" upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+         
+      <properties>
+        <entry listparam="C,N" name="reference">UC_DATATYPE_STRING</entry>
+        <entry name="text">Object Managers</entry>
+        <entry name="multiselect">0</entry>
+        <entry name="separator">;</entry>
+        <entry name="len"/>
+        <entry name="quotes"/>
+        <entry name="id">UC4RB_SIEBEL_OBJECT_MANAGERSs.00</entry>
+        <entry name="regex"/>
+        <entry name="inputassistance">0</entry>
+        <entry name="enabled">0</entry>
+        <entry name="required">1</entry>
+        <entry name="upper">0</entry>
+        <entry name="focus">0</entry>
+        <entry name="showaspassword">0</entry>
+        <entry name="tooltip">The Objectmanagers to connect with the Databean to check if Siebel is running. (No Spaces!!)</entry>
+        <entry name="modifiable">1</entry>
+        <entry name="customfield"/>
+      <entry name="initvalue"/>
+         </properties>
+    </text><integer alt="1" enabled="1" fill="b" focus="0" id="UC4RB_SIEBEL_MAXIMUM_RETRIESs.00" max="" min="" nl="1" text="Maximum retries" tooltip="The maximum retries before the action reaches an error state.">
+      <properties>
+        <entry listparam="N" name="reference">UC_DATATYPE_NUMERIC</entry>
+        <entry name="text">Maximum retries</entry>
+        <entry name="min"/>
+        <entry name="max"/>
+        <entry name="quotes"/>
+        <entry name="id">UC4RB_SIEBEL_MAXIMUM_RETRIESs.00</entry>
+        <entry name="enabled">0</entry>
+        <entry name="focus">0</entry>
+        <entry name="tooltip">The maximum retries before the action reaches an error state.</entry>
+        <entry name="modifiable">1</entry>
+        <entry name="customfield"/>
+      <entry name="initvalue">0</entry>
+         </properties>
+    </integer><integer alt="1" enabled="1" fill="b" focus="0" id="UC4RB_SIEBEL_DELAY_IN_SECONDSs.00" max="" min="" nl="1" text="Delay time" tooltip="The delay between the retries in seconds.">
+      <properties>
+        <entry listparam="N" name="reference">UC_DATATYPE_NUMERIC</entry>
+        <entry name="text">Delay time</entry>
+        <entry name="min"/>
+        <entry name="max"/>
+        <entry name="quotes"/>
+        <entry name="id">UC4RB_SIEBEL_DELAY_IN_SECONDSs.00</entry>
+        <entry name="enabled">0</entry>
+        <entry name="focus">0</entry>
+        <entry name="tooltip">The delay between the retries in seconds.</entry>
+        <entry name="modifiable">1</entry>
+        <entry name="customfield"/>
+      <entry name="initvalue">0</entry>
+         </properties>
+    </integer><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_SIEBEL_ENCODINGs.00" inputassistance="0" len="" nl="1" regex="" required="0" separator=";" showaspassword="0" text="Encoding" tooltip="Encoding is used for Siebel" upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+         
+      <properties>
+        <entry listparam="C,N" name="reference">UC_DATATYPE_STRING</entry>
+        <entry name="text">Encoding</entry>
+        <entry name="multiselect">0</entry>
+        <entry name="separator">;</entry>
+        <entry name="len"/>
+        <entry name="quotes"/>
+        <entry name="id">UC4RB_SIEBEL_ENCODINGs.00</entry>
+        <entry name="regex"/>
+        <entry name="inputassistance">0</entry>
+        <entry name="enabled">0</entry>
+        <entry name="required">1</entry>
+        <entry name="upper">0</entry>
+        <entry name="focus">0</entry>
+        <entry name="showaspassword">0</entry>
+        <entry name="tooltip">Encoding is used for Siebel</entry>
+        <entry name="modifiable">1</entry>
+        <entry name="customfield"/>
+      <entry name="initvalue"/>
+         </properties>
+    </text></readpanel></dialog>]]></XUIEDITOR>
+</PROMPTSETXUI>
+<PROMPTSETDATA state="1">
+<DATAEDITOR><![CDATA[<PRPTS idnr="0005077432" client="6000" system="AE10" ontop="1" src="oh"><PRPTBOX><UC4RB_SIEBEL_GATEWAY_SERVERs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_SIEBEL_GATEWAY_SERVER#" ReadFromTable="OPSE">eworks-server</UC4RB_SIEBEL_GATEWAY_SERVERs.00><UC4RB_SIEBEL_PORTs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_SIEBEL_PORT#" ReadFromTable="OPSE">2321</UC4RB_SIEBEL_PORTs.00><UC4RB_SIEBEL_SERVER_ROOTs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_SIEBEL_SERVER_ROOT#" ReadFromTable="OPSE"></UC4RB_SIEBEL_SERVER_ROOTs.00><UC4RB_SIEBEL_ENTERPRISEs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_SIEBEL_ENTERPRISE#" ReadFromTable="OPSE"></UC4RB_SIEBEL_ENTERPRISEs.00><UC4RB_SIEBEL_ENV_SCRIPT_PATHs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_SIEBEL_ENV_SCRIPT_PATH#" ReadFromTable="OPSE"></UC4RB_SIEBEL_ENV_SCRIPT_PATHs.00><UC4RB_SIEBEL_USERNAMEs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_SIEBEL_USERNAME#" ReadFromTable="OPSE"></UC4RB_SIEBEL_USERNAMEs.00><UC4RB_SIEBEL_PASSWORDs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_SIEBEL_PASSWORD#" ReadFromTable="OPSE"></UC4RB_SIEBEL_PASSWORDs.00><UC4RB_SIEBEL_SERVERSs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_SIEBEL_SERVERS#" ReadFromTable="OPSE"></UC4RB_SIEBEL_SERVERSs.00><UC4RB_SIEBEL_OBJECT_MANAGERSs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_SIEBEL_OBJECT_MANAGERS#" ReadFromTable="OPSE"></UC4RB_SIEBEL_OBJECT_MANAGERSs.00><UC4RB_SIEBEL_MAXIMUM_RETRIESs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_SIEBEL_MAXIMUM_RETRIES#" ReadFromTable="OPSE">10</UC4RB_SIEBEL_MAXIMUM_RETRIESs.00><UC4RB_SIEBEL_DELAY_IN_SECONDSs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_SIEBEL_DELAY_IN_SECONDS#" ReadFromTable="OPSE">40</UC4RB_SIEBEL_DELAY_IN_SECONDSs.00><UC4RB_SIEBEL_ENCODINGs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_SIEBEL_ENCODING#" ReadFromTable="OPSE">utf8</UC4RB_SIEBEL_ENCODINGs.00></PRPTBOX></PRPTS>]]></DATAEDITOR>
+</PROMPTSETDATA>
+<DOCU_Docu state="1" type="text">
+<DOC/>
+</DOCU_Docu>
+</PRPT>
+</uc-export>

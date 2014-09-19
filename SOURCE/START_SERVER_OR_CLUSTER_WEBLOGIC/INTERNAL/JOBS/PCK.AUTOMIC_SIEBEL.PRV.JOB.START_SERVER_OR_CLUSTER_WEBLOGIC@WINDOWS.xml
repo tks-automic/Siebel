@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="ISO-8859-15" standalone="no"?><uc-export clientvers="8.0.0">
+<JOBS_WINDOWS AttrType="WINDOWS" name="PCK.AUTOMIC_SIEBEL.PRV.JOB.START_SERVER_OR_CLUSTER_WEBLOGIC@WINDOWS">
+<XHEADER state="1">
+<Title/>
+
+
+<LastUsed/>
+<ArchiveKey1/>
+<ArchiveKey2/>
+<ExtRepDef>1</ExtRepDef>
+<ExtRepAll>0</ExtRepAll>
+<ExtRepNone>0</ExtRepNone>
+<Active>1</Active>
+<OH_SubType/>
+</XHEADER>
+<OUTPUTREG state="1" tidy="1">
+<FileReg/>
+</OUTPUTREG>
+<SYNCREF state="1">
+<Syncs/>
+</SYNCREF>
+<ATTR_JOBS state="1">
+<Queue>CLIENT_QUEUE</Queue>
+<StartType/>
+<HostDst>WINDOWS|&lt;WIN&gt;|HOST</HostDst>
+<HostATTR_Type>WINDOWS</HostATTR_Type>
+<CodeName/>
+<Login/>
+<IntAccount/>
+<AutoDeactNo>0</AutoDeactNo>
+<AutoDeact1ErrorFree>0</AutoDeact1ErrorFree>
+<AutoDeactErrorFree>0</AutoDeactErrorFree>
+<DeactWhen/>
+<DeactDelay>0</DeactDelay>
+<AutoDeactAlways>1</AutoDeactAlways>
+<AttDialog>0</AttDialog>
+<ActAtRun>1</ActAtRun>
+<Consumption>0</Consumption>
+<UC4Priority>0</UC4Priority>
+<MaxParallel2>0</MaxParallel2>
+<MpElse1>1</MpElse1>
+<MpElse2>0</MpElse2>
+<TZ/>
+</ATTR_JOBS>
+<ATTR_WINDOWS state="1">
+<OutputDb>1</OutputDb>
+<OutputDbErr>0</OutputDbErr>
+<OutputFile>0</OutputFile>
+<IsGenerated>0</IsGenerated>
+<BAT>1</BAT>
+<COM>0</COM>
+<WinBatch>0</WinBatch>
+<Standard>1</Standard>
+<Minimized>0</Minimized>
+<Maximized>0</Maximized>
+<JObjDefault>0</JObjDefault>
+<JObjYes>0</JObjYes>
+<JObjNo>1</JObjNo>
+<WorkingDirectory>c:\</WorkingDirectory>
+<Command/>
+<LogOn>0</LogOn>
+<ShowJob>0</ShowJob>
+</ATTR_WINDOWS>
+<RUNTIME state="1">
+<MaxRetCode>0</MaxRetCode>
+<MrcExecute/>
+<MrcElseE>0</MrcElseE>
+<FcstStatus>0| </FcstStatus>
+<Ert>47</Ert>
+<ErtMethodDef>1</ErtMethodDef>
+<ErtMethodFix>0</ErtMethodFix>
+<ErtFix>0</ErtFix>
+<ErtDynMethod>2|Average</ErtDynMethod>
+<ErtMethodDyn>0</ErtMethodDyn>
+<ErtCnt>0</ErtCnt>
+<ErtCorr>0</ErtCorr>
+<ErtIgn>0</ErtIgn>
+<ErtIgnFlg>0</ErtIgnFlg>
+<ErtMinCnt>0</ErtMinCnt>
+<MrtMethodNone>1</MrtMethodNone>
+<MrtMethodFix>0</MrtMethodFix>
+<MrtFix>0</MrtFix>
+<MrtMethodErt>0</MrtMethodErt>
+<MrtErt>0</MrtErt>
+<MrtMethodDate>0</MrtMethodDate>
+<MrtDays>0</MrtDays>
+<MrtTime>00:00</MrtTime>
+<MrtTZ/>
+<SrtMethodNone>1</SrtMethodNone>
+<SrtMethodFix>0</SrtMethodFix>
+<SrtFix>0</SrtFix>
+<SrtMethodErt>0</SrtMethodErt>
+<SrtErt>0</SrtErt>
+<MrtCancel>0</MrtCancel>
+<MrtExecute>0</MrtExecute>
+<MrtExecuteObj/>
+</RUNTIME>
+<DYNVALUES state="1">
+<dyntree>
+<node content="1" id="VALUE" name="Variables" parent="" type="VALUE">
+<VALUE state="1">
+<Values/>
+<Mode>0</Mode>
+</VALUE>
+</node>
+</dyntree>
+</DYNVALUES>
+<ROLLBACK state="1" tidy="1">
+<RollbackFlag>0</RollbackFlag>
+<CBackupObj/>
+<CRollbackObj/>
+<FBackupPath/>
+<FDeleteBefore>0</FDeleteBefore>
+<FInclSubDirs>0</FInclSubDirs>
+</ROLLBACK>
+<PRE_SCRIPT mode="1" replacementmode="1" state="1" tidy="0">
+<PSCRI><![CDATA[:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.START_STOP_JOB_ACCORDING_TO_AGENT_OS]]></PSCRI>
+</PRE_SCRIPT>
+<SCRIPT mode="1" state="1" tidy="0">
+<MSCRI><![CDATA[@echo off
+:  DEFINE &STRING_ARR#,string,100
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_HEADER_PARAM_VALIDATION
+
+:SET &UC4RB_LOGGING_PARAMETER# = "Host"
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_PARAM &UC4RB_LOGGING_PARAMETER_VAL# = &UC4RB_WEBLOGIC_HOST#
+:SET &UC4RB_LOGGING_PARAMETER# = "Port"
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_PARAM &UC4RB_LOGGING_PARAMETER_VAL# = &UC4RB_WEBLOGIC_PORT#
+:SET &UC4RB_LOGGING_PARAMETER# = "Username"
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_PARAM &UC4RB_LOGGING_PARAMETER_VAL# = &UC4RB_WEBLOGIC_USERNAME#
+:SET &UC4RB_LOGGING_PARAMETER# = "Servers/Clusters"
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_PARAM &UC4RB_LOGGING_PARAMETER_VAL# = &UC4RB_WEBLOGIC_START_NAME#
+:SET &UC4RB_LOGGING_PARAMETER# = "Type"
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_PARAM &UC4RB_LOGGING_PARAMETER_VAL# = &UC4RB_WEBLOGIC_START_TYPE#
+:SET &UC4RB_LOGGING_PARAMETER# = "Actions Temp Directory"
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_PARAM &UC4RB_LOGGING_PARAMETER_VAL# = &UC4RB_WEBLOGIC_TEMP_DIRECTORY#
+:SET &UC4RB_LOGGING_PARAMETER# = "Connection Protocol"
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_PARAM &UC4RB_LOGGING_PARAMETER_VAL# = &UC4RB_WEBLOGIC_USE_PROTOCOL#
+:SET &UC4RB_LOGGING_PARAMETER# = "Security options"
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_PARAM &UC4RB_LOGGING_PARAMETER_VAL# = &UC4RB_WEBLOGIC_USE_SECURITY#
+
+set /a errors=0 > nul
+
+:IF &UC4RB_WEBLOGIC_TEMP_DIRECTORY# NE ""
+:  INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.NORMALIZE_PATH "UC4RB_CONVERTED_STRING" = "UC4RB_WEBLOGIC_TEMP_DIRECTORY"
+
+:  SET &UC4RB_CHECKME# = &UC4RB_WEBLOGIC_TEMP_DIRECTORY#
+:  INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.CHECK_WINDOWS_CONSOLE_FILE_EXISTS
+   if %ISFILE% == 1 (
+:    SET &UC4RB_LOGGING_PARAMETER# = "Actions Temp Directory"
+:    SET &UC4RB_LOGGING_ERROR# = "&UC4RB_WEBLOGIC_TEMP_DIRECTORY# is a file"
+:    INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_ERROR_PARAMETER
+     set /a errors=1 > nul
+   )
+   if %EXIST% == 0 (
+     md "&UC4RB_WEBLOGIC_TEMP_DIRECTORY#"
+   )
+:  INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.CHECK_RETURN_CODE_WINDOWS_CONSOLE
+:ENDIF
+
+if %errors% GTR 0 (
+      set retcode=%errors%
+      goto :retcode
+)
+
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_HEADER_EXECUTION
+
+!Begin my code
+:IF &UC4RB_WEBLOGIC_TEMP_DIRECTORY# EQ ""
+:  SET &UC4RB_WEBLOGIC_TEMP_DIRECTORY# = GET_VAR('UC_EX_PATH_TEMP', &AGENT#)
+:ENDIF
+:SET &FILENAME# = "&UC4RB_WEBLOGIC_TEMP_DIRECTORY#\start_server_or_cluster&$RUNID#.py"
+:SET &HOST_PORT# = STR_CAT("&UC4RB_WEBLOGIC_USE_PROTOCOL#://", "&UC4RB_WEBLOGIC_HOST#:&UC4RB_WEBLOGIC_PORT#")
+
+! Create jython script file
+echo connect(sys.argv[1].strip(),sys.argv[2].strip(),'&HOST_PORT#'.strip())  > "&FILENAME#"
+echo import sys, string, os, os.path, time,traceback,shutil >> "&FILENAME#"
+
+:INC PCK.AUTOMIC_SIEBEL.PRV.INCLUDE.FNS4WINDOWS
+
+echo try:    >> "&FILENAME#"
+echo   servers_arr = rf_prep_svrs('&UC4RB_WEBLOGIC_START_NAME#')    >> "&FILENAME#"
+
+echo.  >> "&FILENAME#"
+echo   sbean = '' >> "&FILENAME#"
+echo   if '&UC4RB_WEBLOGIC_START_TYPE#' == 'Server': >> "&FILENAME#"
+echo     sbean = 'Server' >> "&FILENAME#"
+echo   else: >> "&FILENAME#"
+echo     sbean = 'Cluster' >> "&FILENAME#"
+
+echo.  >> "&FILENAME#"
+echo   for server in servers_arr: >> "&FILENAME#"
+echo     if checkResourceExists(server,sbean) == false: >> "&FILENAME#"
+echo       raise '&UC4RB_WEBLOGIC_START_TYPE#: ' + server + ' does not exist. Aborting ...' >> "&FILENAME#"
+
+echo.  >> "&FILENAME#"
+echo   for server in servers_arr: >> "&FILENAME#"
+echo     if '&UC4RB_WEBLOGIC_START_TYPE#' == 'Server': >> "&FILENAME#"
+echo       domainRuntime() >> "&FILENAME#"
+echo       serverRuntime = getMBean( '/ServerRuntimes/' + server ) >> "&FILENAME#"
+echo       if serverRuntime != None: >> "&FILENAME#"
+echo         raise 'Server: ' + server + ' is already running. Aborting ...' >> "&FILENAME#"
+
+echo.  >> "&FILENAME#"
+echo     else: >> "&FILENAME#"
+echo       print 'Printing state of the cluster: ' >> "&FILENAME#"
+echo       serverConfig() >> "&FILENAME#"
+echo       cd('/Clusters/'+server) >> "&FILENAME#"
+echo       servers_in_cluster = cmo.getServers() >> "&FILENAME#"
+echo       all_running = 'true' >> "&FILENAME#"
+echo       i = 0 >> "&FILENAME#"
+echo       for server1 in servers_in_cluster: >> "&FILENAME#"
+echo         domainRuntime() >> "&FILENAME#"
+echo         serverRuntime = getMBean('/ServerRuntimes/' + server1.getName()) >> "&FILENAME#"
+echo         if serverRuntime == None: >> "&FILENAME#"
+echo           print 'Server: ' + server1.getName() + ' is NOT running in cluster: ' + server >> "&FILENAME#"
+echo           all_running = 'false' >> "&FILENAME#"
+echo         else: >> "&FILENAME#"
+echo           print 'Server: ' + server1.getName() + ' is running in cluster: ' + server >> "&FILENAME#"
+echo         i = i + 1 >> "&FILENAME#"
+echo.  >> "&FILENAME#"
+echo       if i == 0: >> "&FILENAME#"
+echo         raise 'No server in the cluster: ' + server + '. Aborting ...' >> "&FILENAME#"
+echo       if all_running == 'true': >> "&FILENAME#"
+echo         raise 'All servers in the cluster: ' + server + ' are already running. Aborting ...' >> "&FILENAME#"
+
+echo.  >> "&FILENAME#"
+echo   for server in servers_arr: >> "&FILENAME#"
+echo     if '&UC4RB_WEBLOGIC_START_TYPE#' == 'Server': >> "&FILENAME#"
+echo       start (server,'Server',block='true') >> "&FILENAME#"
+echo     else: >> "&FILENAME#"
+echo       start (server,'Cluster',block='true') >> "&FILENAME#"
+
+echo.  >> "&FILENAME#"
+echo finally:  >> "&FILENAME#"
+echo   disconnect('true')  >> "&FILENAME#"
+!Finish creating python script file
+
+:SET &UC4RB_ENCRYPTED_PASSWORD_TMP# = "&UC4RB_WEBLOGIC_PASSWORD#"
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.DECRYPT_PASSWORD
+
+:IF &UC4RB_WEBLOGIC_USE_PROTOCOL# = "t3s" OR "https" OR "iiops"
+:  SET &UC4RB_WEBLOGIC_CMD# = 'java &UC4RB_WEBLOGIC_USE_SECURITY# weblogic.WLST "&FILENAME#" &UC4RB_WEBLOGIC_USERNAME# %UC4_DECRYPTED_PWD% '
+:ELSE
+:  SET &UC4RB_WEBLOGIC_CMD# = 'java weblogic.WLST "&FILENAME#" &UC4RB_WEBLOGIC_USERNAME# %UC4_DECRYPTED_PWD% '
+:ENDIF
+
+call %WL_HOME%\server\bin\setWLSEnv.cmd
+call &UC4RB_WEBLOGIC_CMD#
+set retcode=%ERRORLEVEL%
+
+!clean up the &FILENAME# file
+del "&FILENAME#"
+
+@if NOT %retcode% == 0 goto :retcode
+!End my code
+
+
+
+
+]]></MSCRI>
+</SCRIPT>
+<OUTPUTSCAN state="1">
+<Inherit>N</Inherit>
+<filterobjects/>
+<HostFsc/>
+<LoginFsc/>
+</OUTPUTSCAN>
+<POST_SCRIPT mode="1" replacementmode="1" state="1" tidy="1">
+<OSCRI/>
+</POST_SCRIPT>
+<DOCU_Docu state="1" type="text">
+<DOC/>
+</DOCU_Docu>
+</JOBS_WINDOWS>
+</uc-export>

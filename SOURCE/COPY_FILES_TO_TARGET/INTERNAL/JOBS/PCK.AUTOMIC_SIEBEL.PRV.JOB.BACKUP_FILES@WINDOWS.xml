@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="ISO-8859-15" standalone="no"?><uc-export clientvers="8.0.0">
+<JOBS_WINDOWS AttrType="WINDOWS" name="PCK.AUTOMIC_SIEBEL.PRV.JOB.BACKUP_FILES@WINDOWS">
+<XHEADER state="1">
+<Title/>
+
+
+<LastUsed/>
+<ArchiveKey1/>
+<ArchiveKey2/>
+<ExtRepDef>1</ExtRepDef>
+<ExtRepAll>0</ExtRepAll>
+<ExtRepNone>0</ExtRepNone>
+<Active>1</Active>
+<OH_SubType/>
+</XHEADER>
+<OUTPUTREG state="1" tidy="1">
+<FileReg/>
+</OUTPUTREG>
+<SYNCREF state="1">
+<Syncs/>
+</SYNCREF>
+<ATTR_JOBS state="1">
+<Queue>CLIENT_QUEUE</Queue>
+<StartType/>
+<HostDst>WINDOWS|&lt;WIN&gt;|HOST</HostDst>
+<HostATTR_Type>WINDOWS</HostATTR_Type>
+<CodeName/>
+<Login/>
+<IntAccount/>
+<AutoDeactNo>1</AutoDeactNo>
+<AutoDeact1ErrorFree>0</AutoDeact1ErrorFree>
+<AutoDeactErrorFree>0</AutoDeactErrorFree>
+<DeactWhen/>
+<DeactDelay>0</DeactDelay>
+<AutoDeactAlways>0</AutoDeactAlways>
+<AttDialog>0</AttDialog>
+<ActAtRun>1</ActAtRun>
+<Consumption>0</Consumption>
+<UC4Priority>0</UC4Priority>
+<MaxParallel2>0</MaxParallel2>
+<MpElse1>1</MpElse1>
+<MpElse2>0</MpElse2>
+<TZ/>
+</ATTR_JOBS>
+<ATTR_WINDOWS state="1">
+<OutputDb>1</OutputDb>
+<OutputDbErr>0</OutputDbErr>
+<OutputFile>0</OutputFile>
+<IsGenerated>0</IsGenerated>
+<BAT>0</BAT>
+<COM>0</COM>
+<WinBatch>1</WinBatch>
+<Standard>1</Standard>
+<Minimized>0</Minimized>
+<Maximized>0</Maximized>
+<JObjDefault>0</JObjDefault>
+<JObjYes>1</JObjYes>
+<JObjNo>0</JObjNo>
+<WorkingDirectory>c:\</WorkingDirectory>
+<Command/>
+<LogOn>0</LogOn>
+<ShowJob>0</ShowJob>
+</ATTR_WINDOWS>
+<RUNTIME state="1">
+<MaxRetCode>0</MaxRetCode>
+<MrcExecute/>
+<MrcElseE>0</MrcElseE>
+<FcstStatus>0| </FcstStatus>
+<Ert>81</Ert>
+<ErtMethodDef>1</ErtMethodDef>
+<ErtMethodFix>0</ErtMethodFix>
+<ErtFix>0</ErtFix>
+<ErtDynMethod>2|Average</ErtDynMethod>
+<ErtMethodDyn>0</ErtMethodDyn>
+<ErtCnt>0</ErtCnt>
+<ErtCorr>0</ErtCorr>
+<ErtIgn>0</ErtIgn>
+<ErtIgnFlg>0</ErtIgnFlg>
+<ErtMinCnt>0</ErtMinCnt>
+<MrtMethodNone>1</MrtMethodNone>
+<MrtMethodFix>0</MrtMethodFix>
+<MrtFix>0</MrtFix>
+<MrtMethodErt>0</MrtMethodErt>
+<MrtErt>0</MrtErt>
+<MrtMethodDate>0</MrtMethodDate>
+<MrtDays>0</MrtDays>
+<MrtTime>00:00</MrtTime>
+<MrtTZ/>
+<SrtMethodNone>1</SrtMethodNone>
+<SrtMethodFix>0</SrtMethodFix>
+<SrtFix>0</SrtFix>
+<SrtMethodErt>0</SrtMethodErt>
+<SrtErt>0</SrtErt>
+<MrtCancel>0</MrtCancel>
+<MrtExecute>0</MrtExecute>
+<MrtExecuteObj/>
+</RUNTIME>
+<DYNVALUES state="1">
+<dyntree>
+<node content="1" id="VALUE" name="Variables" parent="" type="VALUE">
+<VALUE state="1">
+<Values/>
+<Mode>0</Mode>
+</VALUE>
+</node>
+</dyntree>
+</DYNVALUES>
+<ROLLBACK state="1" tidy="1">
+<RollbackFlag>0</RollbackFlag>
+<CBackupObj/>
+<CRollbackObj/>
+<FBackupPath/>
+<FDeleteBefore>0</FDeleteBefore>
+<FInclSubDirs>0</FInclSubDirs>
+</ROLLBACK>
+<PRE_SCRIPT mode="1" replacementmode="1" state="1" tidy="0">
+<PSCRI><![CDATA[:SET &PROMPTSET# = "PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.COPY_FILES_TO_TARGET"
+:INC PCK.AUTOMIC_SIEBEL.PRV.INCLUDE.GET_VALUES_FROM_CONFIG
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.START_STOP_JOB_ACCORDING_TO_AGENT_OS]]></PSCRI>
+</PRE_SCRIPT>
+<SCRIPT mode="1" state="1" tidy="0">
+<MSCRI><![CDATA[:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.POWERSHELL_UTILITY
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_HEADER_PARAM_VALIDATION
+
+:DEFINE &STRING_ARR#,string,30
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.NORMALIZE_PATH "UC4RB_CONVERTED_STRING" = "UC4RB_SIEBEL_SERVER_HOME_DIR"
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.NORMALIZE_PATH "UC4RB_CONVERTED_STRING" = "UC4RB_SIEBEL_WS_PUB_DIR"
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.NORMALIZE_PATH "UC4RB_CONVERTED_STRING" = "UC4RB_SIEBEL_CREATED_DIR"
+
+:SET &UC4RB_LOGGING_PARAMETER# = "Siebel Server Home Directory"
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_PARAM &UC4RB_LOGGING_PARAMETER_VAL# = &UC4RB_SIEBEL_SERVER_HOME_DIR#
+:SET &UC4RB_LOGGING_PARAMETER# = "Siebel WebServer Public Directory"
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_PARAM &UC4RB_LOGGING_PARAMETER_VAL# = &UC4RB_SIEBEL_WS_PUB_DIR#
+:SET &UC4RB_LOGGING_PARAMETER# = "Backup Directory Name"
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_PARAM &UC4RB_LOGGING_PARAMETER_VAL# = &UC4RB_SIEBEL_CREATED_DIR#
+
+! Check Backup Directory Name exists
+:SET &UC4RB_CHECKME# = &UC4RB_SIEBEL_CREATED_DIR#
+:INCLUDE PCK.AUTOMIC_SHARED.PUB.INCLUDE.CHECK_WINDOWS_POWERSHELL_FILE_EXISTS
+$errors = 0
+if  ($EXIST -eq 0) {
+:   SET &UC4RB_LOGGING_PARAMETER# = "Backup Directory Name"
+:   SET &UC4RB_LOGGING_ERROR# = "Directory &UC4RB_SIEBEL_CREATED_DIR# does not exist"
+:   INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_ERROR_PARAMETER
+    $errors=1
+} elseif  ($ISDIR -eq 0){
+:   SET &UC4RB_LOGGING_PARAMETER# = "Backup Directory Name"
+:   SET &UC4RB_LOGGING_ERROR# = "&UC4RB_SIEBEL_CREATED_DIR# exists but is not a directory "
+:   INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_ERROR_PARAMETER
+    $errors=2
+}
+
+! Action return if directories does not exist
+if ($errors -gt 0) {
+  exit $errors
+}
+
+! Start execution
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_HEADER_EXECUTION
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.CHANGE_FOLDER_TO_AGENT_BIN
+
+! getting siebel build number by executing list server cmd in srvrmgr tool
+! $buildNumber = Get-Content "&UC4RB_SIEBEL_SERVER_HOME_DIR#\base.txt"| select-string -Pattern "`[[0-9\-]*`]" -allmatches | select -expa matches | select -expa value
+! $buildNumber = $buildNumber.replace("[","").replace("]","")
+
+:SET &CONTAINER# = "&UC4RB_AGENT_WORKING_DIR#\temp&$RUNID#"
+! create container dir
+$tempDir = "&CONTAINER#"
+New-Item -Path "$tempDir" -Force -ItemType directory
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.CHECK_RETURN_CODE_WINDOWS_POWERSHELL
+
+$languages = "&UC4RB_SIEBEL_LANGUAGES#"
+$serverFullDir = "&UC4RB_SIEBEL_SERVER_HOME_DIR#";
+$wsPubDir = "&UC4RB_SIEBEL_WS_PUB_DIR#";
+
+$strArr = $serverFullDir.Split("\")
+$exportServerDir = $strArr[$strArr.length-1];
+
+$strArr = $wsPubDir.Split("\")
+$exportWsPubDir = $strArr[$strArr.length-2]+"\"+$strArr[$strArr.length-1];
+
+! Backup Browser Script Dir <SiebelServer_HomeDir>\bscripts\*
+$targetDir = $tempDir+"\"+$exportServerDir+"\bscripts"
+if (!(Test-Path -Path "$targetDir")) {
+  New-Item -Path "$targetDir" -Force -ItemType directory
+}
+Copy-Item "$serverFullDir\bscripts\*" -Destination "$targetDir" -Force -Recurse
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.CHECK_RETURN_CODE_WINDOWS_POWERSHELL
+
+! Backup SRF Files: <SiebelServer_HomeDir>\OBJECTS\*
+$targetDir = $tempDir+"\"+$exportServerDir+"\OBJECTS"
+if (!(Test-Path -Path "$targetDir")) {
+  New-Item -Path "$targetDir" -Force -ItemType directory
+}
+Copy-Item "$serverFullDir\OBJECTS\*" -Destination "$targetDir" -Force -Recurse
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.CHECK_RETURN_CODE_WINDOWS_POWERSHELL
+
+! Backup Web Templates: <SiebelServer_HomeDir>\webtempl\*
+$targetDir = $tempDir+"\"+$exportServerDir+"\webtempl"
+if (!(Test-Path -Path "$targetDir")) {
+  New-Item -Path "$targetDir" -Force -ItemType directory
+}
+Copy-Item "$serverFullDir\webtempl\*" -Destination "$targetDir" -Force -Recurse
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.CHECK_RETURN_CODE_WINDOWS_POWERSHELL
+
+! Backup CSS Files: <SiebelServer_HomeDir>\webmaster\files\*
+$targetDir = $tempDir+"\"+$exportServerDir+"\webmaster\files"
+if (!(Test-Path -Path "$targetDir")) {
+  New-Item -Path "$targetDir" -Force -ItemType directory
+}
+Copy-Item "$serverFullDir\webmaster\files\*" -Destination "$targetDir" -Force -Recurse
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.CHECK_RETURN_CODE_WINDOWS_POWERSHELL
+
+! Backup Files: <WebServer Public Directory>/[language_3_letter_code]/files
+! Backup Files: <WebServer Public Directory>/[language_3_letter_code]/images
+! Backup Files: <WebServer Public Directory>/[language_3_letter_code]/<Siebel build Nr.>/scripts
+! Backup Files: <WebServer Public Directory>/[language_3_letter_code]/<Siebel build Nr.>/applets
+$targetDir = $tempDir+"\"+$exportWsPubDir
+if (!(Test-Path -Path "$targetDir")) {
+  New-Item -Path "$targetDir" -Force -ItemType directory
+}
+Copy-Item "$wsPubDir\*" -Destination "$targetDir" -Force -Recurse
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.CHECK_RETURN_CODE_WINDOWS_POWERSHELL
+
+! Copy $tempDir to backup directory
+:SET &UC4RB_LOGGING_INFO# = "Starting backup files to &UC4RB_SIEBEL_CREATED_DIR#..."
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_INFO
+
+Copy-Item "$tempDir\*" -Destination "&UC4RB_SIEBEL_CREATED_DIR#" -Force -Recurse
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.CHECK_RETURN_CODE_WINDOWS_POWERSHELL
+
+:SET &UC4RB_LOGGING_INFO# = "Backup files successfully to &UC4RB_SIEBEL_CREATED_DIR#"
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_INFO
+
+! remove container dir
+Remove-Item "$tempDir" -Force -Recurse
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.CHECK_RETURN_CODE_WINDOWS_POWERSHELL
+]]></MSCRI>
+</SCRIPT>
+<OUTPUTSCAN state="1">
+<Inherit>N</Inherit>
+<filterobjects/>
+<HostFsc/>
+<LoginFsc/>
+</OUTPUTSCAN>
+<POST_SCRIPT mode="1" replacementmode="1" state="1" tidy="1">
+<OSCRI/>
+</POST_SCRIPT>
+<DOCU_Docu state="1" type="text">
+<DOC/>
+</DOCU_Docu>
+</JOBS_WINDOWS>
+</uc-export>

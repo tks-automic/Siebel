@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="ISO-8859-15" standalone="no"?><uc-export clientvers="8.0.0">
+<JOBI client="6000" name="PCK.AUTOMIC_SIEBEL.PRV.INCLUDE.FNS4WINDOWS" system="AE10">
+<HEADER state="1">
+<Title/>
+
+
+<LastUsed/>
+<ArchiveKey1/>
+<ArchiveKey2/>
+<OH_SubType/>
+</HEADER>
+<SCRIPT mode="1" state="1" tidy="0">
+<MSCRI><![CDATA[echo.  >> "&FILENAME#"
+echo def rf_trim_comma(str): >> "&FILENAME#"
+echo     if str[:1] == ',': >> "&FILENAME#"
+echo       str = str[1:len(str)] >> "&FILENAME#"
+
+echo.  >> "&FILENAME#"
+echo     if str[len(str)-1:] == ',': >> "&FILENAME#"
+echo       str = str[:len(str)-1] >> "&FILENAME#"
+
+echo.  >> "&FILENAME#"
+echo     return str >> "&FILENAME#"
+
+echo.  >> "&FILENAME#"
+
+echo.  >> "&FILENAME#"
+echo def rf_prep_str(val): >> "&FILENAME#"
+echo     if val == None: >> "&FILENAME#"
+echo         return None >> "&FILENAME#"
+
+echo.  >> "&FILENAME#"
+echo     i = len(val) >> "&FILENAME#"
+echo     if i == 0: >> "&FILENAME#"
+echo         return None >> "&FILENAME#"
+
+echo.  >> "&FILENAME#"
+echo     retval = val.strip() >> "&FILENAME#"
+echo     retval = rf_trim_comma(retval) >> "&FILENAME#"
+
+echo.  >> "&FILENAME#"
+echo     j = len(retval) >> "&FILENAME#"
+
+echo.  >> "&FILENAME#"
+echo     if i != j: >> "&FILENAME#"
+echo         retval = rf_prep_str(retval) >> "&FILENAME#"
+
+echo.  >> "&FILENAME#"
+echo     return retval >> "&FILENAME#"
+
+echo.  >> "&FILENAME#"
+
+echo.  >> "&FILENAME#"
+echo def rf_prep_svrs_nodes(str1, str2): >> "&FILENAME#"
+echo     arr1 = rf_prep_svrs(str1) >> "&FILENAME#"
+echo     arr2 = rf_prep_svrs(str2) >> "&FILENAME#"
+
+echo.  >> "&FILENAME#"
+echo     if len(arr1) != len(arr2): >> "&FILENAME#"
+echo         raise 'Unequal no. of elements in each string array' >> "&FILENAME#"
+echo     else: >> "&FILENAME#"
+echo         retarr = [] >> "&FILENAME#"
+echo         for item1, item2 in zip(arr1, arr2): >> "&FILENAME#"
+echo             #node_server = {\nodename\: item2.strip(), \servername\: item1.strip()} >> "&FILENAME#"
+echo             node_server = {'nodename': item2.strip(), 'servername': item1.strip()} >> "&FILENAME#"
+echo             retarr.append(node_server) >> "&FILENAME#"
+echo         return retarr >> "&FILENAME#"
+
+echo.  >> "&FILENAME#"
+echo def rf_prep_svrs(str1): >> "&FILENAME#"
+echo     if str1 == None: >> "&FILENAME#"
+echo         return None >> "&FILENAME#"
+echo     if len(str1) == 0: >> "&FILENAME#"
+echo         return None >> "&FILENAME#"
+echo.  >> "&FILENAME#"
+echo     str1 = rf_prep_str(str1) >> "&FILENAME#"
+echo     if str1 == None: >> "&FILENAME#"
+echo         return [] >> "&FILENAME#"
+echo     arr1 = str1.split(','); >> "&FILENAME#"
+echo.  >> "&FILENAME#"
+echo     retarr = [] >> "&FILENAME#"
+echo     for item1 in arr1: >> "&FILENAME#"
+echo        if len(item1.strip()) ^> 0: >> "&FILENAME#"
+echo          retarr.append(item1.strip()) >> "&FILENAME#"
+echo.  >> "&FILENAME#"
+echo     return retarr >> "&FILENAME#"
+echo.  >> "&FILENAME#"
+echo def to_t_f(str): >> "&FILENAME#"
+echo     if str.lower() == 'yes' or str.lower() =='true': >> "&FILENAME#"
+echo        str = 'true'  >> "&FILENAME#"
+echo     elif str.lower() == 'no' or str.lower() =='false': >> "&FILENAME#"
+echo        str ='false'  >> "&FILENAME#"
+echo     # return original value if not Yes or No
+echo     return str  >> "&FILENAME#"
+echo.  >> "&FILENAME#"
+
+echo.  >> "&FILENAME#"
+echo def byte_array_to_string(arr): >> "&FILENAME#"
+echo      str = '' >> "&FILENAME#"
+echo      for b in arr: >> "&FILENAME#"
+echo        str += chr(b) >> "&FILENAME#"
+echo      return str >> "&FILENAME#"
+echo.  >> "&FILENAME#"
+
+echo.  >> "&FILENAME#"
+echo def writeReport(m,filePath): >> "&FILENAME#"
+echo      report_file = open(filePath,'w') >> "&FILENAME#"
+echo      for list in m.items(): >> "&FILENAME#"
+echo        str = "%%s#%%s\n" %% (list[0],list[1]) >> "&FILENAME#"
+echo        report_file.write( str ) >> "&FILENAME#"
+echo      report_file.close() >> "&FILENAME#"
+echo.  >> "&FILENAME#"
+
+echo.  >> "&FILENAME#"
+echo def checkResourceExists(name, type): >> "&FILENAME#"
+echo      if getMBean('/' + type + 's/' + name ) is None: >> "&FILENAME#"
+echo        return false >> "&FILENAME#"
+echo      else: >> "&FILENAME#"
+echo        return true >> "&FILENAME#"
+echo.  >> "&FILENAME#"
+
+echo.  >> "&FILENAME#"
+echo def checkAppExists(name): >> "&FILENAME#"
+echo   found = false >> "&FILENAME#"
+echo   try:    >> "&FILENAME#"
+echo     cd('/') >> "&FILENAME#"
+echo     for app in cmo.getAppDeployments(): >> "&FILENAME#"
+echo       appName = app.getName() >> "&FILENAME#"
+echo       cd('/AppDeployments/' + appName) >> "&FILENAME#"
+echo       applicationName = get('ApplicationName')   >> "&FILENAME#"
+echo       if  applicationName == name: >> "&FILENAME#"
+echo         found = true  >> "&FILENAME#"
+echo         break    >> "&FILENAME#"
+echo   except Exception: >> "&FILENAME#"
+echo     return found >> "&FILENAME#"
+echo   return found >> "&FILENAME#"
+echo.  >> "&FILENAME#"
+
+echo.  >> "&FILENAME#"
+echo def getAppMBean(name,version): >> "&FILENAME#"
+echo   mb = None >> "&FILENAME#"
+echo   try:    >> "&FILENAME#"
+echo     cd('/') >> "&FILENAME#"
+echo     for app in cmo.getAppDeployments(): >> "&FILENAME#"
+echo       appName = app.getName() >> "&FILENAME#"
+echo       cd('/AppDeployments/' + appName) >> "&FILENAME#"
+echo       applicationName = get('ApplicationName')   >> "&FILENAME#"
+echo       if  applicationName == name: >> "&FILENAME#"
+echo         if  version == '': >> "&FILENAME#"
+echo           mb = getMBean('/AppDeployments/' + appName) >> "&FILENAME#"
+echo           break    >> "&FILENAME#"
+echo         else: >> "&FILENAME#"
+echo           appVersion = get('VersionIdentifier') >> "&FILENAME#"
+echo           if appVersion == version: >> "&FILENAME#"
+echo             mb = getMBean('/AppDeployments/' + appName) >> "&FILENAME#"
+echo             break    >> "&FILENAME#"
+echo   except Exception: >> "&FILENAME#"
+echo     return mb >> "&FILENAME#"
+echo   return mb >> "&FILENAME#"
+echo.  >> "&FILENAME#"
+]]></MSCRI>
+</SCRIPT>
+<DOCU_Docu state="1" type="text">
+<DOC/>
+</DOCU_Docu>
+</JOBI>
+</uc-export>

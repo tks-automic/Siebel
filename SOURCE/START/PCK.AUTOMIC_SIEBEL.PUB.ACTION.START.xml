@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-15" standalone="no"?><uc-export clientvers="8.0.0">
 <JOBP AllowExternal="1" name="PCK.AUTOMIC_SIEBEL.PUB.ACTION.START">
 <XHEADER state="1">
-<Title>Start Siebel</Title>
+<Title>Start Siebel System</Title>
 
 
 <LastUsed/>
@@ -21,9 +21,9 @@
 <ChildQueue/>
 <StartType/>
 <IntAccount/>
-<AutoDeactNo>0</AutoDeactNo>
+<AutoDeactNo>1</AutoDeactNo>
 <AutoDeact1ErrorFree>0</AutoDeact1ErrorFree>
-<AutoDeactErrorFree>1</AutoDeactErrorFree>
+<AutoDeactErrorFree>0</AutoDeactErrorFree>
 <DeactWhen/>
 <AutoDeactAlways>0</AutoDeactAlways>
 <DeactDelay>0</DeactDelay>
@@ -44,7 +44,7 @@
 <checkpoint RollbackFlag="0" RunPerPatch="0" RunPerTarget="0" TcpADays="0" TcpATime="00:00" TcpATimeTZ="" TcpExecute="" TcpOn="0" promptatgen="0" showprompt="0"/>
 <after ActFlg="1" AtimOn="0" ErlstStDays="0" ErlstStTime="00:00" ErlstStTimeTZ="" HoldFlg="0"/>
 <when ChkWhenExec="0" LtstEnd="0" LtstEndDays="0" LtstEndTime="00:00" LtstSt="0" LtstStDays="0" LtstStTime="00:00" LtstTimeTZ="" WCTypeAND="1" WCTypeOR="0" WElseA="0" WElseH="0" WElseS="1" WElseX="0" WhenExecute="" WtimOn="0"/>
-<preconditions CCTypeOne="1" CaleOn="0">
+<preconditions>
 <PreCon>
 <conditions id="CONDITIONS"/>
 </PreCon>
@@ -57,35 +57,44 @@
 <node content="1" id="VALUE" name="Variables" parent="" type="TASKVALUE">
 <VALUE state="2">
 <Values/>
-<Mode>0</Mode>
+<Mode>OH_OV_Mode</Mode>
 </VALUE>
 </node>
-<node content="1" id="PVALUE" name="Parent Variables" parent="" type="TASKVALUE">
-<VALUE state="2">
-<Values/>
-<Mode>0</Mode>
-</VALUE>
-</node>
-<node content="1" id="PRPTS" name="PromptSets" parent="" pref="1" type="PROMPTSET"/>
-<node content="0" id="PPRPTS" name="Parent PromptSets" parent="" type="PPROMPTSET"/>
 <node content="1" id="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START" name="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START" parent="PPRPTS" type="PPROMPTSET">
 <PROMPTSET name="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">
 <PRPTBOX promptset="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">
-<UC4RB_SIEBEL_ENTRPR_SERVERs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_ENTRPR_SERVER#" promptsetname="">SBA_81</UC4RB_SIEBEL_ENTRPR_SERVERs.00>
-<UC4RB_SIEBEL_ENV_SCRIPT_PATHs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_ENV_SCRIPT_PATH#" promptsetname="">/opt/oracle/siebel/8.2.2.4.0/ses/siebsrvr/siebenv.sh</UC4RB_SIEBEL_ENV_SCRIPT_PATHs.00>
-<UC4RB_SIEBEL_GATEWAY_SERVERs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_GATEWAY_SERVER#" promptsetname="">eworks-server</UC4RB_SIEBEL_GATEWAY_SERVERs.00>
-<UC4RB_SIEBEL_PASSWORDs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_PASSWORD#" promptsetname="">sadmin</UC4RB_SIEBEL_PASSWORDs.00>
-<UC4RB_SIEBEL_SERVER_ROOTs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_SERVER_ROOT#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">D:\sba81\siebsrvr</UC4RB_SIEBEL_SERVER_ROOTs.00>
-<UC4RB_SIEBEL_SERVERSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_SERVERS#" promptsetname="">eworks</UC4RB_SIEBEL_SERVERSs.00>
-<UC4RB_SIEBEL_USERNAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_USERNAME#" promptsetname="">sadmin</UC4RB_SIEBEL_USERNAMEs.00>
+<UC4RB_SIEBEL_DELAY_IN_SECONDSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_DELAY_IN_SECONDS#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">10</UC4RB_SIEBEL_DELAY_IN_SECONDSs.00>
+<UC4RB_SIEBEL_ENTRPR_SERVERs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_ENTRPR_SERVER#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">&amp;ENV#?SIEBEL_ENTRPR_SERVER</UC4RB_SIEBEL_ENTRPR_SERVERs.00>
+<UC4RB_SIEBEL_ENV_SCRIPTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_ENV_SCRIPT#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">&amp;ENV#?UNIX_SIEBEL_ENV_SCRIPT</UC4RB_SIEBEL_ENV_SCRIPTs.00>
+<UC4RB_SIEBEL_ENV_SCRIPT_DIRs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_ENV_SCRIPT_DIR#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">&amp;ENV#?UNIX_SIEBEL_ENV_SCRIPT_DIR</UC4RB_SIEBEL_ENV_SCRIPT_DIRs.00>
+<UC4RB_SIEBEL_GATEWAY_SERVERs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_GATEWAY_SERVER#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">&amp;ENV#?UC4RB_SIEBEL_GATEWAY_SERVER#</UC4RB_SIEBEL_GATEWAY_SERVERs.00>
+<UC4RB_SIEBEL_MAXIMUM_RETRIESs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_MAXIMUM_RETRIES#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">5</UC4RB_SIEBEL_MAXIMUM_RETRIESs.00>
+<UC4RB_SIEBEL_OBJECT_MANAGERSs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_OBJECT_MANAGERS#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">&amp;ENV#?SIEBEL_OBJECT_MANAGERS</UC4RB_SIEBEL_OBJECT_MANAGERSs.00>
+<UC4RB_SIEBEL_PASSWORDs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_PASSWORD#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">--10</UC4RB_SIEBEL_PASSWORDs.00>
+<UC4RB_SIEBEL_PORTs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_PORT#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">2321</UC4RB_SIEBEL_PORTs.00>
+<UC4RB_SIEBEL_SERVER_ROOTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_SERVER_ROOT#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">&amp;ENV#?SIEBEL_SERVER_ROOT</UC4RB_SIEBEL_SERVER_ROOTs.00>
+<UC4RB_SIEBEL_SERVER_URLs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_SERVER_URL#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">localhost</UC4RB_SIEBEL_SERVER_URLs.00>
+<UC4RB_SIEBEL_SERVERSs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_SERVERS#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">&amp;ENV#?SIEBEL_SERVERS</UC4RB_SIEBEL_SERVERSs.00>
+<UC4RB_SIEBEL_SERVICESs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_SERVICES#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">&amp;ENV#?WIN_SIEBEL_SERVICES</UC4RB_SIEBEL_SERVICESs.00>
+<UC4RB_SIEBEL_START_TIMEOUTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_START_TIMEOUT#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">1800</UC4RB_SIEBEL_START_TIMEOUTs.00>
+<UC4RB_SIEBEL_USERNAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_USERNAME#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START"/>
+</PRPTBOX>
+</PROMPTSET>
+</node>
+<node content="1" id="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO" name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO" parent="PPRPTS" type="PPROMPTSET">
+<PROMPTSET name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO">
+<PRPTBOX promptset="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO">
+<UC4RB_SUDO_PASSWORDs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SUDO_PASSWORD#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO"/>
+<UC4RB_SUDO_USERs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SUDO_USER#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO"/>
+<UC4RB_USE_SUDOs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_USE_SUDO#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO">None</UC4RB_USE_SUDOs.00>
 </PRPTBOX>
 </PROMPTSET>
 </node>
 <node content="1" id="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT" name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT" parent="PPRPTS" type="PPROMPTSET">
 <PROMPTSET name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT">
 <PRPTBOX promptset="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT">
-<AGENTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="AGENT#" promptsetname=""/>
-<LOGINs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="LOGIN#" promptsetname=""/>
+<AGENTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="AGENT#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT"/>
+<LOGINs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="LOGIN#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT"/>
 </PRPTBOX>
 </PROMPTSET>
 </node>
@@ -93,17 +102,17 @@
 </dynvalues>
 <CIT CCTypeOne="1" CaleOn="0"/>
 <calendars CCTypeAll="0" CCTypeExt="0" CCTypeNone="0" CCTypeOne="1" CaleOn="0"/>
-<postconditions CCTypeOne="1" CaleOn="0">
+<postconditions>
 <PostCon>
 <conditions id="CONDITIONS"/>
 </PostCon>
 </postconditions>
 </task>
-<task Alias="" BranchType="0" Col="2" Idnr="4950205" Lnr="2" OH_TITLE="" OType="JOBS" Object="PCK.AUTOMIC_SIEBEL.PRV.JOB.START@WINDOWS" ParentAlias="" ParentObject="" Row="2" State="" Text1="" Text2="W" Text3="&lt;WIN&gt;|windows_s:_jobs_l" Text4="" Text5="" Text6="" runid="0" subType="" taskicon="&lt;WIN&gt;|windows_s:_jobs_l">
-<checkpoint RollbackFlag="1" RunPerPatch="0" RunPerTarget="0" TcpADays="0" TcpATime="00:00" TcpATimeTZ="" TcpExecute="" TcpOn="0" promptatgen="0" showprompt="0"/>
+<task Alias="START" BranchType="0" Col="2" Idnr="5286058" Lnr="2" OH_TITLE="" OType="JOBS" Object="PCK.AUTOMIC_SIEBEL.PRV.JOB.START@WINDOWS" ParentAlias="" ParentObject="" Row="1" State="" Text1="" Text2="W" Text3="&lt;WIN&gt;|windows_s:_jobs_l" Text4="" Text5="" Text6="" runid="0" subType="" taskicon="&lt;WIN&gt;|windows_s:_jobs_l">
+<checkpoint RollbackFlag="0" RunPerPatch="0" RunPerTarget="0" TcpADays="0" TcpATime="00:00" TcpATimeTZ="" TcpExecute="" TcpOn="0" promptatgen="0" showprompt="0"/>
 <after ActFlg="1" AtimOn="0" ErlstStDays="0" ErlstStTime="00:00" ErlstStTimeTZ="" HoldFlg="0"/>
-<when ChkWhenExec="0" LtstEnd="0" LtstEndDays="0" LtstEndTime="00:00" LtstSt="0" LtstStDays="0" LtstStTime="00:00" LtstTimeTZ="" WCTypeAND="1" WCTypeOR="0" WElseA="0" WElseH="1" WElseS="0" WElseX="0" WhenExecute="" WtimOn="0"/>
-<preconditions CCTypeOne="1" CaleOn="0">
+<when ChkWhenExec="0" LtstEnd="0" LtstEndDays="0" LtstEndTime="00:00" LtstSt="0" LtstStDays="0" LtstStTime="00:00" LtstTimeTZ="" WCTypeAND="1" WCTypeOR="0" WElseA="1" WElseH="0" WElseS="0" WElseX="0" WhenExecute="" WtimOn="0"/>
+<preconditions>
 <PreCon>
 <conditions id="CONDITIONS"/>
 </PreCon>
@@ -112,7 +121,7 @@
 <pre BranchType="0" Lnr="1" PreLnr="1" When="ANY_OK" type="container"/>
 </predecessors>
 <runtime MrtCancel="0" MrtDays="0" MrtErt="0" MrtExecute="0" MrtExecuteObj="" MrtFix="0" MrtMethodDate="0" MrtMethodErt="0" MrtMethodFix="0" MrtMethodNone="1" MrtOn="1" MrtTZ="" MrtTime="00:00" SrtErt="0" SrtFix="0" SrtMethodErt="0" SrtMethodFix="0" SrtMethodNone="1"/>
-<result ChkRExec="0" RElseHalt="0" RElseIgn="0" RElseJPAbend="0" RExecFlag="0" RExecute="" RRepMTimes="0" RRepOn="0" RRepWait="0" RWhen=""/>
+<result ChkRExec="0" RElseHalt="1" RElseIgn="0" RElseJPAbend="0" RExecFlag="0" RExecute="" RRepMTimes="0" RRepOn="0" RRepWait="0" RWhen=""/>
 <dynvalues>
 <dyntree>
 <node content="1" id="VALUE" name="Variables" parent="" type="TASKVALUE">
@@ -132,21 +141,38 @@
 <node content="1" id="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START" name="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START" parent="PPRPTS" type="PPROMPTSET">
 <PROMPTSET name="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">
 <PRPTBOX promptset="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">
-<UC4RB_SIEBEL_ENTRPR_SERVERs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_ENTRPR_SERVER#" promptsetname="">SBA_81</UC4RB_SIEBEL_ENTRPR_SERVERs.00>
-<UC4RB_SIEBEL_ENV_SCRIPT_PATHs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_ENV_SCRIPT_PATH#" promptsetname="">/opt/oracle/siebel/8.2.2.4.0/ses/siebsrvr/siebenv.sh</UC4RB_SIEBEL_ENV_SCRIPT_PATHs.00>
-<UC4RB_SIEBEL_GATEWAY_SERVERs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_GATEWAY_SERVER#" promptsetname="">eworks-server</UC4RB_SIEBEL_GATEWAY_SERVERs.00>
-<UC4RB_SIEBEL_PASSWORDs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_PASSWORD#" promptsetname="">sadmin</UC4RB_SIEBEL_PASSWORDs.00>
-<UC4RB_SIEBEL_SERVER_ROOTs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_SERVER_ROOT#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">D:\sba81\siebsrvr</UC4RB_SIEBEL_SERVER_ROOTs.00>
-<UC4RB_SIEBEL_SERVERSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_SERVERS#" promptsetname="">eworks</UC4RB_SIEBEL_SERVERSs.00>
-<UC4RB_SIEBEL_USERNAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_USERNAME#" promptsetname="">sadmin</UC4RB_SIEBEL_USERNAMEs.00>
+<UC4RB_SIEBEL_DELAY_IN_SECONDSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_DELAY_IN_SECONDS#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">10</UC4RB_SIEBEL_DELAY_IN_SECONDSs.00>
+<UC4RB_SIEBEL_ENTRPR_SERVERs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_ENTRPR_SERVER#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">&amp;ENV#?SIEBEL_ENTRPR_SERVER</UC4RB_SIEBEL_ENTRPR_SERVERs.00>
+<UC4RB_SIEBEL_ENV_SCRIPTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_ENV_SCRIPT#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">&amp;ENV#?UNIX_SIEBEL_ENV_SCRIPT</UC4RB_SIEBEL_ENV_SCRIPTs.00>
+<UC4RB_SIEBEL_ENV_SCRIPT_DIRs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_ENV_SCRIPT_DIR#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">&amp;ENV#?UNIX_SIEBEL_ENV_SCRIPT_DIR</UC4RB_SIEBEL_ENV_SCRIPT_DIRs.00>
+<UC4RB_SIEBEL_GATEWAY_SERVERs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_GATEWAY_SERVER#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">&amp;ENV#?UC4RB_SIEBEL_GATEWAY_SERVER#</UC4RB_SIEBEL_GATEWAY_SERVERs.00>
+<UC4RB_SIEBEL_MAXIMUM_RETRIESs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_MAXIMUM_RETRIES#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">5</UC4RB_SIEBEL_MAXIMUM_RETRIESs.00>
+<UC4RB_SIEBEL_OBJECT_MANAGERSs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_OBJECT_MANAGERS#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">&amp;ENV#?SIEBEL_OBJECT_MANAGERS</UC4RB_SIEBEL_OBJECT_MANAGERSs.00>
+<UC4RB_SIEBEL_PASSWORDs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_PASSWORD#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">--10</UC4RB_SIEBEL_PASSWORDs.00>
+<UC4RB_SIEBEL_PORTs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_PORT#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">2321</UC4RB_SIEBEL_PORTs.00>
+<UC4RB_SIEBEL_SERVER_ROOTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_SERVER_ROOT#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">&amp;ENV#?SIEBEL_SERVER_ROOT</UC4RB_SIEBEL_SERVER_ROOTs.00>
+<UC4RB_SIEBEL_SERVER_URLs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_SERVER_URL#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">localhost</UC4RB_SIEBEL_SERVER_URLs.00>
+<UC4RB_SIEBEL_SERVERSs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_SERVERS#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">&amp;ENV#?SIEBEL_SERVERS</UC4RB_SIEBEL_SERVERSs.00>
+<UC4RB_SIEBEL_SERVICESs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_SERVICES#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">&amp;ENV#?WIN_SIEBEL_SERVICES</UC4RB_SIEBEL_SERVICESs.00>
+<UC4RB_SIEBEL_START_TIMEOUTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_START_TIMEOUT#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">1800</UC4RB_SIEBEL_START_TIMEOUTs.00>
+<UC4RB_SIEBEL_USERNAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_USERNAME#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START"/>
+</PRPTBOX>
+</PROMPTSET>
+</node>
+<node content="1" id="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO" name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO" parent="PPRPTS" type="PPROMPTSET">
+<PROMPTSET name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO">
+<PRPTBOX promptset="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO">
+<UC4RB_SUDO_PASSWORDs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SUDO_PASSWORD#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO"/>
+<UC4RB_SUDO_USERs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SUDO_USER#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO"/>
+<UC4RB_USE_SUDOs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_USE_SUDO#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO">None</UC4RB_USE_SUDOs.00>
 </PRPTBOX>
 </PROMPTSET>
 </node>
 <node content="1" id="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT" name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT" parent="PPRPTS" type="PPROMPTSET">
 <PROMPTSET name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT">
 <PRPTBOX promptset="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT">
-<AGENTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="AGENT#" promptsetname=""/>
-<LOGINs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="LOGIN#" promptsetname=""/>
+<AGENTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="AGENT#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT"/>
+<LOGINs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="LOGIN#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT"/>
 </PRPTBOX>
 </PROMPTSET>
 </node>
@@ -154,17 +180,95 @@
 </dynvalues>
 <CIT CCTypeOne="1" CaleOn="0"/>
 <calendars CCTypeAll="0" CCTypeExt="0" CCTypeNone="0" CCTypeOne="1" CaleOn="0"/>
-<postconditions CCTypeOne="1" CaleOn="0">
+<postconditions>
 <PostCon>
 <conditions id="CONDITIONS"/>
 </PostCon>
 </postconditions>
 </task>
-<task Alias="" BranchType="0" Col="3" Idnr="0" Lnr="3" OH_TITLE="" OType="&lt;END&gt;" Object="END" ParentAlias="" ParentObject="" Row="2" State="" Text1="" Text2="W" Text3="&lt;END&gt;" Text4="" Text5="" Text6="" runid="0" subType="" taskicon="&lt;END&gt;">
+<task Alias="" BranchType="0" Col="2" Idnr="5287008" Lnr="3" OH_TITLE="" OType="JOBS" Object="PCK.AUTOMIC_SIEBEL.PRV.JOB.START@UNIX" ParentAlias="" ParentObject="" Row="3" State="" Text1="" Text2="W" Text3="&lt;UNIX&gt;|unix_s:_jobs_l" Text4="" Text5="" Text6="" runid="0" subType="" taskicon="&lt;UNIX&gt;|unix_s:_jobs_l">
+<checkpoint RollbackFlag="1" RunPerPatch="0" RunPerTarget="0" TcpADays="0" TcpATime="00:00" TcpATimeTZ="" TcpExecute="" TcpOn="0" promptatgen="0" showprompt="0"/>
+<after ActFlg="1" AtimOn="0" ErlstStDays="0" ErlstStTime="00:00" ErlstStTimeTZ="" HoldFlg="0"/>
+<when ChkWhenExec="0" LtstEnd="0" LtstEndDays="0" LtstEndTime="00:00" LtstSt="0" LtstStDays="0" LtstStTime="00:00" LtstTimeTZ="" WCTypeAND="1" WCTypeOR="0" WElseA="1" WElseH="0" WElseS="0" WElseX="0" WhenExecute="" WtimOn="0"/>
+<preconditions>
+<PreCon>
+<conditions id="CONDITIONS"/>
+</PreCon>
+</preconditions>
+<predecessors>
+<pre BranchType="0" Lnr="1" PreLnr="1" When="ANY_OK" type="container"/>
+</predecessors>
+<runtime MrtCancel="0" MrtDays="0" MrtErt="0" MrtExecute="0" MrtExecuteObj="" MrtFix="0" MrtMethodDate="0" MrtMethodErt="0" MrtMethodFix="0" MrtMethodNone="1" MrtOn="1" MrtTZ="" MrtTime="00:00" SrtErt="0" SrtFix="0" SrtMethodErt="0" SrtMethodFix="0" SrtMethodNone="1"/>
+<result ChkRExec="0" RElseHalt="1" RElseIgn="0" RElseJPAbend="0" RExecFlag="0" RExecute="" RRepMTimes="0" RRepOn="0" RRepWait="0" RWhen=""/>
+<dynvalues>
+<dyntree>
+<node content="1" id="VALUE" name="Variables" parent="" type="TASKVALUE">
+<VALUE state="2">
+<Values/>
+<Mode>0</Mode>
+</VALUE>
+</node>
+<node content="1" id="PVALUE" name="Parent Variables" parent="" type="TASKVALUE">
+<VALUE state="2">
+<Values/>
+<Mode>0</Mode>
+</VALUE>
+</node>
+<node content="1" id="PRPTS" name="PromptSets" parent="" pref="1" type="PROMPTSET"/>
+<node content="0" id="PPRPTS" name="Parent PromptSets" parent="" type="PPROMPTSET"/>
+<node content="1" id="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START" name="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START" parent="PPRPTS" type="PPROMPTSET">
+<PROMPTSET name="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">
+<PRPTBOX promptset="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">
+<UC4RB_SIEBEL_DELAY_IN_SECONDSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_DELAY_IN_SECONDS#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">10</UC4RB_SIEBEL_DELAY_IN_SECONDSs.00>
+<UC4RB_SIEBEL_ENTRPR_SERVERs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_ENTRPR_SERVER#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">&amp;ENV#?SIEBEL_ENTRPR_SERVER</UC4RB_SIEBEL_ENTRPR_SERVERs.00>
+<UC4RB_SIEBEL_ENV_SCRIPTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_ENV_SCRIPT#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">&amp;ENV#?UNIX_SIEBEL_ENV_SCRIPT</UC4RB_SIEBEL_ENV_SCRIPTs.00>
+<UC4RB_SIEBEL_ENV_SCRIPT_DIRs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_ENV_SCRIPT_DIR#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">&amp;ENV#?UNIX_SIEBEL_ENV_SCRIPT_DIR</UC4RB_SIEBEL_ENV_SCRIPT_DIRs.00>
+<UC4RB_SIEBEL_GATEWAY_SERVERs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_GATEWAY_SERVER#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">&amp;ENV#?UC4RB_SIEBEL_GATEWAY_SERVER#</UC4RB_SIEBEL_GATEWAY_SERVERs.00>
+<UC4RB_SIEBEL_MAXIMUM_RETRIESs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_MAXIMUM_RETRIES#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">5</UC4RB_SIEBEL_MAXIMUM_RETRIESs.00>
+<UC4RB_SIEBEL_OBJECT_MANAGERSs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_OBJECT_MANAGERS#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">&amp;ENV#?SIEBEL_OBJECT_MANAGERS</UC4RB_SIEBEL_OBJECT_MANAGERSs.00>
+<UC4RB_SIEBEL_PASSWORDs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_PASSWORD#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">--10</UC4RB_SIEBEL_PASSWORDs.00>
+<UC4RB_SIEBEL_PORTs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_PORT#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">2321</UC4RB_SIEBEL_PORTs.00>
+<UC4RB_SIEBEL_SERVER_ROOTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_SERVER_ROOT#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">&amp;ENV#?SIEBEL_SERVER_ROOT</UC4RB_SIEBEL_SERVER_ROOTs.00>
+<UC4RB_SIEBEL_SERVER_URLs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_SERVER_URL#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">localhost</UC4RB_SIEBEL_SERVER_URLs.00>
+<UC4RB_SIEBEL_SERVERSs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_SERVERS#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">&amp;ENV#?SIEBEL_SERVERS</UC4RB_SIEBEL_SERVERSs.00>
+<UC4RB_SIEBEL_SERVICESs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_SERVICES#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">&amp;ENV#?WIN_SIEBEL_SERVICES</UC4RB_SIEBEL_SERVICESs.00>
+<UC4RB_SIEBEL_START_TIMEOUTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_START_TIMEOUT#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">1800</UC4RB_SIEBEL_START_TIMEOUTs.00>
+<UC4RB_SIEBEL_USERNAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_USERNAME#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START"/>
+</PRPTBOX>
+</PROMPTSET>
+</node>
+<node content="1" id="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO" name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO" parent="PPRPTS" type="PPROMPTSET">
+<PROMPTSET name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO">
+<PRPTBOX promptset="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO">
+<UC4RB_SUDO_PASSWORDs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SUDO_PASSWORD#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO"/>
+<UC4RB_SUDO_USERs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SUDO_USER#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO"/>
+<UC4RB_USE_SUDOs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_USE_SUDO#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO">None</UC4RB_USE_SUDOs.00>
+</PRPTBOX>
+</PROMPTSET>
+</node>
+<node content="1" id="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT" name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT" parent="PPRPTS" type="PPROMPTSET">
+<PROMPTSET name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT">
+<PRPTBOX promptset="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT">
+<AGENTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="AGENT#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT"/>
+<LOGINs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="LOGIN#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT"/>
+</PRPTBOX>
+</PROMPTSET>
+</node>
+</dyntree>
+</dynvalues>
+<CIT CCTypeOne="1" CaleOn="0"/>
+<calendars CCTypeAll="0" CCTypeExt="0" CCTypeNone="0" CCTypeOne="1" CaleOn="0"/>
+<postconditions>
+<PostCon>
+<conditions id="CONDITIONS"/>
+</PostCon>
+</postconditions>
+</task>
+<task Alias="CHECK_STATE" BranchType="0" Col="3" Idnr="5725277" Lnr="4" OH_TITLE="" OType="JOBS" Object="PCK.AUTOMIC_SIEBEL.PRV.JOB.CHECK_SERVER_STATE@WINDOWS" ParentAlias="" ParentObject="" Row="1" State="" Text1="" Text2="W" Text3="&lt;WIN&gt;|windows_s:_jobs_l" Text4="" Text5="" Text6="" runid="0" subType="" taskicon="&lt;WIN&gt;|windows_s:_jobs_l">
 <checkpoint RollbackFlag="0" RunPerPatch="0" RunPerTarget="0" TcpADays="0" TcpATime="00:00" TcpATimeTZ="" TcpExecute="" TcpOn="0" promptatgen="0" showprompt="0"/>
 <after ActFlg="1" AtimOn="0" ErlstStDays="0" ErlstStTime="00:00" ErlstStTimeTZ="" HoldFlg="0"/>
-<when ChkWhenExec="0" LtstEnd="0" LtstEndDays="0" LtstEndTime="00:00" LtstSt="0" LtstStDays="0" LtstStTime="00:00" LtstTimeTZ="" WCTypeAND="1" WCTypeOR="0" WElseA="0" WElseH="1" WElseS="0" WElseX="0" WhenExecute="" WtimOn="0"/>
-<preconditions CCTypeOne="1" CaleOn="0">
+<when ChkWhenExec="0" LtstEnd="0" LtstEndDays="0" LtstEndTime="00:00" LtstSt="0" LtstStDays="0" LtstStTime="00:00" LtstTimeTZ="" WCTypeAND="1" WCTypeOR="0" WElseA="1" WElseH="0" WElseS="0" WElseX="0" WhenExecute="" WtimOn="0"/>
+<preconditions>
 <PreCon>
 <conditions id="CONDITIONS"/>
 </PreCon>
@@ -173,7 +277,7 @@
 <pre BranchType="0" Lnr="1" PreLnr="2" When="ANY_OK" type="container"/>
 </predecessors>
 <runtime MrtCancel="0" MrtDays="0" MrtErt="0" MrtExecute="0" MrtExecuteObj="" MrtFix="0" MrtMethodDate="0" MrtMethodErt="0" MrtMethodFix="0" MrtMethodNone="1" MrtOn="1" MrtTZ="" MrtTime="00:00" SrtErt="0" SrtFix="0" SrtMethodErt="0" SrtMethodFix="0" SrtMethodNone="1"/>
-<result ChkRExec="0" RElseHalt="0" RElseIgn="0" RElseJPAbend="0" RExecFlag="0" RExecute="" RRepMTimes="0" RRepOn="0" RRepWait="0" RWhen=""/>
+<result ChkRExec="0" RElseHalt="1" RElseIgn="0" RElseJPAbend="0" RExecFlag="0" RExecute="" RRepMTimes="0" RRepOn="0" RRepWait="0" RWhen=""/>
 <dynvalues>
 <dyntree>
 <node content="1" id="VALUE" name="Variables" parent="" type="TASKVALUE">
@@ -193,21 +297,326 @@
 <node content="1" id="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START" name="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START" parent="PPRPTS" type="PPROMPTSET">
 <PROMPTSET name="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">
 <PRPTBOX promptset="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">
-<UC4RB_SIEBEL_ENTRPR_SERVERs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_ENTRPR_SERVER#" promptsetname="">SBA_81</UC4RB_SIEBEL_ENTRPR_SERVERs.00>
-<UC4RB_SIEBEL_ENV_SCRIPT_PATHs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_ENV_SCRIPT_PATH#" promptsetname="">/opt/oracle/siebel/8.2.2.4.0/ses/siebsrvr/siebenv.sh</UC4RB_SIEBEL_ENV_SCRIPT_PATHs.00>
-<UC4RB_SIEBEL_GATEWAY_SERVERs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_GATEWAY_SERVER#" promptsetname="">eworks-server</UC4RB_SIEBEL_GATEWAY_SERVERs.00>
-<UC4RB_SIEBEL_PASSWORDs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_PASSWORD#" promptsetname="">sadmin</UC4RB_SIEBEL_PASSWORDs.00>
-<UC4RB_SIEBEL_SERVER_ROOTs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_SERVER_ROOT#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">D:\sba81\siebsrvr</UC4RB_SIEBEL_SERVER_ROOTs.00>
-<UC4RB_SIEBEL_SERVERSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_SERVERS#" promptsetname="">eworks</UC4RB_SIEBEL_SERVERSs.00>
-<UC4RB_SIEBEL_USERNAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_USERNAME#" promptsetname="">sadmin</UC4RB_SIEBEL_USERNAMEs.00>
+<UC4RB_SIEBEL_DELAY_IN_SECONDSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_DELAY_IN_SECONDS#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">10</UC4RB_SIEBEL_DELAY_IN_SECONDSs.00>
+<UC4RB_SIEBEL_ENTRPR_SERVERs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_ENTRPR_SERVER#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">&amp;ENV#?SIEBEL_ENTRPR_SERVER</UC4RB_SIEBEL_ENTRPR_SERVERs.00>
+<UC4RB_SIEBEL_ENV_SCRIPTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_ENV_SCRIPT#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">&amp;ENV#?UNIX_SIEBEL_ENV_SCRIPT</UC4RB_SIEBEL_ENV_SCRIPTs.00>
+<UC4RB_SIEBEL_ENV_SCRIPT_DIRs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_ENV_SCRIPT_DIR#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">&amp;ENV#?UNIX_SIEBEL_ENV_SCRIPT_DIR</UC4RB_SIEBEL_ENV_SCRIPT_DIRs.00>
+<UC4RB_SIEBEL_GATEWAY_SERVERs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_GATEWAY_SERVER#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">&amp;ENV#?UC4RB_SIEBEL_GATEWAY_SERVER#</UC4RB_SIEBEL_GATEWAY_SERVERs.00>
+<UC4RB_SIEBEL_MAXIMUM_RETRIESs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_MAXIMUM_RETRIES#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">5</UC4RB_SIEBEL_MAXIMUM_RETRIESs.00>
+<UC4RB_SIEBEL_OBJECT_MANAGERSs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_OBJECT_MANAGERS#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">&amp;ENV#?SIEBEL_OBJECT_MANAGERS</UC4RB_SIEBEL_OBJECT_MANAGERSs.00>
+<UC4RB_SIEBEL_PASSWORDs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_PASSWORD#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">--10</UC4RB_SIEBEL_PASSWORDs.00>
+<UC4RB_SIEBEL_PORTs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_PORT#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">2321</UC4RB_SIEBEL_PORTs.00>
+<UC4RB_SIEBEL_SERVER_ROOTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_SERVER_ROOT#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">&amp;ENV#?SIEBEL_SERVER_ROOT</UC4RB_SIEBEL_SERVER_ROOTs.00>
+<UC4RB_SIEBEL_SERVER_URLs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_SERVER_URL#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">localhost</UC4RB_SIEBEL_SERVER_URLs.00>
+<UC4RB_SIEBEL_SERVERSs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_SERVERS#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">&amp;ENV#?SIEBEL_SERVERS</UC4RB_SIEBEL_SERVERSs.00>
+<UC4RB_SIEBEL_SERVICESs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_SERVICES#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">&amp;ENV#?WIN_SIEBEL_SERVICES</UC4RB_SIEBEL_SERVICESs.00>
+<UC4RB_SIEBEL_START_TIMEOUTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_START_TIMEOUT#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">1800</UC4RB_SIEBEL_START_TIMEOUTs.00>
+<UC4RB_SIEBEL_USERNAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_USERNAME#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START"/>
+</PRPTBOX>
+</PROMPTSET>
+</node>
+<node content="1" id="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO" name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO" parent="PPRPTS" type="PPROMPTSET">
+<PROMPTSET name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO">
+<PRPTBOX promptset="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO">
+<UC4RB_SUDO_PASSWORDs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SUDO_PASSWORD#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO"/>
+<UC4RB_SUDO_USERs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SUDO_USER#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO"/>
+<UC4RB_USE_SUDOs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_USE_SUDO#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO">None</UC4RB_USE_SUDOs.00>
 </PRPTBOX>
 </PROMPTSET>
 </node>
 <node content="1" id="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT" name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT" parent="PPRPTS" type="PPROMPTSET">
 <PROMPTSET name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT">
 <PRPTBOX promptset="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT">
-<AGENTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="AGENT#" promptsetname=""/>
-<LOGINs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="LOGIN#" promptsetname=""/>
+<AGENTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="AGENT#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT"/>
+<LOGINs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="LOGIN#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT"/>
+</PRPTBOX>
+</PROMPTSET>
+</node>
+</dyntree>
+</dynvalues>
+<CIT CCTypeOne="1" CaleOn="0"/>
+<calendars CCTypeAll="0" CCTypeExt="0" CCTypeNone="0" CCTypeOne="1" CaleOn="0"/>
+<postconditions>
+<PostCon>
+<conditions id="CONDITIONS"/>
+</PostCon>
+</postconditions>
+</task>
+<task Alias="CHECK_STATE" BranchType="0" Col="3" Idnr="5745378" Lnr="5" OH_TITLE="" OType="JOBS" Object="PCK.AUTOMIC_SIEBEL.PRV.JOB.CHECK_SERVER_STATE@UNIX" ParentAlias="" ParentObject="" Row="3" State="" Text1="" Text2="W" Text3="&lt;UNIX&gt;|unix_s:_jobs_l" Text4="" Text5="" Text6="" runid="0" subType="" taskicon="&lt;UNIX&gt;|unix_s:_jobs_l">
+<checkpoint RollbackFlag="1" RunPerPatch="0" RunPerTarget="0" TcpADays="0" TcpATime="00:00" TcpATimeTZ="" TcpExecute="" TcpOn="0" promptatgen="0" showprompt="0"/>
+<after ActFlg="1" AtimOn="0" ErlstStDays="0" ErlstStTime="00:00" ErlstStTimeTZ="" HoldFlg="0"/>
+<when ChkWhenExec="0" LtstEnd="0" LtstEndDays="0" LtstEndTime="00:00" LtstSt="0" LtstStDays="0" LtstStTime="00:00" LtstTimeTZ="" WCTypeAND="1" WCTypeOR="0" WElseA="1" WElseH="0" WElseS="0" WElseX="0" WhenExecute="" WtimOn="0"/>
+<preconditions>
+<PreCon>
+<conditions id="CONDITIONS"/>
+</PreCon>
+</preconditions>
+<predecessors>
+<pre BranchType="0" Lnr="1" PreLnr="3" When="ANY_OK" type="container"/>
+</predecessors>
+<runtime MrtCancel="0" MrtDays="0" MrtErt="0" MrtExecute="0" MrtExecuteObj="" MrtFix="0" MrtMethodDate="0" MrtMethodErt="0" MrtMethodFix="0" MrtMethodNone="1" MrtOn="1" MrtTZ="" MrtTime="00:00" SrtErt="0" SrtFix="0" SrtMethodErt="0" SrtMethodFix="0" SrtMethodNone="1"/>
+<result ChkRExec="0" RElseHalt="1" RElseIgn="0" RElseJPAbend="0" RExecFlag="0" RExecute="" RRepMTimes="0" RRepOn="0" RRepWait="0" RWhen=""/>
+<dynvalues>
+<dyntree>
+<node content="1" id="VALUE" name="Variables" parent="" type="TASKVALUE">
+<VALUE state="2">
+<Values/>
+<Mode>0</Mode>
+</VALUE>
+</node>
+<node content="1" id="PVALUE" name="Parent Variables" parent="" type="TASKVALUE">
+<VALUE state="2">
+<Values/>
+<Mode>0</Mode>
+</VALUE>
+</node>
+<node content="1" id="PRPTS" name="PromptSets" parent="" pref="1" type="PROMPTSET"/>
+<node content="0" id="PPRPTS" name="Parent PromptSets" parent="" type="PPROMPTSET"/>
+<node content="1" id="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START" name="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START" parent="PPRPTS" type="PPROMPTSET">
+<PROMPTSET name="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">
+<PRPTBOX promptset="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">
+<UC4RB_SIEBEL_DELAY_IN_SECONDSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_DELAY_IN_SECONDS#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">10</UC4RB_SIEBEL_DELAY_IN_SECONDSs.00>
+<UC4RB_SIEBEL_ENTRPR_SERVERs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_ENTRPR_SERVER#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">&amp;ENV#?SIEBEL_ENTRPR_SERVER</UC4RB_SIEBEL_ENTRPR_SERVERs.00>
+<UC4RB_SIEBEL_ENV_SCRIPTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_ENV_SCRIPT#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">&amp;ENV#?UNIX_SIEBEL_ENV_SCRIPT</UC4RB_SIEBEL_ENV_SCRIPTs.00>
+<UC4RB_SIEBEL_ENV_SCRIPT_DIRs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_ENV_SCRIPT_DIR#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">&amp;ENV#?UNIX_SIEBEL_ENV_SCRIPT_DIR</UC4RB_SIEBEL_ENV_SCRIPT_DIRs.00>
+<UC4RB_SIEBEL_GATEWAY_SERVERs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_GATEWAY_SERVER#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">&amp;ENV#?UC4RB_SIEBEL_GATEWAY_SERVER#</UC4RB_SIEBEL_GATEWAY_SERVERs.00>
+<UC4RB_SIEBEL_MAXIMUM_RETRIESs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_MAXIMUM_RETRIES#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">5</UC4RB_SIEBEL_MAXIMUM_RETRIESs.00>
+<UC4RB_SIEBEL_OBJECT_MANAGERSs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_OBJECT_MANAGERS#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">&amp;ENV#?SIEBEL_OBJECT_MANAGERS</UC4RB_SIEBEL_OBJECT_MANAGERSs.00>
+<UC4RB_SIEBEL_PASSWORDs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_PASSWORD#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">--10</UC4RB_SIEBEL_PASSWORDs.00>
+<UC4RB_SIEBEL_PORTs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_PORT#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">2321</UC4RB_SIEBEL_PORTs.00>
+<UC4RB_SIEBEL_SERVER_ROOTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_SERVER_ROOT#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">&amp;ENV#?SIEBEL_SERVER_ROOT</UC4RB_SIEBEL_SERVER_ROOTs.00>
+<UC4RB_SIEBEL_SERVER_URLs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_SERVER_URL#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">localhost</UC4RB_SIEBEL_SERVER_URLs.00>
+<UC4RB_SIEBEL_SERVERSs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_SERVERS#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">&amp;ENV#?SIEBEL_SERVERS</UC4RB_SIEBEL_SERVERSs.00>
+<UC4RB_SIEBEL_SERVICESs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_SERVICES#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">&amp;ENV#?WIN_SIEBEL_SERVICES</UC4RB_SIEBEL_SERVICESs.00>
+<UC4RB_SIEBEL_START_TIMEOUTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_START_TIMEOUT#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">1800</UC4RB_SIEBEL_START_TIMEOUTs.00>
+<UC4RB_SIEBEL_USERNAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_USERNAME#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START"/>
+</PRPTBOX>
+</PROMPTSET>
+</node>
+<node content="1" id="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO" name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO" parent="PPRPTS" type="PPROMPTSET">
+<PROMPTSET name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO">
+<PRPTBOX promptset="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO">
+<UC4RB_SUDO_PASSWORDs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SUDO_PASSWORD#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO"/>
+<UC4RB_SUDO_USERs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SUDO_USER#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO"/>
+<UC4RB_USE_SUDOs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_USE_SUDO#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO">None</UC4RB_USE_SUDOs.00>
+</PRPTBOX>
+</PROMPTSET>
+</node>
+<node content="1" id="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT" name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT" parent="PPRPTS" type="PPROMPTSET">
+<PROMPTSET name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT">
+<PRPTBOX promptset="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT">
+<AGENTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="AGENT#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT"/>
+<LOGINs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="LOGIN#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT"/>
+</PRPTBOX>
+</PROMPTSET>
+</node>
+</dyntree>
+</dynvalues>
+<CIT CCTypeOne="1" CaleOn="0"/>
+<calendars CCTypeAll="0" CCTypeExt="0" CCTypeNone="0" CCTypeOne="1" CaleOn="0"/>
+<postconditions>
+<PostCon>
+<conditions id="CONDITIONS"/>
+</PostCon>
+</postconditions>
+</task>
+<task Alias="CHECK_AVAILABILITY" BranchType="0" Col="4" Idnr="4950203" Lnr="6" OH_TITLE="Siebel check availability" OType="JOBP" Object="PCK.AUTOMIC_SIEBEL.PUB.ACTION.CHECK_AVAILABILITY" ParentAlias="" ParentObject="" Row="2" State="" Text1="" Text2="W" Text3="JOBP|jobp_l" Text4="" Text5="" Text6="" runid="0" subType="" taskicon="JOBP|jobp_l">
+<checkpoint RollbackFlag="0" RunPerPatch="0" RunPerTarget="0" TcpADays="0" TcpATime="00:00" TcpATimeTZ="" TcpExecute="" TcpOn="0" promptatgen="0" showprompt="0"/>
+<after ActFlg="1" AtimOn="0" ErlstStDays="0" ErlstStTime="00:00" ErlstStTimeTZ="" HoldFlg="0"/>
+<when ChkWhenExec="0" LtstEnd="0" LtstEndDays="0" LtstEndTime="00:00" LtstSt="0" LtstStDays="0" LtstStTime="00:00" LtstTimeTZ="" WCTypeAND="1" WCTypeOR="0" WElseA="1" WElseH="0" WElseS="0" WElseX="0" WhenExecute="" WtimOn="0"/>
+<preconditions>
+<PreCon>
+<conditions id="CONDITIONS">
+<condition active="1" id="USER DEFINED" once="0" type="C" uiinfo="">
+<params>
+<param altview="0" name="XC_P01" type="V" value="&amp;UC4RB_SIEBEL_OBJECT_MANAGERS#"/>
+<param altview="0" name="XC_P02" type="V" value="&lt;&gt;"/>
+<param altview="0" name="XC_P03" type="V" value=""/>
+</params>
+<when active="1" id="USER DEFINED" once="0" type="W" uiinfo="">
+<action active="1" id="RUN TASK" once="0" type="A" uiinfo="">
+<params/>
+</action>
+</when>
+<else active="1" id="USER DEFINED" once="0" type="E" uiinfo="">
+<action active="1" id="SKIP TASK" once="0" type="A" uiinfo="">
+<params>
+<param altview="0" name="XC_P01" type="V" value="No object manager to be checked"/>
+</params>
+</action>
+</else>
+</condition>
+</conditions>
+</PreCon>
+</preconditions>
+<predecessors>
+<pre BranchType="0" Lnr="1" PreLnr="4" When="ANY_OK" type="container"/>
+<pre BranchType="0" Lnr="2" PreLnr="5" When="ANY_OK" type="container"/>
+</predecessors>
+<runtime MrtCancel="0" MrtDays="0" MrtErt="0" MrtExecute="0" MrtExecuteObj="" MrtFix="0" MrtMethodDate="0" MrtMethodErt="0" MrtMethodFix="0" MrtMethodNone="1" MrtOn="1" MrtTZ="" MrtTime="00:00" SrtErt="0" SrtFix="0" SrtMethodErt="0" SrtMethodFix="0" SrtMethodNone="1"/>
+<result ChkRExec="0" RElseHalt="1" RElseIgn="0" RElseJPAbend="0" RExecFlag="0" RExecute="" RRepMTimes="0" RRepOn="0" RRepWait="0" RWhen=""/>
+<dynvalues>
+<dyntree>
+<node content="1" id="VALUE" name="Variables" parent="" type="TASKVALUE">
+<VALUE state="2">
+<Values/>
+<Mode>0</Mode>
+</VALUE>
+</node>
+<node content="1" id="PVALUE" name="Parent Variables" parent="" type="TASKVALUE">
+<VALUE state="2">
+<Values/>
+<Mode>0</Mode>
+</VALUE>
+</node>
+<node content="1" id="PRPTS" name="PromptSets" parent="" pref="1" type="PROMPTSET"/>
+<node content="0" id="PPRPTS" name="Parent PromptSets" parent="" type="PPROMPTSET"/>
+<node content="1" id="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.CHECK_AVAILABILITY" name="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.CHECK_AVAILABILITY" parent="PRPTS" type="PROMPTSET">
+<PROMPTSET name="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.CHECK_AVAILABILITY">
+<PRPTBOX promptset="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.CHECK_AVAILABILITY">
+<UC4RB_SIEBEL_DELAY_IN_SECONDSs.00 ReadFromTable="JPPV" altview="1" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_DELAY_IN_SECONDS#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.CHECK_AVAILABILITY">&amp;UC4RB_SIEBEL_DELAY_IN_SECONDS#</UC4RB_SIEBEL_DELAY_IN_SECONDSs.00>
+<UC4RB_SIEBEL_ENCODINGs.00 ReadFromTable="JPPV" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_ENCODING#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.CHECK_AVAILABILITY">utf8</UC4RB_SIEBEL_ENCODINGs.00>
+<UC4RB_SIEBEL_ENTERPRISEs.00 ReadFromTable="JPPV" altview="1" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_ENTERPRISE#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.CHECK_AVAILABILITY">&amp;UC4RB_SIEBEL_ENTRPR_SERVER#</UC4RB_SIEBEL_ENTERPRISEs.00>
+<UC4RB_SIEBEL_MAXIMUM_RETRIESs.00 ReadFromTable="JPPV" altview="1" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_MAXIMUM_RETRIES#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.CHECK_AVAILABILITY">&amp;UC4RB_SIEBEL_MAXIMUM_RETRIES#</UC4RB_SIEBEL_MAXIMUM_RETRIESs.00>
+<UC4RB_SIEBEL_OBJECT_MANAGERSs.00 ReadFromTable="JPPV" altview="1" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_OBJECT_MANAGERS#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.CHECK_AVAILABILITY">&amp;UC4RB_SIEBEL_OBJECT_MANAGERS#</UC4RB_SIEBEL_OBJECT_MANAGERSs.00>
+<UC4RB_SIEBEL_PASSWORDs.00 ReadFromTable="JPPV" altview="1" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_PASSWORD#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.CHECK_AVAILABILITY">&amp;UC4RB_SIEBEL_PASSWORD#</UC4RB_SIEBEL_PASSWORDs.00>
+<UC4RB_SIEBEL_PORTs.00 ReadFromTable="JPPV" altview="1" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_PORT#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.CHECK_AVAILABILITY">&amp;UC4RB_SIEBEL_PORT#</UC4RB_SIEBEL_PORTs.00>
+<UC4RB_SIEBEL_SERVER_URLs.00 ReadFromTable="JPPV" altview="1" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_SERVER_URL#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.CHECK_AVAILABILITY">&amp;UC4RB_SIEBEL_SERVER_URL#</UC4RB_SIEBEL_SERVER_URLs.00>
+<UC4RB_SIEBEL_USERs.00 ReadFromTable="JPPV" altview="1" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_USER#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.CHECK_AVAILABILITY">&amp;UC4RB_SIEBEL_USERNAME#</UC4RB_SIEBEL_USERs.00>
+</PRPTBOX>
+</PROMPTSET>
+</node>
+<node content="1" id="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.SIEBEL_JAVA_PROPERTIES" name="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.SIEBEL_JAVA_PROPERTIES" parent="PRPTS" type="PROMPTSET">
+<PROMPTSET name="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.SIEBEL_JAVA_PROPERTIES">
+<PRPTBOX promptset="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.SIEBEL_JAVA_PROPERTIES">
+<UC4RB_SIEBEL_NUM_RETRYs.00 ReadFromTable="JPPV" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_NUM_RETRY#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.SIEBEL_JAVA_PROPERTIES"/>
+<UC4RB_SIEBEL_SESSION_TIMEOUTs.00 ReadFromTable="JPPV" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_SESSION_TIMEOUT#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.SIEBEL_JAVA_PROPERTIES"/>
+<UC4RB_SIEBEL_TXT_TIMEOUTs.00 ReadFromTable="JPPV" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_TXT_TIMEOUT#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.SIEBEL_JAVA_PROPERTIES"/>
+</PRPTBOX>
+</PROMPTSET>
+</node>
+<node content="1" id="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO" name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO" parent="PRPTS" type="PROMPTSET">
+<PROMPTSET name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO">
+<PRPTBOX promptset="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO">
+<UC4RB_SUDO_PASSWORDs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SUDO_PASSWORD#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO"/>
+<UC4RB_SUDO_USERs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SUDO_USER#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO"/>
+<UC4RB_USE_SUDOs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_USE_SUDO#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO">None</UC4RB_USE_SUDOs.00>
+</PRPTBOX>
+</PROMPTSET>
+</node>
+<node content="1" id="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT" name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT" parent="PRPTS" type="PROMPTSET">
+<PROMPTSET name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT">
+<PRPTBOX promptset="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT">
+<AGENTs.00 ReadFromTable="JPPV" altview="1" haslist="0" msginsert="" msgnr="" promptname="AGENT#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT">&amp;AGENT#</AGENTs.00>
+<LOGINs.00 ReadFromTable="JPPV" altview="1" haslist="0" msginsert="" msgnr="" promptname="LOGIN#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT">&amp;LOGIN#</LOGINs.00>
+</PRPTBOX>
+</PROMPTSET>
+</node>
+<node content="1" id="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START" name="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START" parent="PPRPTS" type="PPROMPTSET">
+<PROMPTSET name="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">
+<PRPTBOX promptset="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">
+<UC4RB_SIEBEL_DELAY_IN_SECONDSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_DELAY_IN_SECONDS#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">10</UC4RB_SIEBEL_DELAY_IN_SECONDSs.00>
+<UC4RB_SIEBEL_ENTRPR_SERVERs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_ENTRPR_SERVER#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">&amp;ENV#?SIEBEL_ENTRPR_SERVER</UC4RB_SIEBEL_ENTRPR_SERVERs.00>
+<UC4RB_SIEBEL_ENV_SCRIPTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_ENV_SCRIPT#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">&amp;ENV#?UNIX_SIEBEL_ENV_SCRIPT</UC4RB_SIEBEL_ENV_SCRIPTs.00>
+<UC4RB_SIEBEL_ENV_SCRIPT_DIRs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_ENV_SCRIPT_DIR#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">&amp;ENV#?UNIX_SIEBEL_ENV_SCRIPT_DIR</UC4RB_SIEBEL_ENV_SCRIPT_DIRs.00>
+<UC4RB_SIEBEL_GATEWAY_SERVERs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_GATEWAY_SERVER#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">&amp;ENV#?UC4RB_SIEBEL_GATEWAY_SERVER#</UC4RB_SIEBEL_GATEWAY_SERVERs.00>
+<UC4RB_SIEBEL_MAXIMUM_RETRIESs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_MAXIMUM_RETRIES#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">5</UC4RB_SIEBEL_MAXIMUM_RETRIESs.00>
+<UC4RB_SIEBEL_OBJECT_MANAGERSs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_OBJECT_MANAGERS#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">&amp;ENV#?SIEBEL_OBJECT_MANAGERS</UC4RB_SIEBEL_OBJECT_MANAGERSs.00>
+<UC4RB_SIEBEL_PASSWORDs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_PASSWORD#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">--10</UC4RB_SIEBEL_PASSWORDs.00>
+<UC4RB_SIEBEL_PORTs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_PORT#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">2321</UC4RB_SIEBEL_PORTs.00>
+<UC4RB_SIEBEL_SERVER_ROOTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_SERVER_ROOT#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">&amp;ENV#?SIEBEL_SERVER_ROOT</UC4RB_SIEBEL_SERVER_ROOTs.00>
+<UC4RB_SIEBEL_SERVER_URLs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_SERVER_URL#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">localhost</UC4RB_SIEBEL_SERVER_URLs.00>
+<UC4RB_SIEBEL_SERVERSs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_SERVERS#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">&amp;ENV#?SIEBEL_SERVERS</UC4RB_SIEBEL_SERVERSs.00>
+<UC4RB_SIEBEL_SERVICESs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_SERVICES#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">&amp;ENV#?WIN_SIEBEL_SERVICES</UC4RB_SIEBEL_SERVICESs.00>
+<UC4RB_SIEBEL_START_TIMEOUTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_START_TIMEOUT#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">1800</UC4RB_SIEBEL_START_TIMEOUTs.00>
+<UC4RB_SIEBEL_USERNAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_USERNAME#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START"/>
+</PRPTBOX>
+</PROMPTSET>
+</node>
+<node content="1" id="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO" name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO" parent="PPRPTS" type="PPROMPTSET">
+<PROMPTSET name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO">
+<PRPTBOX promptset="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO">
+<UC4RB_SUDO_PASSWORDs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SUDO_PASSWORD#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO"/>
+<UC4RB_SUDO_USERs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SUDO_USER#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO"/>
+<UC4RB_USE_SUDOs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_USE_SUDO#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO">None</UC4RB_USE_SUDOs.00>
+</PRPTBOX>
+</PROMPTSET>
+</node>
+<node content="1" id="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT" name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT" parent="PPRPTS" type="PPROMPTSET">
+<PROMPTSET name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT">
+<PRPTBOX promptset="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT">
+<AGENTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="AGENT#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT"/>
+<LOGINs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="LOGIN#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT"/>
+</PRPTBOX>
+</PROMPTSET>
+</node>
+</dyntree>
+</dynvalues>
+<CIT CCTypeOne="1" CaleOn="0"/>
+<calendars CCTypeAll="0" CCTypeExt="0" CCTypeNone="0" CCTypeOne="1" CaleOn="0"/>
+<postconditions>
+<PostCon>
+<conditions id="CONDITIONS"/>
+</PostCon>
+</postconditions>
+</task>
+<task Alias="" BranchType="0" Col="5" Idnr="0" Lnr="7" OH_TITLE="" OType="&lt;END&gt;" Object="END" ParentAlias="" ParentObject="" Row="2" State="" Text1="" Text2="W" Text3="&lt;END&gt;" Text4="" Text5="" Text6="" runid="0" subType="" taskicon="&lt;END&gt;">
+<checkpoint RollbackFlag="0" RunPerPatch="0" RunPerTarget="0" TcpADays="0" TcpATime="00:00" TcpATimeTZ="" TcpExecute="" TcpOn="0" promptatgen="0" showprompt="0"/>
+<after ActFlg="1" AtimOn="0" ErlstStDays="0" ErlstStTime="00:00" ErlstStTimeTZ="" HoldFlg="0"/>
+<when ChkWhenExec="0" LtstEnd="0" LtstEndDays="0" LtstEndTime="00:00" LtstSt="0" LtstStDays="0" LtstStTime="00:00" LtstTimeTZ="" WCTypeAND="1" WCTypeOR="0" WElseA="1" WElseH="0" WElseS="0" WElseX="0" WhenExecute="" WtimOn="0"/>
+<preconditions CCTypeOne="1" CaleOn="0">
+<PreCon>
+<conditions id="CONDITIONS"/>
+</PreCon>
+</preconditions>
+<predecessors>
+<pre BranchType="0" Lnr="1" PreLnr="6" When="ANY_OK" type="container"/>
+</predecessors>
+<runtime MrtCancel="0" MrtDays="0" MrtErt="0" MrtExecute="0" MrtExecuteObj="" MrtFix="0" MrtMethodDate="0" MrtMethodErt="0" MrtMethodFix="0" MrtMethodNone="1" MrtOn="1" MrtTZ="" MrtTime="00:00" SrtErt="0" SrtFix="0" SrtMethodErt="0" SrtMethodFix="0" SrtMethodNone="1"/>
+<result ChkRExec="0" RElseHalt="0" RElseIgn="0" RElseJPAbend="0" RExecFlag="0" RExecute="" RRepMTimes="0" RRepOn="0" RRepWait="0" RWhen=""/>
+<dynvalues>
+<dyntree>
+<node content="1" id="VALUE" name="Variables" parent="" type="TASKVALUE">
+<VALUE state="2">
+<Values/>
+<Mode>OH_OV_Mode</Mode>
+</VALUE>
+</node>
+<node content="1" id="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START" name="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START" parent="PPRPTS" type="PPROMPTSET">
+<PROMPTSET name="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">
+<PRPTBOX promptset="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">
+<UC4RB_SIEBEL_DELAY_IN_SECONDSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_DELAY_IN_SECONDS#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">10</UC4RB_SIEBEL_DELAY_IN_SECONDSs.00>
+<UC4RB_SIEBEL_ENTRPR_SERVERs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_ENTRPR_SERVER#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">&amp;ENV#?SIEBEL_ENTRPR_SERVER</UC4RB_SIEBEL_ENTRPR_SERVERs.00>
+<UC4RB_SIEBEL_ENV_SCRIPTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_ENV_SCRIPT#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">&amp;ENV#?UNIX_SIEBEL_ENV_SCRIPT</UC4RB_SIEBEL_ENV_SCRIPTs.00>
+<UC4RB_SIEBEL_ENV_SCRIPT_DIRs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_ENV_SCRIPT_DIR#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">&amp;ENV#?UNIX_SIEBEL_ENV_SCRIPT_DIR</UC4RB_SIEBEL_ENV_SCRIPT_DIRs.00>
+<UC4RB_SIEBEL_GATEWAY_SERVERs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_GATEWAY_SERVER#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">&amp;ENV#?UC4RB_SIEBEL_GATEWAY_SERVER#</UC4RB_SIEBEL_GATEWAY_SERVERs.00>
+<UC4RB_SIEBEL_MAXIMUM_RETRIESs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_MAXIMUM_RETRIES#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">5</UC4RB_SIEBEL_MAXIMUM_RETRIESs.00>
+<UC4RB_SIEBEL_OBJECT_MANAGERSs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_OBJECT_MANAGERS#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">&amp;ENV#?SIEBEL_OBJECT_MANAGERS</UC4RB_SIEBEL_OBJECT_MANAGERSs.00>
+<UC4RB_SIEBEL_PASSWORDs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_PASSWORD#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">--10</UC4RB_SIEBEL_PASSWORDs.00>
+<UC4RB_SIEBEL_PORTs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_PORT#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">2321</UC4RB_SIEBEL_PORTs.00>
+<UC4RB_SIEBEL_SERVER_ROOTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_SERVER_ROOT#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">&amp;ENV#?SIEBEL_SERVER_ROOT</UC4RB_SIEBEL_SERVER_ROOTs.00>
+<UC4RB_SIEBEL_SERVER_URLs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_SERVER_URL#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">localhost</UC4RB_SIEBEL_SERVER_URLs.00>
+<UC4RB_SIEBEL_SERVERSs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_SERVERS#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">&amp;ENV#?SIEBEL_SERVERS</UC4RB_SIEBEL_SERVERSs.00>
+<UC4RB_SIEBEL_SERVICESs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_SERVICES#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">&amp;ENV#?WIN_SIEBEL_SERVICES</UC4RB_SIEBEL_SERVICESs.00>
+<UC4RB_SIEBEL_START_TIMEOUTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_START_TIMEOUT#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START">1800</UC4RB_SIEBEL_START_TIMEOUTs.00>
+<UC4RB_SIEBEL_USERNAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SIEBEL_USERNAME#" promptsetname="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START"/>
+</PRPTBOX>
+</PROMPTSET>
+</node>
+<node content="1" id="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO" name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO" parent="PPRPTS" type="PPROMPTSET">
+<PROMPTSET name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO">
+<PRPTBOX promptset="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO">
+<UC4RB_SUDO_PASSWORDs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SUDO_PASSWORD#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO"/>
+<UC4RB_SUDO_USERs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SUDO_USER#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO"/>
+<UC4RB_USE_SUDOs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_USE_SUDO#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO">None</UC4RB_USE_SUDOs.00>
+</PRPTBOX>
+</PROMPTSET>
+</node>
+<node content="1" id="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT" name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT" parent="PPRPTS" type="PPROMPTSET">
+<PROMPTSET name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT">
+<PRPTBOX promptset="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT">
+<AGENTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="AGENT#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT"/>
+<LOGINs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="LOGIN#" promptsetname="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT"/>
 </PRPTBOX>
 </PROMPTSET>
 </node>
@@ -267,10 +676,23 @@
 </VALUE>
 </node>
 <node content="1" id="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START" name="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START" parent="PRPTS" type="PROMPTSET">
-<PROMPTSET client="6000" idnr="0004962514" name="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START" ontop="1" src="oh" system="AE10">
+<PROMPTSET client="6000" idnr="0005725187" name="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START" ontop="1" src="oh" system="AE10">
 <PRPTBOX promptset="PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.START" prptmode="1">
-<UC4RB_SIEBEL_SERVER_ROOTs.00 altview="0" haslist="0">D:\sba81\siebsrvr</UC4RB_SIEBEL_SERVER_ROOTs.00>
+<UC4RB_SIEBEL_SERVICESs.00 altview="0" haslist="0">&amp;ENV#?WIN_SIEBEL_SERVICES</UC4RB_SIEBEL_SERVICESs.00>
+<UC4RB_SIEBEL_SERVER_URLs.00 altview="0" haslist="0">localhost</UC4RB_SIEBEL_SERVER_URLs.00>
+<UC4RB_SIEBEL_PORTs.00 altview="0" haslist="0">2321</UC4RB_SIEBEL_PORTs.00>
+<UC4RB_SIEBEL_PASSWORDs.00 altview="0" haslist="0">--10</UC4RB_SIEBEL_PASSWORDs.00>
+<UC4RB_SIEBEL_GATEWAY_SERVERs.00 altview="0" haslist="0">&amp;ENV#?UC4RB_SIEBEL_GATEWAY_SERVER#</UC4RB_SIEBEL_GATEWAY_SERVERs.00>
+<UC4RB_SIEBEL_ENTRPR_SERVERs.00 altview="0" haslist="0">&amp;ENV#?SIEBEL_ENTRPR_SERVER</UC4RB_SIEBEL_ENTRPR_SERVERs.00>
+<UC4RB_SIEBEL_SERVERSs.00 altview="0" haslist="0">&amp;ENV#?SIEBEL_SERVERS</UC4RB_SIEBEL_SERVERSs.00>
+<UC4RB_SIEBEL_OBJECT_MANAGERSs.00 altview="0" haslist="0">&amp;ENV#?SIEBEL_OBJECT_MANAGERS</UC4RB_SIEBEL_OBJECT_MANAGERSs.00>
+<UC4RB_SIEBEL_MAXIMUM_RETRIESs.00 altview="0" haslist="0">5</UC4RB_SIEBEL_MAXIMUM_RETRIESs.00>
 </PRPTBOX>
+</PROMPTSET>
+</node>
+<node content="1" id="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO" name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO" parent="PRPTS" type="PROMPTSET">
+<PROMPTSET client="6000" idnr="0005766652" name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO" ontop="1" src="oh" system="AE10">
+<PRPTBOX promptset="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.SUDO" prptmode="1"/>
 </PROMPTSET>
 </node>
 <node content="1" id="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT" name="PCK.AUTOMIC_SHARED.PUB.PROMPTSET.OVERWRITE_AGENT" parent="PRPTS" type="PROMPTSET">
@@ -300,7 +722,38 @@
 <MSCRI/>
 </SCRIPT>
 <DOCU_Docu state="1" type="text">
-<DOC/>
+<DOC><![CDATA[= RB name =
+PCK.AUTOMIC_SIEBEL.PUB.ACTION.START
+
+= General Description =
+This Action to start all Siebel Server in Siebel System.
+For Windows it can be that there is no start-script - in this case siebel is installed as a service and the appropriate service must be started.
+Starting Siebel by executing command via the CLI. With Unix user have to initialize the Siebel Environment first. This must be done inside the same Job as the execution of the Start-Script, since the JOB context is destroyed upon the finishing of each job.
+
+= Inputs =
+* Siebel Environment Script Directory: The directory contains Siebel Environment Script.
+* Siebel Environment Script file : Siebel Environment Script file name.
+* List of Siebel Windows service: Comma-separated list of Windows Siebel Server Service that will be started.
+
+= Behavior =
+(see general description)
+
+= Outputs =
+* Return code is 0 if success.
+* Return code is 1 if not success.
+
+= Rollback =
+= Logging =
+= Example =
+Example usage:
+@Windows: Parameters
+List Siebel Server Service = siebsrvr_SBA_81_siebel01, siebsrvr_SBA_81_siebel02
+
+@Unix:
+The directory Siebel Environment Script = /opt/siebel/nas_rey
+Siebel Environment Script File name = siebel_basic.env
+
+ ]]></DOC>
 </DOCU_Docu>
 </JOBP>
 </uc-export>

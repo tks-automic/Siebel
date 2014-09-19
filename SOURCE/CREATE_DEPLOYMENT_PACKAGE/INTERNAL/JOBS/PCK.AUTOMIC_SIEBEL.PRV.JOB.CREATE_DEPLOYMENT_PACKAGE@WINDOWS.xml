@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="ISO-8859-15" standalone="no"?><uc-export clientvers="8.0.0">
+<JOBS_WINDOWS AttrType="WINDOWS" name="PCK.AUTOMIC_SIEBEL.PRV.JOB.CREATE_DEPLOYMENT_PACKAGE@WINDOWS">
+<XHEADER state="1">
+<Title/>
+
+
+<LastUsed/>
+<ArchiveKey1/>
+<ArchiveKey2/>
+<ExtRepDef>1</ExtRepDef>
+<ExtRepAll>0</ExtRepAll>
+<ExtRepNone>0</ExtRepNone>
+<Active>1</Active>
+<OH_SubType/>
+</XHEADER>
+<OUTPUTREG state="1" tidy="1">
+<FileReg/>
+</OUTPUTREG>
+<SYNCREF state="1">
+<Syncs/>
+</SYNCREF>
+<ATTR_JOBS state="1">
+<Queue>CLIENT_QUEUE</Queue>
+<StartType/>
+<HostDst>WINDOWS|&lt;WIN&gt;|HOST</HostDst>
+<HostATTR_Type>WINDOWS</HostATTR_Type>
+<CodeName/>
+<Login/>
+<IntAccount/>
+<AutoDeactNo>1</AutoDeactNo>
+<AutoDeact1ErrorFree>0</AutoDeact1ErrorFree>
+<AutoDeactErrorFree>0</AutoDeactErrorFree>
+<DeactWhen/>
+<DeactDelay>0</DeactDelay>
+<AutoDeactAlways>0</AutoDeactAlways>
+<AttDialog>0</AttDialog>
+<ActAtRun>0</ActAtRun>
+<Consumption>0</Consumption>
+<UC4Priority>0</UC4Priority>
+<MaxParallel2>0</MaxParallel2>
+<MpElse1>1</MpElse1>
+<MpElse2>0</MpElse2>
+<TZ/>
+</ATTR_JOBS>
+<ATTR_WINDOWS state="1">
+<OutputDb>1</OutputDb>
+<OutputDbErr>0</OutputDbErr>
+<OutputFile>0</OutputFile>
+<IsGenerated>0</IsGenerated>
+<BAT>0</BAT>
+<COM>0</COM>
+<WinBatch>1</WinBatch>
+<Standard>1</Standard>
+<Minimized>0</Minimized>
+<Maximized>0</Maximized>
+<JObjDefault>1</JObjDefault>
+<JObjYes>0</JObjYes>
+<JObjNo>0</JObjNo>
+<WorkingDirectory>c:\</WorkingDirectory>
+<Command/>
+<LogOn>0</LogOn>
+<ShowJob>0</ShowJob>
+</ATTR_WINDOWS>
+<RUNTIME state="1">
+<MaxRetCode>0</MaxRetCode>
+<MrcExecute/>
+<MrcElseE>0</MrcElseE>
+<FcstStatus>0| </FcstStatus>
+<Ert>13</Ert>
+<ErtMethodDef>1</ErtMethodDef>
+<ErtMethodFix>0</ErtMethodFix>
+<ErtFix>0</ErtFix>
+<ErtDynMethod>2|Average</ErtDynMethod>
+<ErtMethodDyn>0</ErtMethodDyn>
+<ErtCnt>0</ErtCnt>
+<ErtCorr>0</ErtCorr>
+<ErtIgn>0</ErtIgn>
+<ErtIgnFlg>0</ErtIgnFlg>
+<ErtMinCnt>0</ErtMinCnt>
+<MrtMethodNone>1</MrtMethodNone>
+<MrtMethodFix>0</MrtMethodFix>
+<MrtFix>0</MrtFix>
+<MrtMethodErt>0</MrtMethodErt>
+<MrtErt>0</MrtErt>
+<MrtMethodDate>0</MrtMethodDate>
+<MrtDays>0</MrtDays>
+<MrtTime>00:00</MrtTime>
+<MrtTZ/>
+<SrtMethodNone>1</SrtMethodNone>
+<SrtMethodFix>0</SrtMethodFix>
+<SrtFix>0</SrtFix>
+<SrtMethodErt>0</SrtMethodErt>
+<SrtErt>0</SrtErt>
+<MrtCancel>0</MrtCancel>
+<MrtExecute>0</MrtExecute>
+<MrtExecuteObj/>
+</RUNTIME>
+<DYNVALUES state="1">
+<dyntree>
+<node content="1" id="VALUE" name="Variables" parent="" type="VALUE">
+<VALUE state="1">
+<Values/>
+<Mode>0</Mode>
+</VALUE>
+</node>
+</dyntree>
+</DYNVALUES>
+<ROLLBACK state="1" tidy="1">
+<RollbackFlag>0</RollbackFlag>
+<CBackupObj/>
+<CRollbackObj/>
+<FBackupPath/>
+<FDeleteBefore>0</FDeleteBefore>
+<FInclSubDirs>0</FInclSubDirs>
+</ROLLBACK>
+<PRE_SCRIPT mode="1" replacementmode="1" state="1" tidy="0">
+<PSCRI><![CDATA[:SET &PROMPTSET# = "PCK.AUTOMIC_SIEBEL.PRV.PROMPTSET.CREATE_DEPLOYMENT_PACKAGE"
+:INC PCK.AUTOMIC_SIEBEL.PRV.INCLUDE.GET_VALUES_FROM_CONFIG
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.START_STOP_JOB_ACCORDING_TO_AGENT_OS]]></PSCRI>
+</PRE_SCRIPT>
+<SCRIPT mode="1" state="1" tidy="0">
+<MSCRI><![CDATA[:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.POWERSHELL_UTILITY
+! validate parameters
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_HEADER_PARAM_VALIDATION
+
+:SET &UC4RB_LOGGING_PARAMETER# = "Siebel SRF Output Directory"
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_PARAM &UC4RB_LOGGING_PARAMETER_VAL# = &UC4RB_SIEBEL_SRF_OUTPUT_DIR#
+:SET &UC4RB_LOGGING_PARAMETER# = "Siebel Browser Script Output Directory"
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_PARAM &UC4RB_LOGGING_PARAMETER_VAL# = &UC4RB_SIEBEL_SCRIPT_OUTPUT_DIR#
+:SET &UC4RB_LOGGING_PARAMETER# = "Siebel Exported Repository File"
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_PARAM &UC4RB_LOGGING_PARAMETER_VAL# = &UC4RB_SIEBEL_REPOSITORY_FILE#
+:SET &UC4RB_LOGGING_PARAMETER# = "Siebel Exported Schema File"
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_PARAM &UC4RB_LOGGING_PARAMETER_VAL# = &UC4RB_SIEBEL_SCHEMA_FILE#
+:SET &UC4RB_LOGGING_PARAMETER# = "Siebel Collected Archive File"
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_PARAM &UC4RB_LOGGING_PARAMETER_VAL# = &UC4RB_SIEBEL_COLLECTED_FILE#
+:SET &UC4RB_LOGGING_PARAMETER# = "Output Package File"
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_PARAM &UC4RB_LOGGING_PARAMETER_VAL# = &UC4RB_SIEBEL_DEP_PKG_FILE#
+
+$errors = 0
+
+! check srf directory, browser script, output directory existence
+:SET &UC4RB_CHECKME# = &UC4RB_SIEBEL_SRF_OUTPUT_DIR#
+:INCLUDE PCK.AUTOMIC_SHARED.PUB.INCLUDE.CHECK_WINDOWS_POWERSHELL_FILE_EXISTS
+if ($ISDIR -eq 0) {
+:  SET &UC4RB_LOGGING_PARAMETER# = "Siebel SRF Output Directory"
+:  SET &UC4RB_LOGGING_ERROR# = "&UC4RB_SIEBEL_SRF_OUTPUT_DIR# does not exist or is not a directory"
+:  INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_ERROR_PARAMETER
+   $errors += 1
+}
+
+:SET &UC4RB_CHECKME# = &UC4RB_SIEBEL_SCRIPT_OUTPUT_DIR#
+:INCLUDE PCK.AUTOMIC_SHARED.PUB.INCLUDE.CHECK_WINDOWS_POWERSHELL_FILE_EXISTS
+if ($ISDIR -eq 0) {
+:  SET &UC4RB_LOGGING_PARAMETER# = "Siebel Browser Script Output Directory"
+:  SET &UC4RB_LOGGING_ERROR# = "&UC4RB_SIEBEL_SCRIPT_OUTPUT_DIR# does not exist or is not a directory"
+:  INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_ERROR_PARAMETER
+   $errors += 1
+}
+
+! check repository file, schema file, collected archive file existence
+:SET &UC4RB_CHECKME# = &UC4RB_SIEBEL_REPOSITORY_FILE#
+:INCLUDE PCK.AUTOMIC_SHARED.PUB.INCLUDE.CHECK_WINDOWS_POWERSHELL_FILE_EXISTS
+if ($ISFILE -eq 0) {
+:  SET &UC4RB_LOGGING_PARAMETER# = "Siebel Exported Repository File"
+:  SET &UC4RB_LOGGING_ERROR# = "&UC4RB_SIEBEL_REPOSITORY_FILE# does not exist or is not a file"
+:  INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_ERROR_PARAMETER
+   $errors += 1
+}
+
+:SET &UC4RB_CHECKME# = &UC4RB_SIEBEL_SCHEMA_FILE#
+:INCLUDE PCK.AUTOMIC_SHARED.PUB.INCLUDE.CHECK_WINDOWS_POWERSHELL_FILE_EXISTS
+if ($ISFILE -eq 0) {
+:  SET &UC4RB_LOGGING_PARAMETER# = "Siebel Exported Schema File"
+:  SET &UC4RB_LOGGING_ERROR# = "&UC4RB_SIEBEL_SCHEMA_FILE# does not exist or is not a file"
+:  INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_ERROR_PARAMETER
+   $errors += 1
+}
+
+:SET &UC4RB_CHECKME# = &UC4RB_SIEBEL_COLLECTED_FILE#
+:INCLUDE PCK.AUTOMIC_SHARED.PUB.INCLUDE.CHECK_WINDOWS_POWERSHELL_FILE_EXISTS
+if ($ISFILE -eq 0) {
+:  SET &UC4RB_LOGGING_PARAMETER# = "Siebel Collected Files Archive"
+:  SET &UC4RB_LOGGING_ERROR# = "&UC4RB_SIEBEL_COLLECTED_FILE# does not exist or is not a file"
+:  INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_ERROR_PARAMETER
+   $errors += 1
+}
+
+:SET &UC4RB_CHECKME# = &UC4RB_SIEBEL_DEP_PKG_FILE#
+:INCLUDE PCK.AUTOMIC_SHARED.PUB.INCLUDE.CHECK_WINDOWS_POWERSHELL_FILE_EXISTS
+if ($ISFILE -eq 1) {
+:  SET &UC4RB_LOGGING_PARAMETER# = "Output Package File"
+:  SET &UC4RB_LOGGING_ERROR# = "&UC4RB_SIEBEL_DEP_PKG_FILE# already existed"
+:  INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_ERROR_PARAMETER
+   $errors += 1
+}
+
+if ($errors -gt 0) {
+  exit 1
+}
+
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.CHANGE_FOLDER_TO_AGENT_BIN
+
+:SET &UC4RB_SIEBEL_DEP_PKG_TMP# = "&UC4RB_AGENT_WORKING_DIR#\sieb_dep_pkg_temp_&$RUNID#"
+
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.LOGGING_HEADER_EXECUTION
+
+! create log file
+!:SET &UC4RB_SIEBEL_DEP_PKG_LOG# = "&UC4RB_SIEBEL_DEP_PKG_DIR#\dep_pkg_&$RUNID#.log"
+!(New-Item "&UC4RB_SIEBEL_DEP_PKG_LOG#" -type file) | out-null
+
+! creates a temporary directory and copy all stuffs to it
+Write-Host INFO: Creating temporary directory and copying data to it ..
+$result = New-Item "&UC4RB_SIEBEL_DEP_PKG_TMP#" -type directory
+
+Copy-Item "&UC4RB_SIEBEL_SRF_OUTPUT_DIR#" "&UC4RB_SIEBEL_DEP_PKG_TMP#\srf" -recurse
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.CHECK_RETURN_CODE_WINDOWS_POWERSHELL
+
+Copy-Item "&UC4RB_SIEBEL_SCRIPT_OUTPUT_DIR#" "&UC4RB_SIEBEL_DEP_PKG_TMP#\browser_scripts" -recurse
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.CHECK_RETURN_CODE_WINDOWS_POWERSHELL
+
+$result = New-Item "&UC4RB_SIEBEL_DEP_PKG_TMP#\repository" -type directory
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.CHECK_RETURN_CODE_WINDOWS_POWERSHELL
+$result = New-Item "&UC4RB_SIEBEL_DEP_PKG_TMP#\schema" -type directory
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.CHECK_RETURN_CODE_WINDOWS_POWERSHELL
+$result = New-Item "&UC4RB_SIEBEL_DEP_PKG_TMP#\collected_files" -type directory
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.CHECK_RETURN_CODE_WINDOWS_POWERSHELL
+
+Copy-Item "&UC4RB_SIEBEL_REPOSITORY_FILE#" "&UC4RB_SIEBEL_DEP_PKG_TMP#\repository"
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.CHECK_RETURN_CODE_WINDOWS_POWERSHELL
+Copy-Item "&UC4RB_SIEBEL_SCHEMA_FILE#" "&UC4RB_SIEBEL_DEP_PKG_TMP#\schema"
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.CHECK_RETURN_CODE_WINDOWS_POWERSHELL
+Copy-Item "&UC4RB_SIEBEL_COLLECTED_FILE#" "&UC4RB_SIEBEL_DEP_PKG_TMP#\collected_files"
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.CHECK_RETURN_CODE_WINDOWS_POWERSHELL
+
+! ensures parent directory of output file exists
+:DEFINE &STRING_ARR#,string,30
+:SET &UC4RB_CONVERTED_STRING# = "&UC4RB_SIEBEL_DEP_PKG_FILE#"
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.GET_DIRECTORY_FROM_FILE_NAME
+:INC PCK.AUTOMIC_SHARED.PUB.INCLUDE.ENSURE_DIRECTORY_EXISTS_WINDOWS_POWERSHELL
+
+! adds all from temp. dir to target Zip archive
+Write-Host INFO: Creating deployment package ..
+:PUB &UC4RB_SIEBEL_DEP_PKG_TMP#,,"WORKFLOW"]]></MSCRI>
+</SCRIPT>
+<OUTPUTSCAN state="1">
+<Inherit>N</Inherit>
+<filterobjects/>
+<HostFsc/>
+<LoginFsc/>
+</OUTPUTSCAN>
+<POST_SCRIPT mode="1" replacementmode="1" state="1" tidy="1">
+<OSCRI/>
+</POST_SCRIPT>
+<DOCU_Docu state="1" type="text">
+<DOC><![CDATA[This action creates a ZIP structure for Siebel stuff generated from previous steps. This is the last step in the Export workflow. Output from this action is a package contains all exported data from the siebel server and the Siebel tool server. We use it for transport to another Siebel System can be used to import again to another Siebel system.]]></DOC>
+</DOCU_Docu>
+</JOBS_WINDOWS>
+</uc-export>
